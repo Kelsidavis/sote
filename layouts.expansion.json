@@ -1,0 +1,177 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "layouts": [
+    {
+      "name": "StackFrame_Medium",
+      "description": "Medium stack frame pattern (avg 211 bytes)",
+      "estimated_size": 211,
+      "confidence": "medium",
+      "evidence_sources": [
+        "fcn.00426ed0",
+        "fcn.004444af",
+        "fcn.0041e870",
+        "fcn.0042c4e0",
+        "fcn.0042a350",
+        "fcn.0042a000",
+        "fcn.0042a620",
+        "fcn.00429710"
+      ],
+      "fields": [
+        {
+          "name": "local_buffer",
+          "offset": 0,
+          "size": 105,
+          "type": "uint8_t[]",
+          "description": "Primary local buffer"
+        },
+        {
+          "name": "temp_vars",
+          "offset": 105,
+          "size": 52,
+          "type": "uint32_t[]",
+          "description": "Temporary variables"
+        }
+      ],
+      "expansion_metadata": {
+        "pattern_count": 23,
+        "average_complexity": 10,
+        "derived_from": "stack_frame_analysis"
+      }
+    },
+    {
+      "name": "StackFrame_Large",
+      "description": "Large stack frame pattern (avg 825 bytes)",
+      "estimated_size": 825,
+      "confidence": "medium",
+      "evidence_sources": [
+        "fcn.00444e3c",
+        "fcn.0040120d",
+        "fcn.00453087",
+        "fcn.0045846d",
+        "fcn.0040108c",
+        "fcn.00401217"
+      ],
+      "fields": [
+        {
+          "name": "local_buffer",
+          "offset": 0,
+          "size": 412,
+          "type": "uint8_t[]",
+          "description": "Primary local buffer"
+        },
+        {
+          "name": "temp_vars",
+          "offset": 412,
+          "size": 206,
+          "type": "uint32_t[]",
+          "description": "Temporary variables"
+        }
+      ],
+      "expansion_metadata": {
+        "pattern_count": 6,
+        "average_complexity": 5,
+        "derived_from": "stack_frame_analysis"
+      }
+    },
+    {
+      "name": "ComplexFunctionState",
+      "description": "State structure for complex functions",
+      "estimated_size": 128,
+      "confidence": "low",
+      "evidence_sources": [
+        "fcn.00416590",
+        "fcn.00426ed0",
+        "fcn.0041ac90",
+        "fcn.0042d4c0",
+        "fcn.004444af",
+        "fcn.0044edfd",
+        "fcn.0041e870",
+        "fcn.0044012a",
+        "fcn.0042c4e0",
+        "fcn.00445766"
+      ],
+      "fields": [
+        {
+          "name": "state_flags",
+          "offset": 0,
+          "size": 4,
+          "type": "uint32_t",
+          "description": "Function state flags"
+        },
+        {
+          "name": "counters",
+          "offset": 4,
+          "size": 16,
+          "type": "uint32_t[4]",
+          "description": "Loop counters and indices"
+        },
+        {
+          "name": "buffer_ptrs",
+          "offset": 20,
+          "size": 16,
+          "type": "void*[4]",
+          "description": "Buffer pointers"
+        },
+        {
+          "name": "scratch_space",
+          "offset": 36,
+          "size": 92,
+          "type": "uint8_t[]",
+          "description": "Scratch space for complex operations"
+        }
+      ],
+      "expansion_metadata": {
+        "complex_function_count": 54,
+        "avg_complexity": 15,
+        "derived_from": "complexity_analysis"
+      }
+    },
+    {
+      "name": "UtilityDataBlock",
+      "description": "Small data block used by utility functions",
+      "estimated_size": 32,
+      "confidence": "medium",
+      "evidence_sources": [
+        "fcn.00441d30",
+        "fcn.004160d8",
+        "fcn.0045664c",
+        "fcn.004159d0",
+        "fcn.00416590",
+        "fcn.00426ed0",
+        "fcn.00441bd1"
+      ],
+      "fields": [
+        {
+          "name": "header",
+          "offset": 0,
+          "size": 8,
+          "type": "uint64_t",
+          "description": "Data block header/signature"
+        },
+        {
+          "name": "payload",
+          "offset": 8,
+          "size": 24,
+          "type": "uint8_t[24]",
+          "description": "Utility data payload"
+        }
+      ],
+      "expansion_metadata": {
+        "high_connectivity_functions": 7,
+        "derived_from": "connectivity_analysis"
+      }
+    }
+  ],
+  "expansion_summary": {
+    "new_layouts_added": 4,
+    "stack_patterns_analyzed": 2,
+    "complex_functions_analyzed": 54,
+    "expansion_method": "pattern_based_inference",
+    "expansion_date": "2025-09-11T00:40:00Z"
+  }
+}

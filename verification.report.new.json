@@ -1,0 +1,1160 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "x86",
+    "abi": "pe32",
+    "endianness": "little"
+  },
+  "verification_metadata": {
+    "timestamp": "2025-09-10T16:55:51.205557",
+    "verifier_version": "4.0",
+    "verification_scope": "comprehensive_100_functions_post_fix",
+    "evidence_files": [
+      "inputs/r2_aflj.json",
+      "evidence.curated.json",
+      "navigator.plan.json",
+      "mappings.json"
+    ],
+    "implementation_files": [
+      "src/priority_functions.c",
+      "src/batch2_functions.c",
+      "src/batch3_functions.c",
+      "src/batch4_functions.c"
+    ]
+  },
+  "summary": {
+    "quality_score": 61.5,
+    "total_functions": 100,
+    "verified_functions": 9,
+    "functions_found": 90,
+    "stub_functions": 23,
+    "total_issues": 81,
+    "fabrications": 0,
+    "errors": 81,
+    "warnings": 0,
+    "info": 0,
+    "implementation_completeness": "77%",
+    "interface_compatibility": "9%",
+    "parameter_accuracy": "83.6%"
+  },
+  "issues": [
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.00419d60",
+      "expected": "0 parameters",
+      "observed": "3 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.00401159",
+      "expected": "29 parameters",
+      "observed": "0 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.00424e40",
+      "expected": "0 parameters",
+      "observed": "7 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.00446000",
+      "expected": "0 parameters",
+      "observed": "1 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.0040b180",
+      "expected": "42 parameters",
+      "observed": "6 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.0043ee21",
+      "expected": "15 parameters",
+      "observed": "4 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.0040bc40",
+      "expected": "44 parameters",
+      "observed": "6 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.0040c2e0",
+      "expected": "45 parameters",
+      "observed": "6 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.00437c83",
+      "expected": "8 parameters",
+      "observed": "2 parameters"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "function fcn.0040d070",
+      "expected": "16 parameters",
+      "observed": "3 parameters"
+    }
+  ],
+  "function_results": [
+    {
+      "function": "fcn.00419d60",
+      "rank": 1,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 117,
+      "size": 2199
+    },
+    {
+      "function": "fcn.00401159",
+      "rank": 19,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 21,
+      "size": 22145
+    },
+    {
+      "function": "fcn.00424e40",
+      "rank": 4,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 101,
+      "size": 1578
+    },
+    {
+      "function": "fcn.00446000",
+      "rank": 2,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 218,
+      "size": 673
+    },
+    {
+      "function": "fcn.0040b180",
+      "rank": 7,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 96,
+      "size": 2020
+    },
+    {
+      "function": "fcn.0043ee21",
+      "rank": 5,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 75,
+      "size": 1595
+    },
+    {
+      "function": "fcn.0040bc40",
+      "rank": 11,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 75,
+      "size": 1695
+    },
+    {
+      "function": "fcn.0040c2e0",
+      "rank": 12,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 75,
+      "size": 1686
+    },
+    {
+      "function": "fcn.00437c83",
+      "rank": 8,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 79,
+      "size": 799
+    },
+    {
+      "function": "fcn.0040d070",
+      "rank": 15,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 62,
+      "size": 1455
+    },
+    {
+      "function": "fcn.00421690",
+      "rank": 13,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 57,
+      "size": 1041
+    },
+    {
+      "function": "fcn.004184e0",
+      "rank": 16,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 59,
+      "size": 1243
+    },
+    {
+      "function": "fcn.0042b460",
+      "rank": 20,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 36,
+      "size": 1315
+    },
+    {
+      "function": "fcn.00418ba0",
+      "rank": 14,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 50,
+      "size": 630
+    },
+    {
+      "function": "fcn.00428060",
+      "rank": 24,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 49,
+      "size": 749
+    },
+    {
+      "function": "fcn.00419020",
+      "rank": 23,
+      "batch": "batch1",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 43,
+      "size": 670
+    },
+    {
+      "function": "fcn.004177c0",
+      "rank": 26,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 47,
+      "size": 607
+    },
+    {
+      "function": "fcn.0041b150",
+      "rank": 27,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 43,
+      "size": 464
+    },
+    {
+      "function": "fcn.0042d0f4",
+      "rank": 28,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 32,
+      "size": 832
+    },
+    {
+      "function": "fcn.00426590",
+      "rank": 29,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 33,
+      "size": 858
+    },
+    {
+      "function": "fcn.00427520",
+      "rank": 30,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 36,
+      "size": 518
+    },
+    {
+      "function": "fcn.00426900",
+      "rank": 31,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 31,
+      "size": 704
+    },
+    {
+      "function": "fcn.0042bc90",
+      "rank": 32,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 23,
+      "size": 822
+    },
+    {
+      "function": "fcn.0041c950",
+      "rank": 33,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 31,
+      "size": 411
+    },
+    {
+      "function": "fcn.0044f383",
+      "rank": 34,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 25,
+      "size": 541
+    },
+    {
+      "function": "fcn.004255e0",
+      "rank": 35,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 36,
+      "size": 923
+    },
+    {
+      "function": "fcn.004421a8",
+      "rank": 36,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 2,
+      "size": 40
+    },
+    {
+      "function": "fcn.004242c0",
+      "rank": 37,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 40,
+      "size": 767
+    },
+    {
+      "function": "fcn.00410260",
+      "rank": 38,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 34,
+      "size": 631
+    },
+    {
+      "function": "fcn.0041aaa0",
+      "rank": 39,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 1,
+      "size": 23
+    },
+    {
+      "function": "fcn.0041ece0",
+      "rank": 40,
+      "batch": "batch2",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 32,
+      "size": 735
+    },
+    {
+      "function": "fcn.00422030",
+      "rank": 41,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 18,
+      "size": 279
+    },
+    {
+      "function": "fcn.00422f60",
+      "rank": 42,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 42,
+      "size": 618
+    },
+    {
+      "function": "fcn.0041c720",
+      "rank": 43,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 30,
+      "size": 560
+    },
+    {
+      "function": "fcn.00409020",
+      "rank": 44,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 35,
+      "size": 1239
+    },
+    {
+      "function": "fcn.00441edd",
+      "rank": 45,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 2,
+      "size": 40
+    },
+    {
+      "function": "fcn.00427750",
+      "rank": 46,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 35,
+      "size": 678
+    },
+    {
+      "function": "fcn.004249f0",
+      "rank": 47,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 31,
+      "size": 424
+    },
+    {
+      "function": "fcn.0043cfc3",
+      "rank": 48,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 19,
+      "size": 558
+    },
+    {
+      "function": "fcn.00428380",
+      "rank": 49,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 32,
+      "size": 592
+    },
+    {
+      "function": "fcn.0041d5c0",
+      "rank": 50,
+      "batch": "batch2",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 35,
+      "size": 634
+    },
+    {
+      "function": "fcn.0041aa30",
+      "rank": 51,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 4,
+      "size": 104
+    },
+    {
+      "function": "fcn.004202d0",
+      "rank": 52,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 26,
+      "size": 555
+    },
+    {
+      "function": "fcn.00415c60",
+      "rank": 53,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 27,
+      "size": 254
+    },
+    {
+      "function": "fcn.00419720",
+      "rank": 54,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 19,
+      "size": 510
+    },
+    {
+      "function": "fcn.0044176e",
+      "rank": 55,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 50,
+      "size": 242
+    },
+    {
+      "function": "fcn.00415900",
+      "rank": 56,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 1,
+      "size": 20
+    },
+    {
+      "function": "fcn.0043dd4b",
+      "rank": 57,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 1,
+      "size": 42
+    },
+    {
+      "function": "fcn.0041b6b0",
+      "rank": 58,
+      "batch": "batch3",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 25,
+      "size": 480
+    },
+    {
+      "function": "fcn.0042b120",
+      "rank": 59,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 16,
+      "size": 831
+    },
+    {
+      "function": "fcn.00416200",
+      "rank": 60,
+      "batch": "batch3",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 26,
+      "size": 334
+    },
+    {
+      "function": "fcn.0043e483",
+      "rank": 61,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 9,
+      "size": 131
+    },
+    {
+      "function": "fcn.00420080",
+      "rank": 62,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 25,
+      "size": 524
+    },
+    {
+      "function": "fcn.0043d3cf",
+      "rank": 63,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 13,
+      "size": 375
+    },
+    {
+      "function": "fcn.00409fe0",
+      "rank": 64,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 35,
+      "size": 754
+    },
+    {
+      "function": "fcn.00417280",
+      "rank": 65,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 25,
+      "size": 547
+    },
+    {
+      "function": "fcn.0042c150",
+      "rank": 66,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 21,
+      "size": 558
+    },
+    {
+      "function": "fcn.0040abe0",
+      "rank": 67,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 27,
+      "size": 462
+    },
+    {
+      "function": "fcn.0041b520",
+      "rank": 68,
+      "batch": "batch3",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 27,
+      "size": 396
+    },
+    {
+      "function": "fcn.0044f0a8",
+      "rank": 69,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 17,
+      "size": 443
+    },
+    {
+      "function": "fcn.0040b9a0",
+      "rank": 70,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 30,
+      "size": 671
+    },
+    {
+      "function": "fcn.00415a40",
+      "rank": 71,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 20,
+      "size": 450
+    },
+    {
+      "function": "fcn.0044f263",
+      "rank": 72,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 16,
+      "size": 288
+    },
+    {
+      "function": "fcn.0041d840",
+      "rank": 73,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 27,
+      "size": 380
+    },
+    {
+      "function": "fcn.00441e8d",
+      "rank": 74,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 5,
+      "size": 80
+    },
+    {
+      "function": "fcn.00440c64",
+      "rank": 75,
+      "batch": "batch3",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 12,
+      "size": 328
+    },
+    {
+      "function": "fcn.00415530",
+      "rank": 76,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 27,
+      "size": 418
+    },
+    {
+      "function": "fcn.00440adb",
+      "rank": 77,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 19,
+      "size": 350
+    },
+    {
+      "function": "fcn.0044164a",
+      "rank": 78,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 21,
+      "size": 292
+    },
+    {
+      "function": "fcn.00423710",
+      "rank": 80,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 2,
+      "size": 563
+    },
+    {
+      "function": "fcn.00418f40",
+      "rank": 81,
+      "batch": "batch4",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 1,
+      "size": 9
+    },
+    {
+      "function": "fcn.00444d53",
+      "rank": 82,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 22,
+      "size": 233
+    },
+    {
+      "function": "fcn.00423390",
+      "rank": 83,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 3,
+      "size": 884
+    },
+    {
+      "function": "fcn.0044070f",
+      "rank": 84,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 15,
+      "size": 380
+    },
+    {
+      "function": "fcn.00414b40",
+      "rank": 85,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 22,
+      "size": 383
+    },
+    {
+      "function": "fcn.00441be1",
+      "rank": 86,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 2,
+      "size": 54
+    },
+    {
+      "function": "fcn.0040a420",
+      "rank": 87,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 21,
+      "size": 597
+    },
+    {
+      "function": "fcn.0042bfd0",
+      "rank": 88,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 21,
+      "size": 335
+    },
+    {
+      "function": "fcn.00410ed0",
+      "rank": 89,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 20,
+      "size": 478
+    },
+    {
+      "function": "fcn.0043fcbd",
+      "rank": 90,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 15,
+      "size": 324
+    },
+    {
+      "function": "fcn.0041fa10",
+      "rank": 91,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 25,
+      "size": 458
+    },
+    {
+      "function": "fcn.00441103",
+      "rank": 92,
+      "batch": "batch4",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 2,
+      "size": 41
+    },
+    {
+      "function": "fcn.0044284c",
+      "rank": 93,
+      "batch": "batch4",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": false,
+      "has_provenance": true,
+      "complexity": 2,
+      "size": 21
+    },
+    {
+      "function": "fcn.004577c0",
+      "rank": 94,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 7,
+      "size": 127
+    },
+    {
+      "function": "fcn.00417010",
+      "rank": 95,
+      "batch": "batch4",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 26,
+      "size": 334
+    },
+    {
+      "function": "fcn.00442c75",
+      "rank": 96,
+      "batch": "batch4",
+      "status": "implemented",
+      "signature_valid": true,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 16,
+      "size": 289
+    },
+    {
+      "function": "fcn.0041eff0",
+      "rank": 97,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 25,
+      "size": 603
+    },
+    {
+      "function": "fcn.00422dc0",
+      "rank": 98,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 19,
+      "size": 255
+    },
+    {
+      "function": "fcn.0041ccd0",
+      "rank": 99,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 21,
+      "size": 507
+    },
+    {
+      "function": "fcn.00421d60",
+      "rank": 100,
+      "batch": "batch4",
+      "status": "signature_error",
+      "signature_valid": false,
+      "has_control_flow": true,
+      "has_provenance": true,
+      "complexity": 30,
+      "size": 584
+    }
+  ],
+  "batch_analysis": {
+    "batch1": {
+      "range": "1-25",
+      "functions_found": 16,
+      "signature_matches": 0,
+      "control_flow_count": 16,
+      "provenance_count": 16,
+      "issues": 16,
+      "quality": 0.0
+    },
+    "batch2": {
+      "range": "26-50",
+      "functions_found": 25,
+      "signature_matches": 1,
+      "control_flow_count": 22,
+      "provenance_count": 25,
+      "issues": 24,
+      "quality": 4.0
+    },
+    "batch3": {
+      "range": "51-75",
+      "functions_found": 25,
+      "signature_matches": 3,
+      "control_flow_count": 21,
+      "provenance_count": 25,
+      "issues": 22,
+      "quality": 12.0
+    },
+    "batch4": {
+      "range": "76-100",
+      "functions_found": 24,
+      "signature_matches": 5,
+      "control_flow_count": 18,
+      "provenance_count": 24,
+      "issues": 19,
+      "quality": 20.8
+    }
+  },
+  "cross_batch_analysis": {
+    "consistency_issues": [
+      {
+        "issue": "INCOMPLETE_SIGNATURES",
+        "description": "Only 9 of 100 functions have correct signatures",
+        "impact": "Interface incompatibility with binary"
+      }
+    ],
+    "quality_breakdown": {
+      "signature_accuracy": 2.6999999999999997,
+      "parameter_compliance": 20.90277777777778,
+      "control_flow": 15.4,
+      "provenance": 13.5,
+      "completeness": 9.0
+    },
+    "batch_metrics": {}
+  }
+}

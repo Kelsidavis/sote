@@ -1,0 +1,1415 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "analysis_date": "2025-09-11T02:15:00Z",
+  "methodology": "stack_frame_and_data_ref_analysis",
+  "structures": [
+    {
+      "name": "local_struct_0041f7a0_291275",
+      "type": "local_variable_struct",
+      "size": 4660412,
+      "fields": [
+        {
+          "name": "arg_471cb4h",
+          "type": "int32_t",
+          "offset": 4660404,
+          "size": 4
+        },
+        {
+          "name": "arg_471cb8h",
+          "type": "int32_t",
+          "offset": 4660408,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0041f7a0"
+    },
+    {
+      "name": "local_struct_0043d3cf_-2",
+      "type": "local_variable_struct",
+      "size": 36,
+      "fields": [
+        {
+          "name": "var_20h",
+          "type": "uint32_t",
+          "offset": 32,
+          "size": 4
+        },
+        {
+          "name": "var_1ch_2",
+          "type": "uint32_t",
+          "offset": 28,
+          "size": 4
+        },
+        {
+          "name": "var_18h",
+          "type": "uint32_t",
+          "offset": 24,
+          "size": 4
+        },
+        {
+          "name": "var_14h_2",
+          "type": "int32_t",
+          "offset": 20,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0043d3cf"
+    },
+    {
+      "name": "local_struct_0043d3cf_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "int32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        },
+        {
+          "name": "var_4h",
+          "type": "int32_t",
+          "offset": 4,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0043d3cf"
+    },
+    {
+      "name": "local_struct_00440adb_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "uint32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "uint32_t",
+          "offset": 12,
+          "size": 4
+        },
+        {
+          "name": "var_8h",
+          "type": "uint32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "var_4h",
+          "type": "int32_t",
+          "offset": 4,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.00440adb"
+    },
+    {
+      "name": "local_struct_004385e4_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "signed int",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004385e4"
+    },
+    {
+      "name": "local_struct_004385e4_0",
+      "type": "local_variable_struct",
+      "size": 16,
+      "fields": [
+        {
+          "name": "arg_8h",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "arg_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004385e4"
+    },
+    {
+      "name": "local_struct_00416200_0",
+      "type": "local_variable_struct",
+      "size": 16,
+      "fields": [
+        {
+          "name": "arg_8h",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "arg_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.00416200"
+    },
+    {
+      "name": "local_struct_00417010_0",
+      "type": "local_variable_struct",
+      "size": 16,
+      "fields": [
+        {
+          "name": "arg_8h",
+          "type": "uint32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "arg_ch",
+          "type": "uint32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.00417010"
+    },
+    {
+      "name": "local_struct_00440c64_-3",
+      "type": "local_variable_struct",
+      "size": 44,
+      "fields": [
+        {
+          "name": "var_28h",
+          "type": "int32_t",
+          "offset": 40,
+          "size": 4
+        },
+        {
+          "name": "var_24h",
+          "type": "int32_t",
+          "offset": 36,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.00440c64"
+    },
+    {
+      "name": "local_struct_00440c64_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "int32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        },
+        {
+          "name": "var_4h",
+          "type": "char *",
+          "offset": 4,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.00440c64"
+    },
+    {
+      "name": "data_struct_0045d310",
+      "type": "global_data_struct",
+      "size": 10,
+      "fields": [
+        {
+          "name": "data",
+          "type": "char[]",
+          "offset": 0,
+          "size": 10
+        }
+      ],
+      "confidence": "low",
+      "provenance": "data_ref_analysis_fcn.00440c64"
+    },
+    {
+      "name": "data_struct_0045d360",
+      "type": "global_data_struct",
+      "size": 17,
+      "fields": [
+        {
+          "name": "data",
+          "type": "char[]",
+          "offset": 0,
+          "size": 17
+        }
+      ],
+      "confidence": "low",
+      "provenance": "data_ref_analysis_fcn.00440c64"
+    },
+    {
+      "name": "data_struct_0045d320",
+      "type": "global_data_struct",
+      "size": 17,
+      "fields": [
+        {
+          "name": "data",
+          "type": "char[]",
+          "offset": 0,
+          "size": 17
+        }
+      ],
+      "confidence": "low",
+      "provenance": "data_ref_analysis_fcn.00440c64"
+    },
+    {
+      "name": "local_struct_004437dc_-2",
+      "type": "local_variable_struct",
+      "size": 28,
+      "fields": [
+        {
+          "name": "var_18h",
+          "type": "int32_t",
+          "offset": 24,
+          "size": 4
+        },
+        {
+          "name": "var_14h",
+          "type": "uint32_t",
+          "offset": 20,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004437dc"
+    },
+    {
+      "name": "local_struct_004437dc_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "uint32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        },
+        {
+          "name": "var_8h",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "var_4h",
+          "type": "uint32_t",
+          "offset": 4,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004437dc"
+    },
+    {
+      "name": "local_struct_004437dc_0",
+      "type": "local_variable_struct",
+      "size": 16,
+      "fields": [
+        {
+          "name": "arg_8h",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "arg_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004437dc"
+    },
+    {
+      "name": "local_struct_0043fcbd_-2",
+      "type": "local_variable_struct",
+      "size": 36,
+      "fields": [
+        {
+          "name": "var_20h",
+          "type": "int32_t",
+          "offset": 32,
+          "size": 4
+        },
+        {
+          "name": "var_1ch",
+          "type": "int32_t",
+          "offset": 28,
+          "size": 4
+        },
+        {
+          "name": "var_18h",
+          "type": "int32_t",
+          "offset": 24,
+          "size": 4
+        },
+        {
+          "name": "var_14h",
+          "type": "int32_t",
+          "offset": 20,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0043fcbd"
+    },
+    {
+      "name": "local_struct_0043fcbd_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "int32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        },
+        {
+          "name": "var_8h",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "var_4h",
+          "type": "int32_t",
+          "offset": 4,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0043fcbd"
+    },
+    {
+      "name": "local_struct_0043fcbd_0",
+      "type": "local_variable_struct",
+      "size": 16,
+      "fields": [
+        {
+          "name": "arg_8h",
+          "type": "uint32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "arg_ch",
+          "type": "uint32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0043fcbd"
+    },
+    {
+      "name": "local_struct_0043fcbd_1",
+      "type": "local_variable_struct",
+      "size": 32,
+      "fields": [
+        {
+          "name": "arg_10h",
+          "type": "uint32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "arg_14h",
+          "type": "uint32_t",
+          "offset": 20,
+          "size": 4
+        },
+        {
+          "name": "arg_18h",
+          "type": "int32_t",
+          "offset": 24,
+          "size": 4
+        },
+        {
+          "name": "arg_1ch",
+          "type": "int32_t",
+          "offset": 28,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.0043fcbd"
+    },
+    {
+      "name": "local_struct_004580af_-2",
+      "type": "local_variable_struct",
+      "size": 32,
+      "fields": [
+        {
+          "name": "var_1ch",
+          "type": "int32_t",
+          "offset": 28,
+          "size": 4
+        },
+        {
+          "name": "var_18h",
+          "type": "int32_t",
+          "offset": 24,
+          "size": 4
+        },
+        {
+          "name": "var_14h",
+          "type": "int32_t",
+          "offset": 20,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004580af"
+    },
+    {
+      "name": "local_struct_004580af_-1",
+      "type": "local_variable_struct",
+      "size": 20,
+      "fields": [
+        {
+          "name": "var_10h",
+          "type": "int32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "var_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        },
+        {
+          "name": "var_4h",
+          "type": "int32_t",
+          "offset": 4,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004580af"
+    },
+    {
+      "name": "local_struct_004580af_0",
+      "type": "local_variable_struct",
+      "size": 16,
+      "fields": [
+        {
+          "name": "arg_8h",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "arg_ch",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004580af"
+    },
+    {
+      "name": "local_struct_004580af_1",
+      "type": "local_variable_struct",
+      "size": 24,
+      "fields": [
+        {
+          "name": "arg_10h",
+          "type": "int32_t",
+          "offset": 16,
+          "size": 4
+        },
+        {
+          "name": "arg_14h",
+          "type": "uint32_t",
+          "offset": 20,
+          "size": 4
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "stack_analysis_fcn.004580af"
+    },
+    {
+      "name": "local_struct_00401041",
+      "type": "local_variable_struct",
+      "size": 556,
+      "fields": [
+        {
+          "name": "var_168h_3",
+          "type": "int32_t",
+          "offset": -360,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_168h_2",
+          "type": "int32_t",
+          "offset": -332,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_13ch",
+          "type": "int32_t",
+          "offset": -316,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_24h_3",
+          "type": "int32_t",
+          "offset": -36,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_1ch_3",
+          "type": "int32_t",
+          "offset": -28,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_20h_4",
+          "type": "int32_t",
+          "offset": -24,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_14h_5",
+          "type": "int32_t",
+          "offset": -20,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_10h_3",
+          "type": "int32_t",
+          "offset": -16,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_14h_4",
+          "type": "int32_t",
+          "offset": -12,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_24h_2",
+          "type": "int32_t",
+          "offset": -8,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_20h_3",
+          "type": "int32_t",
+          "offset": -4,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_1ch_2",
+          "type": "int32_t",
+          "offset": 0,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_20h_2",
+          "type": "int32_t",
+          "offset": 4,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_14h_3",
+          "type": "int32_t",
+          "offset": 8,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_10h_2",
+          "type": "int32_t",
+          "offset": 12,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_14h_2",
+          "type": "int32_t",
+          "offset": 16,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_4h_3",
+          "type": "int32_t",
+          "offset": 24,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_4h_2",
+          "type": "int32_t",
+          "offset": 32,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_168h",
+          "type": "int32_t",
+          "offset": 152,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_28h",
+          "type": "int32_t",
+          "offset": 472,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_24h",
+          "type": "int32_t",
+          "offset": 476,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_20h",
+          "type": "int32_t",
+          "offset": 480,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_1ch",
+          "type": "int32_t",
+          "offset": 484,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_18h",
+          "type": "int32_t",
+          "offset": 488,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_14h",
+          "type": "int32_t",
+          "offset": 492,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_10h",
+          "type": "int32_t",
+          "offset": 496,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        },
+        {
+          "name": "var_4h",
+          "type": "int32_t",
+          "offset": 508,
+          "size": 4,
+          "provenance": "r2_afvd_0x401041"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "stack_analysis_fcn.00401041_from_func_4198465.json"
+    }
+  ],
+  "loader_structures": [
+    {
+      "name": "BITMAPFILEHEADER",
+      "type": "file_format_struct",
+      "size": 14,
+      "alignment": 2,
+      "fields": [
+        {
+          "name": "bfType",
+          "offset": "0x00",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "0x4D42",
+          "description": "Magic number 'BM'",
+          "PROV": "VA_0x4dba3b_constant_0x424D_BMP_magic"
+        },
+        {
+          "name": "bfSize",
+          "offset": "0x02",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "File size in bytes",
+          "PROV": "resource.catalog.json_bitmap_sizes_921654_49208_98360"
+        },
+        {
+          "name": "bfReserved1",
+          "offset": "0x06",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "0",
+          "PROV": "standard_BMP_format_specification"
+        },
+        {
+          "name": "bfReserved2",
+          "offset": "0x08",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "0",
+          "PROV": "standard_BMP_format_specification"
+        },
+        {
+          "name": "bfOffBits",
+          "offset": "0x0A",
+          "size": "0x04",
+          "type": "uint32_t",
+          "value": "54",
+          "description": "Offset to pixel data",
+          "PROV": "resource.catalog.json_bits_offset_54_all_BMPs"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "BMP_format_spec_and_resource_catalog_evidence"
+    },
+    {
+      "name": "BITMAPINFOHEADER",
+      "type": "file_format_struct",
+      "size": 40,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "biSize",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "uint32_t",
+          "value": "40",
+          "description": "Header size",
+          "PROV": "standard_Windows3x_BMP_header_size"
+        },
+        {
+          "name": "biWidth",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "int32_t",
+          "description": "Image width in pixels",
+          "PROV": "resource.catalog.json_640x480_256x64_256x128_dimensions"
+        },
+        {
+          "name": "biHeight",
+          "offset": "0x08",
+          "size": "0x04",
+          "type": "int32_t",
+          "description": "Image height in pixels",
+          "PROV": "resource.catalog.json_640x480_256x64_256x128_dimensions"
+        },
+        {
+          "name": "biPlanes",
+          "offset": "0x0C",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "1",
+          "PROV": "standard_BMP_format_always_1"
+        },
+        {
+          "name": "biBitCount",
+          "offset": "0x0E",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "24",
+          "description": "Bits per pixel",
+          "PROV": "resource.catalog.json_24bit_color_all_BMPs"
+        },
+        {
+          "name": "biCompression",
+          "offset": "0x10",
+          "size": "0x04",
+          "type": "uint32_t",
+          "value": "0",
+          "description": "BI_RGB uncompressed",
+          "PROV": "standard_BMP_BI_RGB_value_0"
+        },
+        {
+          "name": "biSizeImage",
+          "offset": "0x14",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Image data size",
+          "PROV": "resource.catalog.json_image_sizes_921600_49154_98306"
+        },
+        {
+          "name": "biXPelsPerMeter",
+          "offset": "0x18",
+          "size": "0x04",
+          "type": "int32_t",
+          "value": "3790",
+          "PROV": "resource.catalog.json_resolution_3790x3790_or_3788x3788"
+        },
+        {
+          "name": "biYPelsPerMeter",
+          "offset": "0x1C",
+          "size": "0x04",
+          "type": "int32_t",
+          "value": "3790",
+          "PROV": "resource.catalog.json_resolution_3790x3790_or_3788x3788"
+        },
+        {
+          "name": "biClrUsed",
+          "offset": "0x20",
+          "size": "0x04",
+          "type": "uint32_t",
+          "value": "0",
+          "PROV": "standard_24bit_BMP_no_palette"
+        },
+        {
+          "name": "biClrImportant",
+          "offset": "0x24",
+          "size": "0x04",
+          "type": "uint32_t",
+          "value": "0",
+          "PROV": "standard_24bit_BMP_all_colors_important"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "BMP_format_spec_and_resource_catalog_evidence"
+    },
+    {
+      "name": "RIFF_HEADER",
+      "type": "file_format_struct",
+      "size": 12,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "chunkID",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "char[4]",
+          "value": "RIFF",
+          "description": "RIFF magic",
+          "PROV": "resource.catalog.json_RIFF_little_endian_WAV_files"
+        },
+        {
+          "name": "chunkSize",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "File size minus 8",
+          "PROV": "standard_RIFF_format_specification"
+        },
+        {
+          "name": "format",
+          "offset": "0x08",
+          "size": "0x04",
+          "type": "char[4]",
+          "value": "WAVE",
+          "description": "WAVE format",
+          "PROV": "resource.catalog.json_WAVE_audio_format"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "RIFF_WAVE_format_spec_and_resource_catalog"
+    },
+    {
+      "name": "WAVE_FORMAT_CHUNK",
+      "type": "file_format_struct",
+      "size": 24,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "subchunk1ID",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "char[4]",
+          "value": "fmt ",
+          "PROV": "standard_WAVE_format_chunk_ID"
+        },
+        {
+          "name": "subchunk1Size",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "uint32_t",
+          "value": "16",
+          "description": "PCM format chunk size",
+          "PROV": "standard_PCM_format_chunk_size"
+        },
+        {
+          "name": "audioFormat",
+          "offset": "0x08",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "1",
+          "description": "PCM format",
+          "PROV": "resource.catalog.json_Microsoft_PCM_format"
+        },
+        {
+          "name": "numChannels",
+          "offset": "0x0A",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "1",
+          "description": "Mono",
+          "PROV": "resource.catalog.json_mono_all_WAV_files"
+        },
+        {
+          "name": "sampleRate",
+          "offset": "0x0C",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "11025 or 22050 Hz",
+          "PROV": "resource.catalog.json_11025Hz_22050Hz_sample_rates"
+        },
+        {
+          "name": "byteRate",
+          "offset": "0x10",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "SampleRate * NumChannels * BitsPerSample/8",
+          "PROV": "standard_WAVE_byte_rate_calculation"
+        },
+        {
+          "name": "blockAlign",
+          "offset": "0x14",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "2",
+          "description": "NumChannels * BitsPerSample/8",
+          "PROV": "16bit_mono_2byte_blocks"
+        },
+        {
+          "name": "bitsPerSample",
+          "offset": "0x16",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "16",
+          "PROV": "resource.catalog.json_16bit_all_WAV_files"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "WAVE_format_spec_and_resource_catalog"
+    },
+    {
+      "name": "WAVE_DATA_CHUNK",
+      "type": "file_format_struct",
+      "size": 8,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "subchunk2ID",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "char[4]",
+          "value": "data",
+          "PROV": "standard_WAVE_data_chunk_ID"
+        },
+        {
+          "name": "subchunk2Size",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Audio data size",
+          "PROV": "varies_per_file_see_resource_catalog"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "WAVE_format_specification"
+    },
+    {
+      "name": "PE_DOS_HEADER",
+      "type": "file_format_struct",
+      "size": 64,
+      "alignment": 2,
+      "fields": [
+        {
+          "name": "e_magic",
+          "offset": "0x00",
+          "size": "0x02",
+          "type": "uint16_t",
+          "value": "0x5A4D",
+          "description": "MZ signature",
+          "PROV": "standard_PE_DOS_header_magic"
+        },
+        {
+          "name": "e_cblp",
+          "offset": "0x02",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_cp",
+          "offset": "0x04",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_crlc",
+          "offset": "0x06",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_cparhdr",
+          "offset": "0x08",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_minalloc",
+          "offset": "0x0A",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_maxalloc",
+          "offset": "0x0C",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_ss",
+          "offset": "0x0E",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_sp",
+          "offset": "0x10",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_csum",
+          "offset": "0x12",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_ip",
+          "offset": "0x14",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_cs",
+          "offset": "0x16",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_lfarlc",
+          "offset": "0x18",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_ovno",
+          "offset": "0x1A",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_res",
+          "offset": "0x1C",
+          "size": "0x08",
+          "type": "uint16_t[4]",
+          "PROV": "standard_PE_DOS_header_reserved"
+        },
+        {
+          "name": "e_oemid",
+          "offset": "0x24",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_oeminfo",
+          "offset": "0x26",
+          "size": "0x02",
+          "type": "uint16_t",
+          "PROV": "standard_PE_DOS_header_field"
+        },
+        {
+          "name": "e_res2",
+          "offset": "0x28",
+          "size": "0x14",
+          "type": "uint16_t[10]",
+          "PROV": "standard_PE_DOS_header_reserved"
+        },
+        {
+          "name": "e_lfanew",
+          "offset": "0x3C",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Offset to PE header",
+          "PROV": "standard_PE_DOS_header_PE_offset"
+        }
+      ],
+      "confidence": "high",
+      "provenance": "PE_format_specification"
+    },
+    {
+      "name": "FILE_HANDLE",
+      "type": "runtime_struct",
+      "size": 24,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "hFile",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "HANDLE",
+          "description": "Windows file handle",
+          "PROV": "CreateFileA_return_value_storage"
+        },
+        {
+          "name": "fileSize",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "File size in bytes",
+          "PROV": "GetFileSize_result_storage"
+        },
+        {
+          "name": "currentPos",
+          "offset": "0x08",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Current read position",
+          "PROV": "SetFilePointer_tracking"
+        },
+        {
+          "name": "buffer",
+          "offset": "0x0C",
+          "size": "0x04",
+          "type": "void*",
+          "description": "Read buffer pointer",
+          "PROV": "ReadFile_buffer_parameter"
+        },
+        {
+          "name": "bufferSize",
+          "offset": "0x10",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Buffer size",
+          "PROV": "HeapAlloc_size_parameter"
+        },
+        {
+          "name": "lastError",
+          "offset": "0x14",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Last error code",
+          "PROV": "GetLastError_result_storage"
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "inferred_from_API_usage_patterns"
+    },
+    {
+      "name": "DLL_LOADER_CONTEXT",
+      "type": "runtime_struct",
+      "size": 20,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "hModule",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "HMODULE",
+          "description": "DLL module handle",
+          "PROV": "LoadLibraryA_return_value_VA_0x4c450c"
+        },
+        {
+          "name": "dllName",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "char*",
+          "description": "DLL name pointer",
+          "PROV": "LoadLibraryA_parameter_data00_data31_dlls"
+        },
+        {
+          "name": "refCount",
+          "offset": "0x08",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Reference count",
+          "PROV": "common_DLL_reference_counting_pattern"
+        },
+        {
+          "name": "loadFlags",
+          "offset": "0x0C",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Load flags",
+          "PROV": "LoadLibraryEx_flags_if_used"
+        },
+        {
+          "name": "procAddress",
+          "offset": "0x10",
+          "size": "0x04",
+          "type": "void*",
+          "description": "GetProcAddress result",
+          "PROV": "GetProcAddress_return_value_storage"
+        }
+      ],
+      "confidence": "medium",
+      "provenance": "inferred_from_DLL_loading_patterns"
+    },
+    {
+      "name": "SAN_MOVIE_HEADER",
+      "type": "file_format_struct",
+      "size": 128,
+      "alignment": 4,
+      "fields": [
+        {
+          "name": "signature",
+          "offset": "0x00",
+          "size": "0x04",
+          "type": "char[4]",
+          "description": "SAN signature",
+          "PROV": "LucasArts_SAN_format_UNKNOWN_need_file_analysis"
+        },
+        {
+          "name": "version",
+          "offset": "0x04",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Format version",
+          "PROV": "UNKNOWN_need_SAN_file_header_analysis"
+        },
+        {
+          "name": "frameCount",
+          "offset": "0x08",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Number of frames",
+          "PROV": "UNKNOWN_need_SAN_file_analysis"
+        },
+        {
+          "name": "width",
+          "offset": "0x0C",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Video width",
+          "PROV": "UNKNOWN_need_SAN_file_analysis"
+        },
+        {
+          "name": "height",
+          "offset": "0x10",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Video height",
+          "PROV": "UNKNOWN_need_SAN_file_analysis"
+        },
+        {
+          "name": "fps",
+          "offset": "0x14",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Frames per second",
+          "PROV": "UNKNOWN_need_SAN_file_analysis"
+        },
+        {
+          "name": "audioFormat",
+          "offset": "0x18",
+          "size": "0x04",
+          "type": "uint32_t",
+          "description": "Audio format flags",
+          "PROV": "UNKNOWN_need_SAN_file_analysis"
+        },
+        {
+          "name": "reserved",
+          "offset": "0x1C",
+          "size": "0x64",
+          "type": "uint8_t[100]",
+          "description": "Reserved/unknown fields",
+          "PROV": "UNKNOWN_need_SAN_format_documentation"
+        }
+      ],
+      "confidence": "low",
+      "provenance": "speculative_LucasArts_SAN_format_needs_evidence"
+    }
+  ]
+}

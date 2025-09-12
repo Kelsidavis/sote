@@ -1,0 +1,2683 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "symbols": {
+    "functions": {
+      "4279744": {
+        "original_name": "entry0",
+        "mapped_name": "entry_point",
+        "description": "Program entry point",
+        "confidence": "high",
+        "signature": "void entry_point(void)"
+      },
+      "4377150": {
+        "original_name": "main",
+        "mapped_name": "main",
+        "description": "Main function",
+        "confidence": "high",
+        "signature": "int main(char **argv, char **envp, int32_t envp)"
+      },
+      "4482206": {
+        "original_name": "fcn.0044649e",
+        "mapped_name": "game_main_loop",
+        "description": "Main game loop handler",
+        "confidence": "medium",
+        "signature": "int game_main_loop(char **argv, char **envp, int32_t argc, int32_t flags)"
+      },
+      "4444842": {
+        "original_name": "fcn.0043d2aa",
+        "mapped_name": "memory_allocator",
+        "description": "Memory allocation wrapper",
+        "confidence": "medium",
+        "signature": "void* memory_allocator(int32_t size, int32_t flags)"
+      },
+      "4284632": {
+        "original_name": "fcn.004160d8",
+        "mapped_name": "fcn.004160d8",
+        "description": "Expansion function (rank 2, hotness 107.7)",
+        "confidence": "medium",
+        "signature": "fcn.004160d8 (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 2,
+          "hotness_score": 107.724,
+          "connectivity": 215,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4446520": {
+        "original_name": "fcn.0043d938",
+        "mapped_name": "error_handler",
+        "description": "Generic error handler",
+        "confidence": "medium",
+        "signature": "void error_handler(void)"
+      },
+      "4461941": {
+        "original_name": "fcn.00441575",
+        "mapped_name": "system_info_getter",
+        "description": "System information retrieval",
+        "confidence": "medium",
+        "signature": "void system_info_getter(void)"
+      },
+      "4284544": {
+        "original_name": "fcn.00416080",
+        "mapped_name": "fcn.00416080",
+        "description": "Expansion function (rank 16, hotness 22.7)",
+        "confidence": "medium",
+        "signature": "fcn.00416080 (int32_t arg_4h, int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 16,
+          "hotness_score": 22.702,
+          "connectivity": 43,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4463569": {
+        "original_name": "fcn.00441bd1",
+        "mapped_name": "fcn.00441bd1",
+        "description": "Expansion function (rank 7, hotness 52.1)",
+        "confidence": "medium",
+        "signature": "fcn.00441bd1 ();",
+        "expansion_metadata": {
+          "batch_rank": 7,
+          "hotness_score": 52.124,
+          "connectivity": 104,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4463563": {
+        "original_name": "fcn.00441bcb",
+        "mapped_name": "exit_handler",
+        "description": "Program exit handler",
+        "confidence": "low",
+        "signature": "void exit_handler(void)"
+      },
+      "4463920": {
+        "original_name": "fcn.00441d30",
+        "mapped_name": "fcn.00441d30",
+        "description": "Expansion function (rank 1, hotness 127.3)",
+        "confidence": "medium",
+        "signature": "fcn.00441d30 ();",
+        "expansion_metadata": {
+          "batch_rank": 1,
+          "hotness_score": 127.256,
+          "connectivity": 254,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4548172": {
+        "original_name": "fcn.0045664c",
+        "mapped_name": "fcn.0045664c",
+        "description": "Expansion function (rank 3, hotness 76.6)",
+        "confidence": "medium",
+        "signature": "fcn.0045664c ();",
+        "expansion_metadata": {
+          "batch_rank": 3,
+          "hotness_score": 76.634,
+          "connectivity": 153,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4282832": {
+        "original_name": "fcn.004159d0",
+        "mapped_name": "fcn.004159d0",
+        "description": "Expansion function (rank 4, hotness 75.6)",
+        "confidence": "medium",
+        "signature": "fcn.004159d0 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 4,
+          "hotness_score": 75.62,
+          "connectivity": 151,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4285840": {
+        "original_name": "fcn.00416590",
+        "mapped_name": "fcn.00416590",
+        "description": "Expansion function (rank 5, hotness 55.2)",
+        "confidence": "medium",
+        "signature": "fcn.00416590 (int32_t arg_4h, int32_t arg_1ch, signed int arg_20h, int32_t arg_24h);",
+        "expansion_metadata": {
+          "batch_rank": 5,
+          "hotness_score": 55.224000000000004,
+          "connectivity": 105,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4353744": {
+        "original_name": "fcn.00426ed0",
+        "mapped_name": "fcn.00426ed0",
+        "description": "Expansion function (rank 6, hotness 54.1)",
+        "confidence": "medium",
+        "signature": "fcn.00426ed0 (int32_t arg_4h, int32_t arg_9ch_2, int32_t arg_9ch, int32_t arg_a0h);",
+        "expansion_metadata": {
+          "batch_rank": 6,
+          "hotness_score": 54.10999999999999,
+          "connectivity": 105,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4304016": {
+        "original_name": "fcn.0041ac90",
+        "mapped_name": "fcn.0041ac90",
+        "description": "Expansion function (rank 8, hotness 25.0)",
+        "confidence": "medium",
+        "signature": "fcn.0041ac90 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 8,
+          "hotness_score": 25.0,
+          "connectivity": 47,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4379840": {
+        "original_name": "fcn.0042d4c0",
+        "mapped_name": "fcn.0042d4c0",
+        "description": "Expansion function (rank 9, hotness 24.5)",
+        "confidence": "medium",
+        "signature": "fcn.0042d4c0 (int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 9,
+          "hotness_score": 24.540000000000003,
+          "connectivity": 46,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4513886": {
+        "original_name": "fcn.0044e05e",
+        "mapped_name": "fcn.0044e05e",
+        "description": "Expansion function (rank 10, hotness 24.1)",
+        "confidence": "medium",
+        "signature": "fcn.0044e05e (int32_t arg_8h, int32_t arg_10h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 10,
+          "hotness_score": 24.119999999999997,
+          "connectivity": 47,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4474031": {
+        "original_name": "fcn.004444af",
+        "mapped_name": "fcn.004444af",
+        "description": "Expansion function (rank 11, hotness 24.0)",
+        "confidence": "medium",
+        "signature": "fcn.004444af (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 11,
+          "hotness_score": 23.988000000000003,
+          "connectivity": 48,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4517373": {
+        "original_name": "fcn.0044edfd",
+        "mapped_name": "fcn.0044edfd",
+        "description": "Expansion function (rank 12, hotness 23.3)",
+        "confidence": "medium",
+        "signature": "fcn.0044edfd (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, signed int arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 12,
+          "hotness_score": 23.256,
+          "connectivity": 44,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4284752": {
+        "original_name": "fcn.00416150",
+        "mapped_name": "fcn.00416150",
+        "description": "Expansion function (rank 13, hotness 23.2)",
+        "confidence": "medium",
+        "signature": "fcn.00416150 (int32_t arg_4h, int32_t arg_10h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 13,
+          "hotness_score": 23.206000000000003,
+          "connectivity": 41,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4480863": {
+        "original_name": "fcn.00445f5f",
+        "mapped_name": "fcn.00445f5f",
+        "description": "Expansion function (rank 14, hotness 23.2)",
+        "confidence": "medium",
+        "signature": "fcn.00445f5f (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 14,
+          "hotness_score": 23.168,
+          "connectivity": 34,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4319344": {
+        "original_name": "fcn.0041e870",
+        "mapped_name": "fcn.0041e870",
+        "description": "Expansion function (rank 15, hotness 23.0)",
+        "confidence": "medium",
+        "signature": "fcn.0041e870 (int32_t arg_1ch, int32_t arg_20h_2, int32_t arg_20h, int32_t arg_24h, int32_t arg_28h);",
+        "expansion_metadata": {
+          "batch_rank": 15,
+          "hotness_score": 23.024,
+          "connectivity": 43,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4456746": {
+        "original_name": "fcn.0044012a",
+        "mapped_name": "fcn.0044012a",
+        "description": "Expansion function (rank 17, hotness 22.4)",
+        "confidence": "medium",
+        "signature": "fcn.0044012a (int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 17,
+          "hotness_score": 22.43,
+          "connectivity": 43,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4375776": {
+        "original_name": "fcn.0042c4e0",
+        "mapped_name": "fcn.0042c4e0",
+        "description": "Expansion function (rank 18, hotness 22.4)",
+        "confidence": "medium",
+        "signature": "fcn.0042c4e0 (int32_t arg_20h, int32_t arg_30h, int32_t arg_14h, int32_t arg_30h_2);",
+        "expansion_metadata": {
+          "batch_rank": 18,
+          "hotness_score": 22.396,
+          "connectivity": 41,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4478822": {
+        "original_name": "fcn.00445766",
+        "mapped_name": "fcn.00445766",
+        "description": "Expansion function (rank 19, hotness 22.4)",
+        "confidence": "medium",
+        "signature": "fcn.00445766 (int32_t arg_8h, signed int arg_ch, uint32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 19,
+          "hotness_score": 22.387999999999998,
+          "connectivity": 44,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4355008": {
+        "original_name": "fcn.004273c0",
+        "mapped_name": "fcn.004273c0",
+        "description": "Expansion function (rank 20, hotness 22.3)",
+        "confidence": "medium",
+        "signature": "fcn.004273c0 (int32_t arg_18h_2, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h);",
+        "expansion_metadata": {
+          "batch_rank": 20,
+          "hotness_score": 22.278000000000002,
+          "connectivity": 41,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454498": {
+        "original_name": "fcn.0043f862",
+        "mapped_name": "fcn.0043f862",
+        "description": "Expansion function (rank 21, hotness 22.2)",
+        "confidence": "medium",
+        "signature": "fcn.0043f862 (int32_t arg_14h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 21,
+          "hotness_score": 22.233999999999998,
+          "connectivity": 43,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4299792": {
+        "original_name": "fcn.00419c10",
+        "mapped_name": "fcn.00419c10",
+        "description": "Expansion function (rank 22, hotness 22.2)",
+        "confidence": "medium",
+        "signature": "fcn.00419c10 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 22,
+          "hotness_score": 22.214000000000002,
+          "connectivity": 41,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4465825": {
+        "original_name": "fcn.004424a1",
+        "mapped_name": "fcn.004424a1",
+        "description": "Expansion function (rank 23, hotness 22.0)",
+        "confidence": "medium",
+        "signature": "fcn.004424a1 (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 23,
+          "hotness_score": 21.972,
+          "connectivity": 43,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4324416": {
+        "original_name": "fcn.0041fc40",
+        "mapped_name": "fcn.0041fc40",
+        "description": "Expansion function (rank 24, hotness 21.8)",
+        "confidence": "medium",
+        "signature": "fcn.0041fc40 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 24,
+          "hotness_score": 21.788000000000004,
+          "connectivity": 39,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4281072": {
+        "original_name": "fcn.004152f0",
+        "mapped_name": "fcn.004152f0",
+        "description": "Expansion function (rank 25, hotness 21.6)",
+        "confidence": "medium",
+        "signature": "fcn.004152f0 (int32_t arg_4h, signed int arg_1ch_2, int32_t arg_1ch, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 25,
+          "hotness_score": 21.568,
+          "connectivity": 38,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4532230": {
+        "original_name": "fcn.00452806",
+        "mapped_name": "fcn.00452806",
+        "description": "Expansion function (rank 26, hotness 21.4)",
+        "confidence": "medium",
+        "signature": "fcn.00452806 (int32_t arg_8h, uint32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 26,
+          "hotness_score": 21.384,
+          "connectivity": 42,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4496732": {
+        "original_name": "fcn.00449d5c",
+        "mapped_name": "fcn.00449d5c",
+        "description": "Expansion function (rank 27, hotness 21.1)",
+        "confidence": "medium",
+        "signature": "fcn.00449d5c ();",
+        "expansion_metadata": {
+          "batch_rank": 27,
+          "hotness_score": 21.114,
+          "connectivity": 42,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4367184": {
+        "original_name": "fcn.0042a350",
+        "mapped_name": "fcn.0042a350",
+        "description": "Expansion function (rank 28, hotness 21.1)",
+        "confidence": "medium",
+        "signature": "fcn.0042a350 ();",
+        "expansion_metadata": {
+          "batch_rank": 28,
+          "hotness_score": 21.104,
+          "connectivity": 39,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4549771": {
+        "original_name": "fcn.00456c8b",
+        "mapped_name": "fcn.00456c8b",
+        "description": "Expansion function (rank 29, hotness 20.9)",
+        "confidence": "medium",
+        "signature": "fcn.00456c8b ();",
+        "expansion_metadata": {
+          "batch_rank": 29,
+          "hotness_score": 20.936000000000003,
+          "connectivity": 41,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4317600": {
+        "original_name": "fcn.0041e1a0",
+        "mapped_name": "fcn.0041e1a0",
+        "description": "Expansion function (rank 30, hotness 20.9)",
+        "confidence": "medium",
+        "signature": "fcn.0041e1a0 (int32_t arg_8h_2, int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 30,
+          "hotness_score": 20.936,
+          "connectivity": 36,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4302880": {
+        "original_name": "fcn.0041a820",
+        "mapped_name": "fcn.0041a820",
+        "description": "Expansion function (rank 31, hotness 20.8)",
+        "confidence": "medium",
+        "signature": "fcn.0041a820 (int32_t arg_4h, int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 31,
+          "hotness_score": 20.822,
+          "connectivity": 40,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4354704": {
+        "original_name": "fcn.00427290",
+        "mapped_name": "fcn.00427290",
+        "description": "Expansion function (rank 32, hotness 20.8)",
+        "confidence": "medium",
+        "signature": "fcn.00427290 (int32_t arg_18h_2, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h);",
+        "expansion_metadata": {
+          "batch_rank": 32,
+          "hotness_score": 20.772000000000002,
+          "connectivity": 38,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4317002": {
+        "original_name": "fcn.0041df4a",
+        "mapped_name": "fcn.0041df4a",
+        "description": "Expansion function (rank 33, hotness 20.6)",
+        "confidence": "medium",
+        "signature": "fcn.0041df4a (int32_t arg_8h, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 33,
+          "hotness_score": 20.631999999999998,
+          "connectivity": 39,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4449560": {
+        "original_name": "fcn.0043e518",
+        "mapped_name": "fcn.0043e518",
+        "description": "Expansion function (rank 34, hotness 20.5)",
+        "confidence": "medium",
+        "signature": "fcn.0043e518 ();",
+        "expansion_metadata": {
+          "batch_rank": 34,
+          "hotness_score": 20.516000000000002,
+          "connectivity": 40,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4291728": {
+        "original_name": "fcn.00417c90",
+        "mapped_name": "fcn.00417c90",
+        "description": "Expansion function (rank 35, hotness 20.4)",
+        "confidence": "medium",
+        "signature": "fcn.00417c90 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 35,
+          "hotness_score": 20.382,
+          "connectivity": 37,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4356960": {
+        "original_name": "fcn.00427b60",
+        "mapped_name": "fcn.00427b60",
+        "description": "Expansion function (rank 36, hotness 20.3)",
+        "confidence": "medium",
+        "signature": "fcn.00427b60 (int32_t arg_18h, int32_t arg_1ch, int32_t arg_1eh, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 36,
+          "hotness_score": 20.27,
+          "connectivity": 37,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4471755": {
+        "original_name": "fcn.00443bcb",
+        "mapped_name": "fcn.00443bcb",
+        "description": "Expansion function (rank 37, hotness 20.2)",
+        "confidence": "medium",
+        "signature": "fcn.00443bcb (uint32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 37,
+          "hotness_score": 20.248,
+          "connectivity": 40,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4329856": {
+        "original_name": "fcn.00421180",
+        "mapped_name": "fcn.00421180",
+        "description": "Expansion function (rank 38, hotness 20.1)",
+        "confidence": "medium",
+        "signature": "fcn.00421180 ();",
+        "expansion_metadata": {
+          "batch_rank": 38,
+          "hotness_score": 20.076,
+          "connectivity": 39,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4266630": {
+        "original_name": "fcn.00411a86",
+        "mapped_name": "fcn.00411a86",
+        "description": "Expansion function (rank 39, hotness 20.0)",
+        "confidence": "medium",
+        "signature": "fcn.00411a86 (uint32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 39,
+          "hotness_score": 19.976000000000003,
+          "connectivity": 41,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4328512": {
+        "original_name": "fcn.00420c40",
+        "mapped_name": "fcn.00420c40",
+        "description": "Expansion function (rank 40, hotness 19.9)",
+        "confidence": "medium",
+        "signature": "fcn.00420c40 (int32_t arg_4h, int32_t arg_30h, int32_t arg_3ch);",
+        "expansion_metadata": {
+          "batch_rank": 40,
+          "hotness_score": 19.896,
+          "connectivity": 40,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4336366": {
+        "original_name": "fcn.00422aee",
+        "mapped_name": "fcn.00422aee",
+        "description": "Expansion function (rank 41, hotness 19.8)",
+        "confidence": "medium",
+        "signature": "fcn.00422aee (int32_t arg_14h, int32_t arg_16h, int32_t arg_18h, int32_t arg_2ch, int32_t arg_2eh, int32_t arg_30h, int32_t arg_34h, int32_t arg_38h, int32_t arg_3ch);",
+        "expansion_metadata": {
+          "batch_rank": 41,
+          "hotness_score": 19.822,
+          "connectivity": 36,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4299472": {
+        "original_name": "fcn.00419ad0",
+        "mapped_name": "fcn.00419ad0",
+        "description": "Expansion function (rank 42, hotness 19.7)",
+        "confidence": "medium",
+        "signature": "fcn.00419ad0 ();",
+        "expansion_metadata": {
+          "batch_rank": 42,
+          "hotness_score": 19.732,
+          "connectivity": 40,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4366336": {
+        "original_name": "fcn.0042a000",
+        "mapped_name": "fcn.0042a000",
+        "description": "Expansion function (rank 43, hotness 19.7)",
+        "confidence": "medium",
+        "signature": "fcn.0042a000 (int32_t arg_50h_2, int32_t arg_58h, int32_t arg_5ch_2, int32_t arg_5ch, uint32_t arg_50h);",
+        "expansion_metadata": {
+          "batch_rank": 43,
+          "hotness_score": 19.677999999999997,
+          "connectivity": 40,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4547472": {
+        "original_name": "fcn.00456390",
+        "mapped_name": "fcn.00456390",
+        "description": "Expansion function (rank 44, hotness 19.5)",
+        "confidence": "medium",
+        "signature": "fcn.00456390 ();",
+        "expansion_metadata": {
+          "batch_rank": 44,
+          "hotness_score": 19.537999999999997,
+          "connectivity": 42,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4464036": {
+        "original_name": "fcn.00441da4",
+        "mapped_name": "fcn.00441da4",
+        "description": "Expansion function (rank 45, hotness 19.5)",
+        "confidence": "medium",
+        "signature": "fcn.00441da4 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 45,
+          "hotness_score": 19.52,
+          "connectivity": 39,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4348400": {
+        "original_name": "fcn.004259f0",
+        "mapped_name": "fcn.004259f0",
+        "description": "Expansion function (rank 46, hotness 19.4)",
+        "confidence": "medium",
+        "signature": "fcn.004259f0 (int32_t arg_1ch, int32_t arg_1ch_2, int32_t arg_18h, int32_t arg_1018h, int32_t arg_1020h);",
+        "expansion_metadata": {
+          "batch_rank": 46,
+          "hotness_score": 19.408,
+          "connectivity": 39,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4447357": {
+        "original_name": "fcn.0043dc7d",
+        "mapped_name": "fcn.0043dc7d",
+        "description": "Expansion function (rank 47, hotness 19.1)",
+        "confidence": "medium",
+        "signature": "fcn.0043dc7d ();",
+        "expansion_metadata": {
+          "batch_rank": 47,
+          "hotness_score": 19.14,
+          "connectivity": 38,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4516653": {
+        "original_name": "fcn.0044eb2d",
+        "mapped_name": "fcn.0044eb2d",
+        "description": "Expansion function (rank 48, hotness 19.1)",
+        "confidence": "medium",
+        "signature": "fcn.0044eb2d (int32_t arg_ch_3, int32_t arg_ch_2, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 48,
+          "hotness_score": 19.13,
+          "connectivity": 38,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4258848": {
+        "original_name": "fcn.0040fc20",
+        "mapped_name": "fcn.0040fc20",
+        "description": "Expansion function (rank 49, hotness 19.1)",
+        "confidence": "medium",
+        "signature": "fcn.0040fc20 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 49,
+          "hotness_score": 19.104,
+          "connectivity": 35,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4335670": {
+        "original_name": "fcn.00422836",
+        "mapped_name": "fcn.00422836",
+        "description": "Expansion function (rank 50, hotness 18.9)",
+        "confidence": "medium",
+        "signature": "fcn.00422836 (int32_t arg_14h, int32_t arg_16h, int32_t arg_18h, int32_t arg_2ch, int32_t arg_2eh, int32_t arg_30h, int32_t arg_34h, int32_t arg_38h, int32_t arg_3ch);",
+        "expansion_metadata": {
+          "batch_rank": 50,
+          "hotness_score": 18.921999999999997,
+          "connectivity": 34,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4363552": {
+        "original_name": "fcn.00429520",
+        "mapped_name": "fcn.00429520",
+        "description": "Expansion function (rank 51, hotness 18.9)",
+        "confidence": "medium",
+        "signature": "fcn.00429520 (int32_t arg_28h, uint32_t arg_24h, int32_t arg_30h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 51,
+          "hotness_score": 18.876,
+          "connectivity": 37,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4279488": {
+        "original_name": "fcn.00414cc0",
+        "mapped_name": "fcn.00414cc0",
+        "description": "Expansion function (rank 52, hotness 18.6)",
+        "confidence": "medium",
+        "signature": "fcn.00414cc0 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 52,
+          "hotness_score": 18.636000000000003,
+          "connectivity": 34,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4303808": {
+        "original_name": "fcn.0041abc0",
+        "mapped_name": "fcn.0041abc0",
+        "description": "Expansion function (rank 53, hotness 18.6)",
+        "confidence": "medium",
+        "signature": "fcn.0041abc0 (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 53,
+          "hotness_score": 18.612000000000002,
+          "connectivity": 36,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4321872": {
+        "original_name": "fcn.0041f250",
+        "mapped_name": "fcn.0041f250",
+        "description": "Expansion function (rank 54, hotness 18.6)",
+        "confidence": "medium",
+        "signature": "fcn.0041f250 (uint32_t arg_18h, uint32_t arg_ch_2, int32_t arg_ch, int32_t arg_24h, int32_t arg_28h, signed int arg_2ch, int32_t arg_30h, int32_t arg_34h, int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h);",
+        "expansion_metadata": {
+          "batch_rank": 54,
+          "hotness_score": 18.57,
+          "connectivity": 35,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4327456": {
+        "original_name": "fcn.00420820",
+        "mapped_name": "fcn.00420820",
+        "description": "Expansion function (rank 55, hotness 18.5)",
+        "confidence": "medium",
+        "signature": "fcn.00420820 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 55,
+          "hotness_score": 18.536,
+          "connectivity": 35,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4327632": {
+        "original_name": "fcn.004208d0",
+        "mapped_name": "fcn.004208d0",
+        "description": "Expansion function (rank 56, hotness 18.5)",
+        "confidence": "medium",
+        "signature": "fcn.004208d0 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 56,
+          "hotness_score": 18.532,
+          "connectivity": 35,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4280576": {
+        "original_name": "fcn.00415100",
+        "mapped_name": "fcn.00415100",
+        "description": "Expansion function (rank 57, hotness 18.5)",
+        "confidence": "medium",
+        "signature": "fcn.00415100 (int32_t arg_4h, signed int arg_1ch, int32_t arg_18h, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 57,
+          "hotness_score": 18.514,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4319792": {
+        "original_name": "fcn.0041ea30",
+        "mapped_name": "fcn.0041ea30",
+        "description": "Expansion function (rank 58, hotness 18.1)",
+        "confidence": "medium",
+        "signature": "fcn.0041ea30 (int32_t arg_1ch, int32_t arg_20h_2, int32_t arg_20h, int32_t arg_24h, int32_t arg_28h, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 58,
+          "hotness_score": 18.112000000000002,
+          "connectivity": 34,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4313696": {
+        "original_name": "fcn.0041d260",
+        "mapped_name": "fcn.0041d260",
+        "description": "Expansion function (rank 59, hotness 18.1)",
+        "confidence": "medium",
+        "signature": "fcn.0041d260 ();",
+        "expansion_metadata": {
+          "batch_rank": 59,
+          "hotness_score": 18.088,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4367904": {
+        "original_name": "fcn.0042a620",
+        "mapped_name": "fcn.0042a620",
+        "description": "Expansion function (rank 60, hotness 18.0)",
+        "confidence": "medium",
+        "signature": "fcn.0042a620 (uint32_t arg_40h);",
+        "expansion_metadata": {
+          "batch_rank": 60,
+          "hotness_score": 18.018,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4449870": {
+        "original_name": "fcn.0043e64e",
+        "mapped_name": "fcn.0043e64e",
+        "description": "Expansion function (rank 61, hotness 18.0)",
+        "confidence": "medium",
+        "signature": "fcn.0043e64e ();",
+        "expansion_metadata": {
+          "batch_rank": 61,
+          "hotness_score": 18.006,
+          "connectivity": 36,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4505022": {
+        "original_name": "fcn.0044bdbe",
+        "mapped_name": "fcn.0044bdbe",
+        "description": "Expansion function (rank 62, hotness 17.8)",
+        "confidence": "medium",
+        "signature": "fcn.0044bdbe (int32_t arg_8h, uint32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 62,
+          "hotness_score": 17.782,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4517658": {
+        "original_name": "fcn.0044ef1a",
+        "mapped_name": "fcn.0044ef1a",
+        "description": "Expansion function (rank 63, hotness 17.7)",
+        "confidence": "medium",
+        "signature": "fcn.0044ef1a ();",
+        "expansion_metadata": {
+          "batch_rank": 63,
+          "hotness_score": 17.718,
+          "connectivity": 35,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4310224": {
+        "original_name": "fcn.0041c4d0",
+        "mapped_name": "fcn.0041c4d0",
+        "description": "Expansion function (rank 64, hotness 17.7)",
+        "confidence": "medium",
+        "signature": "fcn.0041c4d0 (int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 64,
+          "hotness_score": 17.701999999999998,
+          "connectivity": 34,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4465234": {
+        "original_name": "fcn.00442252",
+        "mapped_name": "fcn.00442252",
+        "description": "Expansion function (rank 65, hotness 17.6)",
+        "confidence": "medium",
+        "signature": "fcn.00442252 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 65,
+          "hotness_score": 17.644000000000002,
+          "connectivity": 35,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4519589": {
+        "original_name": "fcn.0044f6a5",
+        "mapped_name": "fcn.0044f6a5",
+        "description": "Expansion function (rank 66, hotness 17.5)",
+        "confidence": "medium",
+        "signature": "fcn.0044f6a5 (int32_t arg_8h, uint32_t arg_ch, uint32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 66,
+          "hotness_score": 17.51,
+          "connectivity": 36,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4285488": {
+        "original_name": "fcn.00416430",
+        "mapped_name": "fcn.00416430",
+        "description": "Expansion function (rank 67, hotness 17.5)",
+        "confidence": "medium",
+        "signature": "fcn.00416430 (int32_t arg_18h, int32_t arg_18h_2);",
+        "expansion_metadata": {
+          "batch_rank": 67,
+          "hotness_score": 17.494,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4287520": {
+        "original_name": "fcn.00416c20",
+        "mapped_name": "fcn.00416c20",
+        "description": "Expansion function (rank 68, hotness 17.5)",
+        "confidence": "medium",
+        "signature": "fcn.00416c20 (int32_t arg_18h, int32_t arg_18h_2);",
+        "expansion_metadata": {
+          "batch_rank": 68,
+          "hotness_score": 17.492,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4287696": {
+        "original_name": "fcn.00416cd0",
+        "mapped_name": "fcn.00416cd0",
+        "description": "Expansion function (rank 69, hotness 17.5)",
+        "confidence": "medium",
+        "signature": "fcn.00416cd0 (int32_t arg_18h, int32_t arg_18h_2);",
+        "expansion_metadata": {
+          "batch_rank": 69,
+          "hotness_score": 17.492,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4318400": {
+        "original_name": "fcn.0041e4c0",
+        "mapped_name": "fcn.0041e4c0",
+        "description": "Expansion function (rank 70, hotness 17.5)",
+        "confidence": "medium",
+        "signature": "fcn.0041e4c0 (signed int arg_10h_2, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 70,
+          "hotness_score": 17.490000000000002,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4293568": {
+        "original_name": "fcn.004183c0",
+        "mapped_name": "fcn.004183c0",
+        "description": "Expansion function (rank 71, hotness 17.1)",
+        "confidence": "medium",
+        "signature": "fcn.004183c0 (int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h, int32_t arg_28h, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 71,
+          "hotness_score": 17.137999999999998,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4314160": {
+        "original_name": "fcn.0041d430",
+        "mapped_name": "fcn.0041d430",
+        "description": "Expansion function (rank 72, hotness 17.1)",
+        "confidence": "medium",
+        "signature": "fcn.0041d430 (signed int arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 72,
+          "hotness_score": 17.076,
+          "connectivity": 31,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4310432": {
+        "original_name": "fcn.0041c5a0",
+        "mapped_name": "fcn.0041c5a0",
+        "description": "Expansion function (rank 73, hotness 16.9)",
+        "confidence": "medium",
+        "signature": "fcn.0041c5a0 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 73,
+          "hotness_score": 16.922,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4364048": {
+        "original_name": "fcn.00429710",
+        "mapped_name": "fcn.00429710",
+        "description": "Expansion function (rank 74, hotness 16.9)",
+        "confidence": "medium",
+        "signature": "fcn.00429710 (int32_t arg_120h, int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 74,
+          "hotness_score": 16.874,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4425188": {
+        "original_name": "fcn.004385e4",
+        "mapped_name": "fcn.004385e4",
+        "description": "Expansion function (rank 75, hotness 16.7)",
+        "confidence": "medium",
+        "signature": "fcn.004385e4 (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 75,
+          "hotness_score": 16.698,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4467328": {
+        "original_name": "fcn.00442a80",
+        "mapped_name": "fcn.00442a80",
+        "description": "Expansion function (rank 76, hotness 16.6)",
+        "confidence": "medium",
+        "signature": "fcn.00442a80 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 76,
+          "hotness_score": 16.58,
+          "connectivity": 34,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4551565": {
+        "original_name": "fcn.0045738d",
+        "mapped_name": "fcn.0045738d",
+        "description": "Expansion function (rank 77, hotness 16.6)",
+        "confidence": "medium",
+        "signature": "fcn.0045738d ();",
+        "expansion_metadata": {
+          "batch_rank": 77,
+          "hotness_score": 16.574,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4528703": {
+        "original_name": "fcn.00451a3f",
+        "mapped_name": "fcn.00451a3f",
+        "description": "Expansion function (rank 78, hotness 16.5)",
+        "confidence": "medium",
+        "signature": "fcn.00451a3f ();",
+        "expansion_metadata": {
+          "batch_rank": 78,
+          "hotness_score": 16.492,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4307600": {
+        "original_name": "fcn.0041ba90",
+        "mapped_name": "fcn.0041ba90",
+        "description": "Expansion function (rank 79, hotness 16.5)",
+        "confidence": "medium",
+        "signature": "fcn.0041ba90 (int32_t arg_1b0h);",
+        "expansion_metadata": {
+          "batch_rank": 79,
+          "hotness_score": 16.476,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4505565": {
+        "original_name": "fcn.0044bfdd",
+        "mapped_name": "fcn.0044bfdd",
+        "description": "Expansion function (rank 80, hotness 16.4)",
+        "confidence": "medium",
+        "signature": "fcn.0044bfdd (uint32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 80,
+          "hotness_score": 16.418000000000003,
+          "connectivity": 31,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454810": {
+        "original_name": "fcn.0043f99a",
+        "mapped_name": "fcn.0043f99a",
+        "description": "Expansion function (rank 81, hotness 16.2)",
+        "confidence": "medium",
+        "signature": "fcn.0043f99a (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, uint32_t arg_18h, uint32_t arg_1ch);",
+        "expansion_metadata": {
+          "batch_rank": 81,
+          "hotness_score": 16.162000000000003,
+          "connectivity": 32,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4456452": {
+        "original_name": "fcn.00440004",
+        "mapped_name": "fcn.00440004",
+        "description": "Expansion function (rank 82, hotness 16.1)",
+        "confidence": "medium",
+        "signature": "fcn.00440004 (uint32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 82,
+          "hotness_score": 16.09,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4370176": {
+        "original_name": "fcn.0042af00",
+        "mapped_name": "fcn.0042af00",
+        "description": "Expansion function (rank 83, hotness 16.1)",
+        "confidence": "medium",
+        "signature": "fcn.0042af00 (int32_t arg_1ch);",
+        "expansion_metadata": {
+          "batch_rank": 83,
+          "hotness_score": 16.060000000000002,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4291376": {
+        "original_name": "fcn.00417b30",
+        "mapped_name": "fcn.00417b30",
+        "description": "Expansion function (rank 84, hotness 15.8)",
+        "confidence": "medium",
+        "signature": "fcn.00417b30 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 84,
+          "hotness_score": 15.788000000000002,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454686": {
+        "original_name": "fcn.0043f91e",
+        "mapped_name": "fcn.0043f91e",
+        "description": "Expansion function (rank 85, hotness 15.8)",
+        "confidence": "medium",
+        "signature": "fcn.0043f91e (int32_t arg_8h, int32_t arg_ch, uint32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 85,
+          "hotness_score": 15.764,
+          "connectivity": 31,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4237696": {
+        "original_name": "fcn.0040a980",
+        "mapped_name": "fcn.0040a980",
+        "description": "Expansion function (rank 86, hotness 15.7)",
+        "confidence": "medium",
+        "signature": "fcn.0040a980 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 86,
+          "hotness_score": 15.698,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4315584": {
+        "original_name": "fcn.0041d9c0",
+        "mapped_name": "fcn.0041d9c0",
+        "description": "Expansion function (rank 87, hotness 15.7)",
+        "confidence": "medium",
+        "signature": "fcn.0041d9c0 (int32_t arg_14h_2, int32_t arg_18h, int32_t arg_14h, int32_t arg_1ch);",
+        "expansion_metadata": {
+          "batch_rank": 87,
+          "hotness_score": 15.688000000000002,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4447808": {
+        "original_name": "fcn.0043de40",
+        "mapped_name": "fcn.0043de40",
+        "description": "Expansion function (rank 88, hotness 15.7)",
+        "confidence": "medium",
+        "signature": "fcn.0043de40 ();",
+        "expansion_metadata": {
+          "batch_rank": 88,
+          "hotness_score": 15.684000000000001,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4470392": {
+        "original_name": "fcn.00443678",
+        "mapped_name": "fcn.00443678",
+        "description": "Expansion function (rank 89, hotness 15.7)",
+        "confidence": "medium",
+        "signature": "fcn.00443678 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 89,
+          "hotness_score": 15.678,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4554927": {
+        "original_name": "fcn.004580af",
+        "mapped_name": "fcn.004580af",
+        "description": "Expansion function (rank 90, hotness 15.7)",
+        "confidence": "medium",
+        "signature": "fcn.004580af (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, uint32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 90,
+          "hotness_score": 15.675999999999998,
+          "connectivity": 33,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4505442": {
+        "original_name": "fcn.0044bf62",
+        "mapped_name": "fcn.0044bf62",
+        "description": "Expansion function (rank 91, hotness 15.7)",
+        "confidence": "medium",
+        "signature": "fcn.0044bf62 ();",
+        "expansion_metadata": {
+          "batch_rank": 91,
+          "hotness_score": 15.658000000000001,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4365168": {
+        "original_name": "fcn.00429b70",
+        "mapped_name": "fcn.00429b70",
+        "description": "Expansion function (rank 92, hotness 15.6)",
+        "confidence": "medium",
+        "signature": "fcn.00429b70 (int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 92,
+          "hotness_score": 15.606,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4563489": {
+        "original_name": "fcn.0045a221",
+        "mapped_name": "fcn.0045a221",
+        "description": "Expansion function (rank 93, hotness 15.4)",
+        "confidence": "medium",
+        "signature": "fcn.0045a221 ();",
+        "expansion_metadata": {
+          "batch_rank": 93,
+          "hotness_score": 15.420000000000002,
+          "connectivity": 31,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4349040": {
+        "original_name": "fcn.00425c70",
+        "mapped_name": "fcn.00425c70",
+        "description": "Expansion function (rank 94, hotness 15.4)",
+        "confidence": "medium",
+        "signature": "fcn.00425c70 (uint32_t arg_10h, int32_t arg_8h, int32_t arg_1ah, int32_t arg_1bh, int32_t arg_1ch);",
+        "expansion_metadata": {
+          "batch_rank": 94,
+          "hotness_score": 15.374,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4465149": {
+        "original_name": "fcn.004421fd",
+        "mapped_name": "fcn.004421fd",
+        "description": "Expansion function (rank 95, hotness 15.3)",
+        "confidence": "medium",
+        "signature": "fcn.004421fd (signed int arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 95,
+          "hotness_score": 15.296000000000003,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4362848": {
+        "original_name": "fcn.00429260",
+        "mapped_name": "fcn.00429260",
+        "description": "Expansion function (rank 96, hotness 15.2)",
+        "confidence": "medium",
+        "signature": "fcn.00429260 (int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 96,
+          "hotness_score": 15.246000000000002,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4326832": {
+        "original_name": "fcn.004205b0",
+        "mapped_name": "fcn.004205b0",
+        "description": "Expansion function (rank 97, hotness 15.2)",
+        "confidence": "medium",
+        "signature": "fcn.004205b0 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 97,
+          "hotness_score": 15.212,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4318688": {
+        "original_name": "fcn.0041e5e0",
+        "mapped_name": "fcn.0041e5e0",
+        "description": "Expansion function (rank 98, hotness 15.2)",
+        "confidence": "medium",
+        "signature": "fcn.0041e5e0 (int32_t arg_120h, signed int arg_118h);",
+        "expansion_metadata": {
+          "batch_rank": 98,
+          "hotness_score": 15.178,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4362768": {
+        "original_name": "fcn.00429210",
+        "mapped_name": "fcn.00429210",
+        "description": "Expansion function (rank 99, hotness 15.2)",
+        "confidence": "medium",
+        "signature": "fcn.00429210 (int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 99,
+          "hotness_score": 15.171999999999999,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4285296": {
+        "original_name": "fcn.00416370",
+        "mapped_name": "fcn.00416370",
+        "description": "Expansion function (rank 100, hotness 15.1)",
+        "confidence": "medium",
+        "signature": "fcn.00416370 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 100,
+          "hotness_score": 15.102,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4529051": {
+        "original_name": "fcn.00451b9b",
+        "mapped_name": "fcn.00451b9b",
+        "description": "Expansion function (rank 101, hotness 15.1)",
+        "confidence": "medium",
+        "signature": "fcn.00451b9b (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 101,
+          "hotness_score": 15.098000000000003,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4470748": {
+        "original_name": "fcn.004437dc",
+        "mapped_name": "fcn.004437dc",
+        "description": "Expansion function (rank 102, hotness 15.1)",
+        "confidence": "medium",
+        "signature": "fcn.004437dc (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 102,
+          "hotness_score": 15.088,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4287280": {
+        "original_name": "fcn.00416b30",
+        "mapped_name": "fcn.00416b30",
+        "description": "Expansion function (rank 103, hotness 14.9)",
+        "confidence": "medium",
+        "signature": "fcn.00416b30 (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 103,
+          "hotness_score": 14.942,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4277456": {
+        "original_name": "fcn.004144d0",
+        "mapped_name": "fcn.004144d0",
+        "description": "Expansion function (rank 104, hotness 14.7)",
+        "confidence": "medium",
+        "signature": "fcn.004144d0 (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 104,
+          "hotness_score": 14.678000000000003,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4319216": {
+        "original_name": "fcn.0041e7f0",
+        "mapped_name": "fcn.0041e7f0",
+        "description": "Expansion function (rank 105, hotness 14.7)",
+        "confidence": "medium",
+        "signature": "fcn.0041e7f0 (int32_t arg_10h, int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 105,
+          "hotness_score": 14.67,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4287056": {
+        "original_name": "fcn.00416a50",
+        "mapped_name": "fcn.00416a50",
+        "description": "Expansion function (rank 106, hotness 14.7)",
+        "confidence": "medium",
+        "signature": "fcn.00416a50 (int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h);",
+        "expansion_metadata": {
+          "batch_rank": 106,
+          "hotness_score": 14.66,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4476002": {
+        "original_name": "fcn.00444c62",
+        "mapped_name": "fcn.00444c62",
+        "description": "Expansion function (rank 107, hotness 14.5)",
+        "confidence": "medium",
+        "signature": "fcn.00444c62 (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 107,
+          "hotness_score": 14.532,
+          "connectivity": 30,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4296384": {
+        "original_name": "fcn.00418ec0",
+        "mapped_name": "fcn.00418ec0",
+        "description": "Expansion function (rank 108, hotness 14.5)",
+        "confidence": "medium",
+        "signature": "fcn.00418ec0 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 108,
+          "hotness_score": 14.521999999999998,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4472112": {
+        "original_name": "fcn.00443d30",
+        "mapped_name": "fcn.00443d30",
+        "description": "Expansion function (rank 109, hotness 14.5)",
+        "confidence": "medium",
+        "signature": "fcn.00443d30 (uint32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 109,
+          "hotness_score": 14.496,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4299584": {
+        "original_name": "fcn.00419b40",
+        "mapped_name": "fcn.00419b40",
+        "description": "Expansion function (rank 110, hotness 14.4)",
+        "confidence": "medium",
+        "signature": "fcn.00419b40 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 110,
+          "hotness_score": 14.376,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4282144": {
+        "original_name": "fcn.00415720",
+        "mapped_name": "fcn.00415720",
+        "description": "Expansion function (rank 111, hotness 14.4)",
+        "confidence": "medium",
+        "signature": "fcn.00415720 (int32_t arg_ch, int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 111,
+          "hotness_score": 14.370000000000001,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4503655": {
+        "original_name": "fcn.0044b867",
+        "mapped_name": "fcn.0044b867",
+        "description": "Expansion function (rank 112, hotness 14.3)",
+        "confidence": "medium",
+        "signature": "fcn.0044b867 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 112,
+          "hotness_score": 14.328000000000001,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4370416": {
+        "original_name": "fcn.0042aff0",
+        "mapped_name": "fcn.0042aff0",
+        "description": "Expansion function (rank 113, hotness 14.3)",
+        "confidence": "medium",
+        "signature": "fcn.0042aff0 (int32_t arg_20h);",
+        "expansion_metadata": {
+          "batch_rank": 113,
+          "hotness_score": 14.298000000000002,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4318032": {
+        "original_name": "fcn.0041e350",
+        "mapped_name": "fcn.0041e350",
+        "description": "Expansion function (rank 114, hotness 14.2)",
+        "confidence": "medium",
+        "signature": "fcn.0041e350 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 114,
+          "hotness_score": 14.212000000000002,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4445863": {
+        "original_name": "fcn.0043d6a7",
+        "mapped_name": "fcn.0043d6a7",
+        "description": "Expansion function (rank 115, hotness 14.1)",
+        "confidence": "medium",
+        "signature": "fcn.0043d6a7 ();",
+        "expansion_metadata": {
+          "batch_rank": 115,
+          "hotness_score": 14.140000000000002,
+          "connectivity": 29,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4309120": {
+        "original_name": "fcn.0041c080",
+        "mapped_name": "fcn.0041c080",
+        "description": "Expansion function (rank 116, hotness 14.1)",
+        "confidence": "medium",
+        "signature": "fcn.0041c080 (int32_t arg_14h_2, int32_t arg_18h, int32_t arg_14h, uint32_t arg_20h);",
+        "expansion_metadata": {
+          "batch_rank": 116,
+          "hotness_score": 14.094000000000001,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4551928": {
+        "original_name": "fcn.004574f8",
+        "mapped_name": "fcn.004574f8",
+        "description": "Expansion function (rank 117, hotness 14.0)",
+        "confidence": "medium",
+        "signature": "fcn.004574f8 (uint32_t arg_8h, uint32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 117,
+          "hotness_score": 14.042,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4340048": {
+        "original_name": "fcn.00423950",
+        "mapped_name": "fcn.00423950",
+        "description": "Expansion function (rank 118, hotness 13.9)",
+        "confidence": "medium",
+        "signature": "fcn.00423950 (int32_t arg_1ch, int32_t arg_1ch_2);",
+        "expansion_metadata": {
+          "batch_rank": 118,
+          "hotness_score": 13.934,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4448280": {
+        "original_name": "fcn.0043e018",
+        "mapped_name": "fcn.0043e018",
+        "description": "Expansion function (rank 119, hotness 13.8)",
+        "confidence": "medium",
+        "signature": "fcn.0043e018 (int32_t arg_8h_2, uint32_t arg_8h, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 119,
+          "hotness_score": 13.832,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4330176": {
+        "original_name": "fcn.004212c0",
+        "mapped_name": "fcn.004212c0",
+        "description": "Expansion function (rank 120, hotness 13.8)",
+        "confidence": "medium",
+        "signature": "fcn.004212c0 (int32_t arg_4h, int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 120,
+          "hotness_score": 13.77,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4476476": {
+        "original_name": "fcn.00444e3c",
+        "mapped_name": "fcn.00444e3c",
+        "description": "Expansion function (rank 121, hotness 13.7)",
+        "confidence": "medium",
+        "signature": "fcn.00444e3c (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 121,
+          "hotness_score": 13.719999999999999,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4198925": {
+        "original_name": "fcn.0040120d",
+        "mapped_name": "fcn.0040120d",
+        "description": "Expansion function (rank 122, hotness 13.6)",
+        "confidence": "medium",
+        "signature": "fcn.0040120d (int32_t arg_8h, uint32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 122,
+          "hotness_score": 13.638000000000002,
+          "connectivity": 28,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4338240": {
+        "original_name": "fcn.00423240",
+        "mapped_name": "fcn.00423240",
+        "description": "Expansion function (rank 123, hotness 13.6)",
+        "confidence": "medium",
+        "signature": "fcn.00423240 (int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 123,
+          "hotness_score": 13.572000000000001,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4323616": {
+        "original_name": "fcn.0041f920",
+        "mapped_name": "fcn.0041f920",
+        "description": "Expansion function (rank 124, hotness 13.4)",
+        "confidence": "medium",
+        "signature": "fcn.0041f920 ();",
+        "expansion_metadata": {
+          "batch_rank": 124,
+          "hotness_score": 13.414000000000001,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454437": {
+        "original_name": "fcn.0043f825",
+        "mapped_name": "fcn.0043f825",
+        "description": "Expansion function (rank 125, hotness 13.4)",
+        "confidence": "medium",
+        "signature": "fcn.0043f825 ();",
+        "expansion_metadata": {
+          "batch_rank": 125,
+          "hotness_score": 13.383999999999999,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4503390": {
+        "original_name": "fcn.0044b75e",
+        "mapped_name": "fcn.0044b75e",
+        "description": "Expansion function (rank 126, hotness 13.4)",
+        "confidence": "medium",
+        "signature": "fcn.0044b75e (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 126,
+          "hotness_score": 13.354000000000001,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4257024": {
+        "original_name": "fcn.0040f500",
+        "mapped_name": "fcn.0040f500",
+        "description": "Expansion function (rank 127, hotness 13.3)",
+        "confidence": "medium",
+        "signature": "fcn.0040f500 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 127,
+          "hotness_score": 13.306000000000001,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4526116": {
+        "original_name": "fcn.00451024",
+        "mapped_name": "fcn.00451024",
+        "description": "Expansion function (rank 128, hotness 13.3)",
+        "confidence": "medium",
+        "signature": "fcn.00451024 (int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 128,
+          "hotness_score": 13.286,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4286912": {
+        "original_name": "fcn.004169c0",
+        "mapped_name": "fcn.004169c0",
+        "description": "Expansion function (rank 129, hotness 13.3)",
+        "confidence": "medium",
+        "signature": "fcn.004169c0 (int32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 129,
+          "hotness_score": 13.252,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4364544": {
+        "original_name": "fcn.00429900",
+        "mapped_name": "fcn.00429900",
+        "description": "Expansion function (rank 130, hotness 13.2)",
+        "confidence": "medium",
+        "signature": "fcn.00429900 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 130,
+          "hotness_score": 13.22,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454091": {
+        "original_name": "fcn.0043f6cb",
+        "mapped_name": "fcn.0043f6cb",
+        "description": "Expansion function (rank 131, hotness 13.2)",
+        "confidence": "medium",
+        "signature": "fcn.0043f6cb (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 131,
+          "hotness_score": 13.219999999999999,
+          "connectivity": 27,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4311904": {
+        "original_name": "fcn.0041cb60",
+        "mapped_name": "fcn.0041cb60",
+        "description": "Expansion function (rank 132, hotness 13.2)",
+        "confidence": "medium",
+        "signature": "fcn.0041cb60 ();",
+        "expansion_metadata": {
+          "batch_rank": 132,
+          "hotness_score": 13.206,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4453715": {
+        "original_name": "fcn.0043f553",
+        "mapped_name": "fcn.0043f553",
+        "description": "Expansion function (rank 133, hotness 13.2)",
+        "confidence": "medium",
+        "signature": "fcn.0043f553 (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 133,
+          "hotness_score": 13.184,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4549438": {
+        "original_name": "fcn.00456b3e",
+        "mapped_name": "fcn.00456b3e",
+        "description": "Expansion function (rank 134, hotness 13.2)",
+        "confidence": "medium",
+        "signature": "fcn.00456b3e (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 134,
+          "hotness_score": 13.182,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454182": {
+        "original_name": "fcn.0043f726",
+        "mapped_name": "fcn.0043f726",
+        "description": "Expansion function (rank 135, hotness 13.2)",
+        "confidence": "medium",
+        "signature": "fcn.0043f726 ();",
+        "expansion_metadata": {
+          "batch_rank": 135,
+          "hotness_score": 13.158000000000001,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4283888": {
+        "original_name": "fcn.00415df0",
+        "mapped_name": "fcn.00415df0",
+        "description": "Expansion function (rank 136, hotness 13.1)",
+        "confidence": "medium",
+        "signature": "fcn.00415df0 (int32_t arg_14h_2, int32_t arg_10h, uint32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 136,
+          "hotness_score": 13.062000000000003,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4443709": {
+        "original_name": "fcn.0043ce3d",
+        "mapped_name": "fcn.0043ce3d",
+        "description": "Expansion function (rank 137, hotness 13.1)",
+        "confidence": "medium",
+        "signature": "fcn.0043ce3d ();",
+        "expansion_metadata": {
+          "batch_rank": 137,
+          "hotness_score": 13.056,
+          "connectivity": 26,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4457929": {
+        "original_name": "fcn.004405c9",
+        "mapped_name": "fcn.004405c9",
+        "description": "Expansion function (rank 138, hotness 13.0)",
+        "confidence": "medium",
+        "signature": "fcn.004405c9 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, uint32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 138,
+          "hotness_score": 13.048000000000002,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4458722": {
+        "original_name": "fcn.004408e2",
+        "mapped_name": "fcn.004408e2",
+        "description": "Expansion function (rank 139, hotness 13.0)",
+        "confidence": "medium",
+        "signature": "fcn.004408e2 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 139,
+          "hotness_score": 12.964,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4233872": {
+        "original_name": "fcn.00409a90",
+        "mapped_name": "fcn.00409a90",
+        "description": "Expansion function (rank 140, hotness 12.9)",
+        "confidence": "medium",
+        "signature": "fcn.00409a90 ();",
+        "expansion_metadata": {
+          "batch_rank": 140,
+          "hotness_score": 12.928000000000003,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4367680": {
+        "original_name": "fcn.0042a540",
+        "mapped_name": "fcn.0042a540",
+        "description": "Expansion function (rank 141, hotness 12.9)",
+        "confidence": "medium",
+        "signature": "fcn.0042a540 ();",
+        "expansion_metadata": {
+          "batch_rank": 141,
+          "hotness_score": 12.876000000000001,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4288144": {
+        "original_name": "fcn.00416e90",
+        "mapped_name": "fcn.00416e90",
+        "description": "Expansion function (rank 142, hotness 12.8)",
+        "confidence": "medium",
+        "signature": "fcn.00416e90 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 142,
+          "hotness_score": 12.824000000000002,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4552367": {
+        "original_name": "fcn.004576af",
+        "mapped_name": "fcn.004576af",
+        "description": "Expansion function (rank 143, hotness 12.8)",
+        "confidence": "medium",
+        "signature": "fcn.004576af (int32_t arg_8h, uint32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 143,
+          "hotness_score": 12.776000000000002,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4278928": {
+        "original_name": "fcn.00414a90",
+        "mapped_name": "fcn.00414a90",
+        "description": "Expansion function (rank 144, hotness 12.8)",
+        "confidence": "medium",
+        "signature": "fcn.00414a90 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 144,
+          "hotness_score": 12.752,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4330352": {
+        "original_name": "fcn.00421370",
+        "mapped_name": "fcn.00421370",
+        "description": "Expansion function (rank 145, hotness 12.6)",
+        "confidence": "medium",
+        "signature": "fcn.00421370 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 145,
+          "hotness_score": 12.644000000000002,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4308768": {
+        "original_name": "fcn.0041bf20",
+        "mapped_name": "fcn.0041bf20",
+        "description": "Expansion function (rank 146, hotness 12.6)",
+        "confidence": "medium",
+        "signature": "fcn.0041bf20 (int32_t arg_10h, int32_t arg_14h_2, uint32_t arg_18h, int32_t arg_1ch, uint32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 146,
+          "hotness_score": 12.610000000000003,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4258672": {
+        "original_name": "fcn.0040fb70",
+        "mapped_name": "fcn.0040fb70",
+        "description": "Expansion function (rank 147, hotness 12.6)",
+        "confidence": "medium",
+        "signature": "fcn.0040fb70 (int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 147,
+          "hotness_score": 12.602000000000002,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4461013": {
+        "original_name": "fcn.004411d5",
+        "mapped_name": "fcn.004411d5",
+        "description": "Expansion function (rank 148, hotness 12.3)",
+        "confidence": "medium",
+        "signature": "fcn.004411d5 ();",
+        "expansion_metadata": {
+          "batch_rank": 148,
+          "hotness_score": 12.34,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4505997": {
+        "original_name": "fcn.0044c18d",
+        "mapped_name": "fcn.0044c18d",
+        "description": "Expansion function (rank 149, hotness 12.3)",
+        "confidence": "medium",
+        "signature": "fcn.0044c18d (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 149,
+          "hotness_score": 12.294000000000002,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4296544": {
+        "original_name": "fcn.00418f60",
+        "mapped_name": "fcn.00418f60",
+        "description": "Expansion function (rank 150, hotness 12.3)",
+        "confidence": "medium",
+        "signature": "fcn.00418f60 (int32_t arg_8h, int32_t arg_1ch_2, int32_t arg_18h_2, int32_t arg_24h, int32_t arg_18h, uint32_t arg_1ch, int32_t arg_20h, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 150,
+          "hotness_score": 12.283999999999999,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4297408": {
+        "original_name": "fcn.004192c0",
+        "mapped_name": "fcn.004192c0",
+        "description": "Expansion function (rank 151, hotness 12.2)",
+        "confidence": "medium",
+        "signature": "fcn.004192c0 (int32_t arg_38h_2, int32_t arg_2ch, int32_t arg_30h, int32_t arg_34h, int32_t arg_38h);",
+        "expansion_metadata": {
+          "batch_rank": 151,
+          "hotness_score": 12.206000000000001,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4454015": {
+        "original_name": "fcn.0043f67f",
+        "mapped_name": "fcn.0043f67f",
+        "description": "Expansion function (rank 152, hotness 12.2)",
+        "confidence": "medium",
+        "signature": "fcn.0043f67f ();",
+        "expansion_metadata": {
+          "batch_rank": 152,
+          "hotness_score": 12.206000000000001,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4480426": {
+        "original_name": "fcn.00445daa",
+        "mapped_name": "fcn.00445daa",
+        "description": "Expansion function (rank 153, hotness 12.1)",
+        "confidence": "medium",
+        "signature": "fcn.00445daa (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 153,
+          "hotness_score": 12.134000000000002,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4534407": {
+        "original_name": "fcn.00453087",
+        "mapped_name": "fcn.00453087",
+        "description": "Expansion function (rank 154, hotness 12.1)",
+        "confidence": "medium",
+        "signature": "fcn.00453087 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 154,
+          "hotness_score": 12.131999999999998,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4472970": {
+        "original_name": "fcn.0044408a",
+        "mapped_name": "fcn.0044408a",
+        "description": "Expansion function (rank 155, hotness 12.0)",
+        "confidence": "medium",
+        "signature": "fcn.0044408a (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 155,
+          "hotness_score": 12.032,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4479510": {
+        "original_name": "fcn.00445a16",
+        "mapped_name": "fcn.00445a16",
+        "description": "Expansion function (rank 156, hotness 12.0)",
+        "confidence": "medium",
+        "signature": "fcn.00445a16 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 156,
+          "hotness_score": 12.002,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4287872": {
+        "original_name": "fcn.00416d80",
+        "mapped_name": "fcn.00416d80",
+        "description": "Expansion function (rank 157, hotness 12.0)",
+        "confidence": "medium",
+        "signature": "fcn.00416d80 (int32_t arg_10h, int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 157,
+          "hotness_score": 11.97,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4295344": {
+        "original_name": "fcn.00418ab0",
+        "mapped_name": "fcn.00418ab0",
+        "description": "Expansion function (rank 158, hotness 11.9)",
+        "confidence": "medium",
+        "signature": "fcn.00418ab0 (int32_t arg_14h, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h);",
+        "expansion_metadata": {
+          "batch_rank": 158,
+          "hotness_score": 11.948,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4556172": {
+        "original_name": "fcn.0045858c",
+        "mapped_name": "fcn.0045858c",
+        "description": "Expansion function (rank 159, hotness 11.9)",
+        "confidence": "medium",
+        "signature": "fcn.0045858c (int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 159,
+          "hotness_score": 11.914000000000003,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4456649": {
+        "original_name": "fcn.004400c9",
+        "mapped_name": "fcn.004400c9",
+        "description": "Expansion function (rank 160, hotness 11.9)",
+        "confidence": "medium",
+        "signature": "fcn.004400c9 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 160,
+          "hotness_score": 11.896,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4277344": {
+        "original_name": "fcn.00414460",
+        "mapped_name": "fcn.00414460",
+        "description": "Expansion function (rank 161, hotness 11.9)",
+        "confidence": "medium",
+        "signature": "fcn.00414460 (int32_t arg_4h, int32_t arg_30h, int32_t arg_2ch);",
+        "expansion_metadata": {
+          "batch_rank": 161,
+          "hotness_score": 11.886000000000001,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4504037": {
+        "original_name": "fcn.0044b9e5",
+        "mapped_name": "fcn.0044b9e5",
+        "description": "Expansion function (rank 162, hotness 11.9)",
+        "confidence": "medium",
+        "signature": "fcn.0044b9e5 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 162,
+          "hotness_score": 11.872000000000002,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4329376": {
+        "original_name": "fcn.00420fa0",
+        "mapped_name": "fcn.00420fa0",
+        "description": "Expansion function (rank 163, hotness 11.8)",
+        "confidence": "medium",
+        "signature": "fcn.00420fa0 (int32_t arg_8h, int32_t arg_10h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 163,
+          "hotness_score": 11.75,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4555885": {
+        "original_name": "fcn.0045846d",
+        "mapped_name": "fcn.0045846d",
+        "description": "Expansion function (rank 164, hotness 11.7)",
+        "confidence": "medium",
+        "signature": "fcn.0045846d ();",
+        "expansion_metadata": {
+          "batch_rank": 164,
+          "hotness_score": 11.746,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4304832": {
+        "original_name": "fcn.0041afc0",
+        "mapped_name": "fcn.0041afc0",
+        "description": "Expansion function (rank 165, hotness 11.7)",
+        "confidence": "medium",
+        "signature": "fcn.0041afc0 ();",
+        "expansion_metadata": {
+          "batch_rank": 165,
+          "hotness_score": 11.704,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4475062": {
+        "original_name": "fcn.004448b6",
+        "mapped_name": "fcn.004448b6",
+        "description": "Expansion function (rank 166, hotness 11.7)",
+        "confidence": "medium",
+        "signature": "fcn.004448b6 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 166,
+          "hotness_score": 11.696,
+          "connectivity": 25,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4549612": {
+        "original_name": "fcn.00456bec",
+        "mapped_name": "fcn.00456bec",
+        "description": "Expansion function (rank 167, hotness 11.6)",
+        "confidence": "medium",
+        "signature": "fcn.00456bec (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 167,
+          "hotness_score": 11.608,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4437240": {
+        "original_name": "fcn.0043b4f8",
+        "mapped_name": "fcn.0043b4f8",
+        "description": "Expansion function (rank 168, hotness 11.6)",
+        "confidence": "medium",
+        "signature": "fcn.0043b4f8 (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 168,
+          "hotness_score": 11.562000000000001,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4477566": {
+        "original_name": "fcn.0044527e",
+        "mapped_name": "fcn.0044527e",
+        "description": "Expansion function (rank 169, hotness 11.6)",
+        "confidence": "medium",
+        "signature": "fcn.0044527e (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, uint32_t arg_14h, int32_t arg_18h);",
+        "expansion_metadata": {
+          "batch_rank": 169,
+          "hotness_score": 11.556000000000001,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4460543": {
+        "original_name": "fcn.00440fff",
+        "mapped_name": "fcn.00440fff",
+        "description": "Expansion function (rank 170, hotness 11.6)",
+        "confidence": "medium",
+        "signature": "fcn.00440fff (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 170,
+          "hotness_score": 11.550000000000002,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4198540": {
+        "original_name": "fcn.0040108c",
+        "mapped_name": "fcn.0040108c",
+        "description": "Expansion function (rank 171, hotness 11.5)",
+        "confidence": "medium",
+        "signature": "fcn.0040108c (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 171,
+          "hotness_score": 11.536000000000001,
+          "connectivity": 24,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4447164": {
+        "original_name": "fcn.0043dbbc",
+        "mapped_name": "fcn.0043dbbc",
+        "description": "Expansion function (rank 172, hotness 11.4)",
+        "confidence": "medium",
+        "signature": "fcn.0043dbbc (int32_t arg_8h, int32_t arg_ch, int32_t arg_13h);",
+        "expansion_metadata": {
+          "batch_rank": 172,
+          "hotness_score": 11.442,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4348928": {
+        "original_name": "fcn.00425c00",
+        "mapped_name": "fcn.00425c00",
+        "description": "Expansion function (rank 173, hotness 11.4)",
+        "confidence": "medium",
+        "signature": "fcn.00425c00 (uint32_t arg_4h, uint32_t arg_8h, int32_t arg_ah);",
+        "expansion_metadata": {
+          "batch_rank": 173,
+          "hotness_score": 11.392000000000001,
+          "connectivity": 19,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4350576": {
+        "original_name": "fcn.00426270",
+        "mapped_name": "fcn.00426270",
+        "description": "Expansion function (rank 174, hotness 11.3)",
+        "confidence": "medium",
+        "signature": "fcn.00426270 (uint32_t arg_4h, int32_t arg_8h, int32_t arg_ah);",
+        "expansion_metadata": {
+          "batch_rank": 174,
+          "hotness_score": 11.252,
+          "connectivity": 18,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4261760": {
+        "original_name": "fcn.00410780",
+        "mapped_name": "fcn.00410780",
+        "description": "Expansion function (rank 175, hotness 11.2)",
+        "confidence": "medium",
+        "signature": "fcn.00410780 (int32_t arg_8h, int32_t arg_10h, int32_t arg_18h, int32_t arg_1ch);",
+        "expansion_metadata": {
+          "batch_rank": 175,
+          "hotness_score": 11.214,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4554315": {
+        "original_name": "fcn.00457e4b",
+        "mapped_name": "fcn.00457e4b",
+        "description": "Expansion function (rank 176, hotness 11.2)",
+        "confidence": "medium",
+        "signature": "fcn.00457e4b (int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 176,
+          "hotness_score": 11.2,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4351136": {
+        "original_name": "fcn.004264a0",
+        "mapped_name": "fcn.004264a0",
+        "description": "Expansion function (rank 177, hotness 11.2)",
+        "confidence": "medium",
+        "signature": "fcn.004264a0 (int32_t arg_64h, int32_t arg_68h, int32_t arg_7ch_4, int32_t arg_7ch_3, int32_t arg_7ch_2, int32_t arg_7ch, int32_t arg_1ch, int32_t arg_80h, int32_t arg_24h);",
+        "expansion_metadata": {
+          "batch_rank": 177,
+          "hotness_score": 11.198,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4318272": {
+        "original_name": "fcn.0041e440",
+        "mapped_name": "fcn.0041e440",
+        "description": "Expansion function (rank 178, hotness 11.1)",
+        "confidence": "medium",
+        "signature": "fcn.0041e440 (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 178,
+          "hotness_score": 11.122,
+          "connectivity": 19,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4291104": {
+        "original_name": "fcn.00417a20",
+        "mapped_name": "fcn.00417a20",
+        "description": "Expansion function (rank 179, hotness 11.1)",
+        "confidence": "medium",
+        "signature": "fcn.00417a20 ();",
+        "expansion_metadata": {
+          "batch_rank": 179,
+          "hotness_score": 11.09,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4529324": {
+        "original_name": "fcn.00451cac",
+        "mapped_name": "fcn.00451cac",
+        "description": "Expansion function (rank 180, hotness 11.1)",
+        "confidence": "medium",
+        "signature": "fcn.00451cac (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h);",
+        "expansion_metadata": {
+          "batch_rank": 180,
+          "hotness_score": 11.078,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4470314": {
+        "original_name": "fcn.0044362a",
+        "mapped_name": "fcn.0044362a",
+        "description": "Expansion function (rank 181, hotness 11.1)",
+        "confidence": "medium",
+        "signature": "fcn.0044362a (int32_t arg_4h);",
+        "expansion_metadata": {
+          "batch_rank": 181,
+          "hotness_score": 11.075999999999999,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4198935": {
+        "original_name": "fcn.00401217",
+        "mapped_name": "fcn.00401217",
+        "description": "Expansion function (rank 182, hotness 11.1)",
+        "confidence": "medium",
+        "signature": "fcn.00401217 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 182,
+          "hotness_score": 11.074,
+          "connectivity": 23,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4297632": {
+        "original_name": "fcn.004193a0",
+        "mapped_name": "fcn.004193a0",
+        "description": "Expansion function (rank 183, hotness 10.9)",
+        "confidence": "medium",
+        "signature": "fcn.004193a0 (int32_t arg_4h, int32_t arg_20h, int32_t arg_28h, int32_t arg_2ch, int32_t arg_30h);",
+        "expansion_metadata": {
+          "batch_rank": 183,
+          "hotness_score": 10.944,
+          "connectivity": 20,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4473144": {
+        "original_name": "fcn.00444138",
+        "mapped_name": "fcn.00444138",
+        "description": "Expansion function (rank 184, hotness 10.8)",
+        "confidence": "medium",
+        "signature": "fcn.00444138 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 184,
+          "hotness_score": 10.832,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4450937": {
+        "original_name": "fcn.0043ea79",
+        "mapped_name": "fcn.0043ea79",
+        "description": "Expansion function (rank 185, hotness 10.8)",
+        "confidence": "medium",
+        "signature": "fcn.0043ea79 (int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 185,
+          "hotness_score": 10.828,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4514490": {
+        "original_name": "fcn.0044e2ba",
+        "mapped_name": "fcn.0044e2ba",
+        "description": "Expansion function (rank 186, hotness 10.8)",
+        "confidence": "medium",
+        "signature": "fcn.0044e2ba (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 186,
+          "hotness_score": 10.774,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4322272": {
+        "original_name": "fcn.0041f3e0",
+        "mapped_name": "fcn.0041f3e0",
+        "description": "Expansion function (rank 187, hotness 10.7)",
+        "confidence": "medium",
+        "signature": "fcn.0041f3e0 (int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, int32_t arg_44h, int32_t arg_48h, int32_t arg_4ch, int32_t arg_50h);",
+        "expansion_metadata": {
+          "batch_rank": 187,
+          "hotness_score": 10.677999999999999,
+          "connectivity": 19,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4451034": {
+        "original_name": "fcn.0043eada",
+        "mapped_name": "fcn.0043eada",
+        "description": "Expansion function (rank 188, hotness 10.7)",
+        "confidence": "medium",
+        "signature": "fcn.0043eada (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 188,
+          "hotness_score": 10.658000000000001,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4514861": {
+        "original_name": "fcn.0044e42d",
+        "mapped_name": "fcn.0044e42d",
+        "description": "Expansion function (rank 189, hotness 10.7)",
+        "confidence": "medium",
+        "signature": "fcn.0044e42d (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 189,
+          "hotness_score": 10.650000000000002,
+          "connectivity": 22,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4281472": {
+        "original_name": "fcn.00415480",
+        "mapped_name": "fcn.00415480",
+        "description": "Expansion function (rank 190, hotness 10.6)",
+        "confidence": "medium",
+        "signature": "fcn.00415480 (int32_t arg_ch, int32_t arg_14h, int32_t arg_1ch);",
+        "expansion_metadata": {
+          "batch_rank": 190,
+          "hotness_score": 10.646,
+          "connectivity": 20,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4463793": {
+        "original_name": "fcn.00441cb1",
+        "mapped_name": "fcn.00441cb1",
+        "description": "Expansion function (rank 191, hotness 10.6)",
+        "confidence": "medium",
+        "signature": "fcn.00441cb1 ();",
+        "expansion_metadata": {
+          "batch_rank": 191,
+          "hotness_score": 10.638,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4297792": {
+        "original_name": "fcn.00419440",
+        "mapped_name": "fcn.00419440",
+        "description": "Expansion function (rank 192, hotness 10.6)",
+        "confidence": "medium",
+        "signature": "fcn.00419440 (int32_t arg_8h, uint32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 192,
+          "hotness_score": 10.56,
+          "connectivity": 20,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4503141": {
+        "original_name": "fcn.0044b665",
+        "mapped_name": "fcn.0044b665",
+        "description": "Expansion function (rank 193, hotness 10.6)",
+        "confidence": "medium",
+        "signature": "fcn.0044b665 (int32_t arg_8h, int32_t arg_10h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 193,
+          "hotness_score": 10.556,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4312912": {
+        "original_name": "fcn.0041cf50",
+        "mapped_name": "fcn.0041cf50",
+        "description": "Expansion function (rank 194, hotness 10.5)",
+        "confidence": "medium",
+        "signature": "fcn.0041cf50 (int32_t arg_ch, int32_t arg_10h, int32_t arg_14h);",
+        "expansion_metadata": {
+          "batch_rank": 194,
+          "hotness_score": 10.536000000000001,
+          "connectivity": 20,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4366112": {
+        "original_name": "fcn.00429f20",
+        "mapped_name": "fcn.00429f20",
+        "description": "Expansion function (rank 195, hotness 10.5)",
+        "confidence": "medium",
+        "signature": "fcn.00429f20 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+        "expansion_metadata": {
+          "batch_rank": 195,
+          "hotness_score": 10.534,
+          "connectivity": 19,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4472361": {
+        "original_name": "fcn.00443e29",
+        "mapped_name": "fcn.00443e29",
+        "description": "Expansion function (rank 196, hotness 10.5)",
+        "confidence": "medium",
+        "signature": "fcn.00443e29 ();",
+        "expansion_metadata": {
+          "batch_rank": 196,
+          "hotness_score": 10.514,
+          "connectivity": 20,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4503885": {
+        "original_name": "fcn.0044b94d",
+        "mapped_name": "fcn.0044b94d",
+        "description": "Expansion function (rank 197, hotness 10.5)",
+        "confidence": "medium",
+        "signature": "fcn.0044b94d (int32_t arg_8h, int32_t arg_ch);",
+        "expansion_metadata": {
+          "batch_rank": 197,
+          "hotness_score": 10.466,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4547065": {
+        "original_name": "fcn.004561f9",
+        "mapped_name": "fcn.004561f9",
+        "description": "Expansion function (rank 198, hotness 10.5)",
+        "confidence": "medium",
+        "signature": "fcn.004561f9 ();",
+        "expansion_metadata": {
+          "batch_rank": 198,
+          "hotness_score": 10.46,
+          "connectivity": 20,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4447418": {
+        "original_name": "fcn.0043dcba",
+        "mapped_name": "fcn.0043dcba",
+        "description": "Expansion function (rank 199, hotness 10.4)",
+        "confidence": "medium",
+        "signature": "fcn.0043dcba (uint32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 199,
+          "hotness_score": 10.422,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      },
+      "4466259": {
+        "original_name": "fcn.00442653",
+        "mapped_name": "fcn.00442653",
+        "description": "Expansion function (rank 200, hotness 10.4)",
+        "confidence": "medium",
+        "signature": "fcn.00442653 (int32_t arg_8h);",
+        "expansion_metadata": {
+          "batch_rank": 200,
+          "hotness_score": 10.395999999999999,
+          "connectivity": 21,
+          "implementation_priority": "expansion"
+        }
+      }
+    },
+    "imports": {
+      "DirectDrawCreate": {
+        "library": "DDRAW.dll",
+        "type": "graphics",
+        "description": "DirectX DirectDraw initialization"
+      },
+      "DirectDrawEnumerateA": {
+        "library": "DDRAW.dll",
+        "type": "graphics",
+        "description": "Enumerate DirectDraw devices"
+      },
+      "timeGetTime": {
+        "library": "WINMM.dll",
+        "type": "timing",
+        "description": "High-resolution timer"
+      }
+    }
+  },
+  "expansion_summary": {
+    "added_functions": 200,
+    "total_functions": 210,
+    "expansion_date": "2025-09-11T00:35:00Z"
+  }
+}

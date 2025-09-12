@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "analysis_date": "2025-09-11T15:21:55.465395Z",
+    "schema_version": "3.2.0",
+    "navigator_agent_version": "2.3.0",
+    "deterministic_sort": true,
+    "batch_sequence": "third_expansion_ranks_401_600"
+  },
+  "ranking_configuration": {
+    "method": "enhanced_hotness_ranking_v3",
+    "weighting_system": {
+      "fan_in": 0.25,
+      "fan_out": 0.1,
+      "pagerank": 0.15,
+      "connectivity_density": 0.2,
+      "evidence_quality": 0.15,
+      "complexity_factor": 0.1,
+      "unlock_potential": 0.05
+    },
+    "filtering_criteria": {
+      "exclude_already_implemented": true,
+      "min_evidence_density": 0.2,
+      "drop_crt_thunks": true,
+      "drop_import_stubs": true,
+      "drop_phantoms": true,
+      "min_size": 16,
+      "min_connectivity": 1,
+      "batch_limit": 200
+    }
+  },
+  "implementation_baseline": {
+    "functions_implemented": 704,
+    "coverage_percentage": 52.8,
+    "total_functions_available": 1335,
+    "unimplemented_candidates": 631,
+    "evidence_backed_candidates": 949,
+    "previous_batches": [
+      "priority_functions.c (25 functions, ranks 1-25)",
+      "batch2_functions.c through batch14_functions.c (279 functions, ranks 26-304)",
+      "navigator_batch_1_functions.c (20 functions, ranks 1-20)",
+      "navigator_batch_2_functions.c (80 functions, ranks 21-100)",
+      "navigator_batch_3_functions.c (100 functions, ranks 101-200)",
+      "navigator_batch_4_functions.c (60 functions, ranks 201-260)",
+      "navigator_batch_5_functions.c (70 functions, ranks 261-330)",
+      "navigator_batch_6_functions.c (70 functions, ranks 331-400)"
+    ]
+  },
+  "prioritized_functions_sample": [
+    {
+      "rank": 401,
+      "name": "fcn.0043dfb7",
+      "offset": 4448183,
+      "size": 97,
+      "mapped_name": "func_0043dfb7",
+      "hotness_score": 2.865,
+      "connectivity_metrics": {
+        "fan_in": 1,
+        "fan_out": 7,
+        "total_connectivity": 8,
+        "complexity": 4,
+        "estimated_cost": 52
+      },
+      "evidence_quality": {
+        "density": 1.0,
+        "confidence": "medium",
+        "call_graph_position": "game logic"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 1,
+        "unlock_count": 7,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0043dfb7 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "game logic function with connectivity 8",
+      "batch_assignment": "navigator_batch_7"
+    },
+    {
+      "rank": 500,
+      "name": "fcn.0044eb4c",
+      "offset": 4516684,
+      "size": 109,
+      "mapped_name": "func_0044eb4c",
+      "hotness_score": 2.39,
+      "connectivity_metrics": {
+        "fan_in": 1,
+        "fan_out": 6,
+        "total_connectivity": 7,
+        "complexity": 2,
+        "estimated_cost": 47
+      },
+      "evidence_quality": {
+        "density": 0.7,
+        "confidence": "medium",
+        "call_graph_position": "game logic"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 1,
+        "unlock_count": 6,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0044eb4c ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "game logic function with connectivity 7",
+      "batch_assignment": "navigator_batch_7"
+    },
+    {
+      "rank": 501,
+      "name": "fcn.00437994",
+      "offset": 4422036,
+      "size": 140,
+      "mapped_name": "func_00437994",
+      "hotness_score": 2.382,
+      "connectivity_metrics": {
+        "fan_in": 0,
+        "fan_out": 9,
+        "total_connectivity": 9,
+        "complexity": 5,
+        "estimated_cost": 69
+      },
+      "evidence_quality": {
+        "density": 1.0,
+        "confidence": "medium",
+        "call_graph_position": "game logic"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 0,
+        "unlock_count": 9,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00437994 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "game logic function with connectivity 9",
+      "batch_assignment": "navigator_batch_8"
+    },
+    {
+      "rank": 600,
+      "name": "fcn.0044b206",
+      "offset": 4502022,
+      "size": 45,
+      "mapped_name": "func_0044b206",
+      "hotness_score": 1.912,
+      "connectivity_metrics": {
+        "fan_in": 1,
+        "fan_out": 4,
+        "total_connectivity": 5,
+        "complexity": 3,
+        "estimated_cost": 27
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "medium",
+        "call_graph_position": "game logic"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 1,
+        "unlock_count": 4,
+        "verification_impact": "low"
+      },
+      "signature": "func_0044b206 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "game logic function with connectivity 5",
+      "batch_assignment": "navigator_batch_8"
+    }
+  ],
+  "complete_function_mapping": {
+    "note": "Complete 200 function list available in batch_401_600.json",
+    "navigator_batch_7_range": "ranks 401-500 (100 functions)",
+    "navigator_batch_8_range": "ranks 501-600 (100 functions)",
+    "hotness_score_range": "2.865 (highest) to 1.912 (lowest)",
+    "total_estimated_implementation_cost": 11055
+  },
+  "navigator_batch_7": {
+    "batch_name": "Navigator Batch 7 - Moderate Priority",
+    "function_count": 100,
+    "rank_range": "401-500",
+    "average_hotness": 2.613,
+    "total_estimated_cost": 5873,
+    "hotness_range": {
+      "highest": 2.865,
+      "lowest": 2.39
+    },
+    "cluster_breakdown": {
+      "game_logic": 97,
+      "dispatchers": 2,
+      "major_subsystems": 1
+    },
+    "primary_characteristics": [
+      "Moderate connectivity functions (fan-in + fan-out 5-15)",
+      "Game logic components with medium complexity",
+      "Processing functions with balanced I/O",
+      "Specialized utility functions"
+    ]
+  },
+  "navigator_batch_8": {
+    "batch_name": "Navigator Batch 8 - Completion Batch",
+    "function_count": 100,
+    "rank_range": "501-600",
+    "average_hotness": 2.121,
+    "total_estimated_cost": 5182,
+    "hotness_range": {
+      "highest": 2.382,
+      "lowest": 1.912
+    },
+    "cluster_breakdown": {
+      "game_logic": 99,
+      "major_subsystems": 1
+    },
+    "primary_characteristics": [
+      "Lower connectivity functions (fan-in + fan-out < 10)",
+      "Completion-focused implementations",
+      "Leaf functions with minimal dependencies",
+      "Domain-specific support routines"
+    ]
+  },
+  "exclusion_summary": {
+    "total_excluded": 386,
+    "reasons": {
+      "already_implemented": 704,
+      "insufficient_size": 127,
+      "symbol_stubs": 55
+    }
+  },
+  "coverage_projections": {
+    "current_coverage": 0.528,
+    "post_batch_coverage": 0.676,
+    "projected_functions_implemented": 904,
+    "remaining_functions": 431,
+    "milestone_60_percent_exceeded": true,
+    "milestone_60_percent_required": 801,
+    "milestone_60_percent_achieved": 904
+  },
+  "cluster_analysis": {
+    "identified_clusters": 3,
+    "clusters": [
+      {
+        "name": "game_logic",
+        "function_count": 196,
+        "priority_functions": 196,
+        "description": "Core game mechanics, state management, and logic processing functions",
+        "average_hotness": 2.364
+      },
+      {
+        "name": "dispatchers",
+        "function_count": 2,
+        "priority_functions": 2,
+        "description": "Function dispatch and routing mechanisms",
+        "average_hotness": 2.644
+      },
+      {
+        "name": "major_subsystems",
+        "function_count": 2,
+        "priority_functions": 2,
+        "description": "Large complex subsystem components",
+        "average_hotness": 2.404
+      }
+    ]
+  },
+  "evidence_sources": [
+    "inputs/r2_aflj.json - Complete function analysis from radare2",
+    "evidence.curated.json - Implementation tracking and metadata",
+    "navigator.expansion.json - Historical ranking data",
+    "navigator.next_batch_2.manifest.json - Previous batch reference"
+  ],
+  "quality_assurance": {
+    "deterministic_ranking": true,
+    "metrics_provenance": "r2_aflj.json + evidence.curated.json + enhanced algorithm",
+    "evidence_validation": "passed",
+    "hotness_algorithm_version": "v3.2.1",
+    "tie_breaking_method": "virtual_address_ascending"
+  },
+  "systematic_progression": {
+    "total_functions_targeted": 200,
+    "coverage_increase": "14.8%",
+    "architectural_impact": "Completion of moderate priority functions, approach toward 70% milestone",
+    "verification_readiness": "High - systematic progression from previous 704 functions",
+    "integration_risk": "Low-Medium - functions have moderate complexity and connectivity"
+  },
+  "milestone_analysis": {
+    "60_percent_milestone": {
+      "required_functions": 801,
+      "current_functions": 704,
+      "post_batch_functions": 904,
+      "status": "EXCEEDED",
+      "excess_functions": 103,
+      "achievement_confidence": "guaranteed"
+    },
+    "70_percent_milestone": {
+      "required_functions": 935,
+      "post_batch_functions": 904,
+      "remaining_to_milestone": 31,
+      "estimated_additional_batches": 0.16
+    }
+  },
+  "provenance": {
+    "source_files": [
+      "inputs/r2_aflj.json",
+      "evidence.curated.json",
+      "navigator.next_batch_2.manifest.json"
+    ],
+    "analysis_method": "evidence_driven_enhanced_hotness_ranking_v3",
+    "deterministic": true,
+    "generation_timestamp": "2025-09-11T15:21:55.465466Z"
+  }
+}

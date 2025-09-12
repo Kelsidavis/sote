@@ -1,0 +1,35 @@
+{
+  "call_id": "coord-007",
+  "agent": "verification",
+  "intent": "verify",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "implementation": "src/navigator_batch_1_functions.c",
+      "headers": "include/navigator_batch_1_functions.h", 
+      "evidence": "evidence_navigator_sample.json",
+      "mappings": "mappings.json",
+      "test_plan": "tests.plan.json"
+    },
+    "scope": {
+      "verification_types": ["evidence_compliance", "fabrication_check", "re_agent_compliance", "quality_metrics"],
+      "function_ranks": [1, 20],
+      "batch_name": "navigator_batch_1",
+      "strict_mode": true
+    },
+    "options": {
+      "zero_fabrication_tolerance": true,
+      "evidence_traceability_required": true,
+      "re_agent_compliance_strict": true,
+      "quality_threshold": 0.95
+    }
+  },
+  "expected_outputs": [
+    "verification.report.json"
+  ]
+}

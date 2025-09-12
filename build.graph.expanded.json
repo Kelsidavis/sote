@@ -1,0 +1,260 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "build_graph": {
+    "target": "SOTE.exe",
+    "nodes": {
+      "SOTE.exe": {
+        "type": "executable",
+        "inputs": [
+          "main.o",
+          "entry.o"
+        ],
+        "dependencies": [
+          "main.o",
+          "entry.o"
+        ],
+        "build_command": "gcc -m32 -Wl,--subsystem,windows -Wl,--entry,entry_point -static-libgcc -o SOTE.exe build/obj/main.o build/obj/entry.o -lkernel32 -luser32 -lgdi32 -lddraw -lwinmm -ladvapi32 -lshell32 -lcomctl32 -lcomdlg32 -lwinspool",
+        "output_file": "SOTE.exe"
+      },
+      "main.o": {
+        "type": "object",
+        "inputs": [
+          "src/main.c",
+          "include/sote.h",
+          "include/types.h"
+        ],
+        "dependencies": [
+          "include/sote.h",
+          "include/types.h"
+        ],
+        "build_command": "gcc -std=c99 -Wall -Wextra -m32 -Os -g -DWIN32 -D_WIN32 -DUNICODE -D_UNICODE -Iinclude -c src/main.c -o build/obj/main.o",
+        "output_file": "build/obj/main.o"
+      },
+      "entry.o": {
+        "type": "object",
+        "inputs": [
+          "src/entry.c",
+          "include/sote.h",
+          "include/types.h"
+        ],
+        "dependencies": [
+          "include/sote.h",
+          "include/types.h"
+        ],
+        "build_command": "gcc -std=c99 -Wall -Wextra -m32 -Os -g -DWIN32 -D_WIN32 -DUNICODE -D_UNICODE -Iinclude -c src/entry.c -o build/obj/entry.o",
+        "output_file": "build/obj/entry.o"
+      },
+      "include/sote.h": {
+        "type": "header",
+        "inputs": [
+          "include/types.h"
+        ],
+        "dependencies": [
+          "include/types.h"
+        ],
+        "build_command": null,
+        "output_file": "include/sote.h"
+      },
+      "include/types.h": {
+        "type": "header",
+        "inputs": [],
+        "dependencies": [],
+        "build_command": null,
+        "output_file": "include/types.h"
+      },
+      "src/main.c": {
+        "type": "source",
+        "inputs": [],
+        "dependencies": [],
+        "build_command": null,
+        "output_file": "src/main.c"
+      },
+      "src/entry.c": {
+        "type": "source",
+        "inputs": [],
+        "dependencies": [],
+        "build_command": null,
+        "output_file": "src/entry.c"
+      }
+    },
+    "edges": [
+      {
+        "from": "main.o",
+        "to": "SOTE.exe",
+        "type": "link"
+      },
+      {
+        "from": "entry.o",
+        "to": "SOTE.exe",
+        "type": "link"
+      },
+      {
+        "from": "src/main.c",
+        "to": "main.o",
+        "type": "compile"
+      },
+      {
+        "from": "include/sote.h",
+        "to": "main.o",
+        "type": "include"
+      },
+      {
+        "from": "include/types.h",
+        "to": "main.o",
+        "type": "include"
+      },
+      {
+        "from": "src/entry.c",
+        "to": "entry.o",
+        "type": "compile"
+      },
+      {
+        "from": "include/sote.h",
+        "to": "entry.o",
+        "type": "include"
+      },
+      {
+        "from": "include/types.h",
+        "to": "entry.o",
+        "type": "include"
+      },
+      {
+        "from": "include/types.h",
+        "to": "include/sote.h",
+        "type": "include"
+      }
+    ],
+    "build_order": [
+      "include/types.h",
+      "include/sote.h",
+      "src/main.c",
+      "src/entry.c",
+      "main.o",
+      "entry.o",
+      "SOTE.exe"
+    ]
+  },
+  "build_configuration": {
+    "compiler": "gcc",
+    "linker": "gcc",
+    "architecture": "i386",
+    "platform": "win32",
+    "subsystem": "windows",
+    "entry_point": "entry_point",
+    "optimization": "size",
+    "debug_info": true,
+    "static_linking": false
+  },
+  "library_dependencies": {
+    "system_required": [
+      "kernel32.dll",
+      "user32.dll",
+      "gdi32.dll",
+      "ddraw.dll",
+      "winmm.dll",
+      "advapi32.dll"
+    ],
+    "system_optional": [
+      "shell32.dll",
+      "comctl32.dll",
+      "comdlg32.dll",
+      "winspool.drv"
+    ],
+    "link_order": [
+      "kernel32",
+      "user32",
+      "gdi32",
+      "ddraw",
+      "winmm",
+      "advapi32",
+      "shell32",
+      "comctl32",
+      "comdlg32",
+      "winspool"
+    ]
+  },
+  "build_targets": {
+    "all": {
+      "description": "Build main executable",
+      "outputs": [
+        "SOTE.exe"
+      ]
+    },
+    "clean": {
+      "description": "Remove build artifacts",
+      "outputs": []
+    },
+    "debug": {
+      "description": "Build with debug information",
+      "outputs": [
+        "SOTE.exe"
+      ]
+    },
+    "release": {
+      "description": "Build optimized release",
+      "outputs": [
+        "SOTE.exe"
+      ]
+    }
+  },
+  "analysis": {
+    "total_source_files": 2,
+    "total_header_files": 2,
+    "total_object_files": 2,
+    "build_complexity": "simple",
+    "estimated_build_time": "< 10 seconds",
+    "parallelizable": true
+  },
+  "provenance": {
+    "source_evidence": "evidence.curated.json",
+    "source_mappings": "mappings.json",
+    "source_layouts": "layouts.curated.json",
+    "method": "dependency_analysis",
+    "deterministic": true
+  },
+  "symbol_normalization": {
+    "applied": true,
+    "rule": "dots_to_underscores",
+    "affected_headers": [
+      "include/priority_functions.h",
+      "include/batch2_functions.h",
+      "include/batch3_functions.h",
+      "include/batch4_functions.h",
+      "include/missing_functions.h"
+    ],
+    "patch_file": "rename.patch",
+    "mapping_file": "mappings.json",
+    "function_count": 98,
+    "purpose": "build_test_compatibility"
+  },
+  "metadata": {
+    "symbol_normalization_applied": true,
+    "last_updated": "2025-09-10T20:30:00Z"
+  },
+  "source_files": [
+    "src/batch5_functions.c",
+    "src/batch6_functions.c",
+    "src/batch7_functions.c",
+    "src/batch8_functions.c",
+    "src/batch9_functions.c"
+  ],
+  "header_files": [
+    "include/batch5_functions.h",
+    "include/batch6_functions.h",
+    "include/batch7_functions.h",
+    "include/batch8_functions.h",
+    "include/batch9_functions.h"
+  ],
+  "expansion_update": {
+    "date": "2025-09-11T00:50:00Z",
+    "new_source_files": 5,
+    "new_header_files": 5,
+    "total_source_files": 5,
+    "total_header_files": 5
+  }
+}

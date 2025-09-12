@@ -1,0 +1,176 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "dependencies": {
+    "system_libraries": {
+      "KERNEL32.dll": {
+        "type": "system",
+        "required": true,
+        "functions_used": [
+          "GetStartupInfoA", "GetCommandLineA", "GetModuleHandleA", "HeapFree", 
+          "SetEnvironmentVariableA", "HeapAlloc", "TerminateProcess", "RaiseException",
+          "CreateThread", "HeapReAlloc", "HeapSize", "GlobalAddAtomA", "ExitThread",
+          "SetErrorMode", "GetTimeZoneInformation", "GetSystemTime", "FatalAppExitA",
+          "UnhandledExceptionFilter", "FreeEnvironmentStringsA", "GetEnvironmentStrings",
+          "ExitProcess", "CreateFileA", "ReadFile", "WriteFile", "SetFilePointer",
+          "GetCurrentProcess", "GetVersion", "HeapCreate", "VirtualAlloc", "VirtualFree"
+        ],
+        "link_flags": ["-lkernel32"]
+      },
+      "USER32.dll": {
+        "type": "system",
+        "required": true,
+        "functions_used": [
+          "GetMessageA", "DispatchMessageA", "PeekMessageA", "TranslateMessage",
+          "PostQuitMessage", "CreateWindowExA", "DefWindowProcA", "RegisterClassA",
+          "LoadIconA", "LoadCursorA", "GetSystemMetrics", "ShowWindow", "UpdateWindow",
+          "GetWindowRect", "GetClientRect", "InvalidateRect", "BeginPaint", "EndPaint",
+          "MessageBoxA", "SendMessageA", "SetTimer", "KillTimer", "GetDC", "ReleaseDC"
+        ],
+        "link_flags": ["-luser32"]
+      },
+      "GDI32.dll": {
+        "type": "system", 
+        "required": true,
+        "functions_used": [
+          "CreateCompatibleDC", "DeleteDC", "SelectObject", "DeleteObject", "BitBlt",
+          "CreateBitmap", "CreatePalette", "SelectPalette", "RealizePalette", "SetBkMode",
+          "SetTextColor", "SetBkColor", "TextOutA", "GetDeviceCaps", "CreateFontA",
+          "GetTextMetricsA", "GetTextExtentPointA", "CreateSolidBrush", "CreatePen"
+        ],
+        "link_flags": ["-lgdi32"]
+      },
+      "DDRAW.dll": {
+        "type": "directx",
+        "required": true,
+        "functions_used": ["DirectDrawCreate", "DirectDrawEnumerateA"],
+        "link_flags": ["-lddraw"],
+        "headers": ["ddraw.h"],
+        "sdk_required": "DirectX SDK"
+      },
+      "WINMM.dll": {
+        "type": "multimedia",
+        "required": true,
+        "functions_used": ["timeGetTime"],
+        "link_flags": ["-lwinmm"]
+      },
+      "ADVAPI32.dll": {
+        "type": "system",
+        "required": true,
+        "functions_used": [
+          "RegOpenKeyA", "RegDeleteKeyA", "RegDeleteValueA", "RegSetValueExA",
+          "RegCloseKey", "RegOpenKeyExA", "RegQueryValueExA", "RegCreateKeyExA"
+        ],
+        "link_flags": ["-ladvapi32"]
+      },
+      "SHELL32.dll": {
+        "type": "system",
+        "required": false,
+        "functions_used": ["DragQueryFileA", "SHGetFileInfoA", "DragAcceptFiles", "DragFinish"],
+        "link_flags": ["-lshell32"]
+      },
+      "COMCTL32.dll": {
+        "type": "system",
+        "required": false,
+        "functions_used": [
+          "ImageList_LoadImageA", "ImageList_Write", "ImageList_Read", 
+          "ImageList_Merge", "ImageList_Create", "ImageList_Destroy"
+        ],
+        "link_flags": ["-lcomctl32"]
+      },
+      "comdlg32.dll": {
+        "type": "system",
+        "required": false,
+        "functions_used": ["GetSaveFileNameA", "GetFileTitleA", "GetOpenFileNameA"],
+        "link_flags": ["-lcomdlg32"]
+      },
+      "WINSPOOL.DRV": {
+        "type": "system",
+        "required": false,
+        "functions_used": ["ClosePrinter", "DocumentPropertiesA", "OpenPrinterA"],
+        "link_flags": ["-lwinspool"]
+      }
+    },
+    "development_tools": {
+      "compiler": {
+        "name": "gcc",
+        "version": ">=7.0",
+        "required": true,
+        "alternatives": ["clang", "msvc"]
+      },
+      "make": {
+        "name": "make",
+        "version": ">=3.81",
+        "required": true,
+        "alternatives": ["nmake", "mingw32-make"]
+      },
+      "linker": {
+        "name": "ld",
+        "required": true,
+        "alternatives": ["link.exe"]
+      }
+    },
+    "sdk_requirements": {
+      "directx_sdk": {
+        "name": "DirectX SDK",
+        "version": ">=7.0",
+        "required": true,
+        "headers": ["ddraw.h", "dsound.h"],
+        "libraries": ["ddraw.lib"],
+        "description": "Required for DirectDraw functionality"
+      },
+      "windows_sdk": {
+        "name": "Windows SDK",
+        "version": ">=Windows 95",
+        "required": true,
+        "headers": ["windows.h", "winbase.h", "wingdi.h", "winuser.h"],
+        "description": "Required for Win32 API"
+      }
+    }
+  },
+  "build_requirements": {
+    "target_platform": "win32",
+    "architecture": "i386",
+    "calling_convention": "stdcall",
+    "subsystem": "windows",
+    "entry_point": "entry_point",
+    "optimization": "size",
+    "debug_info": true
+  },
+  "compiler_flags": {
+    "c_standard": "c99",
+    "warnings": ["-Wall", "-Wextra"],
+    "defines": ["-DWIN32", "-D_WIN32", "-DUNICODE", "-D_UNICODE"],
+    "include_paths": ["-Iinclude"],
+    "optimization": ["-Os"],
+    "debug": ["-g"],
+    "architecture": ["-m32"]
+  },
+  "linker_flags": {
+    "subsystem": "-Wl,--subsystem,windows",
+    "entry_point": "-Wl,--entry,entry_point",
+    "libraries": [
+      "-lkernel32", "-luser32", "-lgdi32", "-lddraw", 
+      "-lwinmm", "-ladvapi32", "-lshell32", "-lcomctl32",
+      "-lcomdlg32", "-lwinspool"
+    ],
+    "architecture": ["-m32"],
+    "additional": ["-static-libgcc"]
+  },
+  "analysis": {
+    "total_imports": 209,
+    "unique_libraries": 10,
+    "critical_dependencies": ["KERNEL32.dll", "USER32.dll", "GDI32.dll", "DDRAW.dll"],
+    "optional_dependencies": ["SHELL32.dll", "COMCTL32.dll", "comdlg32.dll", "WINSPOOL.DRV"],
+    "sdk_dependencies": ["DirectX SDK", "Windows SDK"]
+  },
+  "provenance": {
+    "source": "evidence.curated.json",
+    "method": "import_analysis",
+    "deterministic": true
+  }
+}

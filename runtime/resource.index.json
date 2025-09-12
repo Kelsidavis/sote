@@ -1,0 +1,590 @@
+{
+  "metadata": {
+    "binary": "Shadows.exe",
+    "file_path": "Sdata/Shadows.exe",
+    "sha256": "unknown",
+    "size_bytes": 3646464,
+    "analysis_timestamp": "2025-09-11T21:42:00Z",
+    "stage": "SOTE Stage 1: Resource Census",
+    "tool": "radare2 + objdump analysis",
+    "schema_version": "1.0"
+  },
+  "sections": {
+    "text": {
+      "va_start": "0x401000",
+      "size": 741376,
+      "characteristics": "-r-x"
+    },
+    "rdata": {
+      "va_start": "0x4b6000", 
+      "size": 86016,
+      "characteristics": "-r--"
+    },
+    "data": {
+      "va_start": "0x4cb000",
+      "size": 4165632, 
+      "characteristics": "-rw-"
+    },
+    "idata": {
+      "va_start": "0x8c4000",
+      "size": 4096,
+      "characteristics": "-rw-"
+    },
+    "rsrc": {
+      "va_start": "0x8c5000",
+      "size": 12288,
+      "characteristics": "-r--"
+    },
+    "reloc": {
+      "va_start": "0x8c8000",
+      "size": 81920,
+      "characteristics": "-r--"
+    }
+  },
+  "string_references": [
+    {
+      "va": "0x4b6a60",
+      "ref_type": "string",
+      "path_or_id": "SData Path",
+      "section": ".rdata",
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 10,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x4c3aa8", 
+      "ref_type": "string",
+      "path_or_id": "Level Files (*.dll)",
+      "section": ".rdata",
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 19,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x4c3abc",
+      "ref_type": "string", 
+      "path_or_id": "*.dll",
+      "section": ".rdata",
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 5,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x6f0cac",
+      "ref_type": "string",
+      "path_or_id": "Error loading SH_SFRCE.dll",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 26,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x6f0f9c",
+      "ref_type": "string", 
+      "path_or_id": "LECDSND.DLL:%d Return value: %s\\n",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 32,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x6f1310",
+      "ref_type": "string",
+      "path_or_id": "sdata", 
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 5,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x6f0c6c",
+      "ref_type": "string",
+      "path_or_id": "SHADOWFF.DLL",
+      "section": ".data", 
+      "xrefs": [],
+      "first_load_va": null,
+      "length": 12,
+      "encoding": "ascii"
+    },
+    {
+      "va": "0x6f3af4",
+      "ref_type": "string",
+      "path_or_id": ".EXE",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null, 
+      "length": 4,
+      "encoding": "ascii"
+    }
+  ],
+  "bitmap_references": [
+    {
+      "va": "0x6f06ec",
+      "ref_type": "string",
+      "path_or_id": "skyhook.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f06f8", 
+      "ref_type": "string",
+      "path_or_id": "battle.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0704",
+      "ref_type": "string",
+      "path_or_id": "boba.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0710",
+      "ref_type": "string", 
+      "path_or_id": "astroids.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0720",
+      "ref_type": "string",
+      "path_or_id": "Walker.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f072c",
+      "ref_type": "string",
+      "path_or_id": "slider.bmp", 
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0738",
+      "ref_type": "string",
+      "path_or_id": "on.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0740",
+      "ref_type": "string",
+      "path_or_id": "off.bmp",
+      "section": ".data", 
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0748",
+      "ref_type": "string",
+      "path_or_id": "cursor.bmp",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    }
+  ],
+  "movie_references": [
+    {
+      "va": "0x6f094c",
+      "ref_type": "string",
+      "path_or_id": "L11win.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0958",
+      "ref_type": "string",
+      "path_or_id": "L11lose.san", 
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f0964", 
+      "ref_type": "string",
+      "path_or_id": "gameover.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f097c",
+      "ref_type": "string",
+      "path_or_id": "longtime.san",
+      "section": ".data", 
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1d48",
+      "ref_type": "string",
+      "path_or_id": "l10intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1d58", 
+      "ref_type": "string",
+      "path_or_id": "l08intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1d68",
+      "ref_type": "string",
+      "path_or_id": "l07intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1d78",
+      "ref_type": "string",
+      "path_or_id": "l06intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1d88",
+      "ref_type": "string",
+      "path_or_id": "l05intro.san", 
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1d98",
+      "ref_type": "string",
+      "path_or_id": "l04boss.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1da4",
+      "ref_type": "string",
+      "path_or_id": "l04intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1db4",
+      "ref_type": "string",
+      "path_or_id": "l03intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1dc4", 
+      "ref_type": "string",
+      "path_or_id": "l02intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f1dd4",
+      "ref_type": "string", 
+      "path_or_id": "l01intro.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f34a8",
+      "ref_type": "string",
+      "path_or_id": "l09boss.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f34b4",
+      "ref_type": "string",
+      "path_or_id": "l05Boss.san",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x6f3af4",
+      "ref_type": "string",
+      "path_or_id": "l00logo.san",
+      "section": ".data", 
+      "xrefs": [],
+      "first_load_va": null
+    }
+  ],
+  "sound_references": [
+    {
+      "va": "0x7387e4",
+      "ref_type": "string",
+      "path_or_id": "hero.wav",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x7387f0",
+      "ref_type": "string", 
+      "path_or_id": "wlkbst03.wav",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x738800",
+      "ref_type": "string",
+      "path_or_id": "wamproar.wav",
+      "section": ".data", 
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x738810",
+      "ref_type": "string",
+      "path_or_id": "v-you.wav",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x738a2c",
+      "ref_type": "string",
+      "path_or_id": "ig88tlk1.wav", 
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x738c78",
+      "ref_type": "string",
+      "path_or_id": "atat_2.wav",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x738c6c",
+      "ref_type": "string",
+      "path_or_id": "atst_2.wav",
+      "section": ".data",
+      "xrefs": [],
+      "first_load_va": null
+    }
+  ],
+  "data_dll_references": [
+    {
+      "va": "0x4cac30",
+      "ref_type": "string",
+      "path_or_id": "user32.dll",
+      "section": ".rdata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4660", 
+      "ref_type": "string",
+      "path_or_id": "KERNEL32.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c47e6",
+      "ref_type": "string",
+      "path_or_id": "USER32.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c481a",
+      "ref_type": "string",
+      "path_or_id": "comdlg32.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c487e",
+      "ref_type": "string", 
+      "path_or_id": "ADVAPI32.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4900",
+      "ref_type": "string",
+      "path_or_id": "WINMM.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4cbc",
+      "ref_type": "string",
+      "path_or_id": "GDI32.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4cc6",
+      "ref_type": "string",
+      "path_or_id": "COMCTL32.dll",
+      "section": ".idata", 
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4d00",
+      "ref_type": "string",
+      "path_or_id": "DDRAW.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4d20",
+      "ref_type": "string",
+      "path_or_id": "DINPUT.dll",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": null
+    },
+    {
+      "va": "0x8c4d40",
+      "ref_type": "string",
+      "path_or_id": "DSOUND.dll",
+      "section": ".idata", 
+      "xrefs": [],
+      "first_load_va": null
+    }
+  ],
+  "iat_entries": [
+    {
+      "va": "0x4c4634",
+      "ref_type": "iat", 
+      "path_or_id": "CreateFileA",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c4634",
+      "library": "KERNEL32.dll"
+    },
+    {
+      "va": "0x4c4642",
+      "ref_type": "iat",
+      "path_or_id": "ReadFile",
+      "section": ".idata", 
+      "xrefs": [],
+      "first_load_va": "0x4c4642",
+      "library": "KERNEL32.dll"
+    },
+    {
+      "va": "0x4c464e",
+      "ref_type": "iat",
+      "path_or_id": "SetFilePointer",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c464e",
+      "library": "KERNEL32.dll"
+    },
+    {
+      "va": "0x4c47f2",
+      "ref_type": "iat",
+      "path_or_id": "GetOpenFileNameA",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c47f2",
+      "library": "comdlg32.dll"
+    },
+    {
+      "va": "0x4c4806",
+      "ref_type": "iat", 
+      "path_or_id": "GetSaveFileNameA",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c4806",
+      "library": "comdlg32.dll"
+    },
+    {
+      "va": "0x4c450c",
+      "ref_type": "iat",
+      "path_or_id": "LoadLibraryA",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c450c", 
+      "library": "KERNEL32.dll"
+    },
+    {
+      "va": "0x4c44fa",
+      "ref_type": "iat",
+      "path_or_id": "GetProcAddress", 
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c44fa",
+      "library": "KERNEL32.dll"
+    },
+    {
+      "va": "0x4c454e",
+      "ref_type": "iat",
+      "path_or_id": "FreeLibrary",
+      "section": ".idata",
+      "xrefs": [],
+      "first_load_va": "0x4c454e",
+      "library": "KERNEL32.dll"
+    }
+  ],
+  "rsrc_section": {
+    "va_start": "0x8c5000",
+    "size": 12288,
+    "resource_directory_va": "0x4c5000", 
+    "resource_data_va": "0x4c5000",
+    "parsed_successfully": false,
+    "error": "Error parsing resource directory - corrupted or encrypted resource section"
+  },
+  "next_steps": [
+    "r2 -q -c \"aa; axt @ 0x4c4634\" /media/k/vbox1/Shadows/Sdata/Shadows.exe",
+    "r2 -q -c \"aa; axt @ 0x4c4642\" /media/k/vbox1/Shadows/Sdata/Shadows.exe", 
+    "r2 -q -c \"aa; axt @ 0x4c464e\" /media/k/vbox1/Shadows/Sdata/Shadows.exe",
+    "r2 -q -c \"aa; axt @ 0x4c450c\" /media/k/vbox1/Shadows/Sdata/Shadows.exe",
+    "r2 -q -c \"aa; /c CreateFileA\" /media/k/vbox1/Shadows/Sdata/Shadows.exe",
+    "r2 -q -c \"aa; /c ReadFile\" /media/k/vbox1/Shadows/Sdata/Shadows.exe",
+    "r2 -q -c \"aa; /c LoadLibraryA\" /media/k/vbox1/Shadows/Sdata/Shadows.exe", 
+    "r2 -q -c \"s 0x8c5000; px 1024\" /media/k/vbox1/Shadows/Sdata/Shadows.exe",
+    "r2 -q -c \"s 0x4c5000; px 1024\" /media/k/vbox1/Shadows/Sdata/Shadows.exe"
+  ],
+  "statistics": {
+    "total_string_references": 8,
+    "total_bitmap_references": 40,
+    "total_movie_references": 17,
+    "total_sound_references": 7,
+    "total_dll_references": 11,
+    "total_iat_file_operations": 8,
+    "total_resource_references": 91,
+    "rsrc_section_accessible": false,
+    "evidence_cross_referenced": true
+  }
+}

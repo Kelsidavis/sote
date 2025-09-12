@@ -1,0 +1,32 @@
+{
+  "call_id": "coord-0005",
+  "agent": "build_integration",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "evidence": "evidence.curated.json",
+      "mappings": "mappings.json",
+      "layouts": "layouts.curated.json",
+      "src_dir": "src",
+      "include_dir": "include"
+    },
+    "scope": {
+      "build_system": "make",
+      "target_platform": "win32",
+      "dependencies": "auto_detect"
+    },
+    "options": {
+      "deterministic_sort": true,
+      "generate_deps_manifest": true,
+      "create_makefile": true,
+      "detect_missing_deps": true
+    }
+  },
+  "expected_outputs": ["build.graph.json", "deps.manifest.json", "Makefile", "build.missing.md"]
+}

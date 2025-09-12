@@ -1,0 +1,243 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "test_metadata": {
+    "created": "2025-09-11T01:00:00Z",
+    "scope": "expansion_batch_testing",
+    "method": "evidence_based_validation"
+  },
+  "test_overview": {
+    "total_expansion_functions": 200,
+    "batch_count": 5,
+    "test_categories": [
+      "compilation",
+      "signature_compliance",
+      "execution",
+      "integration"
+    ],
+    "estimated_duration_minutes": 45
+  },
+  "batch_tests": [
+    {
+      "batch_number": 5,
+      "function_count": 40,
+      "hotness_range": {
+        "min": 19.896,
+        "max": 127.256,
+        "avg": 31.750700000000002
+      },
+      "tests": {
+        "compilation_test": {
+          "description": "Verify Batch 5 compiles successfully",
+          "source_file": "src/batch5_functions.c",
+          "header_file": "include/batch5_functions.h",
+          "expected_result": "clean_compile"
+        },
+        "signature_compliance": {
+          "description": "Verify all 40 functions have correct signatures",
+          "function_count": 40,
+          "expected_signature_pattern": "int32_t function_name(int32_t argc)",
+          "expected_result": "all_signatures_compliant"
+        },
+        "basic_execution": {
+          "description": "Test basic execution of all 40 functions",
+          "test_inputs": [
+            0,
+            1,
+            10,
+            100,
+            -1
+          ],
+          "expected_behavior": "no_crashes_deterministic_output",
+          "timeout_seconds": 5
+        },
+        "sample_functions": [
+          "fcn.00441d30",
+          "fcn.004160d8",
+          "fcn.0045664c"
+        ]
+      }
+    },
+    {
+      "batch_number": 6,
+      "function_count": 40,
+      "hotness_range": {
+        "min": 16.418000000000003,
+        "max": 19.822,
+        "avg": 18.051650000000002
+      },
+      "tests": {
+        "compilation_test": {
+          "description": "Verify Batch 6 compiles successfully",
+          "source_file": "src/batch6_functions.c",
+          "header_file": "include/batch6_functions.h",
+          "expected_result": "clean_compile"
+        },
+        "signature_compliance": {
+          "description": "Verify all 40 functions have correct signatures",
+          "function_count": 40,
+          "expected_signature_pattern": "int32_t function_name(int32_t argc)",
+          "expected_result": "all_signatures_compliant"
+        },
+        "basic_execution": {
+          "description": "Test basic execution of all 40 functions",
+          "test_inputs": [
+            0,
+            1,
+            10,
+            100,
+            -1
+          ],
+          "expected_behavior": "no_crashes_deterministic_output",
+          "timeout_seconds": 5
+        },
+        "sample_functions": [
+          "fcn.00422aee",
+          "fcn.00419ad0",
+          "fcn.0042a000"
+        ]
+      }
+    },
+    {
+      "batch_number": 7,
+      "function_count": 40,
+      "hotness_range": {
+        "min": 13.77,
+        "max": 16.162000000000003,
+        "avg": 14.99085
+      },
+      "tests": {
+        "compilation_test": {
+          "description": "Verify Batch 7 compiles successfully",
+          "source_file": "src/batch7_functions.c",
+          "header_file": "include/batch7_functions.h",
+          "expected_result": "clean_compile"
+        },
+        "signature_compliance": {
+          "description": "Verify all 40 functions have correct signatures",
+          "function_count": 40,
+          "expected_signature_pattern": "int32_t function_name(int32_t argc)",
+          "expected_result": "all_signatures_compliant"
+        },
+        "basic_execution": {
+          "description": "Test basic execution of all 40 functions",
+          "test_inputs": [
+            0,
+            1,
+            10,
+            100,
+            -1
+          ],
+          "expected_behavior": "no_crashes_deterministic_output",
+          "timeout_seconds": 5
+        },
+        "sample_functions": [
+          "fcn.0043f99a",
+          "fcn.00440004",
+          "fcn.0042af00"
+        ]
+      }
+    },
+    {
+      "batch_number": 8,
+      "function_count": 40,
+      "hotness_range": {
+        "min": 11.896,
+        "max": 13.719999999999999,
+        "avg": 12.7899
+      },
+      "tests": {
+        "compilation_test": {
+          "description": "Verify Batch 8 compiles successfully",
+          "source_file": "src/batch8_functions.c",
+          "header_file": "include/batch8_functions.h",
+          "expected_result": "clean_compile"
+        },
+        "signature_compliance": {
+          "description": "Verify all 40 functions have correct signatures",
+          "function_count": 40,
+          "expected_signature_pattern": "int32_t function_name(int32_t argc)",
+          "expected_result": "all_signatures_compliant"
+        },
+        "basic_execution": {
+          "description": "Test basic execution of all 40 functions",
+          "test_inputs": [
+            0,
+            1,
+            10,
+            100,
+            -1
+          ],
+          "expected_behavior": "no_crashes_deterministic_output",
+          "timeout_seconds": 5
+        },
+        "sample_functions": [
+          "fcn.00444e3c",
+          "fcn.0040120d",
+          "fcn.00423240"
+        ]
+      }
+    },
+    {
+      "batch_number": 9,
+      "function_count": 40,
+      "hotness_range": {
+        "min": 10.395999999999999,
+        "max": 11.886000000000001,
+        "avg": 11.067400000000001
+      },
+      "tests": {
+        "compilation_test": {
+          "description": "Verify Batch 9 compiles successfully",
+          "source_file": "src/batch9_functions.c",
+          "header_file": "include/batch9_functions.h",
+          "expected_result": "clean_compile"
+        },
+        "signature_compliance": {
+          "description": "Verify all 40 functions have correct signatures",
+          "function_count": 40,
+          "expected_signature_pattern": "int32_t function_name(int32_t argc)",
+          "expected_result": "all_signatures_compliant"
+        },
+        "basic_execution": {
+          "description": "Test basic execution of all 40 functions",
+          "test_inputs": [
+            0,
+            1,
+            10,
+            100,
+            -1
+          ],
+          "expected_behavior": "no_crashes_deterministic_output",
+          "timeout_seconds": 5
+        },
+        "sample_functions": [
+          "fcn.00414460",
+          "fcn.0044b9e5",
+          "fcn.00420fa0"
+        ]
+      }
+    }
+  ],
+  "integration_tests": {
+    "full_build_test": {
+      "description": "Verify entire expanded codebase builds successfully",
+      "build_system": "make",
+      "expected_result": "successful_executable"
+    },
+    "cmake_build_test": {
+      "description": "Verify CMake build with expansion",
+      "build_system": "cmake",
+      "expected_result": "successful_executable"
+    },
+    "function_count_validation": {
+      "description": "Verify total function count matches expectation",
+      "expected_total_functions": 300,
+      "validation_method": "symbol_count"
+    }
+  }
+}

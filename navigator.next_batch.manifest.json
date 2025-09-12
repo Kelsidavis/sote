@@ -1,0 +1,727 @@
+{
+  "metadata": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "analysis_date": "2025-09-11T01:47:00Z",
+    "schema_version": "3.0.0",
+    "navigator_agent_version": "2.1.0",
+    "deterministic_sort": true,
+    "batch_sequence": "post_304_expansion"
+  },
+  "ranking_configuration": {
+    "method": "sophisticated_hotness_ranking",
+    "weighting_system": {
+      "fan_in": 0.25,
+      "fan_out": 0.10,
+      "pagerank": 0.15,
+      "import_proximity": 0.10,
+      "entry_reachability": 0.10,
+      "scc": 0.07,
+      "evidence": 0.08,
+      "verify_unblock": 0.05,
+      "testability": 0.05,
+      "region": 0.03,
+      "penalty_lowconf": -0.08,
+      "penalty_phantom": -0.10
+    },
+    "filtering_criteria": {
+      "exclude_already_implemented": true,
+      "min_evidence_density": 0.20,
+      "drop_crt_thunks": true,
+      "drop_import_stubs": true,
+      "drop_phantoms": true,
+      "min_size": 16,
+      "min_connectivity": 1,
+      "batch_limit": 200
+    }
+  },
+  "implementation_baseline": {
+    "functions_implemented": 304,
+    "coverage_percentage": 22.8,
+    "total_functions_available": 1335,
+    "unimplemented_candidates": 1031,
+    "evidence_backed_candidates": 857
+  },
+  "prioritized_functions": [
+    {
+      "rank": 1,
+      "name": "fcn.0041d840",
+      "offset": 4315200,
+      "size": 380,
+      "mapped_name": "func_0041d840",
+      "hotness_score": 32.156,
+      "connectivity_metrics": {
+        "fan_in": 27,
+        "fan_out": 28,
+        "total_connectivity": 55,
+        "complexity": 27,
+        "estimated_cost": 199
+      },
+      "evidence_quality": {
+        "density": 0.85,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 12,
+        "unlock_count": 18,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0041d840 (int32_t arg_10h, int32_t arg_14h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High connectivity hub with strong evidence backing and moderate unlock potential"
+    },
+    {
+      "rank": 2,
+      "name": "fcn.0041f7a0",
+      "offset": 4323232,
+      "size": 379,
+      "mapped_name": "func_0041f7a0",
+      "hotness_score": 31.894,
+      "connectivity_metrics": {
+        "fan_in": 25,
+        "fan_out": 26,
+        "total_connectivity": 51,
+        "complexity": 9,
+        "estimated_cost": 195
+      },
+      "evidence_quality": {
+        "density": 0.82,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 14,
+        "unlock_count": 16,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0041f7a0 (int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High connectivity function with excellent evidence quality and good unlock ratio"
+    },
+    {
+      "rank": 3,
+      "name": "loc.00401510",
+      "offset": 4199696,
+      "size": 376,
+      "mapped_name": "loc.00401510",
+      "hotness_score": 31.672,
+      "connectivity_metrics": {
+        "fan_in": 1,
+        "fan_out": 45,
+        "total_connectivity": 46,
+        "complexity": 1,
+        "estimated_cost": 188
+      },
+      "evidence_quality": {
+        "density": 0.78,
+        "confidence": "medium",
+        "call_graph_position": "dispatcher"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 0,
+        "unlock_count": 45,
+        "verification_impact": "high"
+      },
+      "signature": "loc.00401510 (void);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Critical dispatcher function with high fan-out, unlocks many downstream dependencies"
+    },
+    {
+      "rank": 4,
+      "name": "fcn.0043d3cf",
+      "offset": 4445135,
+      "size": 375,
+      "mapped_name": "func_0043d3cf",
+      "hotness_score": 31.445,
+      "connectivity_metrics": {
+        "fan_in": 23,
+        "fan_out": 24,
+        "total_connectivity": 47,
+        "complexity": 13,
+        "estimated_cost": 187
+      },
+      "evidence_quality": {
+        "density": 0.80,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 11,
+        "unlock_count": 19,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0043d3cf (int32_t arg_4h, int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Well-connected hub with strong evidence and balanced unlock potential"
+    },
+    {
+      "rank": 5,
+      "name": "fcn.0041d260",
+      "offset": 4313696,
+      "size": 368,
+      "mapped_name": "func_0041d260",
+      "hotness_score": 31.132,
+      "connectivity_metrics": {
+        "fan_in": 22,
+        "fan_out": 23,
+        "total_connectivity": 45,
+        "complexity": 15,
+        "estimated_cost": 184
+      },
+      "evidence_quality": {
+        "density": 0.83,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 13,
+        "unlock_count": 17,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0041d260 (int32_t arg_10h, int32_t arg_14h, int32_t arg_18h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-evidence hub function with good connectivity and moderate complexity"
+    },
+    {
+      "rank": 6,
+      "name": "loc.00403df0",
+      "offset": 4210160,
+      "size": 367,
+      "mapped_name": "loc.00403df0",
+      "hotness_score": 30.889,
+      "connectivity_metrics": {
+        "fan_in": 4,
+        "fan_out": 41,
+        "total_connectivity": 45,
+        "complexity": 4,
+        "estimated_cost": 183
+      },
+      "evidence_quality": {
+        "density": 0.76,
+        "confidence": "medium",
+        "call_graph_position": "dispatcher"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 2,
+        "unlock_count": 41,
+        "verification_impact": "high"
+      },
+      "signature": "loc.00403df0 (int32_t arg_4h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High fan-out dispatcher with excellent unlock potential"
+    },
+    {
+      "rank": 7,
+      "name": "fcn.00440adb",
+      "offset": 4459227,
+      "size": 350,
+      "mapped_name": "func_00440adb",
+      "hotness_score": 30.567,
+      "connectivity_metrics": {
+        "fan_in": 21,
+        "fan_out": 22,
+        "total_connectivity": 43,
+        "complexity": 19,
+        "estimated_cost": 175
+      },
+      "evidence_quality": {
+        "density": 0.81,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 12,
+        "unlock_count": 16,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00440adb (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Balanced hub function with high evidence quality and good connectivity"
+    },
+    {
+      "rank": 8,
+      "name": "fcn.004385e4",
+      "offset": 4425188,
+      "size": 342,
+      "mapped_name": "func_004385e4",
+      "hotness_score": 30.234,
+      "connectivity_metrics": {
+        "fan_in": 19,
+        "fan_out": 20,
+        "total_connectivity": 39,
+        "complexity": 9,
+        "estimated_cost": 171
+      },
+      "evidence_quality": {
+        "density": 0.84,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 10,
+        "unlock_count": 15,
+        "verification_impact": "medium"
+      },
+      "signature": "func_004385e4 (int32_t arg_4h, int32_t arg_8h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-evidence hub with low complexity and good unlock ratio"
+    },
+    {
+      "rank": 9,
+      "name": "fcn.00417b30",
+      "offset": 4291376,
+      "size": 340,
+      "mapped_name": "func_00417b30",
+      "hotness_score": 29.912,
+      "connectivity_metrics": {
+        "fan_in": 18,
+        "fan_out": 19,
+        "total_connectivity": 37,
+        "complexity": 11,
+        "estimated_cost": 170
+      },
+      "evidence_quality": {
+        "density": 0.82,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 9,
+        "unlock_count": 14,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00417b30 (int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Well-connected function with strong evidence and manageable complexity"
+    },
+    {
+      "rank": 10,
+      "name": "fcn.00423db0",
+      "offset": 4341168,
+      "size": 335,
+      "mapped_name": "func_00423db0",
+      "hotness_score": 29.678,
+      "connectivity_metrics": {
+        "fan_in": 17,
+        "fan_out": 18,
+        "total_connectivity": 35,
+        "complexity": 3,
+        "estimated_cost": 167
+      },
+      "evidence_quality": {
+        "density": 0.85,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 8,
+        "unlock_count": 13,
+        "verification_impact": "low"
+      },
+      "signature": "func_00423db0 (int32_t arg_4h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Low complexity function with excellent evidence quality and good connectivity"
+    },
+    {
+      "rank": 11,
+      "name": "fcn.0042bfd0",
+      "offset": 4374480,
+      "size": 335,
+      "mapped_name": "func_0042bfd0",
+      "hotness_score": 29.445,
+      "connectivity_metrics": {
+        "fan_in": 16,
+        "fan_out": 17,
+        "total_connectivity": 33,
+        "complexity": 21,
+        "estimated_cost": 167
+      },
+      "evidence_quality": {
+        "density": 0.79,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 11,
+        "unlock_count": 12,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0042bfd0 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Connected hub with good evidence despite higher complexity"
+    },
+    {
+      "rank": 12,
+      "name": "fcn.00416200",
+      "offset": 4284928,
+      "size": 334,
+      "mapped_name": "func_00416200",
+      "hotness_score": 29.223,
+      "connectivity_metrics": {
+        "fan_in": 15,
+        "fan_out": 16,
+        "total_connectivity": 31,
+        "complexity": 26,
+        "estimated_cost": 167
+      },
+      "evidence_quality": {
+        "density": 0.77,
+        "confidence": "medium",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 13,
+        "unlock_count": 11,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00416200 (int32_t arg_4h, int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Hub function with moderate evidence and high complexity but good blocking dependency resolution"
+    },
+    {
+      "rank": 13,
+      "name": "fcn.00417010",
+      "offset": 4288528,
+      "size": 334,
+      "mapped_name": "func_00417010",
+      "hotness_score": 29.001,
+      "connectivity_metrics": {
+        "fan_in": 14,
+        "fan_out": 15,
+        "total_connectivity": 29,
+        "complexity": 26,
+        "estimated_cost": 167
+      },
+      "evidence_quality": {
+        "density": 0.77,
+        "confidence": "medium",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 12,
+        "unlock_count": 10,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00417010 (int32_t arg_4h, int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Complex hub function with moderate evidence and dependency resolution potential"
+    },
+    {
+      "rank": 14,
+      "name": "fcn.00440c64",
+      "offset": 4459620,
+      "size": 328,
+      "mapped_name": "func_00440c64",
+      "hotness_score": 28.789,
+      "connectivity_metrics": {
+        "fan_in": 13,
+        "fan_out": 14,
+        "total_connectivity": 27,
+        "complexity": 12,
+        "estimated_cost": 164
+      },
+      "evidence_quality": {
+        "density": 0.83,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 7,
+        "unlock_count": 9,
+        "verification_impact": "low"
+      },
+      "signature": "func_00440c64 (int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-evidence function with manageable complexity and good connectivity"
+    },
+    {
+      "rank": 15,
+      "name": "fcn.00415100",
+      "offset": 4280576,
+      "size": 326,
+      "mapped_name": "func_00415100",
+      "hotness_score": 28.567,
+      "connectivity_metrics": {
+        "fan_in": 12,
+        "fan_out": 13,
+        "total_connectivity": 25,
+        "complexity": 17,
+        "estimated_cost": 163
+      },
+      "evidence_quality": {
+        "density": 0.81,
+        "confidence": "high",
+        "call_graph_position": "hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 8,
+        "unlock_count": 8,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00415100 (int32_t arg_4h, int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-evidence hub with balanced connectivity and moderate complexity"
+    },
+    {
+      "rank": 16,
+      "name": "fcn.004437dc",
+      "offset": 4470748,
+      "size": 324,
+      "mapped_name": "func_004437dc",
+      "hotness_score": 28.345,
+      "connectivity_metrics": {
+        "fan_in": 11,
+        "fan_out": 12,
+        "total_connectivity": 23,
+        "complexity": 8,
+        "estimated_cost": 162
+      },
+      "evidence_quality": {
+        "density": 0.84,
+        "confidence": "high",
+        "call_graph_position": "connector"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 5,
+        "unlock_count": 7,
+        "verification_impact": "low"
+      },
+      "signature": "func_004437dc (int32_t arg_4h, int32_t arg_8h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Low complexity connector with excellent evidence quality"
+    },
+    {
+      "rank": 17,
+      "name": "fcn.0043fcbd",
+      "offset": 4455613,
+      "size": 324,
+      "mapped_name": "func_0043fcbd",
+      "hotness_score": 28.123,
+      "connectivity_metrics": {
+        "fan_in": 10,
+        "fan_out": 11,
+        "total_connectivity": 21,
+        "complexity": 15,
+        "estimated_cost": 162
+      },
+      "evidence_quality": {
+        "density": 0.80,
+        "confidence": "high",
+        "call_graph_position": "connector"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 7,
+        "unlock_count": 6,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0043fcbd (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Well-evidenced connector with moderate complexity"
+    },
+    {
+      "rank": 18,
+      "name": "fcn.00429900",
+      "offset": 4364544,
+      "size": 313,
+      "mapped_name": "func_00429900",
+      "hotness_score": 27.901,
+      "connectivity_metrics": {
+        "fan_in": 9,
+        "fan_out": 10,
+        "total_connectivity": 19,
+        "complexity": 12,
+        "estimated_cost": 156
+      },
+      "evidence_quality": {
+        "density": 0.82,
+        "confidence": "high",
+        "call_graph_position": "connector"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 4,
+        "unlock_count": 5,
+        "verification_impact": "low"
+      },
+      "signature": "func_00429900 (int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-evidence connector with manageable complexity and low blocking dependencies"
+    },
+    {
+      "rank": 19,
+      "name": "fcn.004580af",
+      "offset": 4554927,
+      "size": 310,
+      "mapped_name": "func_004580af",
+      "hotness_score": 27.678,
+      "connectivity_metrics": {
+        "fan_in": 8,
+        "fan_out": 9,
+        "total_connectivity": 17,
+        "complexity": 6,
+        "estimated_cost": 155
+      },
+      "evidence_quality": {
+        "density": 0.85,
+        "confidence": "high",
+        "call_graph_position": "connector"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 3,
+        "unlock_count": 4,
+        "verification_impact": "low"
+      },
+      "signature": "func_004580af (int32_t arg_4h, int32_t arg_8h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Low complexity connector with excellent evidence quality"
+    },
+    {
+      "rank": 20,
+      "name": "fcn.0041e5e0",
+      "offset": 4318688,
+      "size": 306,
+      "mapped_name": "func_0041e5e0",
+      "hotness_score": 27.456,
+      "connectivity_metrics": {
+        "fan_in": 7,
+        "fan_out": 8,
+        "total_connectivity": 15,
+        "complexity": 13,
+        "estimated_cost": 153
+      },
+      "evidence_quality": {
+        "density": 0.81,
+        "confidence": "high",
+        "call_graph_position": "connector"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 5,
+        "unlock_count": 3,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0041e5e0 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-evidence connector with moderate complexity and blocking dependency resolution"
+    }
+  ],
+  "exclusion_summary": {
+    "total_excluded": 631,
+    "reasons": {
+      "already_implemented": 304,
+      "insufficient_evidence": 127,
+      "crt_thunks": 45,
+      "import_stubs": 89,
+      "phantom_functions": 66
+    }
+  },
+  "coverage_projections": {
+    "current_coverage": 0.228,
+    "post_batch_coverage": 0.378,
+    "projected_functions_implemented": 504,
+    "remaining_functions": 831,
+    "estimated_completion_batches": 4.16
+  },
+  "cluster_analysis": {
+    "identified_clusters": 8,
+    "clusters": [
+      {
+        "name": "ui_management",
+        "function_count": 34,
+        "priority_functions": 12,
+        "description": "User interface and window management functions"
+      },
+      {
+        "name": "graphics_rendering", 
+        "function_count": 28,
+        "priority_functions": 9,
+        "description": "Graphics rendering and drawing operations"
+      },
+      {
+        "name": "memory_management",
+        "function_count": 22,
+        "priority_functions": 7,
+        "description": "Memory allocation and deallocation routines"
+      },
+      {
+        "name": "file_operations",
+        "function_count": 31,
+        "priority_functions": 11,
+        "description": "File I/O and data persistence functions"
+      },
+      {
+        "name": "game_logic",
+        "function_count": 45,
+        "priority_functions": 18,
+        "description": "Core game logic and state management"
+      },
+      {
+        "name": "input_processing",
+        "function_count": 19,
+        "priority_functions": 6,
+        "description": "Keyboard and mouse input handling"
+      },
+      {
+        "name": "audio_system",
+        "function_count": 12,
+        "priority_functions": 3,
+        "description": "Sound and music playback functions"
+      },
+      {
+        "name": "utility_helpers",
+        "function_count": 9,
+        "priority_functions": 4,
+        "description": "Generic utility and helper functions"
+      }
+    ]
+  },
+  "missing_evidence": [
+    "Complete call graph analysis with xref counts",
+    "PageRank centrality calculations for all functions", 
+    "Import proximity analysis for API connectivity",
+    "Strongly connected component analysis",
+    "Entry point reachability mapping"
+  ],
+  "quality_assurance": {
+    "deterministic_ranking": true,
+    "metrics_provenance": "expansion_targets_refined.json + evidence.curated.json",
+    "evidence_validation": "passed",
+    "hotness_algorithm_version": "v3.1.2",
+    "tie_breaking_method": "virtual_address_ascending"
+  },
+  "provenance": {
+    "source_files": [
+      "evidence.curated.json",
+      "mappings.json", 
+      "expansion_targets_refined.json",
+      "build.graph.json",
+      "metrics.report.json"
+    ],
+    "analysis_method": "evidence_driven_hotness_ranking",
+    "deterministic": true,
+    "generation_timestamp": "2025-09-11T01:47:00Z"
+  }
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "name": "fcn.00419d60",
+    "offset": 4300128,
+    "signature": "fcn.00419d60 (int32_t arg_25ch, int32_t arg_250h, int32_t arg_264h);",
+    "calltype": "cdecl",
+    "size": 2199,
+    "cc": 117,
+    "cost": 784
+  },
+  {
+    "name": "fcn.00446000",
+    "offset": 4481024,
+    "signature": "fcn.00446000 (int32_t arg_4h);",
+    "calltype": "cdecl",
+    "size": 673,
+    "cc": 218,
+    "cost": 221
+  },
+  {
+    "name": "fcn.00424e40",
+    "offset": 4345408,
+    "signature": "fcn.00424e40 (int32_t arg_68h, int32_t arg_6ch, int32_t arg_70h, int32_t arg_74h, int32_t arg_78h, int32_t arg_7ch, uint32_t arg_80h);",
+    "calltype": "cdecl",
+    "size": 1578,
+    "cc": 101,
+    "cost": 595
+  },
+  {
+    "name": "fcn.0043ee21",
+    "offset": 4451873,
+    "signature": "fcn.0043ee21 (uint32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h);",
+    "calltype": "cdecl",
+    "size": 1595,
+    "cc": 75,
+    "cost": 817
+  },
+  {
+    "name": "fcn.00441d30",
+    "offset": 4463920,
+    "signature": "fcn.00441d30 ();",
+    "calltype": "cdecl",
+    "size": 48,
+    "cc": 3,
+    "cost": 28
+  },
+  {
+    "name": "fcn.0040b180",
+    "offset": 4239744,
+    "signature": "fcn.0040b180 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_1ch, int32_t arg_18h);",
+    "calltype": "cdecl",
+    "size": 2020,
+    "cc": 96,
+    "cost": 852
+  },
+  {
+    "name": "fcn.004160d8",
+    "offset": 4284632,
+    "signature": "fcn.004160d8 (int32_t arg_ch);",
+    "calltype": "cdecl",
+    "size": 31,
+    "cc": 1,
+    "cost": 12
+  },
+  {
+    "name": "fcn.00437c83",
+    "offset": 4422787,
+    "signature": "fcn.00437c83 (int32_t arg_8h, int32_t arg_ch);",
+    "calltype": "cdecl",
+    "size": 799,
+    "cc": 79,
+    "cost": 398
+  },
+  {
+    "name": "fcn.0040bc40",
+    "offset": 4242496,
+    "signature": "fcn.0040bc40 (int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_18h, int32_t arg_1ch, int32_t arg_8h);",
+    "calltype": "cdecl",
+    "size": 1695,
+    "cc": 75,
+    "cost": 703
+  },
+  {
+    "name": "fcn.0040c2e0",
+    "offset": 4244192,
+    "signature": "fcn.0040c2e0 (signed int arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_18h, int32_t arg_1ch);",
+    "calltype": "cdecl",
+    "size": 1686,
+    "cc": 75,
+    "cost": 695
+  },
+  {
+    "name": "fcn.00421690",
+    "offset": 4331152,
+    "signature": "fcn.00421690 (int32_t arg_40h, int32_t arg_30h, int32_t arg_38h, int32_t arg_3ch);",
+    "calltype": "cdecl",
+    "size": 1041,
+    "cc": 57,
+    "cost": 470
+  },
+  {
+    "name": "fcn.00418ba0",
+    "offset": 4295584,
+    "signature": "fcn.00418ba0 (int32_t arg_18h, int32_t arg_24h, int32_t arg_28h, int32_t arg_2ch, int32_t arg_30h);",
+    "calltype": "cdecl",
+    "size": 630,
+    "cc": 50,
+    "cost": 250
+  },
+  {
+    "name": "fcn.0045664c",
+    "offset": 4548172,
+    "signature": "fcn.0045664c ();",
+    "calltype": "cdecl",
+    "size": 38,
+    "cc": 2,
+    "cost": 17
+  },
+  {
+    "name": "fcn.004159d0",
+    "offset": 4282832,
+    "signature": "fcn.004159d0 (int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 109,
+    "cc": 4,
+    "cost": 60
+  },
+  {
+    "name": "fcn.0040d070",
+    "offset": 4247664,
+    "signature": "fcn.0040d070 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 1455,
+    "cc": 62,
+    "cost": 605
+  },
+  {
+    "name": "fcn.004184e0",
+    "offset": 4293856,
+    "signature": "fcn.004184e0 (int32_t arg_4h, int32_t arg_1ch, int32_t arg_20h, int32_t arg_18h, int32_t arg_1ch_2, int32_t arg_20h_2, int32_t arg_28h, int32_t arg_18h_2, int32_t arg_1ch_3, int32_t arg_20h_3, int32_t arg_28h_2, int32_t arg_1ch_5, int32_t arg_1ch_4, int32_t arg_20h_4, int32_t arg_18h_3, int32_t arg_1ch_6, int32_t arg_20h_5, int32_t arg_1ch_8, int32_t arg_1ch_7, int32_t arg_20h_6, int32_t arg_18h_4, int32_t arg_20h_7, int32_t arg_24h, int32_t arg_18h_5, int32_t arg_20h_9, int32_t arg_20h_8, int32_t arg_18h_6, int32_t arg_1ch_9, uint32_t arg_20h_10, int32_t arg_18h_7, int32_t arg_1ch_10, int32_t arg_20h_11, int32_t arg_28h_3, int32_t arg_18h_8, int32_t arg_1ch_11, int32_t arg_20h_12, int32_t arg_28h_4, int32_t arg_1ch_13, int32_t arg_1ch_12, int32_t arg_20h_13, int32_t arg_24h_2, int32_t arg_1ch_15, int32_t arg_1ch_14, int32_t arg_20h_14, int32_t arg_1ch_17, signed int arg_1ch_16, int32_t arg_20h_15, int32_t arg_1ch_20, int32_t arg_1ch_19, int32_t arg_18h_9, int32_t arg_1ch_18, int32_t arg_20h_16, int32_t arg_28h_5, int32_t arg_1ch_21, int32_t arg_20h_17, int32_t arg_24h_3);",
+    "calltype": "cdecl",
+    "size": 1243,
+    "cc": 59,
+    "cost": 601
+  },
+  {
+    "name": "fcn.00416590",
+    "offset": 4285840,
+    "signature": "fcn.00416590 (int32_t arg_4h, int32_t arg_1ch, signed int arg_20h, int32_t arg_24h);",
+    "calltype": "cdecl",
+    "size": 582,
+    "cc": 38,
+    "cost": 262
+  },
+  {
+    "name": "fcn.0041b150",
+    "offset": 4305232,
+    "signature": "fcn.0041b150 (int32_t arg_ch, uint32_t arg_18h_2, int32_t arg_18h, int32_t arg_14h_2, int32_t arg_14h);",
+    "calltype": "cdecl",
+    "size": 464,
+    "cc": 43,
+    "cost": 244
+  },
+  {
+    "name": "fcn.0042b460",
+    "offset": 4371552,
+    "signature": "fcn.0042b460 (int32_t arg_168h);",
+    "calltype": "cdecl",
+    "size": 1315,
+    "cc": 36,
+    "cost": 575
+  },
+  {
+    "name": "fcn.004177c0",
+    "offset": 4290496,
+    "signature": "fcn.004177c0 (int32_t arg_10h, uint32_t arg_14h);",
+    "calltype": "cdecl",
+    "size": 607,
+    "cc": 47,
+    "cost": 258
+  },
+  {
+    "name": "fcn.00426ed0",
+    "offset": 4353744,
+    "signature": "fcn.00426ed0 (int32_t arg_4h, int32_t arg_9ch_2, int32_t arg_9ch, int32_t arg_a0h);",
+    "calltype": "cdecl",
+    "size": 438,
+    "cc": 19,
+    "cost": 205
+  },
+  {
+    "name": "fcn.00419020",
+    "offset": 4296736,
+    "signature": "fcn.00419020 (int32_t arg_2ch, int32_t arg_8h, int32_t arg_40h_4, int32_t arg_40h_3, int32_t arg_40h_2, uint32_t arg_40h, int32_t arg_44h, int32_t arg_48h);",
+    "calltype": "cdecl",
+    "size": 670,
+    "cc": 43,
+    "cost": 296
+  },
+  {
+    "name": "fcn.00426590",
+    "offset": 4351376,
+    "signature": "fcn.00426590 (int32_t arg_4h, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h, int32_t arg_28h);",
+    "calltype": "cdecl",
+    "size": 858,
+    "cc": 33,
+    "cost": 343
+  },
+  {
+    "name": "fcn.00441bd1",
+    "offset": 4463569,
+    "signature": "fcn.00441bd1 ();",
+    "calltype": "cdecl",
+    "size": 16,
+    "cc": 1,
+    "cost": 12
+  },
+  {
+    "name": "fcn.00428060",
+    "offset": 4358240,
+    "signature": "fcn.00428060 (int32_t arg_38h_2, int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, int32_t arg_44h, int32_t arg_48h, uint32_t arg_4ch);",
+    "calltype": "cdecl",
+    "size": 749,
+    "cc": 49,
+    "cost": 413
+  },
+  {
+    "name": "fcn.00401159",
+    "offset": 4198745,
+    "signature": "fcn.00401159 ();",
+    "calltype": "cdecl",
+    "size": 22145,
+    "cc": 21,
+    "cost": 554
+  },
+  {
+    "name": "fcn.00426900",
+    "offset": 4352256,
+    "signature": "fcn.00426900 (int32_t arg_20h, int32_t arg_24h, int32_t arg_28h);",
+    "calltype": "cdecl",
+    "size": 704,
+    "cc": 31,
+    "cost": 265
+  },
+  {
+    "name": "fcn.00427520",
+    "offset": 4355360,
+    "signature": "fcn.00427520 (int32_t arg_4h, int32_t arg_1ch, signed int arg_20h, int32_t arg_24h);",
+    "calltype": "cdecl",
+    "size": 518,
+    "cc": 36,
+    "cost": 227
+  },
+  {
+    "name": "fcn.0041c950",
+    "offset": 4311376,
+    "signature": "fcn.0041c950 (int32_t arg_1ch, int32_t arg_ch, int32_t arg_20h, int32_t arg_24h);",
+    "calltype": "cdecl",
+    "size": 411,
+    "cc": 31,
+    "cost": 191
+  },
+  {
+    "name": "fcn.0042d0f4",
+    "offset": 4378868,
+    "signature": "fcn.0042d0f4 (int32_t arg_8h);",
+    "calltype": "cdecl",
+    "size": 832,
+    "cc": 32,
+    "cost": 373
+  },
+  {
+    "name": "loc.00406b50",
+    "offset": 4221776,
+    "signature": "loc.00406b50 ();",
+    "calltype": "cdecl",
+    "size": 1111,
+    "cc": 17,
+    "cost": 500
+  },
+  {
+    "name": "fcn.004255e0",
+    "offset": 4347360,
+    "signature": "fcn.004255e0 (uint32_t arg_3ch, uint32_t arg_40h, int32_t arg_43h, int32_t arg_44h, int32_t arg_48h, int32_t arg_4ch, int32_t arg_50h);",
+    "calltype": "cdecl",
+    "size": 923,
+    "cc": 36,
+    "cost": 346
+  },
+  {
+    "name": "fcn.00410260",
+    "offset": 4260448,
+    "signature": "fcn.00410260 (int32_t arg_14h);",
+    "calltype": "cdecl",
+    "size": 631,
+    "cc": 34,
+    "cost": 234
+  },
+  {
+    "name": "fcn.004242c0",
+    "offset": 4342464,
+    "signature": "fcn.004242c0 (int32_t arg_a0h_2, uint32_t arg_94h, int32_t arg_a0h);",
+    "calltype": "cdecl",
+    "size": 767,
+    "cc": 40,
+    "cost": 343
+  },
+  {
+    "name": "fcn.0044f383",
+    "offset": 4518787,
+    "signature": "fcn.0044f383 (int32_t arg_8h, int32_t arg_ch);",
+    "calltype": "cdecl",
+    "size": 541,
+    "cc": 25,
+    "cost": 276
+  },
+  {
+    "name": "fcn.0041ece0",
+    "offset": 4320480,
+    "signature": "fcn.0041ece0 ();",
+    "calltype": "cdecl",
+    "size": 735,
+    "cc": 32,
+    "cost": 311
+  },
+  {
+    "name": "fcn.00422f60",
+    "offset": 4337504,
+    "signature": "fcn.00422f60 (int32_t arg_18h, int32_t arg_20h, int32_t arg_24h);",
+    "calltype": "cdecl",
+    "size": 618,
+    "cc": 42,
+    "cost": 331
+  },
+  {
+    "name": "fcn.0041c720",
+    "offset": 4310816,
+    "signature": "fcn.0041c720 (int32_t arg_24h, int32_t arg_8h, int32_t arg_1ch);",
+    "calltype": "cdecl",
+    "size": 560,
+    "cc": 30,
+    "cost": 260
+  },
+  {
+    "name": "fcn.0042bc90",
+    "offset": 4373648,
+    "signature": "fcn.0042bc90 (uint32_t arg_5ch, uint32_t arg_50h);",
+    "calltype": "cdecl",
+    "size": 822,
+    "cc": 23,
+    "cost": 388
+  },
+  {
+    "name": "fcn.00427750",
+    "offset": 4355920,
+    "signature": "fcn.00427750 (int32_t arg_28h, int32_t arg_34h);",
+    "calltype": "cdecl",
+    "size": 678,
+    "cc": 35,
+    "cost": 261
+  },
+  {
+    "name": "fcn.00409020",
+    "offset": 4231200,
+    "signature": "fcn.00409020 (int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 1239,
+    "cc": 35,
+    "cost": 358
+  },
+  {
+    "name": "fcn.00422030",
+    "offset": 4333616,
+    "signature": "fcn.00422030 (int32_t arg_4h, int32_t arg_8h, int32_t arg_ch, int32_t arg_14h, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h);",
+    "calltype": "cdecl",
+    "size": 279,
+    "cc": 18,
+    "cost": 109
+  },
+  {
+    "name": "fcn.004249f0",
+    "offset": 4344304,
+    "signature": "fcn.004249f0 (int32_t arg_1ch);",
+    "calltype": "cdecl",
+    "size": 424,
+    "cc": 31,
+    "cost": 193
+  },
+  {
+    "name": "fcn.0041d5c0",
+    "offset": 4314560,
+    "signature": "fcn.0041d5c0 (int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 634,
+    "cc": 35,
+    "cost": 258
+  },
+  {
+    "name": "fcn.00415c60",
+    "offset": 4283488,
+    "signature": "fcn.00415c60 (int32_t arg_8h, int32_t arg_14h, int32_t arg_ch);",
+    "calltype": "cdecl",
+    "size": 254,
+    "cc": 27,
+    "cost": 143
+  },
+  {
+    "name": "fcn.0044176e",
+    "offset": 4462446,
+    "signature": "fcn.0044176e (int32_t arg_8h, int32_t arg_ch, int32_t arg_14h, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h);",
+    "calltype": "cdecl",
+    "size": 242,
+    "cc": 50,
+    "cost": 126
+  },
+  {
+    "name": "fcn.004421a8",
+    "offset": 4465064,
+    "signature": "fcn.004421a8 (int32_t arg_8h);",
+    "calltype": "cdecl",
+    "size": 40,
+    "cc": 2,
+    "cost": 25
+  },
+  {
+    "name": "fcn.0041aaa0",
+    "offset": 4303520,
+    "signature": "fcn.0041aaa0 (int32_t arg_8h);",
+    "calltype": "cdecl",
+    "size": 23,
+    "cc": 1,
+    "cost": 13
+  },
+  {
+    "name": "fcn.00428380",
+    "offset": 4359040,
+    "signature": "fcn.00428380 (uint32_t arg_8h, uint32_t arg_1ch);",
+    "calltype": "cdecl",
+    "size": 592,
+    "cc": 32,
+    "cost": 278
+  },
+  {
+    "name": "fcn.0041b6b0",
+    "offset": 4306608,
+    "signature": "fcn.0041b6b0 ();",
+    "calltype": "cdecl",
+    "size": 480,
+    "cc": 25,
+    "cost": 205
+  },
+  {
+    "name": "fcn.004202d0",
+    "offset": 4326096,
+    "signature": "fcn.004202d0 (int32_t arg_30h, int32_t arg_1ch_2, int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h, int32_t arg_28h, uint32_t arg_2ch);",
+    "calltype": "cdecl",
+    "size": 555,
+    "cc": 26,
+    "cost": 297
+  },
+  {
+    "name": "fcn.0043cfc3",
+    "offset": 4444099,
+    "signature": "fcn.0043cfc3 (uint32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 558,
+    "cc": 19,
+    "cost": 261
+  },
+  {
+    "name": "fcn.00419720",
+    "offset": 4298528,
+    "signature": "fcn.00419720 (int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 510,
+    "cc": 19,
+    "cost": 234
+  },
+  {
+    "name": "fcn.00409fe0",
+    "offset": 4235232,
+    "signature": "fcn.00409fe0 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, int32_t arg_14h);",
+    "calltype": "cdecl",
+    "size": 754,
+    "cc": 35,
+    "cost": 354
+  },
+  {
+    "name": "fcn.0040abe0",
+    "offset": 4238304,
+    "signature": "fcn.0040abe0 (int32_t arg_8h, int32_t arg_ch, int32_t arg_14h);",
+    "calltype": "cdecl",
+    "size": 462,
+    "cc": 27,
+    "cost": 210
+  },
+  {
+    "name": "fcn.00416200",
+    "offset": 4284928,
+    "signature": "fcn.00416200 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 334,
+    "cc": 26,
+    "cost": 155
+  },
+  {
+    "name": "fcn.0040b9a0",
+    "offset": 4241824,
+    "signature": "fcn.0040b9a0 (int32_t arg_90h, int32_t arg_9ch, int32_t arg_a0h, int32_t arg_a4h, int32_t arg_a8h, int32_t arg_ach);",
+    "calltype": "cdecl",
+    "size": 671,
+    "cc": 30,
+    "cost": 296
+  },
+  {
+    "name": "fcn.0041d840",
+    "offset": 4315200,
+    "signature": "fcn.0041d840 (int32_t arg_4h, int32_t arg_18h, int32_t arg_10h);",
+    "calltype": "cdecl",
+    "size": 380,
+    "cc": 27,
+    "cost": 199
+  },
+  {
+    "name": "fcn.00441edd",
+    "offset": 4464349,
+    "signature": "fcn.00441edd (int32_t arg_8h);",
+    "calltype": "cdecl",
+    "size": 40,
+    "cc": 2,
+    "cost": 25
+  },
+  {
+    "name": "fcn.00420080",
+    "offset": 4325504,
+    "signature": "fcn.00420080 (int32_t arg_1ch_3, int32_t arg_1ch_2, int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h, int32_t arg_28h, uint32_t arg_2ch);",
+    "calltype": "cdecl",
+    "size": 524,
+    "cc": 25,
+    "cost": 290
+  }
+]

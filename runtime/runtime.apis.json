@@ -1,0 +1,516 @@
+{
+  "metadata": {
+    "target_binary": "Shadows.exe",
+    "file_path": "Sdata/Shadows.exe", 
+    "sha256": "unknown",
+    "arch": "i386",
+    "abi": "pe32",
+    "analysis_stage": "SOTE Stage 3: Runtime API Demands",
+    "analysis_timestamp": "2025-09-11T21:55:00Z",
+    "runtime_target": "Wine with SDL2 adapter layer",
+    "schema_version": "1.0"
+  },
+  "windowing_apis": [
+    {
+      "category": "windowing",
+      "function": "CreateWindowExA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4c10",
+      "parameters_used": ["class_name", "window_name", "WS_OVERLAPPEDWINDOW", "x", "y", "width", "height", "parent", "menu", "instance", "lparam"],
+      "required_behavior": "Create main application window with standard desktop window styling",
+      "context": "Application initialization - creates primary game window",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Must create SDL2 window with equivalent properties and handle WS_* style flags"
+    },
+    {
+      "category": "windowing", 
+      "function": "ShowWindow",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c476e",
+      "parameters_used": ["hwnd", "SW_SHOW", "SW_HIDE", "SW_MINIMIZE", "SW_MAXIMIZE"],
+      "required_behavior": "Control window visibility and state",
+      "context": "Window management - show/hide game window based on game state",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Map to SDL_ShowWindow/SDL_HideWindow, handle minimize/maximize states"
+    },
+    {
+      "category": "windowing",
+      "function": "PeekMessageA", 
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4bf0",
+      "parameters_used": ["msg", "hwnd", "wMsgFilterMin", "wMsgFilterMax", "PM_REMOVE"],
+      "required_behavior": "Non-blocking message retrieval for game loop",
+      "context": "Game main loop - peek at pending window messages without blocking",
+      "evidence_source": "objdump import table analysis + apis.manifest.json usage",
+      "runtime_adapter_notes": "Map to SDL_PollEvent, convert Windows messages to SDL events"
+    },
+    {
+      "category": "windowing",
+      "function": "GetMessageA",
+      "call_sites": ["0x401000+"], 
+      "iat_address": "0x4c4be2",
+      "parameters_used": ["msg", "hwnd", "wMsgFilterMin", "wMsgFilterMax"],
+      "required_behavior": "Blocking message retrieval for event-driven processing",
+      "context": "Event handling - block until message available",
+      "evidence_source": "objdump import table analysis + apis.manifest.json usage", 
+      "runtime_adapter_notes": "Map to SDL_WaitEvent, ensure blocking behavior"
+    },
+    {
+      "category": "windowing",
+      "function": "DispatchMessageA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4bba", 
+      "parameters_used": ["msg"],
+      "required_behavior": "Route messages to appropriate window procedure",
+      "context": "Message processing - dispatch messages to window handlers",
+      "evidence_source": "objdump import table analysis + apis.manifest.json usage",
+      "runtime_adapter_notes": "Process SDL events and call appropriate game handlers"
+    },
+    {
+      "category": "windowing",
+      "function": "TranslateMessage",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4bce",
+      "parameters_used": ["msg"],
+      "required_behavior": "Convert virtual key codes to character messages",
+      "context": "Keyboard input processing - translate key presses to characters",
+      "evidence_source": "objdump import table analysis + apis.manifest.json usage",
+      "runtime_adapter_notes": "Handle SDL keyboard events, convert keycodes to characters"
+    },
+    {
+      "category": "windowing",
+      "function": "UpdateWindow",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4c00",
+      "parameters_used": ["hwnd"],
+      "required_behavior": "Force window to repaint immediately",
+      "context": "Graphics refresh - force immediate screen update",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Call SDL_GL_SwapWindow or SDL_UpdateWindowSurface"
+    },
+    {
+      "category": "windowing",
+      "function": "GetDC",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4b9e",
+      "parameters_used": ["hwnd"],
+      "required_behavior": "Get device context for drawing operations",
+      "context": "Graphics setup - obtain drawing surface",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Return SDL surface or create OpenGL context"
+    },
+    {
+      "category": "windowing", 
+      "function": "ReleaseDC",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4b92",
+      "parameters_used": ["hwnd", "hdc"],
+      "required_behavior": "Release device context after drawing",
+      "context": "Graphics cleanup - release drawing resources",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Clean up SDL resources or GL context"
+    },
+    {
+      "category": "windowing",
+      "function": "GetSystemMetrics", 
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4ba6",
+      "parameters_used": ["SM_CXSCREEN", "SM_CYSCREEN", "SM_CXFRAME", "SM_CYFRAME"],
+      "required_behavior": "Query system display metrics",
+      "context": "Display setup - get screen dimensions and window metrics", 
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Use SDL_GetDisplayBounds, SDL_GetDisplayDPI for screen info"
+    }
+  ],
+  "graphics_apis": [
+    {
+      "category": "graphics",
+      "function": "DirectDrawCreate",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4cec",
+      "parameters_used": ["lpGUID", "lplpDD", "pUnkOuter"],
+      "required_behavior": "Initialize DirectDraw interface for hardware-accelerated graphics",
+      "context": "Graphics initialization - create main DirectDraw object",
+      "evidence_source": "objdump import table analysis + apis.manifest.json", 
+      "runtime_adapter_notes": "CRITICAL: Replace with SDL_CreateRenderer with hardware acceleration"
+    },
+    {
+      "category": "graphics",
+      "function": "DirectDrawEnumerateA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4cd4",
+      "parameters_used": ["lpCallback", "lpContext"],
+      "required_behavior": "Enumerate available DirectDraw devices",
+      "context": "Graphics device discovery - find available graphics adapters",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Enumerate SDL render drivers, return default if multiple available"
+    },
+    {
+      "category": "graphics", 
+      "function": "CreateFontA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4c72",
+      "parameters_used": ["height", "width", "escapement", "orientation", "weight", "italic", "underline", "strikeout", "charset", "precision", "clipping", "quality", "pitch_family", "facename"],
+      "required_behavior": "Create font object for text rendering",
+      "context": "Text rendering - create fonts for UI text display",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Use SDL_ttf to load fonts, map Windows font parameters to TTF"
+    },
+    {
+      "category": "graphics",
+      "function": "DeleteObject", 
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4c80",
+      "parameters_used": ["hObject"],
+      "required_behavior": "Delete GDI objects (fonts, brushes, pens, bitmaps)",
+      "context": "Resource cleanup - free graphics objects",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Free SDL textures, fonts, and other graphics resources"
+    },
+    {
+      "category": "graphics",
+      "function": "GetSystemPaletteEntries",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4c90", 
+      "parameters_used": ["hdc", "start_index", "num_entries", "palette_entries"],
+      "required_behavior": "Retrieve system color palette",
+      "context": "Color management - get system palette for 8-bit color modes",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Implement 8-bit color palette support in SDL, or convert to 32-bit"
+    },
+    {
+      "category": "graphics",
+      "function": "GetStockObject",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4caa",
+      "parameters_used": ["stock_object_type"],
+      "required_behavior": "Get standard system objects (brushes, pens, fonts)",
+      "context": "Graphics resources - obtain standard Windows graphics objects",
+      "evidence_source": "objdump import table analysis", 
+      "runtime_adapter_notes": "Create equivalent SDL resources for standard Windows objects"
+    }
+  ],
+  "audio_apis": [
+    {
+      "category": "audio",
+      "function": "DirectSoundCreate",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4d2c",
+      "parameters_used": ["lpGuid", "ppDS", "pUnkOuter"],
+      "required_behavior": "Initialize DirectSound for audio playback",
+      "context": "Audio initialization - create main DirectSound interface", 
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "CRITICAL: Replace with SDL_OpenAudio or SDL_AudioDevice"
+    },
+    {
+      "category": "audio",
+      "function": "timeGetTime",
+      "call_sites": ["0x401000+"], 
+      "iat_address": "0x4c488c",
+      "parameters_used": [],
+      "required_behavior": "Get high-resolution time in milliseconds",
+      "context": "Game timing - precise timing for game loop and audio synchronization",
+      "evidence_source": "objdump import table analysis + apis.manifest.json usage",
+      "runtime_adapter_notes": "Use SDL_GetTicks() for millisecond timing"
+    },
+    {
+      "category": "audio",
+      "function": "auxGetVolume",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c489a",
+      "parameters_used": ["device_id", "volume"],
+      "required_behavior": "Get auxiliary device volume level",
+      "context": "Audio control - read volume settings",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Implement volume control with SDL audio API"
+    },
+    {
+      "category": "audio",
+      "function": "auxSetVolume",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c48cc", 
+      "parameters_used": ["device_id", "volume"],
+      "required_behavior": "Set auxiliary device volume level",
+      "context": "Audio control - adjust volume settings",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Implement volume control with SDL audio API"
+    },
+    {
+      "category": "audio",
+      "function": "auxGetDevCapsA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c48aa",
+      "parameters_used": ["device_id", "aux_caps", "size"],
+      "required_behavior": "Get auxiliary device capabilities",
+      "context": "Audio device enumeration - query audio device features",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Return static capabilities or enumerate SDL audio devices"
+    },
+    {
+      "category": "audio", 
+      "function": "auxGetNumDevs",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c48bc",
+      "parameters_used": [],
+      "required_behavior": "Get number of auxiliary audio devices",
+      "context": "Audio device enumeration - count available audio devices",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Return SDL audio device count"
+    },
+    {
+      "category": "audio",
+      "function": "mciSendCommandA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c48dc",
+      "parameters_used": ["device_id", "message", "flags", "params"],
+      "required_behavior": "Send MCI commands for multimedia control", 
+      "context": "Multimedia control - play/stop/pause audio/video files",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Implement MCI command subset for audio/video playback with SDL"
+    },
+    {
+      "category": "audio",
+      "function": "mciSendStringA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c48ee",
+      "parameters_used": ["command_string", "return_string", "return_length", "callback"],
+      "required_behavior": "Send MCI commands as text strings",
+      "context": "Multimedia control - text-based multimedia commands",
+      "evidence_source": "objdump import table analysis", 
+      "runtime_adapter_notes": "Parse MCI command strings and execute with SDL multimedia functions"
+    }
+  ],
+  "input_apis": [
+    {
+      "category": "input", 
+      "function": "DirectInputCreateA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4d0a",
+      "parameters_used": ["hinst", "version", "ppDI", "punkOuter"],
+      "required_behavior": "Initialize DirectInput for advanced input handling",
+      "context": "Input initialization - setup enhanced keyboard/mouse/joystick input",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "CRITICAL: Replace with SDL input system (SDL_Event, SDL_Joystick)"
+    }
+  ],
+  "file_io_apis": [
+    {
+      "category": "fileio",
+      "function": "CreateFileA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4634",
+      "parameters_used": ["filename", "access", "share_mode", "security", "creation", "flags", "template"],
+      "required_behavior": "Open/create files for asset loading",
+      "context": "Asset loading - open game data files, bitmaps, sounds, movies",
+      "evidence_source": "objdump import table analysis + resource.index.json",
+      "runtime_adapter_notes": "Use standard C fopen() or SDL_RWops for cross-platform file access"
+    },
+    {
+      "category": "fileio",
+      "function": "ReadFile", 
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4642",
+      "parameters_used": ["file", "buffer", "bytes_to_read", "bytes_read", "overlapped"],
+      "required_behavior": "Read data from opened files",
+      "context": "Asset loading - read bitmap, sound, movie, and data files",
+      "evidence_source": "objdump import table analysis + resource.index.json",
+      "runtime_adapter_notes": "Use fread() or SDL_RWread() for reading asset data"
+    },
+    {
+      "category": "fileio",
+      "function": "SetFilePointer",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c464e", 
+      "parameters_used": ["file", "distance", "distance_high", "move_method"],
+      "required_behavior": "Seek within files for random access",
+      "context": "Asset loading - seek to specific positions in data files",
+      "evidence_source": "objdump import table analysis + resource.index.json", 
+      "runtime_adapter_notes": "Use fseek() or SDL_RWseek() for file positioning"
+    },
+    {
+      "category": "fileio",
+      "function": "LoadLibraryA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c450c",
+      "parameters_used": ["library_name"],
+      "required_behavior": "Dynamically load DLL libraries",
+      "context": "Dynamic loading - load game data DLLs (data00.dll-data31.dll)",
+      "evidence_source": "objdump import table analysis + resource.index.json asset references",
+      "runtime_adapter_notes": "CRITICAL: Implement DLL loader for game data archives or convert to standard files"
+    },
+    {
+      "category": "fileio",
+      "function": "GetProcAddress",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c44fa",
+      "parameters_used": ["module", "proc_name"],
+      "required_behavior": "Get function addresses from loaded DLLs",
+      "context": "Dynamic loading - access functions in game data DLLs",
+      "evidence_source": "objdump import table analysis", 
+      "runtime_adapter_notes": "Return function pointers for DLL-based game data access"
+    },
+    {
+      "category": "fileio",
+      "function": "FreeLibrary",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c454e",
+      "parameters_used": ["module"],
+      "required_behavior": "Unload dynamically loaded DLL libraries",
+      "context": "Resource cleanup - unload game data DLLs when done",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Clean up resources used by DLL emulation"
+    },
+    {
+      "category": "fileio",
+      "function": "GetOpenFileNameA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c47f2",
+      "parameters_used": ["ofn_struct"],
+      "required_behavior": "Display file open dialog",
+      "context": "User interface - allow user to select files",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Use native file dialogs or implement with SDL/ImGui"
+    },
+    {
+      "category": "fileio", 
+      "function": "GetSaveFileNameA",
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c4806",
+      "parameters_used": ["ofn_struct"],
+      "required_behavior": "Display file save dialog",
+      "context": "User interface - allow user to save files",
+      "evidence_source": "objdump import table analysis",
+      "runtime_adapter_notes": "Use native file dialogs or implement with SDL/ImGui"
+    }
+  ],
+  "timer_apis": [
+    {
+      "category": "timers",
+      "function": "timeGetTime", 
+      "call_sites": ["0x401000+"],
+      "iat_address": "0x4c488c",
+      "parameters_used": [],
+      "required_behavior": "Get system time in milliseconds for timing",
+      "context": "Game loop timing - calculate frame times and delays",
+      "evidence_source": "objdump import table analysis + apis.manifest.json confirmed usage",
+      "runtime_adapter_notes": "Use SDL_GetTicks() - already confirmed in apis.manifest.json"
+    }
+  ],
+  "asset_loading_patterns": {
+    "bitmap_loading": {
+      "assets_referenced": [
+        "skyhook.bmp", "battle.bmp", "boba.bmp", "astroids.bmp", "walker.bmp", 
+        "slider.bmp", "on.bmp", "off.bmp", "cursor.bmp"
+      ],
+      "api_sequence": ["CreateFileA", "ReadFile", "SetFilePointer"],
+      "context": "UI graphics and game backgrounds - loaded at startup and level transitions",
+      "evidence_source": "resource.index.json bitmap_references"
+    },
+    "sound_loading": {
+      "assets_referenced": [
+        "hero.wav", "wlkbst03.wav", "wamproar.wav", "v-you.wav", "ig88tlk1.wav", 
+        "atat_2.wav", "atst_2.wav"
+      ], 
+      "api_sequence": ["CreateFileA", "ReadFile", "DirectSoundCreate", "mciSendCommandA"],
+      "context": "Game audio - sound effects and voice samples loaded during gameplay",
+      "evidence_source": "resource.index.json sound_references"
+    },
+    "movie_loading": {
+      "assets_referenced": [
+        "L11win.san", "L11lose.san", "gameover.san", "longtime.san", "l10intro.san", 
+        "l08intro.san", "l07intro.san", "l06intro.san", "l05intro.san", "l04boss.san",
+        "l04intro.san", "l03intro.san", "l02intro.san", "l01intro.san", "l09boss.san",
+        "l05Boss.san", "l00logo.san"
+      ],
+      "api_sequence": ["CreateFileA", "ReadFile", "mciSendCommandA"],
+      "context": "Cutscenes and video - intro/outro movies and level transitions",
+      "evidence_source": "resource.index.json movie_references"
+    },
+    "data_dll_loading": {
+      "assets_referenced": [
+        "data00.dll", "data01.dll", "data02.dll", "data03.dll", "data04.dll",
+        "data05.dll", "data06.dll", "data07.dll", "data08.dll", "data09.dll", 
+        "data10.dll", "data11.dll", "data12.dll", "data13.dll", "data14.dll",
+        "data15.dll", "data16.dll", "data17.dll", "data18.dll", "data19.dll",
+        "data20.dll", "data21.dll", "data22.dll", "data23.dll", "data24.dll",
+        "data25.dll", "data26.dll", "data27.dll", "data28.dll", "data29.dll",
+        "data30.dll", "data31.dll"
+      ],
+      "api_sequence": ["LoadLibraryA", "GetProcAddress", "FreeLibrary"], 
+      "context": "Game data archives - level data, textures, models, game logic",
+      "evidence_source": "Sdata directory analysis, these are game data archives"
+    }
+  },
+  "critical_runtime_requirements": {
+    "directx_replacement": {
+      "priority": "CRITICAL",
+      "apis_to_replace": ["DirectDrawCreate", "DirectDrawEnumerateA", "DirectSoundCreate", "DirectInputCreateA"],
+      "replacement_strategy": "Full SDL2 replacement - DirectDraw->SDL_Renderer, DirectSound->SDL_Audio, DirectInput->SDL_Input",
+      "compatibility_notes": "These are core graphics/audio/input APIs that must be fully functional"
+    },
+    "file_system_access": {
+      "priority": "HIGH", 
+      "apis_to_replace": ["CreateFileA", "ReadFile", "SetFilePointer"],
+      "replacement_strategy": "Standard C file I/O or SDL_RWops for cross-platform compatibility",
+      "compatibility_notes": "Must handle large asset files and data archives efficiently"
+    },
+    "dll_loading_system": {
+      "priority": "HIGH",
+      "apis_to_replace": ["LoadLibraryA", "GetProcAddress", "FreeLibrary"],
+      "replacement_strategy": "Implement data archive system to replace DLL loading",
+      "compatibility_notes": "32 data DLL files contain core game content - must be accessible"
+    },
+    "multimedia_control": {
+      "priority": "MEDIUM",
+      "apis_to_replace": ["mciSendCommandA", "mciSendStringA"],
+      "replacement_strategy": "Implement MCI command parser with SDL multimedia backend",
+      "compatibility_notes": "Needed for video playback (.san files) and audio control"
+    },
+    "timing_precision": {
+      "priority": "LOW",
+      "apis_to_replace": ["timeGetTime"],
+      "replacement_strategy": "SDL_GetTicks() provides equivalent functionality",
+      "compatibility_notes": "Already confirmed working in existing codebase"
+    }
+  },
+  "wine_compatibility_notes": {
+    "working_apis": [
+      "Most USER32.dll windowing APIs work well in Wine",
+      "Basic KERNEL32.dll file I/O APIs are compatible",
+      "Registry APIs (ADVAPI32.dll) function correctly"
+    ],
+    "problematic_apis": [
+      "DirectDraw APIs may have performance issues in Wine",
+      "DirectSound may have audio latency problems", 
+      "DirectInput may not detect all input devices properly",
+      "MCI APIs may have limited codec support"
+    ],
+    "recommended_replacements": [
+      "Replace DirectX APIs with SDL2 equivalents",
+      "Use native Linux audio systems through SDL",
+      "Implement cross-platform file dialog alternatives",
+      "Convert data DLLs to standard archive files"
+    ]
+  },
+  "statistics": {
+    "total_api_functions": 43,
+    "windowing_functions": 10,
+    "graphics_functions": 6, 
+    "audio_functions": 8,
+    "input_functions": 1,
+    "file_io_functions": 8,
+    "timer_functions": 1,
+    "critical_replacements_needed": 4,
+    "asset_types_identified": 4,
+    "total_assets_referenced": 91
+  },
+  "next_steps": [
+    "Implement SDL2-based DirectDraw replacement",
+    "Create SDL2-based DirectSound replacement", 
+    "Build DirectInput to SDL input mapping layer",
+    "Develop data archive system to replace DLL loading",
+    "Test multimedia control implementation",
+    "Validate asset loading with real game files",
+    "Performance test on Wine with SDL2 backend"
+  ]
+}

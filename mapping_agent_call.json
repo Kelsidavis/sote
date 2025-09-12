@@ -1,0 +1,28 @@
+{
+  "call_id": "coord-0002",
+  "agent": "mapping",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "evidence": "evidence.curated.json"
+    },
+    "scope": {
+      "symbols": "all",
+      "ranges": "all",
+      "modules": "all"
+    },
+    "options": {
+      "deterministic_sort": true,
+      "respect_existing": true,
+      "resolve_conflicts": true,
+      "prefer_descriptive_names": true
+    }
+  },
+  "expected_outputs": ["mappings.json"]
+}

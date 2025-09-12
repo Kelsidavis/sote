@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "stage": "SOTE Stage 9: Runtime IO Test Harness Generation",
+    "timestamp": "2025-09-11T22:30:00Z",
+    "test_type": "runtime_io_validation",
+    "methodology": "evidence_only_testing",
+    "evidence_sources": [
+      "evidence.curated.json",
+      "layouts.curated.json", 
+      "runtime/resource.catalog.json",
+      "runtime/bootpath.manifest.json",
+      "src/runtime_loaders.c",
+      "include/runtime_loaders.h"
+    ]
+  },
+  "test_suites": [
+    {
+      "id": "runtime_resource_access",
+      "name": "Runtime Resource Access Tests",
+      "description": "Evidence-based tests for file I/O and resource access patterns",
+      "source_file": "tests/runtime_resource_access.c",
+      "executable": "test-runtime-resource-access",
+      "evidence_base": [
+        "VA_0x402100_file_system_setup",
+        "CreateFileA_ReadFile_SetFilePointer_usage",
+        "resource.catalog.json_277_assets"
+      ],
+      "test_cases": [
+        {
+          "id": "RT001",
+          "function": "test_resource_file_access",
+          "description": "Test file accessibility for known assets",
+          "assertion": "File access API works regardless of asset presence"
+        },
+        {
+          "id": "RT002", 
+          "function": "test_file_handle_operations",
+          "description": "Test file handle creation and operations",
+          "assertion": "FILE_HANDLE wrapper functions work correctly"
+        },
+        {
+          "id": "RT003",
+          "function": "test_asset_catalog_structure", 
+          "description": "Test asset catalog structure and capacity",
+          "assertion": "Catalog structure matches 277 asset evidence"
+        },
+        {
+          "id": "RT004",
+          "function": "test_runtime_memory_management",
+          "description": "Test HeapAlloc wrapper functions",
+          "assertion": "Memory management wrappers function correctly"
+        },
+        {
+          "id": "RT005",
+          "function": "test_sdata_directory_presence",
+          "description": "Test Sdata directory accessibility",
+          "assertion": "Directory access works or gracefully degrades"
+        }
+      ]
+    },
+    {
+      "id": "runtime_bmp_loader",
+      "name": "BMP Format Validation Tests",
+      "description": "Evidence-based tests for BMP format parsing and validation",
+      "source_file": "tests/runtime_bmp_loader.c",
+      "executable": "test-runtime-bmp-loader",
+      "evidence_base": [
+        "VA_0x403000_bmp_format_parser",
+        "resource.catalog.json_43_BMPs_Windows3x_format",
+        "layouts.curated.json_BITMAPFILEHEADER_BITMAPINFOHEADER",
+        "VA_0x4dba3b_BMP_signature_0x424D"
+      ],
+      "test_cases": [
+        {
+          "id": "BMP001",
+          "function": "test_bmp_header_structure_sizes",
+          "description": "Validate BMP header structure sizes",
+          "assertion": "Header sizes match evidence (14+40 bytes)"
+        },
+        {
+          "id": "BMP002",
+          "function": "test_bmp_header_validation_logic", 
+          "description": "Test BMP header validation function",
+          "assertion": "Header validation correctly accepts/rejects BMPs"
+        },
+        {
+          "id": "BMP003",
+          "function": "test_bmp_loader_error_handling",
+          "description": "Test BMP loader error handling",
+          "assertion": "Loader handles invalid inputs gracefully"
+        },
+        {
+          "id": "BMP004",
+          "function": "test_bmp_memory_management",
+          "description": "Test BMP memory allocation patterns",
+          "assertion": "Memory management follows HeapAlloc patterns"
+        },
+        {
+          "id": "BMP005",
+          "function": "test_bmp_dimension_constraints",
+          "description": "Test BMP dimension validation",
+          "assertion": "Dimensions match evidence (640x480, 256x256)"
+        },
+        {
+          "id": "BMP006",
+          "function": "test_bmp_constants_validation",
+          "description": "Test BMP constant definitions",
+          "assertion": "Constants match VA evidence values"
+        }
+      ]
+    },
+    {
+      "id": "runtime_wav_loader",
+      "name": "WAV Format Validation Tests", 
+      "description": "Evidence-based tests for WAV format parsing and validation",
+      "source_file": "tests/runtime_wav_loader.c",
+      "executable": "test-runtime-wav-loader",
+      "evidence_base": [
+        "VA_0x403100_wav_format_parser",
+        "resource.catalog.json_183_WAVs_16bit_mono_PCM",
+        "layouts.curated.json_RIFF_WAVE_structures",
+        "sample_rates_11025Hz_22050Hz"
+      ],
+      "test_cases": [
+        {
+          "id": "WAV001",
+          "function": "test_wav_header_structure_sizes",
+          "description": "Validate WAV header structure sizes",
+          "assertion": "Header sizes match RIFF/WAVE spec (12+24+8)"
+        },
+        {
+          "id": "WAV002",
+          "function": "test_wav_header_validation_logic",
+          "description": "Test WAV header validation function", 
+          "assertion": "Header validation correctly identifies RIFF/WAVE"
+        },
+        {
+          "id": "WAV003",
+          "function": "test_wav_format_chunk_validation",
+          "description": "Test PCM format chunk validation",
+          "assertion": "PCM format constraints enforced correctly"
+        },
+        {
+          "id": "WAV004", 
+          "function": "test_wav_loader_error_handling",
+          "description": "Test WAV loader error handling",
+          "assertion": "Loader handles invalid inputs gracefully"
+        },
+        {
+          "id": "WAV005",
+          "function": "test_wav_memory_management", 
+          "description": "Test WAV memory allocation patterns",
+          "assertion": "Memory management follows HeapAlloc patterns"
+        },
+        {
+          "id": "WAV006",
+          "function": "test_wav_constants_validation",
+          "description": "Test WAV magic constant definitions",
+          "assertion": "Constants match RIFF/WAVE magic values"
+        },
+        {
+          "id": "WAV007",
+          "function": "test_wav_sample_rate_constraints",
+          "description": "Test supported sample rate validation", 
+          "assertion": "Only 11025Hz and 22050Hz rates accepted"
+        }
+      ]
+    },
+    {
+      "id": "runtime_boot_sequence",
+      "name": "Boot Sequence Initialization Tests",
+      "description": "Evidence-based tests for boot stage progression and initialization",
+      "source_file": "tests/runtime_boot_sequence.c", 
+      "executable": "test-runtime-boot-sequence",
+      "evidence_base": [
+        "bootpath.manifest.json_6_boot_stages",
+        "priority_ranges_90-100_entry_80-89_config_etc",
+        "critical_path_true_for_all_stages"
+      ],
+      "test_cases": [
+        {
+          "id": "BOOT001",
+          "function": "test_boot_stage_progression",
+          "description": "Test boot stage sequence and metadata",
+          "assertion": "Boot stages match evidence definitions"
+        },
+        {
+          "id": "BOOT002", 
+          "function": "test_entry_init_stage",
+          "description": "Test entry point initialization",
+          "assertion": "Entry init completes without errors"
+        },
+        {
+          "id": "BOOT003",
+          "function": "test_config_stage",
+          "description": "Test configuration loading (stubbed)",
+          "assertion": "Config stage handles stubbed implementation"
+        },
+        {
+          "id": "BOOT004",
+          "function": "test_resource_open_stage",
+          "description": "Test resource discovery and catalog init",
+          "assertion": "Asset catalog initialization succeeds"
+        },
+        {
+          "id": "BOOT005",
+          "function": "test_decode_stage",
+          "description": "Test loader initialization",
+          "assertion": "BMP/WAV/DLL loaders initialize correctly"
+        },
+        {
+          "id": "BOOT006",
+          "function": "test_main_loop_stage",
+          "description": "Test main loop initialization (stubbed)",
+          "assertion": "Main loop stage handles stubbed implementation"
+        },
+        {
+          "id": "BOOT007", 
+          "function": "test_present_stage",
+          "description": "Test presentation layer init (stubbed)",
+          "assertion": "Present stage handles stubbed implementation"
+        },
+        {
+          "id": "BOOT008",
+          "function": "test_critical_path_validation",
+          "description": "Test critical path stage verification",
+          "assertion": "All critical stages properly initialized"
+        }
+      ]
+    },
+    {
+      "id": "runtime_adapter_init",
+      "name": "Adapter Layer Initialization Tests",
+      "description": "Evidence-based tests for adapter initialization with SDL stubs",
+      "source_file": "tests/runtime_adapter_init.c",
+      "executable": "test-runtime-adapter-init", 
+      "evidence_base": [
+        "adapter_video_sdl.c_adapter_audio_sdl.c_etc",
+        "5_adapters_4_SDL_dependent_1_POSIX",
+        "SDL2_dependency_graceful_degradation"
+      ],
+      "test_cases": [
+        {
+          "id": "ADP001",
+          "function": "test_adapter_info_validation",
+          "description": "Test adapter metadata validation",
+          "assertion": "Adapter info matches source file analysis"
+        },
+        {
+          "id": "ADP002",
+          "function": "test_sdl_dependency_handling",
+          "description": "Test SDL dependency and fallback",
+          "assertion": "SDL unavailability handled gracefully"
+        },
+        {
+          "id": "ADP003",
+          "function": "test_video_adapter_init",
+          "description": "Test video adapter initialization",
+          "assertion": "Video adapter failure handled gracefully"
+        },
+        {
+          "id": "ADP004",
+          "function": "test_audio_adapter_init", 
+          "description": "Test audio adapter initialization",
+          "assertion": "Audio adapter failure acceptable (non-critical)"
+        },
+        {
+          "id": "ADP005",
+          "function": "test_input_adapter_init",
+          "description": "Test input adapter initialization",
+          "assertion": "Input adapter provides fallback mechanism"
+        },
+        {
+          "id": "ADP006",
+          "function": "test_filesystem_adapter_init",
+          "description": "Test filesystem adapter initialization",
+          "assertion": "POSIX filesystem adapter initializes successfully"
+        },
+        {
+          "id": "ADP007",
+          "function": "test_time_adapter_init",
+          "description": "Test time adapter initialization", 
+          "assertion": "Time adapter provides system time fallback"
+        },
+        {
+          "id": "ADP008",
+          "function": "test_adapter_initialization_summary",
+          "description": "Test overall adapter initialization results",
+          "assertion": "Expected adapter success/failure pattern achieved"
+        }
+      ]
+    }
+  ],
+  "missing_evidence": {
+    "description": "Evidence gaps preventing full test implementation",
+    "requirements": [
+      {
+        "category": "Registry Access",
+        "commands": [
+          "radare2 -c 'axt @ sym.imp.RegOpenKeyA' SOTE.EXE",
+          "radare2 -c 'axt @ sym.imp.RegQueryValueExA' SOTE.EXE"
+        ],
+        "purpose": "Config stage registry access patterns"
+      },
+      {
+        "category": "Directory Scanning",
+        "commands": [
+          "radare2 -c 'axt @ sym.imp.FindFirstFileA' SOTE.EXE",
+          "radare2 -c 'axt @ sym.imp.FindNextFileA' SOTE.EXE" 
+        ],
+        "purpose": "Asset discovery implementation patterns"
+      },
+      {
+        "category": "DLL Loading", 
+        "commands": [
+          "radare2 -c 'axt @ sym.imp.LoadLibraryA' SOTE.EXE",
+          "radare2 -c 'axt @ sym.imp.GetProcAddress' SOTE.EXE",
+          "radare2 -c 'axt @ sym.imp.FreeLibrary' SOTE.EXE"
+        ],
+        "purpose": "DLL archive loader implementation"
+      },
+      {
+        "category": "SAN Format Analysis",
+        "commands": [
+          "hexdump -C Sdata/*.san | head -100",
+          "strings Sdata/*.san | grep -i 'magic|version|codec'",
+          "radare2 -c 'px 512' Sdata/intro.san"
+        ],
+        "purpose": "SAN movie format reverse engineering"
+      }
+    ]
+  },
+  "quality_checklist": {
+    "evidence_compliance": [
+      "✓ All assertions backed by evidence from curated JSON files",
+      "✓ No speculation beyond evidence boundaries", 
+      "✓ Stub implementations clearly marked with TODO_EVID",
+      "✓ Provenance comments reference specific VAs and evidence"
+    ],
+    "test_methodology": [
+      "✓ Tests focus on structure validation not deep functionality",
+      "✓ Error handling tested for graceful degradation",
+      "✓ Memory management patterns validated",
+      "✓ Constants match evidence-derived values"
+    ],
+    "build_independence": [
+      "✓ Tests compile without editing source implementations",
+      "✓ Function signatures match evidence exactly",
+      "✓ Missing SDL2 handled gracefully in test environment",
+      "✓ POSIX fallbacks work without Windows dependencies"
+    ]
+  }
+}

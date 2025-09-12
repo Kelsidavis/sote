@@ -1,0 +1,908 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32",
+    "analysis_date": "2025-09-10T15:17:00Z"
+  },
+  "analysis_metadata": {
+    "navigator_version": "1.0",
+    "evidence_sources": [
+      "evidence.curated.json",
+      "mappings.json", 
+      "verification.report.json",
+      "metrics.report.json",
+      "layouts.curated.json",
+      "inputs/r2_aflj.json"
+    ],
+    "total_functions_analyzed": 1335,
+    "ranking_algorithm": "evidence_based_centrality_analysis",
+    "deterministic": true,
+    "analysis_scope": "full_binary_analysis"
+  },
+  "ranking_basis": {
+    "hotness_formula": "hotness = (indegree * 0.4) + (outdegree * 0.3) + (cost * 0.002) + (callrefs * 0.1) + (complexity * 0.2)",
+    "metrics_used": [
+      "indegree: number of functions calling this function",
+      "outdegree: number of functions this function calls", 
+      "cost: computational complexity from radare2 analysis",
+      "callrefs: number of call references",
+      "complexity: cyclomatic complexity (cc)",
+      "size: function size in bytes",
+      "connectivity: indegree + outdegree"
+    ],
+    "evidence_weights": {
+      "centrality": 0.4,
+      "connectivity": 0.3,
+      "complexity": 0.2,
+      "api_usage": 0.1
+    }
+  },
+  "prioritized_tasks": [
+    {
+      "rank": 1,
+      "offset": 4300128,
+      "name": "fcn.00419d60",
+      "hotness_score": 114.668,
+      "status": "not_started",
+      "priority": "critical",
+      "metrics": {
+        "size": 2199,
+        "indegree": 158,
+        "outdegree": 27,
+        "callrefs": 184,
+        "cost": 784,
+        "complexity": 117,
+        "connectivity": 185
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 158,
+        "unlocks_functions": 27,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.5
+      },
+      "evidence": {
+        "api_usage": ["multiple_kernel32_calls", "user32_operations", "gdi32_graphics"],
+        "data_access": ["large_data_structure_manipulation"],
+        "control_flow": "complex_branching_logic"
+      },
+      "recommendation": "Implement first - central hub function with highest unlock potential",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 2,
+      "offset": 4481024,
+      "name": "fcn.00446000", 
+      "hotness_score": 111.842,
+      "status": "not_started",
+      "priority": "critical",
+      "metrics": {
+        "size": 673,
+        "indegree": 136,
+        "outdegree": 0,
+        "callrefs": 134,
+        "cost": 221,
+        "complexity": 218,
+        "connectivity": 136
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 136,
+        "unlocks_functions": 0,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 2.0
+      },
+      "evidence": {
+        "api_usage": ["graphics_operations", "memory_management"],
+        "data_access": ["buffer_operations"],
+        "control_flow": "linear_processing"
+      },
+      "recommendation": "High-priority leaf function - many dependencies but straightforward implementation",
+      "cluster": "graphics_subsystem"
+    },
+    {
+      "rank": 3,
+      "offset": 4463920,
+      "name": "fcn.00441d30",
+      "hotness_score": 101.656,
+      "status": "not_started", 
+      "priority": "critical",
+      "metrics": {
+        "size": 48,
+        "indegree": 250,
+        "outdegree": 2,
+        "callrefs": 4,
+        "cost": 28,
+        "complexity": 3,
+        "connectivity": 252
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 250,
+        "unlocks_functions": 2,
+        "implementation_complexity": "low",
+        "estimated_effort_days": 0.5
+      },
+      "evidence": {
+        "api_usage": ["utility_function"],
+        "data_access": ["simple_operations"],
+        "control_flow": "minimal_branching"
+      },
+      "recommendation": "Critical utility function - small size but massive unlock potential",
+      "cluster": "utility_functions"
+    },
+    {
+      "rank": 4,
+      "offset": 4345408,
+      "name": "fcn.00424e40",
+      "hotness_score": 96.69,
+      "status": "not_started",
+      "priority": "high",
+      "metrics": {
+        "size": 1578,
+        "indegree": 145,
+        "outdegree": 7,
+        "callrefs": 152,
+        "cost": 595,
+        "complexity": 101,
+        "connectivity": 152
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 145,
+        "unlocks_functions": 7,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.0
+      },
+      "evidence": {
+        "api_usage": ["complex_api_interactions"],
+        "data_access": ["structure_manipulation"],
+        "control_flow": "complex_state_machine"
+      },
+      "recommendation": "Core subsystem function with significant complexity",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 5,
+      "offset": 4451873,
+      "name": "fcn.0043ee21",
+      "hotness_score": 89.334,
+      "status": "not_started",
+      "priority": "high",
+      "metrics": {
+        "size": 1595,
+        "indegree": 116,
+        "outdegree": 37,
+        "callrefs": 152,
+        "cost": 817,
+        "complexity": 75,
+        "connectivity": 153
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 116,
+        "unlocks_functions": 37,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 4.0
+      },
+      "evidence": {
+        "api_usage": ["extensive_api_usage"],
+        "data_access": ["complex_data_structures"],
+        "control_flow": "sophisticated_logic"
+      },
+      "recommendation": "High-impact function with extensive downstream unlocks",
+      "cluster": "game_logic"
+    },
+    {
+      "rank": 6,
+      "offset": 4284632,
+      "name": "fcn.004160d8",
+      "mapped_name": "debug_output",
+      "hotness_score": 86.224,
+      "status": "implemented",
+      "priority": "high",
+      "metrics": {
+        "size": 31,
+        "indegree": 215,
+        "outdegree": 0,
+        "callrefs": 0,
+        "cost": 12,
+        "complexity": 1,
+        "connectivity": 215
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 215,
+        "unlocks_functions": 0,
+        "implementation_complexity": "low",
+        "estimated_effort_days": 0.2
+      },
+      "evidence": {
+        "api_usage": ["debug_utilities"],
+        "confidence": "medium",
+        "verification_status": "implemented"
+      },
+      "recommendation": "ALREADY IMPLEMENTED - Critical utility with massive usage",
+      "cluster": "utility_functions"
+    },
+    {
+      "rank": 7,
+      "offset": 4239744,
+      "name": "fcn.0040b180",
+      "hotness_score": 68.904,
+      "status": "not_started",
+      "priority": "high",
+      "metrics": {
+        "size": 2020,
+        "indegree": 96,
+        "outdegree": 0,
+        "callrefs": 96,
+        "cost": 852,
+        "complexity": 96,
+        "connectivity": 96
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 96,
+        "unlocks_functions": 0,
+        "implementation_complexity": "very_high",
+        "estimated_effort_days": 5.0
+      },
+      "evidence": {
+        "api_usage": ["complex_graphics_operations"],
+        "data_access": ["large_buffer_operations"],
+        "control_flow": "complex_processing_logic"
+      },
+      "recommendation": "Complex leaf function - high effort but significant unlock value",
+      "cluster": "graphics_subsystem"
+    },
+    {
+      "rank": 8,
+      "offset": 4422787,
+      "name": "fcn.00437c83",
+      "hotness_score": 66.496,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 799,
+        "indegree": 84,
+        "outdegree": 20,
+        "callrefs": 103,
+        "cost": 398,
+        "complexity": 79,
+        "connectivity": 104
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 84,
+        "unlocks_functions": 20,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 2.5
+      },
+      "evidence": {
+        "api_usage": ["moderate_api_usage"],
+        "data_access": ["structured_data_access"],
+        "control_flow": "moderate_complexity"
+      },
+      "recommendation": "Good balance of complexity and unlock potential",
+      "cluster": "game_logic"
+    },
+    {
+      "rank": 9,
+      "offset": 4548172,
+      "name": "fcn.0045664c",
+      "hotness_score": 61.334,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 38,
+        "indegree": 150,
+        "outdegree": 2,
+        "callrefs": 3,
+        "cost": 17,
+        "complexity": 2,
+        "connectivity": 152
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 150,
+        "unlocks_functions": 2,
+        "implementation_complexity": "low",
+        "estimated_effort_days": 0.3
+      },
+      "evidence": {
+        "api_usage": ["simple_utility"],
+        "data_access": ["minimal_operations"],
+        "control_flow": "simple_logic"
+      },
+      "recommendation": "Quick win - small function with high unlock value",
+      "cluster": "utility_functions"
+    },
+    {
+      "rank": 10,
+      "offset": 4282832,
+      "name": "fcn.004159d0",
+      "hotness_score": 60.72,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 109,
+        "indegree": 143,
+        "outdegree": 6,
+        "callrefs": 8,
+        "cost": 60,
+        "complexity": 4,
+        "connectivity": 149
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 143,
+        "unlocks_functions": 6,
+        "implementation_complexity": "low",
+        "estimated_effort_days": 0.8
+      },
+      "evidence": {
+        "api_usage": ["utility_operations"],
+        "data_access": ["simple_data_access"],
+        "control_flow": "straightforward_logic"
+      },
+      "recommendation": "High-value utility function with reasonable complexity",
+      "cluster": "utility_functions"
+    },
+    {
+      "rank": 11,
+      "offset": 4242496,
+      "name": "fcn.0040bc40",
+      "hotness_score": 59.606,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1695,
+        "indegree": 85,
+        "outdegree": 2,
+        "callrefs": 86,
+        "cost": 703,
+        "complexity": 75,
+        "connectivity": 87
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 85,
+        "unlocks_functions": 2,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.5
+      },
+      "evidence": {
+        "api_usage": ["graphics_operations"],
+        "data_access": ["buffer_manipulation"],
+        "control_flow": "complex_processing"
+      },
+      "recommendation": "Graphics processing function - moderate priority",
+      "cluster": "graphics_subsystem"
+    },
+    {
+      "rank": 12,
+      "offset": 4244192,
+      "name": "fcn.0040c2e0",
+      "hotness_score": 59.59,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1686,
+        "indegree": 85,
+        "outdegree": 2,
+        "callrefs": 86,
+        "cost": 695,
+        "complexity": 75,
+        "connectivity": 87
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 85,
+        "unlocks_functions": 2,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.5
+      },
+      "evidence": {
+        "api_usage": ["graphics_operations"],
+        "data_access": ["buffer_manipulation"],
+        "control_flow": "complex_processing"
+      },
+      "recommendation": "Twin graphics function - similar to rank 11",
+      "cluster": "graphics_subsystem"
+    },
+    {
+      "rank": 13,
+      "offset": 4331152,
+      "name": "fcn.00421690",
+      "hotness_score": 55.74,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1041,
+        "indegree": 63,
+        "outdegree": 30,
+        "callrefs": 92,
+        "cost": 470,
+        "complexity": 57,
+        "connectivity": 93
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 63,
+        "unlocks_functions": 30,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 2.5
+      },
+      "evidence": {
+        "api_usage": ["moderate_api_usage"],
+        "data_access": ["structured_operations"],
+        "control_flow": "moderate_complexity"
+      },
+      "recommendation": "Good balance - reasonable effort with significant unlocks",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 14,
+      "offset": 4295584,
+      "name": "fcn.00418ba0",
+      "hotness_score": 49.3,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 630,
+        "indegree": 76,
+        "outdegree": 3,
+        "callrefs": 75,
+        "cost": 250,
+        "complexity": 50,
+        "connectivity": 79
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 76,
+        "unlocks_functions": 3,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 2.0
+      },
+      "evidence": {
+        "api_usage": ["standard_operations"],
+        "data_access": ["moderate_complexity"],
+        "control_flow": "structured_logic"
+      },
+      "recommendation": "Solid medium-priority function",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 15,
+      "offset": 4247664,
+      "name": "fcn.0040d070",
+      "hotness_score": 44.71,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1455,
+        "indegree": 60,
+        "outdegree": 3,
+        "callrefs": 62,
+        "cost": 605,
+        "complexity": 62,
+        "connectivity": 63
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 60,
+        "unlocks_functions": 3,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.0
+      },
+      "evidence": {
+        "api_usage": ["complex_operations"],
+        "data_access": ["substantial_processing"],
+        "control_flow": "complex_logic"
+      },
+      "recommendation": "Complex function - implement after simpler high-value targets",
+      "cluster": "graphics_subsystem"
+    },
+    {
+      "rank": 16,
+      "offset": 4293856,
+      "name": "fcn.004184e0",
+      "hotness_score": 42.302,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1243,
+        "indegree": 38,
+        "outdegree": 26,
+        "callrefs": 63,
+        "cost": 601,
+        "complexity": 59,
+        "connectivity": 64
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 38,
+        "unlocks_functions": 26,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.0
+      },
+      "evidence": {
+        "api_usage": ["complex_api_interactions"],
+        "data_access": ["sophisticated_operations"],
+        "control_flow": "complex_state_handling"
+      },
+      "recommendation": "High unlock potential but significant complexity",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 17,
+      "offset": 4463569,
+      "name": "fcn.00441bd1",
+      "mapped_name": "cleanup_handler",
+      "hotness_score": 41.824,
+      "status": "implemented",
+      "priority": "medium",
+      "metrics": {
+        "size": 16,
+        "indegree": 103,
+        "outdegree": 1,
+        "callrefs": 1,
+        "cost": 12,
+        "complexity": 1,
+        "connectivity": 104
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 103,
+        "unlocks_functions": 1,
+        "implementation_complexity": "low",
+        "estimated_effort_days": 0.2
+      },
+      "evidence": {
+        "api_usage": ["cleanup_operations"],
+        "confidence": "low",
+        "verification_status": "implemented"
+      },
+      "recommendation": "ALREADY IMPLEMENTED - Critical cleanup function",
+      "cluster": "utility_functions"
+    },
+    {
+      "rank": 18,
+      "offset": 4353744,
+      "name": "fcn.00426ed0",
+      "hotness_score": 41.71,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 438,
+        "indegree": 79,
+        "outdegree": 11,
+        "callrefs": 26,
+        "cost": 205,
+        "complexity": 19,
+        "connectivity": 90
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 79,
+        "unlocks_functions": 11,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 1.5
+      },
+      "evidence": {
+        "api_usage": ["moderate_operations"],
+        "data_access": ["structured_access"],
+        "control_flow": "manageable_complexity"
+      },
+      "recommendation": "Balanced function with good unlock ratio",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 19,
+      "offset": 4198745,
+      "name": "fcn.00401159",
+      "hotness_score": 40.408,
+      "status": "not_started",
+      "priority": "low",
+      "metrics": {
+        "size": 22145,
+        "indegree": 30,
+        "outdegree": 51,
+        "callrefs": 78,
+        "cost": 554,
+        "complexity": 21,
+        "connectivity": 81
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 30,
+        "unlocks_functions": 51,
+        "implementation_complexity": "very_high",
+        "estimated_effort_days": 8.0
+      },
+      "evidence": {
+        "api_usage": ["extensive_functionality"],
+        "data_access": ["massive_function"],
+        "control_flow": "extremely_complex"
+      },
+      "recommendation": "MASSIVE FUNCTION - defer until smaller functions are complete",
+      "cluster": "mega_function"
+    },
+    {
+      "rank": 20,
+      "offset": 4371552,
+      "name": "fcn.0042b460",
+      "hotness_score": 40.35,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1315,
+        "indegree": 37,
+        "outdegree": 34,
+        "callrefs": 70,
+        "cost": 575,
+        "complexity": 36,
+        "connectivity": 71
+      },
+      "analysis": {
+        "unlock_potential": "high",
+        "blocking_dependencies": 37,
+        "unlocks_functions": 34,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.0
+      },
+      "evidence": {
+        "api_usage": ["complex_interactions"],
+        "data_access": ["sophisticated_operations"],
+        "control_flow": "complex_state_machine"
+      },
+      "recommendation": "High unlock potential with significant complexity",
+      "cluster": "game_logic"
+    },
+    {
+      "rank": 21,
+      "offset": 4221776,
+      "name": "loc.00406b50",
+      "hotness_score": 40.3,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 1111,
+        "indegree": 20,
+        "outdegree": 65,
+        "callrefs": 84,
+        "cost": 500,
+        "complexity": 17,
+        "connectivity": 85
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 20,
+        "unlocks_functions": 65,
+        "implementation_complexity": "high",
+        "estimated_effort_days": 3.5
+      },
+      "evidence": {
+        "api_usage": ["dispatcher_pattern"],
+        "data_access": ["central_hub"],
+        "control_flow": "routing_logic"
+      },
+      "recommendation": "Central dispatcher - massive unlock potential",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 22,
+      "offset": 4465889,
+      "name": "fcn.004424e1",
+      "hotness_score": 39.016,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 13,
+        "indegree": 96,
+        "outdegree": 1,
+        "callrefs": 1,
+        "cost": 8,
+        "complexity": 1,
+        "connectivity": 97
+      },
+      "analysis": {
+        "unlock_potential": "very_high",
+        "blocking_dependencies": 96,
+        "unlocks_functions": 1,
+        "implementation_complexity": "very_low",
+        "estimated_effort_days": 0.1
+      },
+      "evidence": {
+        "api_usage": ["trivial_function"],
+        "data_access": ["minimal_operations"],
+        "control_flow": "single_operation"
+      },
+      "recommendation": "Trivial function with massive usage - quick win",
+      "cluster": "utility_functions"
+    },
+    {
+      "rank": 23,
+      "offset": 4296736,
+      "name": "fcn.00419020",
+      "hotness_score": 35.892,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 670,
+        "indegree": 44,
+        "outdegree": 12,
+        "callrefs": 55,
+        "cost": 296,
+        "complexity": 43,
+        "connectivity": 56
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 44,
+        "unlocks_functions": 12,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 2.0
+      },
+      "evidence": {
+        "api_usage": ["standard_operations"],
+        "data_access": ["moderate_complexity"],
+        "control_flow": "structured_logic"
+      },
+      "recommendation": "Standard medium-priority function",
+      "cluster": "core_engine"
+    },
+    {
+      "rank": 24,
+      "offset": 4358240,
+      "name": "fcn.00428060",
+      "hotness_score": 35.526,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 749,
+        "indegree": 38,
+        "outdegree": 15,
+        "callrefs": 52,
+        "cost": 413,
+        "complexity": 49,
+        "connectivity": 53
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 38,
+        "unlocks_functions": 15,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 2.5
+      },
+      "evidence": {
+        "api_usage": ["moderate_operations"],
+        "data_access": ["structured_processing"],
+        "control_flow": "moderate_complexity"
+      },
+      "recommendation": "Balanced function with reasonable effort-to-unlock ratio",
+      "cluster": "game_logic"
+    },
+    {
+      "rank": 25,
+      "offset": 4285840,
+      "name": "fcn.00416590",
+      "hotness_score": 35.424,
+      "status": "not_started",
+      "priority": "medium",
+      "metrics": {
+        "size": 582,
+        "indegree": 51,
+        "outdegree": 5,
+        "callrefs": 54,
+        "cost": 262,
+        "complexity": 38,
+        "connectivity": 56
+      },
+      "analysis": {
+        "unlock_potential": "medium",
+        "blocking_dependencies": 51,
+        "unlocks_functions": 5,
+        "implementation_complexity": "medium",
+        "estimated_effort_days": 1.8
+      },
+      "evidence": {
+        "api_usage": ["utility_operations"],
+        "data_access": ["moderate_processing"],
+        "control_flow": "structured_logic"
+      },
+      "recommendation": "Good utility function for 25th priority slot",
+      "cluster": "utility_functions"
+    }
+  ],
+  "cluster_analysis": {
+    "core_engine": {
+      "functions": 6,
+      "total_hotness": 339.256,
+      "average_complexity": "medium-high",
+      "recommendation": "Primary focus cluster - contains central game logic",
+      "estimated_total_effort": 15.5
+    },
+    "utility_functions": {
+      "functions": 6,
+      "total_hotness": 325.582,
+      "average_complexity": "low",
+      "recommendation": "Quick wins cluster - implement early for maximum unlock",
+      "estimated_total_effort": 3.7
+    },
+    "graphics_subsystem": {
+      "functions": 4,
+      "total_hotness": 241.944,
+      "average_complexity": "high",
+      "recommendation": "Graphics-heavy functions - require DirectX knowledge",
+      "estimated_total_effort": 15.0
+    },
+    "game_logic": {
+      "functions": 4,
+      "total_hotness": 231.706,
+      "average_complexity": "medium-high",
+      "recommendation": "Game-specific logic functions",
+      "estimated_total_effort": 11.0
+    },
+    "mega_function": {
+      "functions": 1,
+      "total_hotness": 40.408,
+      "average_complexity": "very_high",
+      "recommendation": "DEFER - Massive function requiring extensive analysis",
+      "estimated_total_effort": 8.0
+    }
+  },
+  "implementation_strategy": {
+    "phase_1_quick_wins": {
+      "functions": ["fcn.00441d30", "fcn.0045664c", "fcn.004159d0", "fcn.004424e1"],
+      "total_effort_days": 1.7,
+      "unlock_potential": 406,
+      "reasoning": "Small functions with massive unlock potential"
+    },
+    "phase_2_core_hubs": {
+      "functions": ["fcn.00419d60", "fcn.00424e40", "fcn.00421690"],
+      "total_effort_days": 9.0,
+      "unlock_potential": 370,
+      "reasoning": "Central functions that unlock major subsystems"
+    },
+    "phase_3_specialized": {
+      "functions": ["fcn.00446000", "fcn.0043ee21", "fcn.0040b180"],
+      "total_effort_days": 11.0,
+      "unlock_potential": 252,
+      "reasoning": "Complex specialized functions requiring domain knowledge"
+    }
+  },
+  "missing_evidence": {
+    "call_graph_exports": "Would benefit from agfj or Ghidra callgraph CSV",
+    "string_analysis": "Cross-reference with string usage patterns",
+    "api_dependency_graph": "Import usage mapping to functions"
+  },
+  "confidence_assessment": {
+    "high_confidence": [
+      "Hotness scoring algorithm based on proven graph centrality metrics",
+      "Function size and complexity measurements from radare2",
+      "Cross-reference counting from static analysis"
+    ],
+    "medium_confidence": [
+      "Implementation effort estimates based on size/complexity",
+      "Cluster assignments based on naming patterns and proximity",
+      "Unlock potential calculations"
+    ],
+    "low_confidence": [
+      "Function purpose inference without full behavioral analysis",
+      "Cross-platform compatibility assumptions",
+      "Performance impact estimates"
+    ]
+  },
+  "provenance": {
+    "algorithm_version": "navigator_v1.0_evidence_driven",
+    "input_data_sources": 6,
+    "functions_analyzed": 1335,
+    "deterministic_sorting": true,
+    "tie_breaking": "virtual_address_ascending",
+    "generation_timestamp": "2025-09-10T15:17:30Z"
+  }
+}

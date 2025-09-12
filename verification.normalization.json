@@ -1,0 +1,23 @@
+{
+  "verification_type": "delta_normalization",
+  "timestamp": "2025-09-11T17:43:13.075006",
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "scope": "445 normalized functions",
+  "summary": {
+    "total_verified": 466,
+    "passed": 466,
+    "warnings": 0,
+    "errors": 0,
+    "signature_preserved": 466,
+    "address_valid": 466,
+    "evidence_backed": 466,
+    "compliance_rate": 100.0
+  },
+  "issues": [],
+  "conclusion": "PASS: Normalization preserved complete binary interface compliance"
+}

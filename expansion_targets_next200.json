@@ -1,0 +1,2016 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "expansion_scope": {
+    "method": "hotness_ranking",
+    "total_available": 953,
+    "target_count": 200,
+    "implemented_baseline": 97
+  },
+  "functions": [
+    {
+      "name": "fcn.00419d60",
+      "offset": 4300128,
+      "size": 2199,
+      "indegree": 158,
+      "outdegree": 184,
+      "cost": 784,
+      "complexity": 117,
+      "hotness": 143.368
+    },
+    {
+      "name": "fcn.00446000",
+      "offset": 4481024,
+      "size": 673,
+      "indegree": 136,
+      "outdegree": 134,
+      "cost": 221,
+      "complexity": 218,
+      "hotness": 138.642
+    },
+    {
+      "name": "fcn.00424e40",
+      "offset": 4345408,
+      "size": 1578,
+      "indegree": 145,
+      "outdegree": 152,
+      "cost": 595,
+      "complexity": 101,
+      "hotness": 124.99
+    },
+    {
+      "name": "fcn.0043ee21",
+      "offset": 4451873,
+      "size": 1595,
+      "indegree": 116,
+      "outdegree": 152,
+      "cost": 817,
+      "complexity": 75,
+      "hotness": 108.634
+    },
+    {
+      "name": "fcn.00441d30",
+      "offset": 4463920,
+      "size": 48,
+      "indegree": 250,
+      "outdegree": 4,
+      "cost": 28,
+      "complexity": 3,
+      "hotness": 101.856
+    },
+    {
+      "name": "fcn.0040b180",
+      "offset": 4239744,
+      "size": 2020,
+      "indegree": 96,
+      "outdegree": 96,
+      "cost": 852,
+      "complexity": 96,
+      "hotness": 88.104
+    },
+    {
+      "name": "fcn.004160d8",
+      "offset": 4284632,
+      "size": 31,
+      "indegree": 215,
+      "outdegree": 0,
+      "cost": 12,
+      "complexity": 1,
+      "hotness": 86.224
+    },
+    {
+      "name": "fcn.00437c83",
+      "offset": 4422787,
+      "size": 799,
+      "indegree": 84,
+      "outdegree": 103,
+      "cost": 398,
+      "complexity": 79,
+      "hotness": 81.096
+    },
+    {
+      "name": "fcn.0040bc40",
+      "offset": 4242496,
+      "size": 1695,
+      "indegree": 85,
+      "outdegree": 86,
+      "cost": 703,
+      "complexity": 75,
+      "hotness": 76.20599999999999
+    },
+    {
+      "name": "fcn.0040c2e0",
+      "offset": 4244192,
+      "size": 1686,
+      "indegree": 85,
+      "outdegree": 86,
+      "cost": 695,
+      "complexity": 75,
+      "hotness": 76.19
+    },
+    {
+      "name": "fcn.00421690",
+      "offset": 4331152,
+      "size": 1041,
+      "indegree": 63,
+      "outdegree": 92,
+      "cost": 470,
+      "complexity": 57,
+      "hotness": 65.14
+    },
+    {
+      "name": "fcn.00418ba0",
+      "offset": 4295584,
+      "size": 630,
+      "indegree": 76,
+      "outdegree": 75,
+      "cost": 250,
+      "complexity": 50,
+      "hotness": 63.400000000000006
+    },
+    {
+      "name": "fcn.0045664c",
+      "offset": 4548172,
+      "size": 38,
+      "indegree": 150,
+      "outdegree": 3,
+      "cost": 17,
+      "complexity": 2,
+      "hotness": 61.333999999999996
+    },
+    {
+      "name": "fcn.004159d0",
+      "offset": 4282832,
+      "size": 109,
+      "indegree": 143,
+      "outdegree": 8,
+      "cost": 60,
+      "complexity": 4,
+      "hotness": 60.519999999999996
+    },
+    {
+      "name": "fcn.0040d070",
+      "offset": 4247664,
+      "size": 1455,
+      "indegree": 60,
+      "outdegree": 62,
+      "cost": 605,
+      "complexity": 62,
+      "hotness": 56.209999999999994
+    },
+    {
+      "name": "fcn.004184e0",
+      "offset": 4293856,
+      "size": 1243,
+      "indegree": 38,
+      "outdegree": 63,
+      "cost": 601,
+      "complexity": 59,
+      "hotness": 47.102000000000004
+    },
+    {
+      "name": "fcn.00416590",
+      "offset": 4285840,
+      "size": 582,
+      "indegree": 51,
+      "outdegree": 54,
+      "cost": 262,
+      "complexity": 38,
+      "hotness": 44.724000000000004
+    },
+    {
+      "name": "fcn.0041b150",
+      "offset": 4305232,
+      "size": 464,
+      "indegree": 51,
+      "outdegree": 49,
+      "cost": 244,
+      "complexity": 43,
+      "hotness": 44.188
+    },
+    {
+      "name": "fcn.0042b460",
+      "offset": 4371552,
+      "size": 1315,
+      "indegree": 37,
+      "outdegree": 70,
+      "cost": 575,
+      "complexity": 36,
+      "hotness": 44.15
+    },
+    {
+      "name": "fcn.004177c0",
+      "offset": 4290496,
+      "size": 607,
+      "indegree": 48,
+      "outdegree": 50,
+      "cost": 258,
+      "complexity": 47,
+      "hotness": 44.116
+    },
+    {
+      "name": "fcn.00426ed0",
+      "offset": 4353744,
+      "size": 438,
+      "indegree": 79,
+      "outdegree": 26,
+      "cost": 205,
+      "complexity": 19,
+      "hotness": 43.60999999999999
+    },
+    {
+      "name": "fcn.00419020",
+      "offset": 4296736,
+      "size": 670,
+      "indegree": 44,
+      "outdegree": 55,
+      "cost": 296,
+      "complexity": 43,
+      "hotness": 43.292
+    },
+    {
+      "name": "fcn.00426590",
+      "offset": 4351376,
+      "size": 858,
+      "indegree": 50,
+      "outdegree": 51,
+      "cost": 343,
+      "complexity": 33,
+      "hotness": 42.586
+    },
+    {
+      "name": "fcn.00441bd1",
+      "offset": 4463569,
+      "size": 16,
+      "indegree": 103,
+      "outdegree": 1,
+      "cost": 12,
+      "complexity": 1,
+      "hotness": 41.724000000000004
+    },
+    {
+      "name": "fcn.00428060",
+      "offset": 4358240,
+      "size": 749,
+      "indegree": 38,
+      "outdegree": 52,
+      "cost": 413,
+      "complexity": 49,
+      "hotness": 41.426
+    },
+    {
+      "name": "fcn.00401159",
+      "offset": 4198745,
+      "size": 22145,
+      "indegree": 30,
+      "outdegree": 78,
+      "cost": 554,
+      "complexity": 21,
+      "hotness": 40.708
+    },
+    {
+      "name": "fcn.00426900",
+      "offset": 4352256,
+      "size": 704,
+      "indegree": 47,
+      "outdegree": 50,
+      "cost": 265,
+      "complexity": 31,
+      "hotness": 40.53
+    },
+    {
+      "name": "fcn.00427520",
+      "offset": 4355360,
+      "size": 518,
+      "indegree": 45,
+      "outdegree": 49,
+      "cost": 227,
+      "complexity": 36,
+      "hotness": 40.354000000000006
+    },
+    {
+      "name": "fcn.0041c950",
+      "offset": 4311376,
+      "size": 411,
+      "indegree": 47,
+      "outdegree": 48,
+      "cost": 191,
+      "complexity": 31,
+      "hotness": 39.782000000000004
+    },
+    {
+      "name": "fcn.0042d0f4",
+      "offset": 4378868,
+      "size": 832,
+      "indegree": 34,
+      "outdegree": 58,
+      "cost": 373,
+      "complexity": 32,
+      "hotness": 38.146
+    },
+    {
+      "name": "loc.00406b50",
+      "offset": 4221776,
+      "size": 1111,
+      "indegree": 20,
+      "outdegree": 84,
+      "cost": 500,
+      "complexity": 17,
+      "hotness": 37.6
+    },
+    {
+      "name": "fcn.004255e0",
+      "offset": 4347360,
+      "size": 923,
+      "indegree": 38,
+      "outdegree": 45,
+      "cost": 346,
+      "complexity": 36,
+      "hotness": 36.592000000000006
+    },
+    {
+      "name": "fcn.00410260",
+      "offset": 4260448,
+      "size": 631,
+      "indegree": 41,
+      "outdegree": 43,
+      "cost": 234,
+      "complexity": 34,
+      "hotness": 36.568000000000005
+    },
+    {
+      "name": "fcn.004242c0",
+      "offset": 4342464,
+      "size": 767,
+      "indegree": 34,
+      "outdegree": 43,
+      "cost": 343,
+      "complexity": 40,
+      "hotness": 35.186
+    },
+    {
+      "name": "fcn.0044f383",
+      "offset": 4518787,
+      "size": 541,
+      "indegree": 33,
+      "outdegree": 53,
+      "cost": 276,
+      "complexity": 25,
+      "hotness": 34.652
+    },
+    {
+      "name": "fcn.0041ece0",
+      "offset": 4320480,
+      "size": 735,
+      "indegree": 32,
+      "outdegree": 46,
+      "cost": 311,
+      "complexity": 32,
+      "hotness": 33.622
+    },
+    {
+      "name": "fcn.00422f60",
+      "offset": 4337504,
+      "size": 618,
+      "indegree": 30,
+      "outdegree": 41,
+      "cost": 331,
+      "complexity": 42,
+      "hotness": 33.361999999999995
+    },
+    {
+      "name": "fcn.0041c720",
+      "offset": 4310816,
+      "size": 560,
+      "indegree": 35,
+      "outdegree": 41,
+      "cost": 260,
+      "complexity": 30,
+      "hotness": 32.81999999999999
+    },
+    {
+      "name": "fcn.0042bc90",
+      "offset": 4373648,
+      "size": 822,
+      "indegree": 25,
+      "outdegree": 57,
+      "cost": 388,
+      "complexity": 23,
+      "hotness": 32.476
+    },
+    {
+      "name": "fcn.00427750",
+      "offset": 4355920,
+      "size": 678,
+      "indegree": 35,
+      "outdegree": 36,
+      "cost": 261,
+      "complexity": 35,
+      "hotness": 32.321999999999996
+    },
+    {
+      "name": "fcn.00409020",
+      "offset": 4231200,
+      "size": 1239,
+      "indegree": 33,
+      "outdegree": 38,
+      "cost": 358,
+      "complexity": 35,
+      "hotness": 32.316
+    },
+    {
+      "name": "fcn.00422030",
+      "offset": 4333616,
+      "size": 279,
+      "indegree": 60,
+      "outdegree": 14,
+      "cost": 109,
+      "complexity": 18,
+      "hotness": 32.018
+    },
+    {
+      "name": "fcn.004249f0",
+      "offset": 4344304,
+      "size": 424,
+      "indegree": 32,
+      "outdegree": 39,
+      "cost": 193,
+      "complexity": 31,
+      "hotness": 31.086
+    },
+    {
+      "name": "fcn.0041d5c0",
+      "offset": 4314560,
+      "size": 634,
+      "indegree": 32,
+      "outdegree": 33,
+      "cost": 258,
+      "complexity": 35,
+      "hotness": 30.216
+    },
+    {
+      "name": "fcn.00415c60",
+      "offset": 4283488,
+      "size": 254,
+      "indegree": 40,
+      "outdegree": 28,
+      "cost": 143,
+      "complexity": 27,
+      "hotness": 30.086
+    },
+    {
+      "name": "fcn.0044176e",
+      "offset": 4462446,
+      "size": 242,
+      "indegree": 28,
+      "outdegree": 28,
+      "cost": 126,
+      "complexity": 50,
+      "hotness": 29.852
+    },
+    {
+      "name": "fcn.004421a8",
+      "offset": 4465064,
+      "size": 40,
+      "indegree": 71,
+      "outdegree": 3,
+      "cost": 25,
+      "complexity": 2,
+      "hotness": 29.75
+    },
+    {
+      "name": "fcn.0041aaa0",
+      "offset": 4303520,
+      "size": 23,
+      "indegree": 72,
+      "outdegree": 1,
+      "cost": 13,
+      "complexity": 1,
+      "hotness": 29.326
+    },
+    {
+      "name": "fcn.00428380",
+      "offset": 4359040,
+      "size": 592,
+      "indegree": 27,
+      "outdegree": 38,
+      "cost": 278,
+      "complexity": 32,
+      "hotness": 29.156000000000006
+    },
+    {
+      "name": "fcn.0041b6b0",
+      "offset": 4306608,
+      "size": 480,
+      "indegree": 29,
+      "outdegree": 36,
+      "cost": 205,
+      "complexity": 25,
+      "hotness": 27.81
+    },
+    {
+      "name": "fcn.004202d0",
+      "offset": 4326096,
+      "size": 555,
+      "indegree": 28,
+      "outdegree": 36,
+      "cost": 297,
+      "complexity": 26,
+      "hotness": 27.794
+    },
+    {
+      "name": "fcn.0043cfc3",
+      "offset": 4444099,
+      "size": 558,
+      "indegree": 25,
+      "outdegree": 43,
+      "cost": 261,
+      "complexity": 19,
+      "hotness": 27.221999999999998
+    },
+    {
+      "name": "fcn.00419720",
+      "offset": 4298528,
+      "size": 510,
+      "indegree": 25,
+      "outdegree": 43,
+      "cost": 234,
+      "complexity": 19,
+      "hotness": 27.168
+    },
+    {
+      "name": "fcn.00409fe0",
+      "offset": 4235232,
+      "size": 754,
+      "indegree": 28,
+      "outdegree": 27,
+      "cost": 354,
+      "complexity": 35,
+      "hotness": 27.008
+    },
+    {
+      "name": "fcn.0040abe0",
+      "offset": 4238304,
+      "size": 462,
+      "indegree": 31,
+      "outdegree": 29,
+      "cost": 210,
+      "complexity": 27,
+      "hotness": 26.92
+    },
+    {
+      "name": "fcn.00416200",
+      "offset": 4284928,
+      "size": 334,
+      "indegree": 38,
+      "outdegree": 20,
+      "cost": 155,
+      "complexity": 26,
+      "hotness": 26.71
+    },
+    {
+      "name": "fcn.0040b9a0",
+      "offset": 4241824,
+      "size": 671,
+      "indegree": 29,
+      "outdegree": 28,
+      "cost": 296,
+      "complexity": 30,
+      "hotness": 26.592
+    },
+    {
+      "name": "fcn.0041d840",
+      "offset": 4315200,
+      "size": 380,
+      "indegree": 30,
+      "outdegree": 28,
+      "cost": 199,
+      "complexity": 27,
+      "hotness": 26.198
+    },
+    {
+      "name": "fcn.00441edd",
+      "offset": 4464349,
+      "size": 40,
+      "indegree": 62,
+      "outdegree": 3,
+      "cost": 25,
+      "complexity": 2,
+      "hotness": 26.15
+    },
+    {
+      "name": "fcn.00420080",
+      "offset": 4325504,
+      "size": 524,
+      "indegree": 23,
+      "outdegree": 35,
+      "cost": 290,
+      "complexity": 25,
+      "hotness": 25.28
+    },
+    {
+      "name": "fcn.00410ed0",
+      "offset": 4263632,
+      "size": 478,
+      "indegree": 29,
+      "outdegree": 29,
+      "cost": 193,
+      "complexity": 20,
+      "hotness": 24.686
+    },
+    {
+      "name": "fcn.0041aa30",
+      "offset": 4303408,
+      "size": 104,
+      "indegree": 51,
+      "outdegree": 11,
+      "cost": 60,
+      "complexity": 4,
+      "hotness": 24.620000000000005
+    },
+    {
+      "name": "fcn.00415530",
+      "offset": 4281648,
+      "size": 418,
+      "indegree": 26,
+      "outdegree": 28,
+      "cost": 198,
+      "complexity": 27,
+      "hotness": 24.596000000000004
+    },
+    {
+      "name": "fcn.0041b520",
+      "offset": 4306208,
+      "size": 396,
+      "indegree": 22,
+      "outdegree": 32,
+      "cost": 243,
+      "complexity": 27,
+      "hotness": 24.286
+    },
+    {
+      "name": "fcn.0040a420",
+      "offset": 4236320,
+      "size": 597,
+      "indegree": 28,
+      "outdegree": 28,
+      "cost": 241,
+      "complexity": 21,
+      "hotness": 24.282
+    },
+    {
+      "name": "fcn.0044164a",
+      "offset": 4462154,
+      "size": 292,
+      "indegree": 29,
+      "outdegree": 27,
+      "cost": 155,
+      "complexity": 21,
+      "hotness": 24.21
+    },
+    {
+      "name": "fcn.00417280",
+      "offset": 4289152,
+      "size": 547,
+      "indegree": 22,
+      "outdegree": 33,
+      "cost": 249,
+      "complexity": 25,
+      "hotness": 24.198000000000004
+    },
+    {
+      "name": "fcn.00414b40",
+      "offset": 4279104,
+      "size": 383,
+      "indegree": 26,
+      "outdegree": 29,
+      "cost": 152,
+      "complexity": 22,
+      "hotness": 23.804000000000002
+    },
+    {
+      "name": "fcn.00415900",
+      "offset": 4282624,
+      "size": 20,
+      "indegree": 58,
+      "outdegree": 1,
+      "cost": 11,
+      "complexity": 1,
+      "hotness": 23.722
+    },
+    {
+      "name": "fcn.0043e483",
+      "offset": 4449411,
+      "size": 131,
+      "indegree": 46,
+      "outdegree": 11,
+      "cost": 59,
+      "complexity": 9,
+      "hotness": 23.618000000000002
+    },
+    {
+      "name": "fcn.0042c150",
+      "offset": 4374864,
+      "size": 558,
+      "indegree": 20,
+      "outdegree": 36,
+      "cost": 277,
+      "complexity": 21,
+      "hotness": 23.553999999999995
+    },
+    {
+      "name": "fcn.0042b120",
+      "offset": 4370720,
+      "size": 831,
+      "indegree": 17,
+      "outdegree": 42,
+      "cost": 391,
+      "complexity": 16,
+      "hotness": 23.381999999999998
+    },
+    {
+      "name": "fcn.0044f0a8",
+      "offset": 4518056,
+      "size": 443,
+      "indegree": 21,
+      "outdegree": 37,
+      "cost": 230,
+      "complexity": 17,
+      "hotness": 23.36
+    },
+    {
+      "name": "fcn.00415a40",
+      "offset": 4282944,
+      "size": 450,
+      "indegree": 23,
+      "outdegree": 32,
+      "cost": 223,
+      "complexity": 20,
+      "hotness": 23.246000000000002
+    },
+    {
+      "name": "fcn.0044f263",
+      "offset": 4518499,
+      "size": 288,
+      "indegree": 23,
+      "outdegree": 35,
+      "cost": 161,
+      "complexity": 16,
+      "hotness": 23.222
+    },
+    {
+      "name": "fcn.00444d53",
+      "offset": 4476243,
+      "size": 233,
+      "indegree": 23,
+      "outdegree": 31,
+      "cost": 132,
+      "complexity": 22,
+      "hotness": 23.164
+    },
+    {
+      "name": "fcn.00440adb",
+      "offset": 4459227,
+      "size": 350,
+      "indegree": 21,
+      "outdegree": 34,
+      "cost": 189,
+      "complexity": 19,
+      "hotness": 22.778000000000002
+    },
+    {
+      "name": "fcn.0043dd4b",
+      "offset": 4447563,
+      "size": 42,
+      "indegree": 54,
+      "outdegree": 3,
+      "cost": 25,
+      "complexity": 1,
+      "hotness": 22.75
+    },
+    {
+      "name": "fcn.00440c64",
+      "offset": 4459620,
+      "size": 328,
+      "indegree": 31,
+      "outdegree": 25,
+      "cost": 137,
+      "complexity": 12,
+      "hotness": 22.573999999999998
+    },
+    {
+      "name": "fcn.0041fa10",
+      "offset": 4323856,
+      "size": 458,
+      "indegree": 24,
+      "outdegree": 25,
+      "cost": 193,
+      "complexity": 25,
+      "hotness": 22.486
+    },
+    {
+      "name": "fcn.0043d3cf",
+      "offset": 4445135,
+      "size": 375,
+      "indegree": 23,
+      "outdegree": 34,
+      "cost": 187,
+      "complexity": 13,
+      "hotness": 22.374
+    },
+    {
+      "name": "fcn.0042bfd0",
+      "offset": 4374480,
+      "size": 335,
+      "indegree": 22,
+      "outdegree": 29,
+      "cost": 184,
+      "complexity": 21,
+      "hotness": 22.067999999999998
+    },
+    {
+      "name": "fcn.00417010",
+      "offset": 4288528,
+      "size": 334,
+      "indegree": 26,
+      "outdegree": 20,
+      "cost": 155,
+      "complexity": 26,
+      "hotness": 21.909999999999997
+    },
+    {
+      "name": "fcn.0044070f",
+      "offset": 4458255,
+      "size": 380,
+      "indegree": 22,
+      "outdegree": 32,
+      "cost": 208,
+      "complexity": 15,
+      "hotness": 21.816
+    },
+    {
+      "name": "fcn.00422dc0",
+      "offset": 4337088,
+      "size": 255,
+      "indegree": 23,
+      "outdegree": 28,
+      "cost": 119,
+      "complexity": 19,
+      "hotness": 21.638
+    },
+    {
+      "name": "fcn.0043fcbd",
+      "offset": 4455613,
+      "size": 324,
+      "indegree": 23,
+      "outdegree": 30,
+      "cost": 177,
+      "complexity": 15,
+      "hotness": 21.554000000000002
+    },
+    {
+      "name": "fcn.0041eff0",
+      "offset": 4321264,
+      "size": 603,
+      "indegree": 22,
+      "outdegree": 24,
+      "cost": 246,
+      "complexity": 25,
+      "hotness": 21.492
+    },
+    {
+      "name": "fcn.00421d60",
+      "offset": 4332896,
+      "size": 584,
+      "indegree": 21,
+      "outdegree": 21,
+      "cost": 231,
+      "complexity": 30,
+      "hotness": 21.162
+    },
+    {
+      "name": "fcn.00441e8d",
+      "offset": 4464269,
+      "size": 80,
+      "indegree": 44,
+      "outdegree": 8,
+      "cost": 45,
+      "complexity": 5,
+      "hotness": 21.09
+    },
+    {
+      "name": "fcn.0041ac90",
+      "offset": 4304016,
+      "size": 335,
+      "indegree": 23,
+      "outdegree": 24,
+      "cost": 150,
+      "complexity": 18,
+      "hotness": 20.3
+    },
+    {
+      "name": "fcn.0041ccd0",
+      "offset": 4312272,
+      "size": 507,
+      "indegree": 19,
+      "outdegree": 26,
+      "cost": 218,
+      "complexity": 21,
+      "hotness": 20.036
+    },
+    {
+      "name": "fcn.0042d4c0",
+      "offset": 4379840,
+      "size": 342,
+      "indegree": 20,
+      "outdegree": 26,
+      "cost": 170,
+      "complexity": 19,
+      "hotness": 19.94
+    },
+    {
+      "name": "fcn.00445f5f",
+      "offset": 4480863,
+      "size": 81,
+      "indegree": 17,
+      "outdegree": 17,
+      "cost": 34,
+      "complexity": 39,
+      "hotness": 19.768
+    },
+    {
+      "name": "fcn.00442c75",
+      "offset": 4467829,
+      "size": 289,
+      "indegree": 18,
+      "outdegree": 30,
+      "cost": 148,
+      "complexity": 16,
+      "hotness": 19.695999999999998
+    },
+    {
+      "name": "fcn.0044e05e",
+      "offset": 4513886,
+      "size": 190,
+      "indegree": 23,
+      "outdegree": 24,
+      "cost": 110,
+      "complexity": 14,
+      "hotness": 19.419999999999998
+    },
+    {
+      "name": "fcn.004444af",
+      "offset": 4474031,
+      "size": 322,
+      "indegree": 21,
+      "outdegree": 27,
+      "cost": 144,
+      "complexity": 12,
+      "hotness": 19.188000000000002
+    },
+    {
+      "name": "fcn.00441be1",
+      "offset": 4463585,
+      "size": 54,
+      "indegree": 43,
+      "outdegree": 5,
+      "cost": 33,
+      "complexity": 2,
+      "hotness": 19.165999999999997
+    },
+    {
+      "name": "fcn.004577c0",
+      "offset": 4552640,
+      "size": 127,
+      "indegree": 35,
+      "outdegree": 12,
+      "cost": 63,
+      "complexity": 7,
+      "hotness": 19.126
+    },
+    {
+      "name": "fcn.00416150",
+      "offset": 4284752,
+      "size": 172,
+      "indegree": 22,
+      "outdegree": 19,
+      "cost": 103,
+      "complexity": 22,
+      "hotness": 19.106
+    },
+    {
+      "name": "fcn.0044edfd",
+      "offset": 4517373,
+      "size": 220,
+      "indegree": 20,
+      "outdegree": 24,
+      "cost": 128,
+      "complexity": 17,
+      "hotness": 18.856
+    },
+    {
+      "name": "fcn.0041e870",
+      "offset": 4319344,
+      "size": 436,
+      "indegree": 18,
+      "outdegree": 25,
+      "cost": 212,
+      "complexity": 18,
+      "hotness": 18.724
+    },
+    {
+      "name": "fcn.00441103",
+      "offset": 4460803,
+      "size": 41,
+      "indegree": 43,
+      "outdegree": 3,
+      "cost": 25,
+      "complexity": 2,
+      "hotness": 18.549999999999997
+    },
+    {
+      "name": "fcn.00416080",
+      "offset": 4284544,
+      "size": 88,
+      "indegree": 36,
+      "outdegree": 7,
+      "cost": 51,
+      "complexity": 9,
+      "hotness": 18.402
+    },
+    {
+      "name": "fcn.004011b3",
+      "offset": 4198835,
+      "size": 8245,
+      "indegree": 20,
+      "outdegree": 22,
+      "cost": 255,
+      "complexity": 16,
+      "hotness": 18.31
+    },
+    {
+      "name": "fcn.0042c4e0",
+      "offset": 4375776,
+      "size": 356,
+      "indegree": 14,
+      "outdegree": 27,
+      "cost": 198,
+      "complexity": 21,
+      "hotness": 18.296
+    },
+    {
+      "name": "fcn.004273c0",
+      "offset": 4355008,
+      "size": 319,
+      "indegree": 19,
+      "outdegree": 22,
+      "cost": 189,
+      "complexity": 18,
+      "hotness": 18.178
+    },
+    {
+      "name": "fcn.0044012a",
+      "offset": 4456746,
+      "size": 260,
+      "indegree": 20,
+      "outdegree": 23,
+      "cost": 115,
+      "complexity": 15,
+      "hotness": 18.13
+    },
+    {
+      "name": "fcn.0044284c",
+      "offset": 4466764,
+      "size": 21,
+      "indegree": 42,
+      "outdegree": 3,
+      "cost": 14,
+      "complexity": 2,
+      "hotness": 18.127999999999997
+    },
+    {
+      "name": "fcn.00419c10",
+      "offset": 4299792,
+      "size": 333,
+      "indegree": 21,
+      "outdegree": 20,
+      "cost": 157,
+      "complexity": 17,
+      "hotness": 18.114
+    },
+    {
+      "name": "fcn.00445766",
+      "offset": 4478822,
+      "size": 262,
+      "indegree": 17,
+      "outdegree": 27,
+      "cost": 144,
+      "complexity": 14,
+      "hotness": 17.988
+    },
+    {
+      "name": "fcn.0043f862",
+      "offset": 4454498,
+      "size": 188,
+      "indegree": 18,
+      "outdegree": 25,
+      "cost": 117,
+      "complexity": 15,
+      "hotness": 17.933999999999997
+    },
+    {
+      "name": "fcn.0041fc40",
+      "offset": 4324416,
+      "size": 245,
+      "indegree": 19,
+      "outdegree": 20,
+      "cost": 144,
+      "complexity": 20,
+      "hotness": 17.888
+    },
+    {
+      "name": "fcn.004152f0",
+      "offset": 4281072,
+      "size": 386,
+      "indegree": 18,
+      "outdegree": 20,
+      "cost": 184,
+      "complexity": 21,
+      "hotness": 17.768
+    },
+    {
+      "name": "fcn.004424a1",
+      "offset": 4465825,
+      "size": 64,
+      "indegree": 37,
+      "outdegree": 6,
+      "cost": 36,
+      "complexity": 5,
+      "hotness": 17.672
+    },
+    {
+      "name": "fcn.0041e1a0",
+      "offset": 4317600,
+      "size": 204,
+      "indegree": 19,
+      "outdegree": 17,
+      "cost": 118,
+      "complexity": 22,
+      "hotness": 17.336
+    },
+    {
+      "name": "fcn.0042a350",
+      "offset": 4367184,
+      "size": 487,
+      "indegree": 17,
+      "outdegree": 22,
+      "cost": 202,
+      "complexity": 17,
+      "hotness": 17.204
+    },
+    {
+      "name": "fcn.00452806",
+      "offset": 4532230,
+      "size": 262,
+      "indegree": 19,
+      "outdegree": 23,
+      "cost": 142,
+      "complexity": 12,
+      "hotness": 17.184
+    },
+    {
+      "name": "fcn.00427290",
+      "offset": 4354704,
+      "size": 302,
+      "indegree": 16,
+      "outdegree": 22,
+      "cost": 186,
+      "complexity": 18,
+      "hotness": 16.972
+    },
+    {
+      "name": "fcn.00449d5c",
+      "offset": 4496732,
+      "size": 231899,
+      "indegree": 41,
+      "outdegree": 1,
+      "cost": 7,
+      "complexity": 1,
+      "hotness": 16.914
+    },
+    {
+      "name": "fcn.00456c8b",
+      "offset": 4549771,
+      "size": 380,
+      "indegree": 16,
+      "outdegree": 25,
+      "cost": 168,
+      "complexity": 13,
+      "hotness": 16.836000000000002
+    },
+    {
+      "name": "fcn.0041a820",
+      "offset": 4302880,
+      "size": 145,
+      "indegree": 35,
+      "outdegree": 5,
+      "cost": 61,
+      "complexity": 6,
+      "hotness": 16.822
+    },
+    {
+      "name": "fcn.0041df4a",
+      "offset": 4317002,
+      "size": 305,
+      "indegree": 20,
+      "outdegree": 19,
+      "cost": 116,
+      "complexity": 14,
+      "hotness": 16.732
+    },
+    {
+      "name": "fcn.00417c90",
+      "offset": 4291728,
+      "size": 459,
+      "indegree": 18,
+      "outdegree": 19,
+      "cost": 191,
+      "complexity": 17,
+      "hotness": 16.682000000000002
+    },
+    {
+      "name": "fcn.00427b60",
+      "offset": 4356960,
+      "size": 629,
+      "indegree": 11,
+      "outdegree": 26,
+      "cost": 285,
+      "complexity": 19,
+      "hotness": 16.57
+    },
+    {
+      "name": "fcn.0043e518",
+      "offset": 4449560,
+      "size": 289,
+      "indegree": 14,
+      "outdegree": 26,
+      "cost": 158,
+      "complexity": 14,
+      "hotness": 16.516000000000002
+    },
+    {
+      "name": "fcn.00443bcb",
+      "offset": 4471755,
+      "size": 223,
+      "indegree": 14,
+      "outdegree": 26,
+      "cost": 124,
+      "complexity": 13,
+      "hotness": 16.248
+    },
+    {
+      "name": "fcn.00422aee",
+      "offset": 4336366,
+      "size": 518,
+      "indegree": 19,
+      "outdegree": 17,
+      "cost": 161,
+      "complexity": 16,
+      "hotness": 16.221999999999998
+    },
+    {
+      "name": "fcn.00421180",
+      "offset": 4329856,
+      "size": 318,
+      "indegree": 16,
+      "outdegree": 23,
+      "cost": 138,
+      "complexity": 13,
+      "hotness": 16.176000000000002
+    },
+    {
+      "name": "fcn.00420c40",
+      "offset": 4328512,
+      "size": 459,
+      "indegree": 15,
+      "outdegree": 25,
+      "cost": 198,
+      "complexity": 10,
+      "hotness": 15.896
+    },
+    {
+      "name": "fcn.00411a86",
+      "offset": 4266630,
+      "size": 256,
+      "indegree": 15,
+      "outdegree": 26,
+      "cost": 138,
+      "complexity": 9,
+      "hotness": 15.876000000000001
+    },
+    {
+      "name": "fcn.00423710",
+      "offset": 4339472,
+      "size": 563,
+      "indegree": 4,
+      "outdegree": 44,
+      "cost": 267,
+      "complexity": 2,
+      "hotness": 15.734
+    },
+    {
+      "name": "fcn.00419ad0",
+      "offset": 4299472,
+      "size": 111,
+      "indegree": 28,
+      "outdegree": 12,
+      "cost": 66,
+      "complexity": 4,
+      "hotness": 15.732000000000001
+    },
+    {
+      "name": "fcn.0042a000",
+      "offset": 4366336,
+      "size": 678,
+      "indegree": 11,
+      "outdegree": 29,
+      "cost": 289,
+      "complexity": 10,
+      "hotness": 15.677999999999999
+    },
+    {
+      "name": "fcn.00441da4",
+      "offset": 4464036,
+      "size": 94,
+      "indegree": 28,
+      "outdegree": 11,
+      "cost": 60,
+      "complexity": 5,
+      "hotness": 15.62
+    },
+    {
+      "name": "fcn.0040fc20",
+      "offset": 4258848,
+      "size": 1049,
+      "indegree": 18,
+      "outdegree": 17,
+      "cost": 252,
+      "complexity": 14,
+      "hotness": 15.604000000000001
+    },
+    {
+      "name": "fcn.00422836",
+      "offset": 4335670,
+      "size": 518,
+      "indegree": 18,
+      "outdegree": 16,
+      "cost": 161,
+      "complexity": 16,
+      "hotness": 15.521999999999998
+    },
+    {
+      "name": "fcn.004259f0",
+      "offset": 4348400,
+      "size": 306,
+      "indegree": 13,
+      "outdegree": 26,
+      "cost": 154,
+      "complexity": 11,
+      "hotness": 15.508
+    },
+    {
+      "name": "fcn.00423390",
+      "offset": 4338576,
+      "size": 884,
+      "indegree": 2,
+      "outdegree": 44,
+      "cost": 454,
+      "complexity": 3,
+      "hotness": 15.508
+    },
+    {
+      "name": "fcn.0043dc7d",
+      "offset": 4447357,
+      "size": 39,
+      "indegree": 37,
+      "outdegree": 1,
+      "cost": 20,
+      "complexity": 1,
+      "hotness": 15.34
+    },
+    {
+      "name": "fcn.00456390",
+      "offset": 4547472,
+      "size": 379,
+      "indegree": 8,
+      "outdegree": 34,
+      "cost": 169,
+      "complexity": 8,
+      "hotness": 15.337999999999997
+    },
+    {
+      "name": "fcn.0044eb2d",
+      "offset": 4516653,
+      "size": 31,
+      "indegree": 37,
+      "outdegree": 1,
+      "cost": 15,
+      "complexity": 1,
+      "hotness": 15.33
+    },
+    {
+      "name": "fcn.00414cc0",
+      "offset": 4279488,
+      "size": 251,
+      "indegree": 18,
+      "outdegree": 16,
+      "cost": 118,
+      "complexity": 15,
+      "hotness": 15.236
+    },
+    {
+      "name": "fcn.00415100",
+      "offset": 4280576,
+      "size": 326,
+      "indegree": 16,
+      "outdegree": 17,
+      "cost": 157,
+      "complexity": 17,
+      "hotness": 15.214
+    },
+    {
+      "name": "fcn.00429520",
+      "offset": 4363552,
+      "size": 306,
+      "indegree": 24,
+      "outdegree": 13,
+      "cost": 138,
+      "complexity": 7,
+      "hotness": 15.176000000000002
+    },
+    {
+      "name": "fcn.0041f250",
+      "offset": 4321872,
+      "size": 395,
+      "indegree": 19,
+      "outdegree": 16,
+      "cost": 135,
+      "complexity": 12,
+      "hotness": 15.07
+    },
+    {
+      "name": "fcn.00420820",
+      "offset": 4327456,
+      "size": 161,
+      "indegree": 18,
+      "outdegree": 17,
+      "cost": 68,
+      "complexity": 13,
+      "hotness": 15.036
+    },
+    {
+      "name": "fcn.004208d0",
+      "offset": 4327632,
+      "size": 141,
+      "indegree": 18,
+      "outdegree": 17,
+      "cost": 66,
+      "complexity": 13,
+      "hotness": 15.032
+    },
+    {
+      "name": "fcn.0041abc0",
+      "offset": 4303808,
+      "size": 199,
+      "indegree": 20,
+      "outdegree": 16,
+      "cost": 106,
+      "complexity": 10,
+      "hotness": 15.012
+    },
+    {
+      "name": "fcn.0042a620",
+      "offset": 4367904,
+      "size": 393,
+      "indegree": 15,
+      "outdegree": 17,
+      "cost": 159,
+      "complexity": 17,
+      "hotness": 14.818
+    },
+    {
+      "name": "fcn.0041d260",
+      "offset": 4313696,
+      "size": 368,
+      "indegree": 16,
+      "outdegree": 17,
+      "cost": 144,
+      "complexity": 15,
+      "hotness": 14.788
+    },
+    {
+      "name": "fcn.0041ea30",
+      "offset": 4319792,
+      "size": 291,
+      "indegree": 16,
+      "outdegree": 18,
+      "cost": 156,
+      "complexity": 13,
+      "hotness": 14.712
+    },
+    {
+      "name": "fcn.0044bdbe",
+      "offset": 4505022,
+      "size": 280,
+      "indegree": 17,
+      "outdegree": 16,
+      "cost": 141,
+      "complexity": 13,
+      "hotness": 14.482000000000001
+    },
+    {
+      "name": "fcn.0043e64e",
+      "offset": 4449870,
+      "size": 79,
+      "indegree": 27,
+      "outdegree": 9,
+      "cost": 53,
+      "complexity": 4,
+      "hotness": 14.406
+    },
+    {
+      "name": "fcn.0041c4d0",
+      "offset": 4310224,
+      "size": 203,
+      "indegree": 15,
+      "outdegree": 19,
+      "cost": 101,
+      "complexity": 12,
+      "hotness": 14.302
+    },
+    {
+      "name": "fcn.00416430",
+      "offset": 4285488,
+      "size": 178,
+      "indegree": 15,
+      "outdegree": 17,
+      "cost": 97,
+      "complexity": 15,
+      "hotness": 14.294
+    },
+    {
+      "name": "fcn.00416c20",
+      "offset": 4287520,
+      "size": 173,
+      "indegree": 15,
+      "outdegree": 17,
+      "cost": 96,
+      "complexity": 15,
+      "hotness": 14.292
+    },
+    {
+      "name": "fcn.00416cd0",
+      "offset": 4287696,
+      "size": 173,
+      "indegree": 15,
+      "outdegree": 17,
+      "cost": 96,
+      "complexity": 15,
+      "hotness": 14.292
+    },
+    {
+      "name": "fcn.0044ef1a",
+      "offset": 4517658,
+      "size": 183,
+      "indegree": 13,
+      "outdegree": 22,
+      "cost": 109,
+      "complexity": 11,
+      "hotness": 14.218
+    },
+    {
+      "name": "fcn.0041e4c0",
+      "offset": 4318400,
+      "size": 171,
+      "indegree": 19,
+      "outdegree": 14,
+      "cost": 95,
+      "complexity": 11,
+      "hotness": 14.190000000000001
+    },
+    {
+      "name": "fcn.00442252",
+      "offset": 4465234,
+      "size": 40,
+      "indegree": 32,
+      "outdegree": 3,
+      "cost": 22,
+      "complexity": 2,
+      "hotness": 14.144000000000002
+    },
+    {
+      "name": "fcn.0041d430",
+      "offset": 4314160,
+      "size": 215,
+      "indegree": 15,
+      "outdegree": 16,
+      "cost": 88,
+      "complexity": 15,
+      "hotness": 13.976
+    },
+    {
+      "name": "fcn.004183c0",
+      "offset": 4293568,
+      "size": 286,
+      "indegree": 15,
+      "outdegree": 17,
+      "cost": 119,
+      "complexity": 13,
+      "hotness": 13.937999999999999
+    },
+    {
+      "name": "fcn.0041c5a0",
+      "offset": 4310432,
+      "size": 245,
+      "indegree": 15,
+      "outdegree": 15,
+      "cost": 111,
+      "complexity": 16,
+      "hotness": 13.922
+    },
+    {
+      "name": "fcn.0044f6a5",
+      "offset": 4519589,
+      "size": 180,
+      "indegree": 15,
+      "outdegree": 21,
+      "cost": 105,
+      "complexity": 7,
+      "hotness": 13.910000000000002
+    },
+    {
+      "name": "fcn.00429710",
+      "offset": 4364048,
+      "size": 172,
+      "indegree": 17,
+      "outdegree": 15,
+      "cost": 87,
+      "complexity": 11,
+      "hotness": 13.674
+    },
+    {
+      "name": "fcn.0041ba90",
+      "offset": 4307600,
+      "size": 502,
+      "indegree": 15,
+      "outdegree": 15,
+      "cost": 188,
+      "complexity": 13,
+      "hotness": 13.475999999999999
+    },
+    {
+      "name": "fcn.004385e4",
+      "offset": 4425188,
+      "size": 342,
+      "indegree": 14,
+      "outdegree": 19,
+      "cost": 149,
+      "complexity": 9,
+      "hotness": 13.398000000000001
+    },
+    {
+      "name": "fcn.0044bfdd",
+      "offset": 4505565,
+      "size": 202,
+      "indegree": 20,
+      "outdegree": 11,
+      "cost": 109,
+      "complexity": 9,
+      "hotness": 13.318000000000001
+    },
+    {
+      "name": "fcn.00451a3f",
+      "offset": 4528703,
+      "size": 157,
+      "indegree": 13,
+      "outdegree": 19,
+      "cost": 96,
+      "complexity": 11,
+      "hotness": 13.292000000000002
+    },
+    {
+      "name": "fcn.0045738d",
+      "offset": 4551565,
+      "size": 267,
+      "indegree": 11,
+      "outdegree": 22,
+      "cost": 137,
+      "complexity": 10,
+      "hotness": 13.274000000000001
+    },
+    {
+      "name": "fcn.00442a80",
+      "offset": 4467328,
+      "size": 253,
+      "indegree": 11,
+      "outdegree": 23,
+      "cost": 140,
+      "complexity": 8,
+      "hotness": 13.18
+    },
+    {
+      "name": "fcn.0042af00",
+      "offset": 4370176,
+      "size": 236,
+      "indegree": 16,
+      "outdegree": 14,
+      "cost": 130,
+      "complexity": 11,
+      "hotness": 13.060000000000002
+    },
+    {
+      "name": "fcn.0043f99a",
+      "offset": 4454810,
+      "size": 127,
+      "indegree": 18,
+      "outdegree": 14,
+      "cost": 81,
+      "complexity": 7,
+      "hotness": 12.962000000000002
+    },
+    {
+      "name": "fcn.0041d9c0",
+      "offset": 4315584,
+      "size": 200,
+      "indegree": 15,
+      "outdegree": 13,
+      "cost": 94,
+      "complexity": 14,
+      "hotness": 12.888000000000002
+    },
+    {
+      "name": "fcn.00417b30",
+      "offset": 4291376,
+      "size": 340,
+      "indegree": 17,
+      "outdegree": 12,
+      "cost": 144,
+      "complexity": 11,
+      "hotness": 12.888000000000002
+    },
+    {
+      "name": "fcn.0040a980",
+      "offset": 4237696,
+      "size": 228,
+      "indegree": 15,
+      "outdegree": 14,
+      "cost": 99,
+      "complexity": 12,
+      "hotness": 12.798
+    },
+    {
+      "name": "fcn.00440004",
+      "offset": 4456452,
+      "size": 197,
+      "indegree": 15,
+      "outdegree": 18,
+      "cost": 95,
+      "complexity": 6,
+      "hotness": 12.79
+    },
+    {
+      "name": "fcn.00429b70",
+      "offset": 4365168,
+      "size": 263,
+      "indegree": 13,
+      "outdegree": 16,
+      "cost": 153,
+      "complexity": 12,
+      "hotness": 12.706
+    },
+    {
+      "name": "fcn.00443678",
+      "offset": 4470392,
+      "size": 179,
+      "indegree": 15,
+      "outdegree": 15,
+      "cost": 89,
+      "complexity": 10,
+      "hotness": 12.678
+    },
+    {
+      "name": "fcn.0043f91e",
+      "offset": 4454686,
+      "size": 124,
+      "indegree": 14,
+      "outdegree": 17,
+      "cost": 82,
+      "complexity": 9,
+      "hotness": 12.664
+    },
+    {
+      "name": "fcn.0044bf62",
+      "offset": 4505442,
+      "size": 123,
+      "indegree": 23,
+      "outdegree": 7,
+      "cost": 79,
+      "complexity": 6,
+      "hotness": 12.658000000000001
+    },
+    {
+      "name": "fcn.004205b0",
+      "offset": 4326832,
+      "size": 229,
+      "indegree": 14,
+      "outdegree": 13,
+      "cost": 106,
+      "complexity": 14,
+      "hotness": 12.512
+    },
+    {
+      "name": "fcn.00425c70",
+      "offset": 4349040,
+      "size": 238,
+      "indegree": 16,
+      "outdegree": 13,
+      "cost": 87,
+      "complexity": 10,
+      "hotness": 12.474
+    },
+    {
+      "name": "fcn.0043de40",
+      "offset": 4447808,
+      "size": 305,
+      "indegree": 10,
+      "outdegree": 23,
+      "cost": 142,
+      "complexity": 6,
+      "hotness": 12.384
+    },
+    {
+      "name": "fcn.0041e5e0",
+      "offset": 4318688,
+      "size": 306,
+      "indegree": 11,
+      "outdegree": 17,
+      "cost": 139,
+      "complexity": 13,
+      "hotness": 12.378
+    },
+    {
+      "name": "fcn.004580af",
+      "offset": 4554927,
+      "size": 310,
+      "indegree": 10,
+      "outdegree": 23,
+      "cost": 138,
+      "complexity": 6,
+      "hotness": 12.375999999999998
+    },
+    {
+      "name": "fcn.00429260",
+      "offset": 4362848,
+      "size": 229,
+      "indegree": 14,
+      "outdegree": 15,
+      "cost": 123,
+      "complexity": 10,
+      "hotness": 12.346000000000002
+    },
+    {
+      "name": "fcn.0045a221",
+      "offset": 4563489,
+      "size": 184,
+      "indegree": 10,
+      "outdegree": 21,
+      "cost": 110,
+      "complexity": 9,
+      "hotness": 12.320000000000002
+    },
+    {
+      "name": "fcn.00416370",
+      "offset": 4285296,
+      "size": 181,
+      "indegree": 15,
+      "outdegree": 13,
+      "cost": 101,
+      "complexity": 11,
+      "hotness": 12.302
+    },
+    {
+      "name": "fcn.004421fd",
+      "offset": 4465149,
+      "size": 85,
+      "indegree": 24,
+      "outdegree": 6,
+      "cost": 48,
+      "complexity": 4,
+      "hotness": 12.296000000000003
+    },
+    {
+      "name": "fcn.00416b30",
+      "offset": 4287280,
+      "size": 240,
+      "indegree": 16,
+      "outdegree": 11,
+      "cost": 71,
+      "complexity": 12,
+      "hotness": 12.241999999999999
+    },
+    {
+      "name": "fcn.004011a4",
+      "offset": 4198820,
+      "size": 15883,
+      "indegree": 10,
+      "outdegree": 21,
+      "cost": 145,
+      "complexity": 8,
+      "hotness": 12.19
+    },
+    {
+      "name": "fcn.00429210",
+      "offset": 4362768,
+      "size": 70,
+      "indegree": 25,
+      "outdegree": 5,
+      "cost": 36,
+      "complexity": 3,
+      "hotness": 12.171999999999999
+    },
+    {
+      "name": "fcn.00451b9b",
+      "offset": 4529051,
+      "size": 179,
+      "indegree": 11,
+      "outdegree": 19,
+      "cost": 99,
+      "complexity": 9,
+      "hotness": 12.098000000000003
+    },
+    {
+      "name": "fcn.004437dc",
+      "offset": 4470748,
+      "size": 324,
+      "indegree": 12,
+      "outdegree": 18,
+      "cost": 144,
+      "complexity": 8,
+      "hotness": 12.088
+    },
+    {
+      "name": "fcn.0041e7f0",
+      "offset": 4319216,
+      "size": 128,
+      "indegree": 13,
+      "outdegree": 13,
+      "cost": 85,
+      "complexity": 14,
+      "hotness": 12.07
+    },
+    {
+      "name": "fcn.00416a50",
+      "offset": 4287056,
+      "size": 222,
+      "indegree": 10,
+      "outdegree": 17,
+      "cost": 130,
+      "complexity": 13,
+      "hotness": 11.959999999999999
+    },
+    {
+      "name": "fcn.004144d0",
+      "offset": 4277456,
+      "size": 164,
+      "indegree": 15,
+      "outdegree": 13,
+      "cost": 89,
+      "complexity": 9,
+      "hotness": 11.878000000000002
+    },
+    {
+      "name": "fcn.00418ec0",
+      "offset": 4296384,
+      "size": 115,
+      "indegree": 16,
+      "outdegree": 11,
+      "cost": 61,
+      "complexity": 10,
+      "hotness": 11.822
+    },
+    {
+      "name": "fcn.0041e350",
+      "offset": 4318032,
+      "size": 229,
+      "indegree": 12,
+      "outdegree": 13,
+      "cost": 106,
+      "complexity": 14,
+      "hotness": 11.712000000000002
+    }
+  ]
+}

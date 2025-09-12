@@ -1,0 +1,365 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32",
+    "generated_utc": "2025-09-10T15:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  "imports": [
+    {
+      "library": "kernel32.dll",
+      "symbol": "GetStartupInfoA",
+      "kind": "function",
+      "ordinal": 1,
+      "iat_va": "0x4721916",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:70"],
+      "notes": ["Process initialization"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "GetCommandLineA",
+      "kind": "function",
+      "ordinal": 2,
+      "iat_va": "0x4721920",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:74"],
+      "notes": ["Command line argument parsing"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "GetModuleHandleA",
+      "kind": "function",
+      "ordinal": 3,
+      "iat_va": "0x4721924",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": [],
+      "notes": ["Module handle retrieval - not used in analyzed source"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "HeapFree",
+      "kind": "function",
+      "ordinal": 4,
+      "iat_va": "0x4721928",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:186", "src/entry.c:189", "src/main.c:231", "src/main.c:235", "src/main.c:239"],
+      "notes": ["Memory deallocation"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "HeapAlloc",
+      "kind": "function",
+      "ordinal": 6,
+      "iat_va": "0x4721936",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:131", "src/entry.c:150", "src/entry.c:168", "src/main.c:132"],
+      "notes": ["Memory allocation"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "ExitProcess",
+      "kind": "function",
+      "ordinal": 53,
+      "iat_va": "0x4722124",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:198", "src/main.c:252"],
+      "notes": ["Process termination"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "GetCurrentProcess",
+      "kind": "function",
+      "ordinal": 89,
+      "iat_va": "0x4722268",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:82"],
+      "notes": ["Current process handle retrieval"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "GetProcessHeap",
+      "kind": "function",
+      "ordinal": null,
+      "iat_va": null,
+      "sha256_stub": null,
+      "provenance": ["source code analysis"],
+      "usage_in_code": ["src/entry.c:86", "src/main.c:126", "src/main.c:231", "src/main.c:235", "src/main.c:239"],
+      "notes": ["PHANTOM API: Used in source but not found in IAT"]
+    },
+    {
+      "library": "kernel32.dll",
+      "symbol": "FreeEnvironmentStringsA",
+      "kind": "function",
+      "ordinal": 19,
+      "iat_va": "0x4721988",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:193"],
+      "notes": ["Environment string cleanup"]
+    },
+    {
+      "library": "user32.dll",
+      "symbol": "TranslateMessage",
+      "kind": "function",
+      "ordinal": 19,
+      "iat_va": "0x4722804",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/main.c:101"],
+      "notes": ["Message translation for window processing"]
+    },
+    {
+      "library": "user32.dll",
+      "symbol": "MessageBoxA",
+      "kind": "function",
+      "ordinal": 130,
+      "iat_va": "0x4723248",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/main.c:171"],
+      "notes": ["User interface dialogs"]
+    },
+    {
+      "library": "user32.dll",
+      "symbol": "PeekMessage",
+      "kind": "function",
+      "ordinal": null,
+      "iat_va": null,
+      "sha256_stub": null,
+      "provenance": ["source code analysis"],
+      "usage_in_code": ["src/main.c:97"],
+      "notes": ["PHANTOM API: Used in source but entry not found in provided IAT data"]
+    },
+    {
+      "library": "user32.dll", 
+      "symbol": "DispatchMessage",
+      "kind": "function",
+      "ordinal": null,
+      "iat_va": null,
+      "sha256_stub": null,
+      "provenance": ["source code analysis"],
+      "usage_in_code": ["src/main.c:102"],
+      "notes": ["PHANTOM API: Used in source but entry not found in provided IAT data"]
+    },
+    {
+      "library": "ddraw.dll",
+      "symbol": "DirectDrawCreate",
+      "kind": "function",
+      "ordinal": 1,
+      "iat_va": "0x4721428",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:213"],
+      "notes": ["DirectX DirectDraw initialization"]
+    },
+    {
+      "library": "ddraw.dll",
+      "symbol": "DirectDrawEnumerateA",
+      "kind": "function",
+      "ordinal": 2,
+      "iat_va": "0x4721432",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": [],
+      "notes": ["DirectX device enumeration - not used in analyzed source"]
+    },
+    {
+      "library": "winmm.dll",
+      "symbol": "timeGetTime",
+      "kind": "function",
+      "ordinal": 3,
+      "iat_va": "0x4723556",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:349"],
+      "notes": ["High-resolution timing for game loop"]
+    },
+    {
+      "library": "advapi32.dll",
+      "symbol": "RegOpenKeyExA",
+      "kind": "function",
+      "ordinal": 6,
+      "iat_va": "0x4721284",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:302"],
+      "notes": ["Registry access for configuration"]
+    },
+    {
+      "library": "advapi32.dll",
+      "symbol": "RegQueryValueExA",
+      "kind": "function",
+      "ordinal": 7,
+      "iat_va": "0x4721288",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:305", "src/entry.c:306", "src/entry.c:307", "src/entry.c:310"],
+      "notes": ["Configuration data reading from registry"]
+    },
+    {
+      "library": "advapi32.dll",
+      "symbol": "RegCloseKey",
+      "kind": "function",
+      "ordinal": 5,
+      "iat_va": "0x4721280",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:312", "src/entry.c:334"],
+      "notes": ["Registry key cleanup"]
+    },
+    {
+      "library": "advapi32.dll",
+      "symbol": "RegCreateKeyExA",
+      "kind": "function",
+      "ordinal": 8,
+      "iat_va": "0x4721292",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:327"],
+      "notes": ["Registry key creation for configuration storage"]
+    },
+    {
+      "library": "advapi32.dll",
+      "symbol": "RegSetValueExA", 
+      "kind": "function",
+      "ordinal": 4,
+      "iat_va": "0x4721276",
+      "sha256_stub": null,
+      "provenance": ["r2: iij", "evidence.curated.json"],
+      "usage_in_code": ["src/entry.c:329", "src/entry.c:330", "src/entry.c:331", "src/entry.c:332"],
+      "notes": ["Configuration data writing to registry"]
+    }
+  ],
+  "exports": [],
+  "phantoms": [
+    {
+      "symbol": "GetProcessHeap",
+      "library": "kernel32.dll",
+      "usage_in_code": ["src/entry.c:86", "src/main.c:126", "src/main.c:231", "src/main.c:235", "src/main.c:239"],
+      "status": "NOT_EVIDENCED",
+      "provenance": ["grep in src/"],
+      "fix_suggestion": "Verify binary analysis - GetProcessHeap may be imported but not captured in IAT analysis"
+    },
+    {
+      "symbol": "PeekMessage",
+      "library": "user32.dll", 
+      "usage_in_code": ["src/main.c:97"],
+      "status": "NOT_EVIDENCED",
+      "provenance": ["grep in src/"],
+      "fix_suggestion": "Check if PeekMessageA is imported instead of PeekMessage, or verify IAT analysis completeness"
+    },
+    {
+      "symbol": "DispatchMessage",
+      "library": "user32.dll",
+      "usage_in_code": ["src/main.c:102"],
+      "status": "NOT_EVIDENCED", 
+      "provenance": ["grep in src/"],
+      "fix_suggestion": "Check if DispatchMessageA is imported instead of DispatchMessage, or verify IAT analysis completeness"
+    }
+  ],
+  "stats": {
+    "imports_total": 21,
+    "exports_total": 0,
+    "phantoms_total": 3,
+    "libraries_total": 5,
+    "evidenced_apis": 18,
+    "phantom_apis": 3
+  },
+  "validation_summary": {
+    "api_coverage": "85.7%",
+    "phantom_rate": "14.3%",
+    "critical_phantoms": 3,
+    "validation_status": "NEEDS_ATTENTION",
+    "recommendations": [
+      "Verify IAT analysis captured all imports",
+      "Check for ANSI/Unicode API variants (PeekMessageA vs PeekMessage)",
+      "Review GetProcessHeap usage - may be statically linked or delay-loaded",
+      "Re-run r2 import analysis with comprehensive flags"
+    ]
+  },
+  "api_categories": {
+    "system_core": {
+      "imports": 7,
+      "description": "KERNEL32.dll core system functions",
+      "critical": true
+    },
+    "windowing": {
+      "imports": 2,
+      "phantoms": 2,
+      "description": "USER32.dll window and message handling",
+      "critical": true
+    },
+    "graphics": {
+      "imports": 2,
+      "description": "DirectDraw graphics acceleration",
+      "critical": false
+    },
+    "timing": {
+      "imports": 1,
+      "description": "WINMM.dll multimedia timing",
+      "critical": false
+    },
+    "configuration": {
+      "imports": 5,
+      "description": "ADVAPI32.dll registry operations",
+      "critical": false
+    }
+  },
+  "platform_dependencies": {
+    "minimum_windows": "Windows 95",
+    "recommended_windows": "Windows 98",
+    "directx_requirement": "DirectX 7.0+",
+    "compatibility_notes": [
+      "DirectDraw APIs deprecated in modern Windows",
+      "Registry operations standard across all Windows versions",
+      "ANSI string functions used (A suffix)"
+    ]
+  },
+  "modernization_recommendations": {
+    "high_priority": [
+      "Replace DirectDraw with SDL2 or Direct3D",
+      "Migrate from ANSI to Unicode APIs where possible",
+      "Replace registry configuration with JSON/XML files"
+    ],
+    "medium_priority": [
+      "Update timing functions to QueryPerformanceCounter",
+      "Add error handling for all API calls",
+      "Implement fallback mechanisms for legacy APIs"
+    ],
+    "low_priority": [
+      "Code review for phantom API usage",
+      "Optimize memory allocation patterns",
+      "Add comprehensive API validation"
+    ]
+  },
+  "security_considerations": {
+    "potential_issues": [
+      "ANSI string functions vulnerable to buffer overflows",
+      "Registry operations could be hijacked",
+      "DirectDraw drivers may have vulnerabilities"
+    ],
+    "mitigations": [
+      "Validate all string inputs and buffer sizes",
+      "Use secure registry access patterns",
+      "Keep graphics drivers updated"
+    ]
+  },
+  "provenance": {
+    "source_evidence": ["evidence.curated.json", "inputs/r2_iij.json"],
+    "source_code": ["src/entry.c", "src/main.c", "src/*.c"],
+    "analysis_method": "comprehensive_iat_validation",
+    "tools_used": ["radare2", "grep", "manual_source_analysis"],
+    "deterministic": true,
+    "timestamp": "2025-09-10T15:30:00Z"
+  }
+}

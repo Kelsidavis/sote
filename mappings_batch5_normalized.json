@@ -1,0 +1,1362 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "size": 691712,
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "metadata": {
+    "version": "2.0",
+    "generator": "binary_symbol_mapping_agent",
+    "created": "2025-09-11T22:14:27.963016Z",
+    "last_modified": "2025-09-11T22:14:27.963072Z",
+    "normalization_rule": "dot_to_underscore"
+  },
+  "namespaces": {
+    "SOTE::batch5": {
+      "description": "Batch 5 expansion functions with normalized identifiers",
+      "prefix": "fcn_",
+      "scope": "batch5_functions"
+    }
+  },
+  "symbols": [
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00411a86",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00411a86",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00411a86",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00411a86",
+        "timestamp": "2025-09-11T22:14:27.963198Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x004152f0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.004152f0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_004152f0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_004152f0",
+        "timestamp": "2025-09-11T22:14:27.963213Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x004159d0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.004159d0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_004159d0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_004159d0",
+        "timestamp": "2025-09-11T22:14:27.963220Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00416080",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00416080",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00416080",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00416080",
+        "timestamp": "2025-09-11T22:14:27.963224Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x004160d8",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.004160d8",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_004160d8",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_004160d8",
+        "timestamp": "2025-09-11T22:14:27.963229Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00416150",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00416150",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00416150",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00416150",
+        "timestamp": "2025-09-11T22:14:27.963236Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00416590",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00416590",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00416590",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00416590",
+        "timestamp": "2025-09-11T22:14:27.963245Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00417c90",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00417c90",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00417c90",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00417c90",
+        "timestamp": "2025-09-11T22:14:27.963249Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00419c10",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00419c10",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00419c10",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00419c10",
+        "timestamp": "2025-09-11T22:14:27.963254Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0041a820",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0041a820",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0041a820",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0041a820",
+        "timestamp": "2025-09-11T22:14:27.963258Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0041ac90",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0041ac90",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0041ac90",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0041ac90",
+        "timestamp": "2025-09-11T22:14:27.963263Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0041df4a",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0041df4a",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0041df4a",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0041df4a",
+        "timestamp": "2025-09-11T22:14:27.963269Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0041e1a0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0041e1a0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0041e1a0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0041e1a0",
+        "timestamp": "2025-09-11T22:14:27.963276Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0041e870",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0041e870",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0041e870",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0041e870",
+        "timestamp": "2025-09-11T22:14:27.963280Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0041fc40",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0041fc40",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0041fc40",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0041fc40",
+        "timestamp": "2025-09-11T22:14:27.963285Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00420c40",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00420c40",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00420c40",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00420c40",
+        "timestamp": "2025-09-11T22:14:27.963289Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00421180",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00421180",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00421180",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00421180",
+        "timestamp": "2025-09-11T22:14:27.963293Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00426ed0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00426ed0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00426ed0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00426ed0",
+        "timestamp": "2025-09-11T22:14:27.963298Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00427290",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00427290",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00427290",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00427290",
+        "timestamp": "2025-09-11T22:14:27.963304Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x004273c0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.004273c0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_004273c0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_004273c0",
+        "timestamp": "2025-09-11T22:14:27.963311Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00427b60",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00427b60",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00427b60",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00427b60",
+        "timestamp": "2025-09-11T22:14:27.963318Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0042a350",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0042a350",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0042a350",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0042a350",
+        "timestamp": "2025-09-11T22:14:27.963322Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0042c4e0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0042c4e0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0042c4e0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0042c4e0",
+        "timestamp": "2025-09-11T22:14:27.963326Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0042d4c0",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0042d4c0",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0042d4c0",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0042d4c0",
+        "timestamp": "2025-09-11T22:14:27.963331Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0043e518",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0043e518",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0043e518",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0043e518",
+        "timestamp": "2025-09-11T22:14:27.963337Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0043f862",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0043f862",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0043f862",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0043f862",
+        "timestamp": "2025-09-11T22:14:27.963344Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0044012a",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0044012a",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0044012a",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0044012a",
+        "timestamp": "2025-09-11T22:14:27.963348Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00441bd1",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00441bd1",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00441bd1",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00441bd1",
+        "timestamp": "2025-09-11T22:14:27.963353Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00441d30",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00441d30",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00441d30",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00441d30",
+        "timestamp": "2025-09-11T22:14:27.963357Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x004424a1",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.004424a1",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_004424a1",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_004424a1",
+        "timestamp": "2025-09-11T22:14:27.963364Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00443bcb",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00443bcb",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00443bcb",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00443bcb",
+        "timestamp": "2025-09-11T22:14:27.963370Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x004444af",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.004444af",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_004444af",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_004444af",
+        "timestamp": "2025-09-11T22:14:27.963377Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00445766",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00445766",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00445766",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00445766",
+        "timestamp": "2025-09-11T22:14:27.963381Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00445f5f",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00445f5f",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00445f5f",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00445f5f",
+        "timestamp": "2025-09-11T22:14:27.963386Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00449d5c",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00449d5c",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00449d5c",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00449d5c",
+        "timestamp": "2025-09-11T22:14:27.963390Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0044e05e",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0044e05e",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0044e05e",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0044e05e",
+        "timestamp": "2025-09-11T22:14:27.963394Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0044edfd",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0044edfd",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0044edfd",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0044edfd",
+        "timestamp": "2025-09-11T22:14:27.963399Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00452806",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00452806",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00452806",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00452806",
+        "timestamp": "2025-09-11T22:14:27.963405Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x0045664c",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.0045664c",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_0045664c",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_0045664c",
+        "timestamp": "2025-09-11T22:14:27.963414Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    },
+    {
+      "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "id": {
+        "va": "0x00456c8b",
+        "kind": "function"
+      },
+      "name_originals": [
+        {
+          "tool": "radare2",
+          "value": "fcn.00456c8b",
+          "view": "aflj"
+        }
+      ],
+      "aliases": [
+        {
+          "value": "fcn_00456c8b",
+          "kind": "canonical",
+          "confidence": "certain",
+          "basis": "c_identifier_normalization",
+          "provenance": {
+            "tool": "symbol_mapper",
+            "command": "normalize_batch5.py",
+            "rationale": "Replaced dots with underscores to create valid C identifier"
+          }
+        }
+      ],
+      "namespace": "SOTE::batch5",
+      "decision": {
+        "canonical": "fcn_00456c8b",
+        "timestamp": "2025-09-11T22:14:27.963418Z",
+        "rationale": "Normalized invalid C identifier by replacing '.' with '_'"
+      }
+    }
+  ],
+  "rules": {
+    "identifier_normalization": {
+      "pattern": "fcn\\.[0-9a-f]+",
+      "replacement": "Replace '.' with '_'",
+      "reason": "Create valid C identifiers"
+    }
+  },
+  "summary": {
+    "total_symbols": 40,
+    "normalized_identifiers": 40,
+    "confidence_distribution": {
+      "certain": 40,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  }
+}

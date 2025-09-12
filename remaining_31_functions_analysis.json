@@ -1,0 +1,398 @@
+{
+  "analysis_metadata": {
+    "artifact": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "analysis_date": "2025-09-11T19:00:00Z",
+    "total_functions": 1335,
+    "implemented_functions": 1304,
+    "remaining_functions": 31,
+    "coverage_percentage": 97.7,
+    "methodology": "evidence-only analysis"
+  },
+  "remaining_functions": [
+    {
+      "va": "0x401041",
+      "decimal_offset": 4198465,
+      "name": "fcn.00401041",
+      "normalized_name": "fcn_00401041",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00401041 ();",
+      "nlocals": 27,
+      "nargs": 0,
+      "indegree": 1,
+      "outdegree": 0,
+      "stackframe": 556,
+      "analysis_notes": "5-byte function with high local variable count, likely a small utility or thunk",
+      "evidence_file": "inputs/per_va_evidence/func_4198465.json"
+    },
+    {
+      "va": "0x401046",
+      "decimal_offset": 4198470,
+      "name": "fcn.00401046",
+      "normalized_name": "fcn_00401046",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00401046 ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x401050",
+      "decimal_offset": 4198480,
+      "name": "fcn.00401050",
+      "normalized_name": "fcn_00401050",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00401050 ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x40109b",
+      "decimal_offset": 4198555,
+      "name": "fcn.0040109b",
+      "normalized_name": "fcn_0040109b",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.0040109b ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x4010cd",
+      "decimal_offset": 4198605,
+      "name": "fcn.004010cd",
+      "normalized_name": "fcn_004010cd",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004010cd ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x4010eb",
+      "decimal_offset": 4198635,
+      "name": "fcn.004010eb",
+      "normalized_name": "fcn_004010eb",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004010eb ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x4010f0",
+      "decimal_offset": 4198640,
+      "name": "fcn.004010f0",
+      "normalized_name": "fcn_004010f0",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004010f0 ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x401145",
+      "decimal_offset": 4198725,
+      "name": "fcn.00401145",
+      "normalized_name": "fcn_00401145",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00401145 ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x401195",
+      "decimal_offset": 4198805,
+      "name": "fcn.00401195",
+      "normalized_name": "fcn_00401195",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00401195 ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x4011ae",
+      "decimal_offset": 4198830,
+      "name": "fcn.004011ae",
+      "normalized_name": "fcn_004011ae",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004011ae ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x40122b",
+      "decimal_offset": 4198955,
+      "name": "fcn.0040122b",
+      "normalized_name": "fcn_0040122b",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.0040122b ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x40124e",
+      "decimal_offset": 4198990,
+      "name": "fcn.0040124e",
+      "normalized_name": "fcn_0040124e",
+      "size": 5,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.0040124e ();",
+      "analysis_notes": "5-byte function, likely part of small function series"
+    },
+    {
+      "va": "0x401927",
+      "decimal_offset": 4200743,
+      "name": "fcn.00401927",
+      "normalized_name": "fcn_00401927",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00401927 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x4023ee",
+      "decimal_offset": 4203502,
+      "name": "fcn.004023ee",
+      "normalized_name": "fcn_004023ee",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004023ee ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x4023f6",
+      "decimal_offset": 4203510,
+      "name": "fcn.004023f6",
+      "normalized_name": "fcn_004023f6",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004023f6 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x4023fe",
+      "decimal_offset": 4203518,
+      "name": "fcn.004023fe",
+      "normalized_name": "fcn_004023fe",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004023fe ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x402410",
+      "decimal_offset": 4203536,
+      "name": "fcn.00402410",
+      "normalized_name": "fcn_00402410",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00402410 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x40265d",
+      "decimal_offset": 4204637,
+      "name": "fcn.0040265d",
+      "normalized_name": "fcn_0040265d",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.0040265d ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x40270e",
+      "decimal_offset": 4204814,
+      "name": "fcn.0040270e",
+      "normalized_name": "fcn_0040270e",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.0040270e ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x402900",
+      "decimal_offset": 4205696,
+      "name": "fcn.00402900",
+      "normalized_name": "fcn_00402900",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00402900 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x402da4",
+      "decimal_offset": 4206692,
+      "name": "fcn.00402da4",
+      "normalized_name": "fcn_00402da4",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00402da4 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x402db6",
+      "decimal_offset": 4206710,
+      "name": "fcn.00402db6",
+      "normalized_name": "fcn_00402db6",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00402db6 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x402f10",
+      "decimal_offset": 4206352,
+      "name": "fcn.00402f10",
+      "normalized_name": "fcn_00402f10",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00402f10 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x402f22",
+      "decimal_offset": 4206370,
+      "name": "fcn.00402f22",
+      "normalized_name": "fcn_00402f22",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00402f22 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x403544",
+      "decimal_offset": 4208516,
+      "name": "fcn.00403544",
+      "normalized_name": "fcn_00403544",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00403544 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x4035ee",
+      "decimal_offset": 4208638,
+      "name": "fcn.004035ee",
+      "normalized_name": "fcn_004035ee",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.004035ee ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x403602",
+      "decimal_offset": 4208658,
+      "name": "fcn.00403602",
+      "normalized_name": "fcn_00403602",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00403602 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x403b01",
+      "decimal_offset": 4209409,
+      "name": "fcn.00403b01",
+      "normalized_name": "fcn_00403b01",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00403b01 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x403b09",
+      "decimal_offset": 4209417,
+      "name": "fcn.00403b09",
+      "normalized_name": "fcn_00403b09",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00403b09 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x403b21",
+      "decimal_offset": 4209441,
+      "name": "fcn.00403b21",
+      "normalized_name": "fcn_00403b21",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00403b21 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    },
+    {
+      "va": "0x403b39",
+      "decimal_offset": 4209465,
+      "name": "fcn.00403b39",
+      "normalized_name": "fcn_00403b39",
+      "size": 8,
+      "type": "fcn",
+      "calltype": "cdecl",
+      "signature": "fcn.00403b39 ();",
+      "analysis_notes": "8-byte function, slightly larger but still likely utility"
+    }
+  ],
+  "advanced_analysis": {
+    "patterns_identified": {
+      "small_function_clusters": "Most remaining functions are 5-8 bytes, suggesting they are utility functions, thunks, or import stubs",
+      "va_ranges": {
+        "primary_cluster": "0x401000-0x404000 (early binary sections)",
+        "function_density": "High concentration in initialization/startup code"
+      },
+      "calling_convention": "All use cdecl calling convention",
+      "complexity": "Low complexity (1-2 basic blocks each)"
+    },
+    "implementation_priority": {
+      "high_priority": ["fcn.00401041 (has cross-references)", "fcn.00401927", "fcn.004023ee"],
+      "medium_priority": "All 5-byte functions in 0x401000 range",
+      "low_priority": "8-byte utility functions"
+    },
+    "function_characteristics": {
+      "thunk_candidates": ["All 5-byte functions"],
+      "import_wrappers": ["Functions in 0x402000 range"],
+      "utility_helpers": ["Functions with simple signatures"]
+    }
+  },
+  "next_steps": {
+    "required_analysis": [
+      "r2 -q -c \"afbj 0x401041; q\" SOTE.EXE > inputs/r2_afbj_0x401041.json",
+      "r2 -q -c \"axtj 0x401041; q\" SOTE.EXE > inputs/r2_axtj_0x401041.json",
+      "r2 -q -c \"pdj 10 @ 0x401041; q\" SOTE.EXE > inputs/r2_pdj_0x401041.json",
+      "r2 -q -c \"pif @ 0x401041; q\" SOTE.EXE > inputs/r2_pif_0x401041.txt"
+    ],
+    "batch_commands": [
+      "for va in 0x401046 0x401050 0x40109b 0x4010cd; do r2 -q -c \"pdj 5 @ $va; q\" SOTE.EXE > inputs/r2_pdj_$va.json; done"
+    ],
+    "verification_needed": [
+      "Confirm these 31 functions are actually unimplemented",
+      "Check if any are import thunks that should be excluded",
+      "Verify cross-reference patterns for implementation priority"
+    ]
+  }
+}

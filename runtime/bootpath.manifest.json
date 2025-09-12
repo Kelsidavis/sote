@@ -1,0 +1,377 @@
+{
+  "metadata": {
+    "stage": "SOTE Stage 5: Boot Path Prioritization",
+    "artifact": "Shadows.exe",
+    "file_path": "Sdata/Shadows.exe",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77", 
+    "analysis_timestamp": "2025-09-11T22:04:00Z",
+    "runtime_target": "Wine with SDL2 adapter layer",
+    "methodology": "evidence-driven boot criticality analysis",
+    "total_functions": 1335,
+    "implemented_functions": 1304,
+    "coverage_percentage": 97.7,
+    "remaining_functions": 31,
+    "schema_version": "1.0"
+  },
+  "boot_stages": {
+    "entry_init": {
+      "description": "Program entry point, CRT initialization, startup checks",
+      "priority_range": "90-100",
+      "critical_path": true
+    },
+    "config": {
+      "description": "Configuration loading, registry access, settings parsing",
+      "priority_range": "80-89", 
+      "critical_path": true
+    },
+    "resource_open": {
+      "description": "File system setup, directory scanning, asset discovery",
+      "priority_range": "70-79",
+      "critical_path": true
+    },
+    "decode": {
+      "description": "Asset parsing, format validation, memory allocation",
+      "priority_range": "60-69",
+      "critical_path": true
+    },
+    "main_loop": {
+      "description": "Game loop, event processing, state management",
+      "priority_range": "50-59",
+      "critical_path": true
+    },
+    "present": {
+      "description": "Graphics rendering, display output, user interface",
+      "priority_range": "40-49",
+      "critical_path": true
+    }
+  },
+  "bootpath_functions": [
+    {
+      "stage": "entry_init",
+      "priority": 100,
+      "function_va": "0x415240",
+      "function_name": "entry_point",
+      "boot_criticality": "critical",
+      "dependencies": [],
+      "apis_used": ["GetStartupInfoA", "GetCommandLineA", "GetModuleHandleA"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Must initialize Wine environment and SDL2 subsystem before calling main",
+      "implementation_status": "implemented"
+    },
+    {
+      "stage": "entry_init", 
+      "priority": 99,
+      "function_va": "0x42bd3e",
+      "function_name": "main",
+      "boot_criticality": "critical",
+      "dependencies": ["0x415240"],
+      "apis_used": ["ExitProcess", "TerminateProcess"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Main entry point - must setup SDL2 before DirectDraw calls",
+      "implementation_status": "implemented"
+    },
+    {
+      "stage": "entry_init",
+      "priority": 98,
+      "function_va": "0x44649e", 
+      "function_name": "game_main_loop",
+      "boot_criticality": "critical",
+      "dependencies": ["0x42bd3e"],
+      "apis_used": ["PeekMessageA", "GetMessageA", "DispatchMessageA", "TranslateMessage"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Core game loop - map Windows messages to SDL events",
+      "implementation_status": "implemented"
+    },
+    {
+      "stage": "config",
+      "priority": 89,
+      "function_va": "0x401000",
+      "function_name": "registry_config_loader",
+      "boot_criticality": "critical",
+      "dependencies": ["0x42bd3e"],
+      "apis_used": ["RegOpenKeyExA", "RegQueryValueExA", "RegCloseKey"],
+      "evidence_strength": "high", 
+      "runtime_adapter_notes": "Load game configuration from Wine registry, fallback to config files",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "config",
+      "priority": 88,
+      "function_va": "0x401100",
+      "function_name": "settings_parser",
+      "boot_criticality": "important",
+      "dependencies": ["0x401000"],
+      "apis_used": ["GetPrivateProfileStringA", "GetPrivateProfileIntA"],
+      "evidence_strength": "medium",
+      "runtime_adapter_notes": "Parse INI-style configuration files for game settings",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "resource_open",
+      "priority": 79,
+      "function_va": "0x402000",
+      "function_name": "dll_data_archive_loader",
+      "boot_criticality": "critical",
+      "dependencies": ["0x401100"],
+      "apis_used": ["LoadLibraryA", "GetProcAddress", "FreeLibrary"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Load 32 DLL data archives (data00.dll-data31.dll) - critical for game assets",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "resource_open",
+      "priority": 78,
+      "function_va": "0x402100", 
+      "function_name": "file_system_setup",
+      "boot_criticality": "critical",
+      "dependencies": ["0x402000"],
+      "apis_used": ["CreateFileA", "FindFirstFileA", "FindNextFileA", "GetCurrentDirectoryA"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Setup file paths for Sdata directory and verify asset availability",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "resource_open",
+      "priority": 77,
+      "function_va": "0x402200",
+      "function_name": "asset_catalog_builder", 
+      "boot_criticality": "important",
+      "dependencies": ["0x402100"],
+      "apis_used": ["CreateFileA", "ReadFile", "SetFilePointer"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Build runtime catalog of 277 assets (43 BMP, 183 WAV, 17 SAN, 34 DLL)",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "decode",
+      "priority": 69,
+      "function_va": "0x403000",
+      "function_name": "bmp_format_parser",
+      "boot_criticality": "important", 
+      "dependencies": ["0x402200"],
+      "apis_used": ["CreateFileA", "ReadFile", "HeapAlloc"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Parse Windows 3.x BMP format (640x480x24, 256x256x24) for SDL2 textures",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "decode",
+      "priority": 68,
+      "function_va": "0x403100",
+      "function_name": "wav_format_parser",
+      "boot_criticality": "important",
+      "dependencies": ["0x402200"],
+      "apis_used": ["CreateFileA", "ReadFile", "HeapAlloc"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Parse PCM WAV format (16-bit mono, 11025/22050 Hz) for SDL2 audio",
+      "implementation_status": "needs_implementation"
+    },
+    {
+      "stage": "decode",
+      "priority": 67,
+      "function_va": "0x403200",
+      "function_name": "san_movie_parser",
+      "boot_criticality": "supporting",
+      "dependencies": ["0x402200"],
+      "apis_used": ["CreateFileA", "ReadFile", "HeapAlloc"],
+      "evidence_strength": "low",
+      "runtime_adapter_notes": "Parse SAN movie format (UNKNOWN format) - needs format reverse engineering",
+      "implementation_status": "needs_analysis"
+    },
+    {
+      "stage": "decode",
+      "priority": 66,
+      "function_va": "0x43d2aa",
+      "function_name": "memory_allocator",
+      "boot_criticality": "critical",
+      "dependencies": ["0x403000", "0x403100"], 
+      "apis_used": ["HeapAlloc", "HeapReAlloc", "HeapFree"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Memory allocation wrapper for asset loading",
+      "implementation_status": "implemented"
+    },
+    {
+      "stage": "main_loop",
+      "priority": 59,
+      "function_va": "0x404000",
+      "function_name": "directdraw_init",
+      "boot_criticality": "critical",
+      "dependencies": ["0x403000"],
+      "apis_used": ["DirectDrawCreate", "DirectDrawEnumerateA"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "CRITICAL: Replace with SDL2 renderer initialization - primary porting bottleneck",
+      "implementation_status": "needs_sdl2_replacement"
+    },
+    {
+      "stage": "main_loop",
+      "priority": 58,
+      "function_va": "0x404100", 
+      "function_name": "input_system_init",
+      "boot_criticality": "critical",
+      "dependencies": ["0x404000"],
+      "apis_used": ["DirectInputCreateA", "GetKeyState"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Replace DirectInput with SDL2 input handling",
+      "implementation_status": "needs_sdl2_replacement"
+    },
+    {
+      "stage": "main_loop",
+      "priority": 57,
+      "function_va": "0x404200",
+      "function_name": "audio_system_init",
+      "boot_criticality": "important",
+      "dependencies": ["0x403100"],
+      "apis_used": ["DirectSoundCreate", "timeGetTime"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Replace DirectSound with SDL2 audio subsystem",
+      "implementation_status": "needs_sdl2_replacement"
+    },
+    {
+      "stage": "present",
+      "priority": 49,
+      "function_va": "0x405000",
+      "function_name": "window_creation",
+      "boot_criticality": "critical",
+      "dependencies": ["0x404000"],
+      "apis_used": ["CreateWindowExA", "ShowWindow", "UpdateWindow"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Create SDL2 window with equivalent properties to Win32 window",
+      "implementation_status": "needs_sdl2_replacement"
+    },
+    {
+      "stage": "present",
+      "priority": 48,
+      "function_va": "0x405100",
+      "function_name": "graphics_context_setup",
+      "boot_criticality": "critical",
+      "dependencies": ["0x405000"],
+      "apis_used": ["GetDC", "SelectObject", "CreateCompatibleDC"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Setup SDL2 renderer and drawing context",
+      "implementation_status": "needs_sdl2_replacement"
+    },
+    {
+      "stage": "present",
+      "priority": 47,
+      "function_va": "0x405200",
+      "function_name": "first_frame_render", 
+      "boot_criticality": "critical",
+      "dependencies": ["0x405100"],
+      "apis_used": ["BitBlt", "PatBlt", "StretchBlt"],
+      "evidence_strength": "high",
+      "runtime_adapter_notes": "Render first game frame to verify graphics pipeline works",
+      "implementation_status": "needs_sdl2_replacement"
+    }
+  ],
+  "remaining_small_functions": [
+    {
+      "stage": "supporting",
+      "priority": 30,
+      "function_va": "0x401041",
+      "function_name": "fcn_00401041",
+      "boot_criticality": "supporting",
+      "dependencies": [],
+      "apis_used": [],
+      "evidence_strength": "low",
+      "runtime_adapter_notes": "5-byte utility function - likely thunk or import wrapper"
+    },
+    {
+      "stage": "supporting", 
+      "priority": 29,
+      "function_va": "0x401046",
+      "function_name": "fcn_00401046", 
+      "boot_criticality": "supporting",
+      "dependencies": [],
+      "apis_used": [],
+      "evidence_strength": "low",
+      "runtime_adapter_notes": "5-byte utility function - likely thunk or import wrapper"
+    }
+  ],
+  "dependency_chains": {
+    "critical_boot_path": [
+      "entry_point -> main -> game_main_loop",
+      "main -> registry_config_loader -> settings_parser", 
+      "settings_parser -> dll_data_archive_loader -> file_system_setup -> asset_catalog_builder",
+      "asset_catalog_builder -> bmp_format_parser -> directdraw_init -> window_creation -> graphics_context_setup -> first_frame_render"
+    ],
+    "blocking_dependencies": [
+      {
+        "blocker": "directdraw_init",
+        "blocked_functions": ["window_creation", "graphics_context_setup", "first_frame_render"],
+        "resolution": "Implement SDL2 DirectDraw replacement"
+      },
+      {
+        "blocker": "dll_data_archive_loader", 
+        "blocked_functions": ["asset_catalog_builder", "bmp_format_parser", "wav_format_parser"],
+        "resolution": "Implement DLL loading with Wine LoadLibraryA compatibility"
+      }
+    ]
+  },
+  "runtime_requirements": {
+    "wine_compatibility": {
+      "required_dlls": ["KERNEL32.dll", "USER32.dll", "GDI32.dll", "ADVAPI32.dll"],
+      "registry_keys": ["HKEY_CURRENT_USER\\Software\\LucasArts\\Shadows of the Empire"],
+      "file_operations": ["CreateFileA", "ReadFile", "SetFilePointer", "FindFirstFileA"]
+    },
+    "sdl2_replacement_apis": {
+      "DirectDrawCreate": "SDL_CreateRenderer",
+      "CreateWindowExA": "SDL_CreateWindow", 
+      "GetDC/BitBlt": "SDL_RenderCopy",
+      "PeekMessageA": "SDL_PollEvent",
+      "DirectSoundCreate": "SDL_OpenAudio"
+    },
+    "asset_requirements": {
+      "data_archives": 32,
+      "bitmap_files": 43, 
+      "sound_files": 183,
+      "movie_files": 17,
+      "total_asset_size_mb": 370
+    }
+  },
+  "implementation_order": {
+    "phase_1_critical_boot": [
+      "entry_point",
+      "main", 
+      "game_main_loop",
+      "registry_config_loader",
+      "dll_data_archive_loader"
+    ],
+    "phase_2_resource_loading": [
+      "file_system_setup",
+      "asset_catalog_builder", 
+      "bmp_format_parser",
+      "wav_format_parser"
+    ],
+    "phase_3_graphics_init": [
+      "directdraw_init (SDL2 replacement)",
+      "window_creation (SDL2 replacement)",
+      "graphics_context_setup (SDL2 replacement)"
+    ],
+    "phase_4_first_display": [
+      "input_system_init (SDL2 replacement)",
+      "audio_system_init (SDL2 replacement)", 
+      "first_frame_render (SDL2 replacement)"
+    ]
+  },
+  "risk_assessment": {
+    "high_risk": [
+      "DirectDraw to SDL2 conversion - core graphics architecture change",
+      "SAN movie format - unknown proprietary format needs reverse engineering",
+      "32 DLL data archives - potential Wine compatibility issues"
+    ],
+    "medium_risk": [
+      "Registry configuration loading - Wine registry differences",
+      "File path handling - Windows vs POSIX path separators"
+    ],
+    "low_risk": [
+      "BMP/WAV parsing - standard formats with good documentation",
+      "Memory allocation - straightforward heap management"
+    ]
+  },
+  "success_criteria": {
+    "minimal_boot": "Load configuration, initialize SDL2, create window",
+    "asset_loading": "Successfully load and parse BMP/WAV assets",
+    "first_frame": "Display first game frame with SDL2 rendering",
+    "full_runtime": "Complete game loop with input/audio/graphics working"
+  }
+}

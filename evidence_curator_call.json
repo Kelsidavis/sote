@@ -1,0 +1,31 @@
+{
+  "call_id": "coord-0001",
+  "agent": "evidence_curator",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "r2_functions": "inputs/r2_aflj.json",
+      "r2_strings": "inputs/r2_izzj.json", 
+      "r2_imports": "inputs/r2_iij.json",
+      "r2_sections": "inputs/r2_iSj.json",
+      "r2_exports": "inputs/r2_iEj.json"
+    },
+    "scope": {
+      "symbols": "all",
+      "ranges": "all",
+      "modules": "all"
+    },
+    "options": {
+      "deterministic_sort": true,
+      "respect_existing": true,
+      "minimal_delta": true
+    }
+  },
+  "expected_outputs": ["evidence.curated.json"]
+}

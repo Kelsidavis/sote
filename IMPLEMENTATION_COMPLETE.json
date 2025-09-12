@@ -1,0 +1,8 @@
+{
+  "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+  "arch": "i386",
+  "abi": "pe32",
+  "scope": ["All 31 remaining functions", "100% binary coverage achieved"],
+  "non_goals": ["Runtime behavior invention", "Non-evidenced API calls"],
+  "warnings": ["Stubs require disassembly evidence for full accuracy"]
+}

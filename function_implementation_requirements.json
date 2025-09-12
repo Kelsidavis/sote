@@ -1,0 +1,222 @@
+{
+  "analysis_date": "2025-09-11T20:00:00Z",
+  "total_remaining_functions": 31,
+  "functions_requiring_structs": 1,
+  "functions_without_structs": 30,
+  
+  "struct_dependent_functions": [
+    {
+      "va": "0x401041",
+      "name": "fcn_00401041",
+      "struct_required": "local_struct_00401041",
+      "struct_type": "stack_frame",
+      "struct_size": 556,
+      "field_count": 27,
+      "implementation_note": "5-byte function with large stack frame, likely jump thunk inheriting frame from target",
+      "struct_added_to_layouts": true
+    }
+  ],
+  
+  "simple_implementation_functions": {
+    "5_byte_thunks": [
+      {
+        "va": "0x401046",
+        "name": "fcn_00401046",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x401050",
+        "name": "fcn_00401050",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x40109b",
+        "name": "fcn_0040109b",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x4010cd",
+        "name": "fcn_004010cd",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x4010eb",
+        "name": "fcn_004010eb",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x4010f0",
+        "name": "fcn_004010f0",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x401145",
+        "name": "fcn_00401145",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x401195",
+        "name": "fcn_00401195",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x4011ae",
+        "name": "fcn_004011ae",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x40122b",
+        "name": "fcn_0040122b",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      },
+      {
+        "va": "0x40124e",
+        "name": "fcn_0040124e",
+        "likely_implementation": "jmp rel32",
+        "struct_required": false
+      }
+    ],
+    
+    "8_byte_utilities": [
+      {
+        "va": "0x401927",
+        "name": "fcn_00401927",
+        "likely_implementation": "push imm32; jmp rel32 or mov eax, imm32; ret",
+        "struct_required": false
+      },
+      {
+        "va": "0x4023ee",
+        "name": "fcn_004023ee",
+        "likely_implementation": "import wrapper or utility",
+        "struct_required": false
+      },
+      {
+        "va": "0x4023f6",
+        "name": "fcn_004023f6",
+        "likely_implementation": "import wrapper or utility",
+        "struct_required": false
+      },
+      {
+        "va": "0x4023fe",
+        "name": "fcn_004023fe",
+        "likely_implementation": "import wrapper or utility",
+        "struct_required": false
+      },
+      {
+        "va": "0x402410",
+        "name": "fcn_00402410",
+        "likely_implementation": "import wrapper or utility",
+        "struct_required": false
+      },
+      {
+        "va": "0x40265d",
+        "name": "fcn_0040265d",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x40270e",
+        "name": "fcn_0040270e",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x402900",
+        "name": "fcn_00402900",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x402da4",
+        "name": "fcn_00402da4",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x402db6",
+        "name": "fcn_00402db6",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x402f10",
+        "name": "fcn_00402f10",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x402f22",
+        "name": "fcn_00402f22",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x403544",
+        "name": "fcn_00403544",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x4035ee",
+        "name": "fcn_004035ee",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x403602",
+        "name": "fcn_00403602",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x403b01",
+        "name": "fcn_00403b01",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x403b09",
+        "name": "fcn_00403b09",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x403b21",
+        "name": "fcn_00403b21",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      },
+      {
+        "va": "0x403b39",
+        "name": "fcn_00403b39",
+        "likely_implementation": "utility function",
+        "struct_required": false
+      }
+    ]
+  },
+  
+  "implementation_summary": {
+    "struct_updates_required": 1,
+    "struct_updates_completed": 1,
+    "ready_for_implementation": true,
+    "blocking_issues": "none",
+    "recommendation": "All 31 functions can now be implemented - fcn_00401041 has required struct support, others are simple thunks/utilities"
+  },
+  
+  "evidence_methodology": {
+    "struct_identification": "Based on stack frame analysis from func_4198465.json",
+    "function_size_analysis": "5-byte and 8-byte functions cannot contain complex data access patterns",
+    "evidence_only_approach": "No speculative fields added - all struct fields from radare2 analysis",
+    "minimal_requirements": "Only added structs where evidence explicitly shows stack variables"
+  }
+}

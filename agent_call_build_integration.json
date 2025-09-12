@@ -1,0 +1,37 @@
+{
+  "call_id": "coord-005",
+  "agent": "build_integration",
+  "intent": "merge",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "new_sources": ["src/navigator_batch_1_functions.c"],
+      "new_headers": ["include/navigator_batch_1_functions.h"],
+      "existing_cmake": "CMakeLists.txt",
+      "existing_makefile": "Makefile",
+      "build_graph": "build.graph.json"
+    },
+    "scope": {
+      "integration_mode": "navigator_batch_addition",
+      "functions_added": 20,
+      "batch_name": "navigator_batch_1",
+      "preserve_existing": true
+    },
+    "options": {
+      "deterministic_sort": true,
+      "update_build_graph": true,
+      "validate_dependencies": true,
+      "maintain_build_order": true
+    }
+  },
+  "expected_outputs": [
+    "CMakeLists.txt",
+    "Makefile", 
+    "build.graph.json"
+  ]
+}

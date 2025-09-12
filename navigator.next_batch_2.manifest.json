@@ -1,0 +1,472 @@
+{
+  "metadata": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "analysis_date": "2025-09-11T12:00:00Z",
+    "schema_version": "3.1.0",
+    "navigator_agent_version": "2.2.0",
+    "deterministic_sort": true,
+    "batch_sequence": "second_expansion_ranks_201_400"
+  },
+  "ranking_configuration": {
+    "method": "enhanced_hotness_ranking_v2",
+    "weighting_system": {
+      "fan_in": 0.25,
+      "fan_out": 0.10,
+      "pagerank": 0.15,
+      "connectivity_density": 0.20,
+      "evidence_quality": 0.15,
+      "complexity_factor": 0.10,
+      "unlock_potential": 0.05
+    },
+    "filtering_criteria": {
+      "exclude_already_implemented": true,
+      "min_evidence_density": 0.20,
+      "drop_crt_thunks": true,
+      "drop_import_stubs": true,
+      "drop_phantoms": true,
+      "min_size": 16,
+      "min_connectivity": 1,
+      "batch_limit": 200
+    }
+  },
+  "implementation_baseline": {
+    "functions_implemented": 504,
+    "coverage_percentage": 37.8,
+    "total_functions_available": 1335,
+    "unimplemented_candidates": 831,
+    "evidence_backed_candidates": 631,
+    "previous_batches": [
+      "priority_functions.c (25 functions, ranks 1-25)",
+      "batch2_functions.c through batch14_functions.c (279 functions, ranks 26-304)",
+      "navigator_batch_1_functions.c (20 functions, ranks 1-20)",
+      "navigator_batch_2_functions.c (80 functions, ranks 21-100)",
+      "navigator_batch_3_functions.c (100 functions, ranks 101-200)"
+    ]
+  },
+  "prioritized_functions_sample": [
+    {
+      "rank": 201,
+      "name": "fcn.00419d60",
+      "offset": 4300128,
+      "size": 2199,
+      "mapped_name": "func_00419d60",
+      "hotness_score": 143.368,
+      "connectivity_metrics": {
+        "fan_in": 158,
+        "fan_out": 184,
+        "total_connectivity": 342,
+        "complexity": 117,
+        "estimated_cost": 784
+      },
+      "evidence_quality": {
+        "density": 0.92,
+        "confidence": "high",
+        "call_graph_position": "major_hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 45,
+        "unlock_count": 89,
+        "verification_impact": "very_high"
+      },
+      "signature": "func_00419d60 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Ultra-high connectivity major hub with exceptional unlock potential - critical architectural component",
+      "batch_assignment": "navigator_batch_4"
+    },
+    {
+      "rank": 202,
+      "name": "fcn.00446000",
+      "offset": 4481024,
+      "size": 673,
+      "mapped_name": "func_00446000",
+      "hotness_score": 138.642,
+      "connectivity_metrics": {
+        "fan_in": 136,
+        "fan_out": 134,
+        "total_connectivity": 270,
+        "complexity": 218,
+        "estimated_cost": 221
+      },
+      "evidence_quality": {
+        "density": 0.89,
+        "confidence": "high",
+        "call_graph_position": "balanced_hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 38,
+        "unlock_count": 67,
+        "verification_impact": "very_high"
+      },
+      "signature": "func_00446000 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High-complexity balanced hub with strong bidirectional connectivity",
+      "batch_assignment": "navigator_batch_4"
+    },
+    {
+      "rank": 203,
+      "name": "fcn.00424e40",
+      "offset": 4345408,
+      "size": 1578,
+      "mapped_name": "func_00424e40",
+      "hotness_score": 124.99,
+      "connectivity_metrics": {
+        "fan_in": 145,
+        "fan_out": 152,
+        "total_connectivity": 297,
+        "complexity": 101,
+        "estimated_cost": 595
+      },
+      "evidence_quality": {
+        "density": 0.87,
+        "confidence": "high",
+        "call_graph_position": "major_hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 41,
+        "unlock_count": 76,
+        "verification_impact": "very_high"
+      },
+      "signature": "func_00424e40 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Major hub with excellent balance of connectivity and manageable complexity",
+      "batch_assignment": "navigator_batch_4"
+    },
+    {
+      "rank": 260,
+      "name": "fcn.00441bd1",
+      "offset": 4463569,
+      "size": 16,
+      "mapped_name": "func_00441bd1",
+      "hotness_score": 41.724,
+      "connectivity_metrics": {
+        "fan_in": 103,
+        "fan_out": 1,
+        "total_connectivity": 104,
+        "complexity": 1,
+        "estimated_cost": 12
+      },
+      "evidence_quality": {
+        "density": 0.94,
+        "confidence": "high",
+        "call_graph_position": "terminal_utility"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 0,
+        "unlock_count": 51,
+        "verification_impact": "high"
+      },
+      "signature": "func_00441bd1 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High fan-in terminal utility - end of Navigator Batch 4",
+      "batch_assignment": "navigator_batch_4"
+    },
+    {
+      "rank": 261,
+      "name": "fcn.00428060",
+      "offset": 4358240,
+      "size": 749,
+      "mapped_name": "func_00428060",
+      "hotness_score": 41.426,
+      "connectivity_metrics": {
+        "fan_in": 38,
+        "fan_out": 52,
+        "total_connectivity": 90,
+        "complexity": 49,
+        "estimated_cost": 413
+      },
+      "evidence_quality": {
+        "density": 0.76,
+        "confidence": "high",
+        "call_graph_position": "processing_hub"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 15,
+        "unlock_count": 26,
+        "verification_impact": "medium"
+      },
+      "signature": "func_00428060 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Processing hub with moderate complexity - start of Navigator Batch 5",
+      "batch_assignment": "navigator_batch_5"
+    },
+    {
+      "rank": 330,
+      "name": "fcn.0042d0f4",
+      "offset": 4378868,
+      "size": 832,
+      "mapped_name": "func_0042d0f4",
+      "hotness_score": 38.146,
+      "connectivity_metrics": {
+        "fan_in": 34,
+        "fan_out": 58,
+        "total_connectivity": 92,
+        "complexity": 32,
+        "estimated_cost": 373
+      },
+      "evidence_quality": {
+        "density": 0.73,
+        "confidence": "medium",
+        "call_graph_position": "dispatcher"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 12,
+        "unlock_count": 29,
+        "verification_impact": "medium"
+      },
+      "signature": "func_0042d0f4 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Dispatcher with good fan-out - end of Navigator Batch 5",
+      "batch_assignment": "navigator_batch_5"
+    },
+    {
+      "rank": 331,
+      "name": "loc.00406b50",
+      "offset": 4221776,
+      "size": 1111,
+      "mapped_name": "loc_00406b50",
+      "hotness_score": 37.6,
+      "connectivity_metrics": {
+        "fan_in": 20,
+        "fan_out": 84,
+        "total_connectivity": 104,
+        "complexity": 17,
+        "estimated_cost": 500
+      },
+      "evidence_quality": {
+        "density": 0.71,
+        "confidence": "medium",
+        "call_graph_position": "dispatcher"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 8,
+        "unlock_count": 42,
+        "verification_impact": "medium"
+      },
+      "signature": "loc_00406b50 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "High fan-out dispatcher - start of Navigator Batch 6",
+      "batch_assignment": "navigator_batch_6"
+    },
+    {
+      "rank": 400,
+      "name": "fcn.0041e350",
+      "offset": 4318032,
+      "size": 229,
+      "mapped_name": "func_0041e350",
+      "hotness_score": 11.712,
+      "connectivity_metrics": {
+        "fan_in": 12,
+        "fan_out": 13,
+        "total_connectivity": 25,
+        "complexity": 14,
+        "estimated_cost": 106
+      },
+      "evidence_quality": {
+        "density": 0.68,
+        "confidence": "medium",
+        "call_graph_position": "leaf_function"
+      },
+      "unlock_potential": {
+        "blocking_dependencies": 3,
+        "unlock_count": 6,
+        "verification_impact": "low"
+      },
+      "signature": "func_0041e350 ();",
+      "calltype": "cdecl",
+      "section": ".text",
+      "selection_rationale": "Leaf function with low connectivity - end of Navigator Batch 6",
+      "batch_assignment": "navigator_batch_6"
+    }
+  ],
+  "complete_function_mapping": {
+    "note": "Complete 200 function list available in expansion_targets_next200.json",
+    "navigator_batch_4_range": "ranks 201-260 (60 functions)",
+    "navigator_batch_5_range": "ranks 261-330 (70 functions)", 
+    "navigator_batch_6_range": "ranks 331-400 (70 functions)",
+    "hotness_score_range": "143.368 (highest) to 11.712 (lowest)",
+    "total_estimated_implementation_cost": 39973
+  },
+  "navigator_batch_4": {
+    "batch_name": "Navigator Batch 4 - Ultra High Priority",
+    "function_count": 60,
+    "rank_range": "201-260",
+    "average_hotness": 45.2,
+    "total_estimated_cost": 12847,
+    "primary_characteristics": [
+      "Ultra-high connectivity hubs (fan-in + fan-out > 200)",
+      "Critical architectural components with >50 unlock potential",
+      "Terminal utilities with exceptional fan-in (>100)",
+      "Major dispatcher functions with high fan-out (>75)"
+    ],
+    "cluster_breakdown": {
+      "ui_management": 15,
+      "memory_management": 12,
+      "graphics_rendering": 11,
+      "file_operations": 10,
+      "game_logic": 8,
+      "utility_helpers": 4
+    }
+  },
+  "navigator_batch_5": {
+    "batch_name": "Navigator Batch 5 - High Priority", 
+    "function_count": 70,
+    "rank_range": "261-330",
+    "average_hotness": 28.7,
+    "total_estimated_cost": 15234,
+    "primary_characteristics": [
+      "High connectivity hubs (fan-in + fan-out > 100)",
+      "Processing functions with balanced I/O",
+      "Medium complexity components (complexity 25-75)",
+      "Connector functions linking subsystems"
+    ],
+    "cluster_breakdown": {
+      "game_logic": 18,
+      "graphics_rendering": 14,
+      "ui_management": 12,
+      "file_operations": 11,
+      "input_processing": 8,
+      "audio_system": 4,
+      "utility_helpers": 3
+    }
+  },
+  "navigator_batch_6": {
+    "batch_name": "Navigator Batch 6 - Completion Batch",
+    "function_count": 70,
+    "rank_range": "331-400", 
+    "average_hotness": 16.8,
+    "total_estimated_cost": 11892,
+    "primary_characteristics": [
+      "Medium connectivity functions (fan-in + fan-out 50-100)",
+      "Specialized processing functions",
+      "Lower complexity leaf functions", 
+      "Domain-specific utilities"
+    ],
+    "cluster_breakdown": {
+      "file_operations": 16,
+      "graphics_rendering": 13,
+      "game_logic": 12,
+      "ui_management": 10,
+      "input_processing": 9,
+      "memory_management": 6,
+      "audio_system": 4
+    }
+  },
+  "exclusion_summary": {
+    "total_excluded": 631,
+    "reasons": {
+      "already_implemented": 504,
+      "insufficient_evidence": 127
+    }
+  },
+  "coverage_projections": {
+    "current_coverage": 0.378,
+    "post_batch_coverage": 0.528,
+    "projected_functions_implemented": 704,
+    "remaining_functions": 631,
+    "estimated_completion_batches": 3.16
+  },
+  "cluster_analysis": {
+    "identified_clusters": 7,
+    "clusters": [
+      {
+        "name": "ui_management",
+        "function_count": 37,
+        "priority_functions": 22,
+        "description": "User interface, window management, and display control functions",
+        "average_hotness": 34.2
+      },
+      {
+        "name": "graphics_rendering",
+        "function_count": 38,
+        "priority_functions": 19,
+        "description": "Graphics rendering, drawing operations, and visual effects",
+        "average_hotness": 31.8
+      },
+      {
+        "name": "memory_management", 
+        "function_count": 18,
+        "priority_functions": 12,
+        "description": "Memory allocation, deallocation, and heap management routines",
+        "average_hotness": 42.1
+      },
+      {
+        "name": "file_operations",
+        "function_count": 37,
+        "priority_functions": 15,
+        "description": "File I/O, data persistence, and resource loading functions",
+        "average_hotness": 27.4
+      },
+      {
+        "name": "game_logic",
+        "function_count": 38,
+        "priority_functions": 18,
+        "description": "Core game mechanics, state management, and logic processing",
+        "average_hotness": 29.6
+      },
+      {
+        "name": "input_processing",
+        "function_count": 17,
+        "priority_functions": 8,
+        "description": "Keyboard, mouse, and input event handling functions",
+        "average_hotness": 25.3
+      },
+      {
+        "name": "audio_system",
+        "function_count": 8,
+        "priority_functions": 4,
+        "description": "Sound playback, music control, and audio management",
+        "average_hotness": 23.7
+      },
+      {
+        "name": "utility_helpers",
+        "function_count": 7,
+        "priority_functions": 4,
+        "description": "Generic utility functions, helpers, and support routines",
+        "average_hotness": 48.9
+      }
+    ]
+  },
+  "evidence_sources": [
+    "evidence.curated.json - Base function evidence and metadata",
+    "mappings.json - Function name mappings and signatures", 
+    "expansion_targets_next200.json - Ranked function targets with hotness scores",
+    "navigator.next_batch.manifest.json - Previous batch implementation status"
+  ],
+  "quality_assurance": {
+    "deterministic_ranking": true,
+    "metrics_provenance": "expansion_targets_next200.json + evidence.curated.json",
+    "evidence_validation": "passed",
+    "hotness_algorithm_version": "v3.2.1",
+    "tie_breaking_method": "virtual_address_ascending"
+  },
+  "systematic_progression": {
+    "total_functions_targeted": 200,
+    "coverage_increase": "15.0%",
+    "architectural_impact": "Major subsystem completion",
+    "verification_readiness": "High - builds on solid foundation from previous 504 functions",
+    "integration_risk": "Medium - larger functions require careful testing"
+  },
+  "provenance": {
+    "source_files": [
+      "evidence.curated.json",
+      "mappings.json",
+      "expansion_targets_next200.json", 
+      "navigator.next_batch.manifest.json"
+    ],
+    "analysis_method": "evidence_driven_hotness_ranking_v2",
+    "deterministic": true,
+    "generation_timestamp": "2025-09-11T12:00:00Z"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "call_id": "coord-004",
+  "agent": "reimplementation",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "evidence_db": "evidence_navigator_sample.json",
+      "mappings": "mappings.json",
+      "layouts": "layouts.curated.json",
+      "existing_source": "src/"
+    },
+    "scope": {
+      "function_ranks": [1, 20],
+      "implementation_mode": "evidence_only_strict",
+      "batch_name": "navigator_batch_1",
+      "preserve_existing": true
+    },
+    "options": {
+      "deterministic_sort": true,
+      "evidence_only": true,
+      "forbid_phantoms": true,
+      "re_agent_compliance": true,
+      "strict_evidence_backing": true,
+      "include_provenance_lines": true
+    }
+  },
+  "expected_outputs": [
+    "src/navigator_batch_1_functions.c",
+    "include/navigator_batch_1_functions.h"
+  ]
+}

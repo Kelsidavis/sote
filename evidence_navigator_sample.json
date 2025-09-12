@@ -1,0 +1,5547 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "extraction_date": "2025-09-11T02:00:00Z",
+  "methodology": "navigator_manifest_evidence_extraction",
+  "evidence_source": "r2_aflj.json",
+  "functions": [
+    {
+      "offset": 4315200,
+      "name": "fcn.0041d840",
+      "size": 380,
+      "signature": "fcn.0041d840 (int32_t arg_4h, int32_t arg_18h, int32_t arg_10h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 199,
+        "cc": 27,
+        "nbbs": 40,
+        "edges": 55
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4315274,
+            "type": "CODE",
+            "at": 4315221
+          },
+          {
+            "addr": 4315245,
+            "type": "CODE",
+            "at": 4315236
+          },
+          {
+            "addr": 4315257,
+            "type": "CODE",
+            "at": 4315243
+          },
+          {
+            "addr": 4315283,
+            "type": "CODE",
+            "at": 4315279
+          },
+          {
+            "addr": 4315438,
+            "type": "CODE",
+            "at": 4315298
+          },
+          {
+            "addr": 4315356,
+            "type": "CODE",
+            "at": 4315309
+          },
+          {
+            "addr": 4315331,
+            "type": "CODE",
+            "at": 4315322
+          },
+          {
+            "addr": 4315324,
+            "type": "CODE",
+            "at": 4315329
+          },
+          {
+            "addr": 4315384,
+            "type": "CODE",
+            "at": 4315333
+          },
+          {
+            "addr": 4315346,
+            "type": "CODE",
+            "at": 4315337
+          },
+          {
+            "addr": 4315362,
+            "type": "CODE",
+            "at": 4315344
+          },
+          {
+            "addr": 4315377,
+            "type": "CODE",
+            "at": 4315350
+          },
+          {
+            "addr": 4315362,
+            "type": "CODE",
+            "at": 4315354
+          },
+          {
+            "addr": 4315304,
+            "type": "CODE",
+            "at": 4315373
+          },
+          {
+            "addr": 4315438,
+            "type": "CODE",
+            "at": 4315375
+          },
+          {
+            "addr": 4315406,
+            "type": "CODE",
+            "at": 4315395
+          },
+          {
+            "addr": 4315418,
+            "type": "CODE",
+            "at": 4315404
+          },
+          {
+            "addr": 4315512,
+            "type": "CODE",
+            "at": 4315446
+          },
+          {
+            "addr": 4315512,
+            "type": "CODE",
+            "at": 4315459
+          },
+          {
+            "addr": 4315502,
+            "type": "CODE",
+            "at": 4315466
+          },
+          {
+            "addr": 4315488,
+            "type": "CODE",
+            "at": 4315479
+          },
+          {
+            "addr": 4315481,
+            "type": "CODE",
+            "at": 4315486
+          },
+          {
+            "addr": 4315526,
+            "type": "CODE",
+            "at": 4315490
+          },
+          {
+            "addr": 4315519,
+            "type": "CODE",
+            "at": 4315496
+          },
+          {
+            "addr": 4315508,
+            "type": "CODE",
+            "at": 4315500
+          },
+          {
+            "addr": 4315448,
+            "type": "CODE",
+            "at": 4315510
+          },
+          {
+            "addr": 4315548,
+            "type": "CODE",
+            "at": 4315537
+          },
+          {
+            "addr": 4315560,
+            "type": "CODE",
+            "at": 4315546
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4314644,
+            "type": "CALL",
+            "at": 4315200
+          },
+          {
+            "addr": 4314732,
+            "type": "CALL",
+            "at": 4315200
+          },
+          {
+            "addr": 4315236,
+            "type": "CODE",
+            "at": 4315245
+          },
+          {
+            "addr": 4315243,
+            "type": "CODE",
+            "at": 4315257
+          },
+          {
+            "addr": 4315221,
+            "type": "CODE",
+            "at": 4315274
+          },
+          {
+            "addr": 4315279,
+            "type": "CODE",
+            "at": 4315283
+          },
+          {
+            "addr": 4315373,
+            "type": "CODE",
+            "at": 4315304
+          },
+          {
+            "addr": 4315329,
+            "type": "CODE",
+            "at": 4315324
+          },
+          {
+            "addr": 4315322,
+            "type": "CODE",
+            "at": 4315331
+          },
+          {
+            "addr": 4315337,
+            "type": "CODE",
+            "at": 4315346
+          },
+          {
+            "addr": 4315309,
+            "type": "CODE",
+            "at": 4315356
+          },
+          {
+            "addr": 4315344,
+            "type": "CODE",
+            "at": 4315362
+          },
+          {
+            "addr": 4315354,
+            "type": "CODE",
+            "at": 4315362
+          },
+          {
+            "addr": 4315350,
+            "type": "CODE",
+            "at": 4315377
+          },
+          {
+            "addr": 4315333,
+            "type": "CODE",
+            "at": 4315384
+          },
+          {
+            "addr": 4315395,
+            "type": "CODE",
+            "at": 4315406
+          },
+          {
+            "addr": 4315404,
+            "type": "CODE",
+            "at": 4315418
+          },
+          {
+            "addr": 4315298,
+            "type": "CODE",
+            "at": 4315438
+          },
+          {
+            "addr": 4315375,
+            "type": "CODE",
+            "at": 4315438
+          },
+          {
+            "addr": 4315510,
+            "type": "CODE",
+            "at": 4315448
+          },
+          {
+            "addr": 4315486,
+            "type": "CODE",
+            "at": 4315481
+          },
+          {
+            "addr": 4315479,
+            "type": "CODE",
+            "at": 4315488
+          },
+          {
+            "addr": 4315466,
+            "type": "CODE",
+            "at": 4315502
+          },
+          {
+            "addr": 4315500,
+            "type": "CODE",
+            "at": 4315508
+          },
+          {
+            "addr": 4315446,
+            "type": "CODE",
+            "at": 4315512
+          },
+          {
+            "addr": 4315459,
+            "type": "CODE",
+            "at": 4315512
+          },
+          {
+            "addr": 4315496,
+            "type": "CODE",
+            "at": 4315519
+          },
+          {
+            "addr": 4315490,
+            "type": "CODE",
+            "at": 4315526
+          },
+          {
+            "addr": 4315537,
+            "type": "CODE",
+            "at": 4315548
+          },
+          {
+            "addr": 4315546,
+            "type": "CODE",
+            "at": 4315560
+          }
+        ],
+        "indegree": 30,
+        "outdegree": 0
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 16,
+        "nlocals": 0,
+        "nargs": 3,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 1,
+        "hotness_score": 32.156,
+        "connectivity_metrics": {
+          "fan_in": 27,
+          "fan_out": 28,
+          "total_connectivity": 55,
+          "complexity": 27,
+          "estimated_cost": 199
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 12,
+          "unlock_count": 18,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4323232,
+      "name": "fcn.0041f7a0",
+      "size": 379,
+      "signature": "fcn.0041f7a0 (int32_t arg_471cb4h, int32_t arg_471cb8h, int32_t arg_b0h, int32_t arg_c8h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 144,
+        "cc": 9,
+        "nbbs": 11,
+        "edges": 12
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4323856,
+            "type": "CALL",
+            "at": 4323273
+          },
+          {
+            "addr": 4323298,
+            "type": "CODE",
+            "at": 4323283
+          },
+          {
+            "addr": 4282624,
+            "type": "CALL",
+            "at": 4323314
+          },
+          {
+            "addr": 4323343,
+            "type": "CODE",
+            "at": 4323328
+          },
+          {
+            "addr": 4323504,
+            "type": "CODE",
+            "at": 4323493
+          },
+          {
+            "addr": 4660408,
+            "type": "CALL",
+            "at": 4323504
+          },
+          {
+            "addr": 4323571,
+            "type": "CODE",
+            "at": 4323512
+          },
+          {
+            "addr": 4282832,
+            "type": "CALL",
+            "at": 4323529
+          },
+          {
+            "addr": 4323594,
+            "type": "CODE",
+            "at": 4323579
+          },
+          {
+            "addr": 4282832,
+            "type": "CALL",
+            "at": 4323586
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4322608,
+            "type": "CALL",
+            "at": 4323232
+          },
+          {
+            "addr": 4322881,
+            "type": "CALL",
+            "at": 4323232
+          },
+          {
+            "addr": 4323090,
+            "type": "CALL",
+            "at": 4323232
+          },
+          {
+            "addr": 4323283,
+            "type": "CODE",
+            "at": 4323298
+          },
+          {
+            "addr": 4323328,
+            "type": "CODE",
+            "at": 4323343
+          },
+          {
+            "addr": 4323493,
+            "type": "CODE",
+            "at": 4323504
+          },
+          {
+            "addr": 4323512,
+            "type": "CODE",
+            "at": 4323571
+          },
+          {
+            "addr": 4323579,
+            "type": "CODE",
+            "at": 4323594
+          }
+        ],
+        "indegree": 8,
+        "outdegree": 5
+      },
+      "data_analysis": {
+        "datarefs": [
+          4660404,
+          4660056,
+          4661280,
+          4660080,
+          4660404,
+          4660056,
+          4660080,
+          4660404,
+          4660056,
+          4660080,
+          4660392,
+          4660404
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 204,
+        "nlocals": 8,
+        "nargs": 4,
+        "bpvars": [
+          {
+            "name": "arg_471cb4h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 4660404
+            }
+          },
+          {
+            "name": "arg_471cb8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 4660408
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 1.0,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 2,
+        "hotness_score": 31.894,
+        "connectivity_metrics": {
+          "fan_in": 25,
+          "fan_out": 26,
+          "total_connectivity": 51,
+          "complexity": 9,
+          "estimated_cost": 195
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 14,
+          "unlock_count": 16,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4199696,
+      "name": "loc.00401510",
+      "size": 376,
+      "signature": "loc.00401510 (int32_t arg_8h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 119,
+        "cc": 1,
+        "nbbs": 1,
+        "edges": 0
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4444842,
+            "type": "CALL",
+            "at": 4199742
+          },
+          {
+            "addr": 4446520,
+            "type": "CALL",
+            "at": 4199759
+          },
+          {
+            "addr": 4446520,
+            "type": "CALL",
+            "at": 4199781
+          },
+          {
+            "addr": 4446520,
+            "type": "CALL",
+            "at": 4199806
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199841
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199852
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199867
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199882
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199897
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199912
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4199927
+          },
+          {
+            "addr": 4464349,
+            "type": "CALL",
+            "at": 4199977
+          },
+          {
+            "addr": 4464349,
+            "type": "CALL",
+            "at": 4199989
+          },
+          {
+            "addr": 4464349,
+            "type": "CALL",
+            "at": 4200005
+          },
+          {
+            "addr": 4464349,
+            "type": "CALL",
+            "at": 4200033
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4198595,
+            "type": "CODE",
+            "at": 4199696
+          }
+        ],
+        "indegree": 1,
+        "outdegree": 15
+      },
+      "data_analysis": {
+        "datarefs": [
+          4200248,
+          4577980,
+          4577980,
+          4577980,
+          4571552,
+          4623816,
+          4623816,
+          4623816,
+          4623816
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 56,
+        "nlocals": 0,
+        "nargs": 0,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 3,
+        "hotness_score": 31.672,
+        "connectivity_metrics": {
+          "fan_in": 1,
+          "fan_out": 45,
+          "total_connectivity": 46,
+          "complexity": 1,
+          "estimated_cost": 188
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 0,
+          "unlock_count": 45,
+          "verification_impact": "high"
+        }
+      }
+    },
+    {
+      "offset": 4445135,
+      "name": "fcn.0043d3cf",
+      "size": 375,
+      "signature": "fcn.0043d3cf ();",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 187,
+        "cc": 13,
+        "nbbs": 23,
+        "edges": 34
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4284632,
+            "type": "CALL",
+            "at": 4445140
+          },
+          {
+            "addr": 4548172,
+            "type": "CALL",
+            "at": 4445166
+          },
+          {
+            "addr": 4445214,
+            "type": "CODE",
+            "at": 4445183
+          },
+          {
+            "addr": 4548172,
+            "type": "CALL",
+            "at": 4445185
+          },
+          {
+            "addr": 4722480,
+            "type": "CALL",
+            "at": 4445198
+          },
+          {
+            "addr": 4722484,
+            "type": "CALL",
+            "at": 4445206
+          },
+          {
+            "addr": 4445228,
+            "type": "CODE",
+            "at": 4445216
+          },
+          {
+            "addr": 4722464,
+            "type": "CALL",
+            "at": 4445219
+          },
+          {
+            "addr": 4445256,
+            "type": "CODE",
+            "at": 4445232
+          },
+          {
+            "addr": 4445018,
+            "type": "CALL",
+            "at": 4445261
+          },
+          {
+            "addr": 4449008,
+            "type": "CALL",
+            "at": 4445269
+          },
+          {
+            "addr": 4447563,
+            "type": "CALL",
+            "at": 4445277
+          },
+          {
+            "addr": 4445320,
+            "type": "CODE",
+            "at": 4445288
+          },
+          {
+            "addr": 4723224,
+            "type": "CALL",
+            "at": 4445293
+          },
+          {
+            "addr": 4445320,
+            "type": "CODE",
+            "at": 4445301
+          },
+          {
+            "addr": 4723284,
+            "type": "CALL",
+            "at": 4445307
+          },
+          {
+            "addr": 4448929,
+            "type": "CALL",
+            "at": 4445330
+          },
+          {
+            "addr": 4447563,
+            "type": "CALL",
+            "at": 4445339
+          },
+          {
+            "addr": 4444099,
+            "type": "CALL",
+            "at": 4445351
+          },
+          {
+            "addr": 4445428,
+            "type": "CODE",
+            "at": 4445358
+          },
+          {
+            "addr": 4445403,
+            "type": "CODE",
+            "at": 4445367
+          },
+          {
+            "addr": 4461013,
+            "type": "CALL",
+            "at": 4445378
+          },
+          {
+            "addr": 4445392,
+            "type": "CODE",
+            "at": 4445386
+          },
+          {
+            "addr": 4459227,
+            "type": "CALL",
+            "at": 4445398
+          },
+          {
+            "addr": 4445428,
+            "type": "CODE",
+            "at": 4445411
+          },
+          {
+            "addr": 4461376,
+            "type": "CALL",
+            "at": 4445423
+          },
+          {
+            "addr": 4445452,
+            "type": "CODE",
+            "at": 4445439
+          },
+          {
+            "addr": 4723284,
+            "type": "CALL",
+            "at": 4445446
+          },
+          {
+            "addr": 4445481,
+            "type": "CODE",
+            "at": 4445456
+          },
+          {
+            "addr": 4723252,
+            "type": "CALL",
+            "at": 4445458
+          },
+          {
+            "addr": 4445481,
+            "type": "CODE",
+            "at": 4445470
+          },
+          {
+            "addr": 4723260,
+            "type": "CALL",
+            "at": 4445475
+          },
+          {
+            "addr": 4445072,
+            "type": "CALL",
+            "at": 4445494
+          },
+          {
+            "addr": 4445239,
+            "type": "CODE",
+            "at": 4445505
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4209279,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4209375,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4212361,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4216582,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4216888,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4217212,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4218963,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4219324,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4220049,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4230371,
+            "type": "CALL",
+            "at": 4445135
+          },
+          {
+            "addr": 4445183,
+            "type": "CODE",
+            "at": 4445214
+          },
+          {
+            "addr": 4445216,
+            "type": "CODE",
+            "at": 4445228
+          },
+          {
+            "addr": 4445505,
+            "type": "CODE",
+            "at": 4445239
+          },
+          {
+            "addr": 4445232,
+            "type": "CODE",
+            "at": 4445256
+          },
+          {
+            "addr": 4445288,
+            "type": "CODE",
+            "at": 4445320
+          },
+          {
+            "addr": 4445301,
+            "type": "CODE",
+            "at": 4445320
+          },
+          {
+            "addr": 4445386,
+            "type": "CODE",
+            "at": 4445392
+          },
+          {
+            "addr": 4445367,
+            "type": "CODE",
+            "at": 4445403
+          },
+          {
+            "addr": 4445358,
+            "type": "CODE",
+            "at": 4445428
+          },
+          {
+            "addr": 4445411,
+            "type": "CODE",
+            "at": 4445428
+          },
+          {
+            "addr": 4445439,
+            "type": "CODE",
+            "at": 4445452
+          },
+          {
+            "addr": 4445456,
+            "type": "CODE",
+            "at": 4445481
+          },
+          {
+            "addr": 4445470,
+            "type": "CODE",
+            "at": 4445481
+          }
+        ],
+        "indegree": 23,
+        "outdegree": 21
+      },
+      "data_analysis": {
+        "datarefs": [
+          4445534
+        ],
+        "dataxrefs": [
+          4445528
+        ]
+      },
+      "stack_frame": {
+        "stackframe": 88,
+        "nlocals": 10,
+        "nargs": 0,
+        "bpvars": [
+          {
+            "name": "var_24h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -36
+            }
+          },
+          {
+            "name": "var_20h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -32
+            }
+          },
+          {
+            "name": "var_1ch_2",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -28
+            }
+          },
+          {
+            "name": "var_18h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -24
+            }
+          },
+          {
+            "name": "var_14h_2",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -20
+            }
+          },
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "var_4h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -4
+            }
+          },
+          {
+            "name": "var_1ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          },
+          {
+            "name": "var_14h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 20
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 4,
+        "hotness_score": 31.445,
+        "connectivity_metrics": {
+          "fan_in": 23,
+          "fan_out": 24,
+          "total_connectivity": 47,
+          "complexity": 13,
+          "estimated_cost": 187
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 11,
+          "unlock_count": 19,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4313696,
+      "name": "fcn.0041d260",
+      "size": 368,
+      "signature": "fcn.0041d260 ();",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 144,
+        "cc": 15,
+        "nbbs": 25,
+        "edges": 34
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4313817,
+            "type": "CODE",
+            "at": 4313707
+          },
+          {
+            "addr": 4314034,
+            "type": "CODE",
+            "at": 4313740
+          },
+          {
+            "addr": 4314020,
+            "type": "CODE",
+            "at": 4313763
+          },
+          {
+            "addr": 4313853,
+            "type": "CODE",
+            "at": 4313775
+          },
+          {
+            "addr": 4313796,
+            "type": "CODE",
+            "at": 4313784
+          },
+          {
+            "addr": 4313878,
+            "type": "CODE",
+            "at": 4313803
+          },
+          {
+            "addr": 4313878,
+            "type": "CODE",
+            "at": 4313815
+          },
+          {
+            "addr": 4721936,
+            "type": "CALL",
+            "at": 4313830
+          },
+          {
+            "addr": 4313714,
+            "type": "CODE",
+            "at": 4313840
+          },
+          {
+            "addr": 4313924,
+            "type": "CODE",
+            "at": 4313917
+          },
+          {
+            "addr": 4313927,
+            "type": "CODE",
+            "at": 4313922
+          },
+          {
+            "addr": 4313911,
+            "type": "CODE",
+            "at": 4313940
+          },
+          {
+            "addr": 4314013,
+            "type": "CODE",
+            "at": 4313966
+          },
+          {
+            "addr": 4313978,
+            "type": "CODE",
+            "at": 4314011
+          },
+          {
+            "addr": 4722504,
+            "type": "CALL",
+            "at": 4314028
+          },
+          {
+            "addr": 4314057,
+            "type": "CODE",
+            "at": 4314040
+          },
+          {
+            "addr": 4721928,
+            "type": "CALL",
+            "at": 4314051
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4307211,
+            "type": "CALL",
+            "at": 4313696
+          },
+          {
+            "addr": 4314816,
+            "type": "CALL",
+            "at": 4313696
+          },
+          {
+            "addr": 4313840,
+            "type": "CODE",
+            "at": 4313714
+          },
+          {
+            "addr": 4313784,
+            "type": "CODE",
+            "at": 4313796
+          },
+          {
+            "addr": 4313707,
+            "type": "CODE",
+            "at": 4313817
+          },
+          {
+            "addr": 4313775,
+            "type": "CODE",
+            "at": 4313853
+          },
+          {
+            "addr": 4313803,
+            "type": "CODE",
+            "at": 4313878
+          },
+          {
+            "addr": 4313815,
+            "type": "CODE",
+            "at": 4313878
+          },
+          {
+            "addr": 4313940,
+            "type": "CODE",
+            "at": 4313911
+          },
+          {
+            "addr": 4313917,
+            "type": "CODE",
+            "at": 4313924
+          },
+          {
+            "addr": 4313922,
+            "type": "CODE",
+            "at": 4313927
+          },
+          {
+            "addr": 4314011,
+            "type": "CODE",
+            "at": 4313978
+          },
+          {
+            "addr": 4313966,
+            "type": "CODE",
+            "at": 4314013
+          },
+          {
+            "addr": 4313763,
+            "type": "CODE",
+            "at": 4314020
+          },
+          {
+            "addr": 4313740,
+            "type": "CODE",
+            "at": 4314034
+          },
+          {
+            "addr": 4314040,
+            "type": "CODE",
+            "at": 4314057
+          }
+        ],
+        "indegree": 16,
+        "outdegree": 3
+      },
+      "data_analysis": {
+        "datarefs": [
+          4659792,
+          4657728,
+          4722508,
+          4657728,
+          4657728,
+          4657728,
+          4657732,
+          4657728,
+          4657732,
+          4713620,
+          4657728,
+          4657732,
+          4657732,
+          4657728,
+          4713620
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 72,
+        "nlocals": 0,
+        "nargs": 0,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 5,
+        "hotness_score": 31.132,
+        "connectivity_metrics": {
+          "fan_in": 22,
+          "fan_out": 23,
+          "total_connectivity": 45,
+          "complexity": 15,
+          "estimated_cost": 184
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 13,
+          "unlock_count": 17,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4210160,
+      "name": "loc.00403df0",
+      "size": 367,
+      "signature": "loc.00403df0 (int32_t arg_828h, int32_t arg_838h, int32_t arg_83ch);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 150,
+        "cc": 4,
+        "nbbs": 7,
+        "edges": 9
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4548172,
+            "type": "CALL",
+            "at": 4210172
+          },
+          {
+            "addr": 4721504,
+            "type": "CALL",
+            "at": 4210188
+          },
+          {
+            "addr": 4210514,
+            "type": "CODE",
+            "at": 4210198
+          },
+          {
+            "addr": 4723276,
+            "type": "CALL",
+            "at": 4210250
+          },
+          {
+            "addr": 4210507,
+            "type": "CODE",
+            "at": 4210262
+          },
+          {
+            "addr": 4721628,
+            "type": "CALL",
+            "at": 4210301
+          },
+          {
+            "addr": 4721488,
+            "type": "CALL",
+            "at": 4210326
+          },
+          {
+            "addr": 4210334,
+            "type": "CODE",
+            "at": 4210388
+          },
+          {
+            "addr": 4721492,
+            "type": "CALL",
+            "at": 4210409
+          },
+          {
+            "addr": 4721804,
+            "type": "CALL",
+            "at": 4210418
+          },
+          {
+            "addr": 4721628,
+            "type": "CALL",
+            "at": 4210426
+          },
+          {
+            "addr": 4721628,
+            "type": "CALL",
+            "at": 4210494
+          },
+          {
+            "addr": 4721640,
+            "type": "CALL",
+            "at": 4210508
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4198725,
+            "type": "CODE",
+            "at": 4210160
+          },
+          {
+            "addr": 4210388,
+            "type": "CODE",
+            "at": 4210334
+          },
+          {
+            "addr": 4210262,
+            "type": "CODE",
+            "at": 4210507
+          },
+          {
+            "addr": 4210198,
+            "type": "CODE",
+            "at": 4210514
+          }
+        ],
+        "indegree": 4,
+        "outdegree": 10
+      },
+      "data_analysis": {
+        "datarefs": [
+          4721484,
+          4721480,
+          4721792
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 2220,
+        "nlocals": 0,
+        "nargs": 0,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 6,
+        "hotness_score": 30.889,
+        "connectivity_metrics": {
+          "fan_in": 4,
+          "fan_out": 41,
+          "total_connectivity": 45,
+          "complexity": 4,
+          "estimated_cost": 183
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 2,
+          "unlock_count": 41,
+          "verification_impact": "high"
+        }
+      }
+    },
+    {
+      "offset": 4459227,
+      "name": "fcn.00440adb",
+      "size": 350,
+      "signature": "fcn.00440adb (int32_t arg_8h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 189,
+        "cc": 19,
+        "nbbs": 31,
+        "edges": 48
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4459271,
+            "type": "CODE",
+            "at": 4459257
+          },
+          {
+            "addr": 4461013,
+            "type": "CALL",
+            "at": 4459259
+          },
+          {
+            "addr": 4459273,
+            "type": "CODE",
+            "at": 4459269
+          },
+          {
+            "addr": 4723216,
+            "type": "CALL",
+            "at": 4459276
+          },
+          {
+            "addr": 4466764,
+            "type": "CALL",
+            "at": 4459289
+          },
+          {
+            "addr": 4459423,
+            "type": "CODE",
+            "at": 4459304
+          },
+          {
+            "addr": 4723000,
+            "type": "CALL",
+            "at": 4459315
+          },
+          {
+            "addr": 4459423,
+            "type": "CODE",
+            "at": 4459323
+          },
+          {
+            "addr": 4459349,
+            "type": "CODE",
+            "at": 4459327
+          },
+          {
+            "addr": 4461460,
+            "type": "CALL",
+            "at": 4459335
+          },
+          {
+            "addr": 4722980,
+            "type": "CALL",
+            "at": 4459343
+          },
+          {
+            "addr": 4459383,
+            "type": "CODE",
+            "at": 4459353
+          },
+          {
+            "addr": 4459383,
+            "type": "CODE",
+            "at": 4459358
+          },
+          {
+            "addr": 4459383,
+            "type": "CODE",
+            "at": 4459363
+          },
+          {
+            "addr": 4723312,
+            "type": "CALL",
+            "at": 4459377
+          },
+          {
+            "addr": 4459415,
+            "type": "CODE",
+            "at": 4459387
+          },
+          {
+            "addr": 4723312,
+            "type": "CALL",
+            "at": 4459405
+          },
+          {
+            "addr": 4459418,
+            "type": "CODE",
+            "at": 4459413
+          },
+          {
+            "addr": 4459308,
+            "type": "CODE",
+            "at": 4459421
+          },
+          {
+            "addr": 4466764,
+            "type": "CALL",
+            "at": 4459425
+          },
+          {
+            "addr": 4459547,
+            "type": "CODE",
+            "at": 4459439
+          },
+          {
+            "addr": 4459485,
+            "type": "CODE",
+            "at": 4459443
+          },
+          {
+            "addr": 4459465,
+            "type": "CODE",
+            "at": 4459456
+          },
+          {
+            "addr": 4459485,
+            "type": "CODE",
+            "at": 4459463
+          },
+          {
+            "addr": 4461460,
+            "type": "CALL",
+            "at": 4459471
+          },
+          {
+            "addr": 4722980,
+            "type": "CALL",
+            "at": 4459479
+          },
+          {
+            "addr": 4459561,
+            "type": "CODE",
+            "at": 4459494
+          },
+          {
+            "addr": 4466764,
+            "type": "CALL",
+            "at": 4459496
+          },
+          {
+            "addr": 4459525,
+            "type": "CODE",
+            "at": 4459513
+          },
+          {
+            "addr": 4723000,
+            "type": "CALL",
+            "at": 4459532
+          },
+          {
+            "addr": 4459425,
+            "type": "CODE",
+            "at": 4459540
+          },
+          {
+            "addr": 4459300,
+            "type": "CODE",
+            "at": 4459542
+          },
+          {
+            "addr": 4563338,
+            "type": "CALL",
+            "at": 4459549
+          },
+          {
+            "addr": 4459568,
+            "type": "CODE",
+            "at": 4459559
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4445398,
+            "type": "CALL",
+            "at": 4459227
+          },
+          {
+            "addr": 4459257,
+            "type": "CODE",
+            "at": 4459271
+          },
+          {
+            "addr": 4459269,
+            "type": "CODE",
+            "at": 4459273
+          },
+          {
+            "addr": 4459542,
+            "type": "CODE",
+            "at": 4459300
+          },
+          {
+            "addr": 4459421,
+            "type": "CODE",
+            "at": 4459308
+          },
+          {
+            "addr": 4459327,
+            "type": "CODE",
+            "at": 4459349
+          },
+          {
+            "addr": 4459353,
+            "type": "CODE",
+            "at": 4459383
+          },
+          {
+            "addr": 4459358,
+            "type": "CODE",
+            "at": 4459383
+          },
+          {
+            "addr": 4459363,
+            "type": "CODE",
+            "at": 4459383
+          },
+          {
+            "addr": 4459387,
+            "type": "CODE",
+            "at": 4459415
+          },
+          {
+            "addr": 4459413,
+            "type": "CODE",
+            "at": 4459418
+          },
+          {
+            "addr": 4459304,
+            "type": "CODE",
+            "at": 4459423
+          },
+          {
+            "addr": 4459323,
+            "type": "CODE",
+            "at": 4459423
+          },
+          {
+            "addr": 4459540,
+            "type": "CODE",
+            "at": 4459425
+          },
+          {
+            "addr": 4459456,
+            "type": "CODE",
+            "at": 4459465
+          },
+          {
+            "addr": 4459443,
+            "type": "CODE",
+            "at": 4459485
+          },
+          {
+            "addr": 4459463,
+            "type": "CODE",
+            "at": 4459485
+          },
+          {
+            "addr": 4459513,
+            "type": "CODE",
+            "at": 4459525
+          },
+          {
+            "addr": 4459439,
+            "type": "CODE",
+            "at": 4459547
+          },
+          {
+            "addr": 4459494,
+            "type": "CODE",
+            "at": 4459561
+          },
+          {
+            "addr": 4459559,
+            "type": "CODE",
+            "at": 4459568
+          }
+        ],
+        "indegree": 21,
+        "outdegree": 14
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 72,
+        "nlocals": 4,
+        "nargs": 1,
+        "bpvars": [
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "var_8h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -8
+            }
+          },
+          {
+            "name": "var_4h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -4
+            }
+          },
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 7,
+        "hotness_score": 30.567,
+        "connectivity_metrics": {
+          "fan_in": 21,
+          "fan_out": 22,
+          "total_connectivity": 43,
+          "complexity": 19,
+          "estimated_cost": 175
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 12,
+          "unlock_count": 16,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4425188,
+      "name": "fcn.004385e4",
+      "size": 342,
+      "signature": "fcn.004385e4 (int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 149,
+        "cc": 9,
+        "nbbs": 16,
+        "edges": 23
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4284632,
+            "type": "CALL",
+            "at": 4425193
+          },
+          {
+            "addr": 4425486,
+            "type": "CODE",
+            "at": 4425230
+          },
+          {
+            "addr": 4425454,
+            "type": "CODE",
+            "at": 4425238
+          },
+          {
+            "addr": 4425281,
+            "type": "CODE",
+            "at": 4425253
+          },
+          {
+            "addr": 4425314,
+            "type": "CODE",
+            "at": 4425258
+          },
+          {
+            "addr": 4425364,
+            "type": "CODE",
+            "at": 4425263
+          },
+          {
+            "addr": 4425414,
+            "type": "CODE",
+            "at": 4425268
+          },
+          {
+            "addr": 4425474,
+            "type": "CODE",
+            "at": 4425276
+          },
+          {
+            "addr": 4723084,
+            "type": "CALL",
+            "at": 4425298
+          },
+          {
+            "addr": 4425475,
+            "type": "CODE",
+            "at": 4425309
+          },
+          {
+            "addr": 4723084,
+            "type": "CALL",
+            "at": 4425351
+          },
+          {
+            "addr": 4425475,
+            "type": "CODE",
+            "at": 4425362
+          },
+          {
+            "addr": 4723084,
+            "type": "CALL",
+            "at": 4425401
+          },
+          {
+            "addr": 4425475,
+            "type": "CODE",
+            "at": 4425412
+          },
+          {
+            "addr": 4723084,
+            "type": "CALL",
+            "at": 4425441
+          },
+          {
+            "addr": 4425475,
+            "type": "CODE",
+            "at": 4425452
+          },
+          {
+            "addr": 4425475,
+            "type": "CODE",
+            "at": 4425467
+          },
+          {
+            "addr": 4425236,
+            "type": "CODE",
+            "at": 4425480
+          },
+          {
+            "addr": 4464036,
+            "type": "CALL",
+            "at": 4425499
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4425611,
+            "type": "CALL",
+            "at": 4425188
+          },
+          {
+            "addr": 4425480,
+            "type": "CODE",
+            "at": 4425236
+          },
+          {
+            "addr": 4425253,
+            "type": "CODE",
+            "at": 4425281
+          },
+          {
+            "addr": 4425258,
+            "type": "CODE",
+            "at": 4425314
+          },
+          {
+            "addr": 4425263,
+            "type": "CODE",
+            "at": 4425364
+          },
+          {
+            "addr": 4425268,
+            "type": "CODE",
+            "at": 4425414
+          },
+          {
+            "addr": 4425238,
+            "type": "CODE",
+            "at": 4425454
+          },
+          {
+            "addr": 4425276,
+            "type": "CODE",
+            "at": 4425474
+          },
+          {
+            "addr": 4425309,
+            "type": "CODE",
+            "at": 4425475
+          },
+          {
+            "addr": 4425362,
+            "type": "CODE",
+            "at": 4425475
+          },
+          {
+            "addr": 4425412,
+            "type": "CODE",
+            "at": 4425475
+          },
+          {
+            "addr": 4425452,
+            "type": "CODE",
+            "at": 4425475
+          },
+          {
+            "addr": 4425467,
+            "type": "CODE",
+            "at": 4425475
+          },
+          {
+            "addr": 4425230,
+            "type": "CODE",
+            "at": 4425486
+          }
+        ],
+        "indegree": 14,
+        "outdegree": 6
+      },
+      "data_analysis": {
+        "datarefs": [
+          4425545,
+          4579044,
+          4581924,
+          4581924,
+          4581924,
+          4654817
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 160,
+        "nlocals": 4,
+        "nargs": 2,
+        "bpvars": [
+          {
+            "name": "var_94h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -148
+            }
+          },
+          {
+            "name": "var_14h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -20
+            }
+          },
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "signed int",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          },
+          {
+            "name": "arg_ch",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 1.0,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 8,
+        "hotness_score": 30.234,
+        "connectivity_metrics": {
+          "fan_in": 19,
+          "fan_out": 20,
+          "total_connectivity": 39,
+          "complexity": 9,
+          "estimated_cost": 171
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 10,
+          "unlock_count": 15,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4291376,
+      "name": "fcn.00417b30",
+      "size": 340,
+      "signature": "fcn.00417b30 (int32_t arg_10h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 144,
+        "cc": 11,
+        "nbbs": 15,
+        "edges": 22
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4299472,
+            "type": "CALL",
+            "at": 4291388
+          },
+          {
+            "addr": 4291406,
+            "type": "CODE",
+            "at": 4291397
+          },
+          {
+            "addr": 4291434,
+            "type": "CODE",
+            "at": 4291410
+          },
+          {
+            "addr": 4282624,
+            "type": "CALL",
+            "at": 4291414
+          },
+          {
+            "addr": 4291437,
+            "type": "CODE",
+            "at": 4291432
+          },
+          {
+            "addr": 4291536,
+            "type": "CODE",
+            "at": 4291490
+          },
+          {
+            "addr": 4291536,
+            "type": "CODE",
+            "at": 4291505
+          },
+          {
+            "addr": 4291531,
+            "type": "CODE",
+            "at": 4291520
+          },
+          {
+            "addr": 4291536,
+            "type": "CODE",
+            "at": 4291529
+          },
+          {
+            "addr": 4291586,
+            "type": "CODE",
+            "at": 4291579
+          },
+          {
+            "addr": 4291608,
+            "type": "CODE",
+            "at": 4291597
+          },
+          {
+            "addr": 4291599,
+            "type": "CODE",
+            "at": 4291606
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4291061,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4291786,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4291840,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4291866,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4424900,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4424921,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4425843,
+            "type": "CALL",
+            "at": 4291376
+          },
+          {
+            "addr": 4291397,
+            "type": "CODE",
+            "at": 4291406
+          },
+          {
+            "addr": 4291410,
+            "type": "CODE",
+            "at": 4291434
+          },
+          {
+            "addr": 4291432,
+            "type": "CODE",
+            "at": 4291437
+          },
+          {
+            "addr": 4291520,
+            "type": "CODE",
+            "at": 4291531
+          },
+          {
+            "addr": 4291490,
+            "type": "CODE",
+            "at": 4291536
+          },
+          {
+            "addr": 4291505,
+            "type": "CODE",
+            "at": 4291536
+          },
+          {
+            "addr": 4291529,
+            "type": "CODE",
+            "at": 4291536
+          },
+          {
+            "addr": 4291579,
+            "type": "CODE",
+            "at": 4291586
+          },
+          {
+            "addr": 4291606,
+            "type": "CODE",
+            "at": 4291599
+          },
+          {
+            "addr": 4291597,
+            "type": "CODE",
+            "at": 4291608
+          }
+        ],
+        "indegree": 17,
+        "outdegree": 2
+      },
+      "data_analysis": {
+        "datarefs": [
+          4655360,
+          4660280,
+          4660336
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 20,
+        "nlocals": 0,
+        "nargs": 1,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 9,
+        "hotness_score": 29.912,
+        "connectivity_metrics": {
+          "fan_in": 18,
+          "fan_out": 19,
+          "total_connectivity": 37,
+          "complexity": 11,
+          "estimated_cost": 170
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 9,
+          "unlock_count": 14,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4341168,
+      "name": "fcn.00423db0",
+      "size": 335,
+      "signature": "fcn.00423db0 (int32_t arg_ch);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 182,
+        "cc": 3,
+        "nbbs": 3,
+        "edges": 2
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4341199,
+            "type": "CODE",
+            "at": 4341187
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341208
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341227
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341246
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341268
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341284
+          },
+          {
+            "addr": 4341504,
+            "type": "CALL",
+            "at": 4341298
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341315
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341334
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341353
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341372
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341391
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341410
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341429
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341448
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341470
+          },
+          {
+            "addr": 4353744,
+            "type": "CALL",
+            "at": 4341486
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4340968,
+            "type": "CALL",
+            "at": 4341168
+          },
+          {
+            "addr": 4341187,
+            "type": "CODE",
+            "at": 4341199
+          }
+        ],
+        "indegree": 2,
+        "outdegree": 16
+      },
+      "data_analysis": {
+        "datarefs": [
+          4661300
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 32,
+        "nlocals": 0,
+        "nargs": 1,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 10,
+        "hotness_score": 29.678,
+        "connectivity_metrics": {
+          "fan_in": 17,
+          "fan_out": 18,
+          "total_connectivity": 35,
+          "complexity": 3,
+          "estimated_cost": 167
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 8,
+          "unlock_count": 13,
+          "verification_impact": "low"
+        }
+      }
+    },
+    {
+      "offset": 4374480,
+      "name": "fcn.0042bfd0",
+      "size": 335,
+      "signature": "fcn.0042bfd0 (int32_t arg_18h, int32_t arg_1ch, int32_t arg_2ch, int32_t arg_24h, int32_t arg_28h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 184,
+        "cc": 21,
+        "nbbs": 26,
+        "edges": 37
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4374536,
+            "type": "CODE",
+            "at": 4374497
+          },
+          {
+            "addr": 4363328,
+            "type": "CALL",
+            "at": 4374520
+          },
+          {
+            "addr": 4723160,
+            "type": "CALL",
+            "at": 4374550
+          },
+          {
+            "addr": 4374603,
+            "type": "CODE",
+            "at": 4374576
+          },
+          {
+            "addr": 4362768,
+            "type": "CALL",
+            "at": 4374578
+          },
+          {
+            "addr": 4362768,
+            "type": "CALL",
+            "at": 4374603
+          },
+          {
+            "addr": 4723168,
+            "type": "CALL",
+            "at": 4374612
+          },
+          {
+            "addr": 4374658,
+            "type": "CODE",
+            "at": 4374625
+          },
+          {
+            "addr": 4723220,
+            "type": "CALL",
+            "at": 4374630
+          },
+          {
+            "addr": 4374662,
+            "type": "CODE",
+            "at": 4374644
+          },
+          {
+            "addr": 4374686,
+            "type": "CODE",
+            "at": 4374665
+          },
+          {
+            "addr": 4374741,
+            "type": "CODE",
+            "at": 4374667
+          },
+          {
+            "addr": 4374709,
+            "type": "CODE",
+            "at": 4374672
+          },
+          {
+            "addr": 4374772,
+            "type": "CODE",
+            "at": 4374689
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374697
+          },
+          {
+            "addr": 4374795,
+            "type": "CODE",
+            "at": 4374705
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374707
+          },
+          {
+            "addr": 4374727,
+            "type": "CODE",
+            "at": 4374712
+          },
+          {
+            "addr": 4374727,
+            "type": "CODE",
+            "at": 4374720
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374725
+          },
+          {
+            "addr": 4373648,
+            "type": "CALL",
+            "at": 4374731
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374739
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374750
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374757
+          },
+          {
+            "addr": 4370416,
+            "type": "CALL",
+            "at": 4374762
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374770
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374781
+          },
+          {
+            "addr": 4370416,
+            "type": "CALL",
+            "at": 4374785
+          },
+          {
+            "addr": 4374674,
+            "type": "CODE",
+            "at": 4374793
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4374838,
+            "type": "CALL",
+            "at": 4374480
+          },
+          {
+            "addr": 4375510,
+            "type": "CALL",
+            "at": 4374480
+          },
+          {
+            "addr": 4374497,
+            "type": "CODE",
+            "at": 4374536
+          },
+          {
+            "addr": 4374576,
+            "type": "CODE",
+            "at": 4374603
+          },
+          {
+            "addr": 4374625,
+            "type": "CODE",
+            "at": 4374658
+          },
+          {
+            "addr": 4374644,
+            "type": "CODE",
+            "at": 4374662
+          },
+          {
+            "addr": 4374697,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374707,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374725,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374739,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374750,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374757,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374770,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374781,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374793,
+            "type": "CODE",
+            "at": 4374674
+          },
+          {
+            "addr": 4374665,
+            "type": "CODE",
+            "at": 4374686
+          },
+          {
+            "addr": 4374672,
+            "type": "CODE",
+            "at": 4374709
+          },
+          {
+            "addr": 4374712,
+            "type": "CODE",
+            "at": 4374727
+          },
+          {
+            "addr": 4374720,
+            "type": "CODE",
+            "at": 4374727
+          },
+          {
+            "addr": 4374667,
+            "type": "CODE",
+            "at": 4374741
+          },
+          {
+            "addr": 4374689,
+            "type": "CODE",
+            "at": 4374772
+          },
+          {
+            "addr": 4374705,
+            "type": "CODE",
+            "at": 4374795
+          }
+        ],
+        "indegree": 22,
+        "outdegree": 9
+      },
+      "data_analysis": {
+        "datarefs": [
+          4714612,
+          4723168,
+          4714624,
+          4714624
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 60,
+        "nlocals": 3,
+        "nargs": 5,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 11,
+        "hotness_score": 29.445,
+        "connectivity_metrics": {
+          "fan_in": 16,
+          "fan_out": 17,
+          "total_connectivity": 33,
+          "complexity": 21,
+          "estimated_cost": 167
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 11,
+          "unlock_count": 12,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4284928,
+      "name": "fcn.00416200",
+      "size": 334,
+      "signature": "fcn.00416200 (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 155,
+        "cc": 26,
+        "nbbs": 20,
+        "edges": 14
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4284958,
+            "type": "CODE",
+            "at": 4284944
+          },
+          {
+            "addr": 4285100,
+            "type": "CODE",
+            "at": 4284952
+          },
+          {
+            "addr": 4285048,
+            "type": "CODE",
+            "at": 4284964
+          },
+          {
+            "addr": 4284984,
+            "type": "CODE",
+            "at": 4284976
+          },
+          {
+            "addr": 4285088,
+            "type": "CODE",
+            "at": 4285051
+          },
+          {
+            "addr": 4284984,
+            "type": "CODE",
+            "at": 4285078
+          },
+          {
+            "addr": 4285000,
+            "type": "CODE",
+            "at": 4285078
+          },
+          {
+            "addr": 4285020,
+            "type": "CODE",
+            "at": 4285078
+          },
+          {
+            "addr": 4285036,
+            "type": "CODE",
+            "at": 4285078
+          },
+          {
+            "addr": 4285040,
+            "type": "CODE",
+            "at": 4285078
+          },
+          {
+            "addr": 4285088,
+            "type": "CODE",
+            "at": 4285078
+          },
+          {
+            "addr": 4285208,
+            "type": "CODE",
+            "at": 4285111
+          },
+          {
+            "addr": 4285136,
+            "type": "CODE",
+            "at": 4285129
+          },
+          {
+            "addr": 4285252,
+            "type": "CODE",
+            "at": 4285213
+          },
+          {
+            "addr": 4285136,
+            "type": "CODE",
+            "at": 4285244
+          },
+          {
+            "addr": 4285152,
+            "type": "CODE",
+            "at": 4285244
+          },
+          {
+            "addr": 4285176,
+            "type": "CODE",
+            "at": 4285244
+          },
+          {
+            "addr": 4285192,
+            "type": "CODE",
+            "at": 4285244
+          },
+          {
+            "addr": 4285198,
+            "type": "CODE",
+            "at": 4285244
+          },
+          {
+            "addr": 4285252,
+            "type": "CODE",
+            "at": 4285244
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4377940,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4378019,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4378352,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4378406,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4421644,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4424177,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4438072,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4463865,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4464021,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4464114,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4464245,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4464503,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4464520,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4465012,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4465206,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4465338,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4470102,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4473223,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4505068,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4505277,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4505339,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4505424,
+            "type": "CALL",
+            "at": 4284928
+          },
+          {
+            "addr": 4284944,
+            "type": "CODE",
+            "at": 4284958
+          },
+          {
+            "addr": 4285078,
+            "type": "CODE",
+            "at": 4285000
+          },
+          {
+            "addr": 4285078,
+            "type": "CODE",
+            "at": 4285020
+          },
+          {
+            "addr": 4285078,
+            "type": "CODE",
+            "at": 4285036
+          },
+          {
+            "addr": 4285078,
+            "type": "CODE",
+            "at": 4285040
+          },
+          {
+            "addr": 4284964,
+            "type": "CODE",
+            "at": 4285048
+          },
+          {
+            "addr": 4285051,
+            "type": "CODE",
+            "at": 4285088
+          },
+          {
+            "addr": 4285078,
+            "type": "CODE",
+            "at": 4285088
+          },
+          {
+            "addr": 4284952,
+            "type": "CODE",
+            "at": 4285100
+          },
+          {
+            "addr": 4285244,
+            "type": "CODE",
+            "at": 4285152
+          },
+          {
+            "addr": 4285244,
+            "type": "CODE",
+            "at": 4285176
+          },
+          {
+            "addr": 4285244,
+            "type": "CODE",
+            "at": 4285192
+          },
+          {
+            "addr": 4285244,
+            "type": "CODE",
+            "at": 4285198
+          },
+          {
+            "addr": 4285111,
+            "type": "CODE",
+            "at": 4285208
+          },
+          {
+            "addr": 4285213,
+            "type": "CODE",
+            "at": 4285252
+          },
+          {
+            "addr": 4285244,
+            "type": "CODE",
+            "at": 4285252
+          }
+        ],
+        "indegree": 38,
+        "outdegree": 0
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 12,
+        "nlocals": 0,
+        "nargs": 3,
+        "bpvars": [
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          },
+          {
+            "name": "arg_ch",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          },
+          {
+            "name": "arg_10h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 16
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 12,
+        "hotness_score": 29.223,
+        "connectivity_metrics": {
+          "fan_in": 15,
+          "fan_out": 16,
+          "total_connectivity": 31,
+          "complexity": 26,
+          "estimated_cost": 167
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 13,
+          "unlock_count": 11,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4288528,
+      "name": "fcn.00417010",
+      "size": 334,
+      "signature": "fcn.00417010 (uint32_t arg_8h, uint32_t arg_ch, uint32_t arg_10h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 155,
+        "cc": 26,
+        "nbbs": 20,
+        "edges": 14
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4288558,
+            "type": "CODE",
+            "at": 4288544
+          },
+          {
+            "addr": 4288700,
+            "type": "CODE",
+            "at": 4288552
+          },
+          {
+            "addr": 4288648,
+            "type": "CODE",
+            "at": 4288564
+          },
+          {
+            "addr": 4288584,
+            "type": "CODE",
+            "at": 4288576
+          },
+          {
+            "addr": 4288688,
+            "type": "CODE",
+            "at": 4288651
+          },
+          {
+            "addr": 4288584,
+            "type": "CODE",
+            "at": 4288678
+          },
+          {
+            "addr": 4288600,
+            "type": "CODE",
+            "at": 4288678
+          },
+          {
+            "addr": 4288620,
+            "type": "CODE",
+            "at": 4288678
+          },
+          {
+            "addr": 4288636,
+            "type": "CODE",
+            "at": 4288678
+          },
+          {
+            "addr": 4288640,
+            "type": "CODE",
+            "at": 4288678
+          },
+          {
+            "addr": 4288688,
+            "type": "CODE",
+            "at": 4288678
+          },
+          {
+            "addr": 4288808,
+            "type": "CODE",
+            "at": 4288711
+          },
+          {
+            "addr": 4288736,
+            "type": "CODE",
+            "at": 4288729
+          },
+          {
+            "addr": 4288852,
+            "type": "CODE",
+            "at": 4288813
+          },
+          {
+            "addr": 4288736,
+            "type": "CODE",
+            "at": 4288844
+          },
+          {
+            "addr": 4288752,
+            "type": "CODE",
+            "at": 4288844
+          },
+          {
+            "addr": 4288776,
+            "type": "CODE",
+            "at": 4288844
+          },
+          {
+            "addr": 4288792,
+            "type": "CODE",
+            "at": 4288844
+          },
+          {
+            "addr": 4288798,
+            "type": "CODE",
+            "at": 4288844
+          },
+          {
+            "addr": 4288852,
+            "type": "CODE",
+            "at": 4288844
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4298753,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4298873,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4309632,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4319732,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4424136,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4470990,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4471018,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4505616,
+            "type": "CALL",
+            "at": 4288528
+          },
+          {
+            "addr": 4288544,
+            "type": "CODE",
+            "at": 4288558
+          },
+          {
+            "addr": 4288678,
+            "type": "CODE",
+            "at": 4288600
+          },
+          {
+            "addr": 4288678,
+            "type": "CODE",
+            "at": 4288620
+          },
+          {
+            "addr": 4288678,
+            "type": "CODE",
+            "at": 4288636
+          },
+          {
+            "addr": 4288678,
+            "type": "CODE",
+            "at": 4288640
+          },
+          {
+            "addr": 4288564,
+            "type": "CODE",
+            "at": 4288648
+          },
+          {
+            "addr": 4288651,
+            "type": "CODE",
+            "at": 4288688
+          },
+          {
+            "addr": 4288678,
+            "type": "CODE",
+            "at": 4288688
+          },
+          {
+            "addr": 4288552,
+            "type": "CODE",
+            "at": 4288700
+          },
+          {
+            "addr": 4288844,
+            "type": "CODE",
+            "at": 4288752
+          },
+          {
+            "addr": 4288844,
+            "type": "CODE",
+            "at": 4288776
+          },
+          {
+            "addr": 4288844,
+            "type": "CODE",
+            "at": 4288792
+          },
+          {
+            "addr": 4288844,
+            "type": "CODE",
+            "at": 4288798
+          },
+          {
+            "addr": 4288737,
+            "type": "CODE",
+            "at": 4288804
+          },
+          {
+            "addr": 4288711,
+            "type": "CODE",
+            "at": 4288808
+          },
+          {
+            "addr": 4288741,
+            "type": "CODE",
+            "at": 4288808
+          },
+          {
+            "addr": 4288813,
+            "type": "CODE",
+            "at": 4288852
+          },
+          {
+            "addr": 4288844,
+            "type": "CODE",
+            "at": 4288852
+          }
+        ],
+        "indegree": 26,
+        "outdegree": 0
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 12,
+        "nlocals": 0,
+        "nargs": 3,
+        "bpvars": [
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          },
+          {
+            "name": "arg_ch",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          },
+          {
+            "name": "arg_10h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 16
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 13,
+        "hotness_score": 29.001,
+        "connectivity_metrics": {
+          "fan_in": 14,
+          "fan_out": 15,
+          "total_connectivity": 29,
+          "complexity": 26,
+          "estimated_cost": 167
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 12,
+          "unlock_count": 10,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4459620,
+      "name": "fcn.00440c64",
+      "size": 328,
+      "signature": "fcn.00440c64 (int32_t arg_8h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 137,
+        "cc": 12,
+        "nbbs": 18,
+        "edges": 28
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4284544,
+            "type": "CALL",
+            "at": 4459638
+          },
+          {
+            "addr": 4548172,
+            "type": "CALL",
+            "at": 4459654
+          },
+          {
+            "addr": 4548172,
+            "type": "CALL",
+            "at": 4459674
+          },
+          {
+            "addr": 4459731,
+            "type": "CODE",
+            "at": 4459687
+          },
+          {
+            "addr": 4451034,
+            "type": "CALL",
+            "at": 4459707
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459716
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459726
+          },
+          {
+            "addr": 4459774,
+            "type": "CODE",
+            "at": 4459733
+          },
+          {
+            "addr": 4451034,
+            "type": "CALL",
+            "at": 4459750
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459759
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459769
+          },
+          {
+            "addr": 4459820,
+            "type": "CODE",
+            "at": 4459776
+          },
+          {
+            "addr": 4451034,
+            "type": "CALL",
+            "at": 4459803
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459812
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459818
+          },
+          {
+            "addr": 4459869,
+            "type": "CODE",
+            "at": 4459822
+          },
+          {
+            "addr": 4459948,
+            "type": "CALL",
+            "at": 4459852
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459861
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459867
+          },
+          {
+            "addr": 4459918,
+            "type": "CODE",
+            "at": 4459871
+          },
+          {
+            "addr": 4459948,
+            "type": "CALL",
+            "at": 4459901
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459910
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459916
+          },
+          {
+            "addr": 4459937,
+            "type": "CODE",
+            "at": 4459920
+          },
+          {
+            "addr": 4721352,
+            "type": "CALL",
+            "at": 4459927
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4269673,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4270112,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4270650,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4271753,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4272792,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4272970,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4273312,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4273446,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4273632,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4273815,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4274059,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4444176,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4449303,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4529259,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4529968,
+            "type": "CALL",
+            "at": 4459620
+          },
+          {
+            "addr": 4459687,
+            "type": "CODE",
+            "at": 4459731
+          },
+          {
+            "addr": 4459733,
+            "type": "CODE",
+            "at": 4459774
+          },
+          {
+            "addr": 4459776,
+            "type": "CODE",
+            "at": 4459820
+          },
+          {
+            "addr": 4459822,
+            "type": "CODE",
+            "at": 4459869
+          },
+          {
+            "addr": 4459871,
+            "type": "CODE",
+            "at": 4459918
+          },
+          {
+            "addr": 4459716,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459726,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459759,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459769,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459812,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459818,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459861,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459867,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459910,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459916,
+            "type": "CODE",
+            "at": 4459937
+          },
+          {
+            "addr": 4459920,
+            "type": "CODE",
+            "at": 4459937
+          }
+        ],
+        "indegree": 31,
+        "outdegree": 9
+      },
+      "data_analysis": {
+        "datarefs": [
+          4723128,
+          4685088,
+          4576016,
+          4576096,
+          4576032,
+          4576056,
+          4576072
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 68,
+        "nlocals": 6,
+        "nargs": 1,
+        "bpvars": [
+          {
+            "name": "var_28h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -40
+            }
+          },
+          {
+            "name": "var_24h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -36
+            }
+          },
+          {
+            "name": "var_18h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -24
+            }
+          },
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "var_4h",
+            "kind": "var",
+            "type": "char *",
+            "ref": {
+              "base": "ebp",
+              "offset": -4
+            }
+          },
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 1.0,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 14,
+        "hotness_score": 28.789,
+        "connectivity_metrics": {
+          "fan_in": 13,
+          "fan_out": 14,
+          "total_connectivity": 27,
+          "complexity": 12,
+          "estimated_cost": 164
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 7,
+          "unlock_count": 9,
+          "verification_impact": "low"
+        }
+      }
+    },
+    {
+      "offset": 4280576,
+      "name": "fcn.00415100",
+      "size": 326,
+      "signature": "fcn.00415100 (int32_t arg_4h, signed int arg_1ch, int32_t arg_18h, int32_t arg_2ch);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 157,
+        "cc": 17,
+        "nbbs": 24,
+        "edges": 31
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4280620,
+            "type": "CODE",
+            "at": 4280608
+          },
+          {
+            "addr": 4280642,
+            "type": "CODE",
+            "at": 4280631
+          },
+          {
+            "addr": 4280650,
+            "type": "CODE",
+            "at": 4280640
+          },
+          {
+            "addr": 4280822,
+            "type": "CODE",
+            "at": 4280655
+          },
+          {
+            "addr": 4280720,
+            "type": "CODE",
+            "at": 4280668
+          },
+          {
+            "addr": 4280720,
+            "type": "CODE",
+            "at": 4280675
+          },
+          {
+            "addr": 4280685,
+            "type": "CODE",
+            "at": 4280681
+          },
+          {
+            "addr": 4280814,
+            "type": "CODE",
+            "at": 4280718
+          },
+          {
+            "addr": 4280782,
+            "type": "CODE",
+            "at": 4280724
+          },
+          {
+            "addr": 4280747,
+            "type": "CODE",
+            "at": 4280733
+          },
+          {
+            "addr": 4310688,
+            "type": "CALL",
+            "at": 4280757
+          },
+          {
+            "addr": 4280834,
+            "type": "CODE",
+            "at": 4280767
+          },
+          {
+            "addr": 4280858,
+            "type": "CODE",
+            "at": 4280772
+          },
+          {
+            "addr": 4280814,
+            "type": "CODE",
+            "at": 4280780
+          },
+          {
+            "addr": 4310432,
+            "type": "CALL",
+            "at": 4280783
+          },
+          {
+            "addr": 4280882,
+            "type": "CODE",
+            "at": 4280794
+          },
+          {
+            "addr": 4280661,
+            "type": "CODE",
+            "at": 4280816
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4280543,
+            "type": "CALL",
+            "at": 4280576
+          },
+          {
+            "addr": 4280608,
+            "type": "CODE",
+            "at": 4280620
+          },
+          {
+            "addr": 4280631,
+            "type": "CODE",
+            "at": 4280642
+          },
+          {
+            "addr": 4280640,
+            "type": "CODE",
+            "at": 4280650
+          },
+          {
+            "addr": 4280816,
+            "type": "CODE",
+            "at": 4280661
+          },
+          {
+            "addr": 4280681,
+            "type": "CODE",
+            "at": 4280685
+          },
+          {
+            "addr": 4280668,
+            "type": "CODE",
+            "at": 4280720
+          },
+          {
+            "addr": 4280675,
+            "type": "CODE",
+            "at": 4280720
+          },
+          {
+            "addr": 4280733,
+            "type": "CODE",
+            "at": 4280747
+          },
+          {
+            "addr": 4280724,
+            "type": "CODE",
+            "at": 4280782
+          },
+          {
+            "addr": 4280718,
+            "type": "CODE",
+            "at": 4280814
+          },
+          {
+            "addr": 4280780,
+            "type": "CODE",
+            "at": 4280814
+          },
+          {
+            "addr": 4280655,
+            "type": "CODE",
+            "at": 4280822
+          },
+          {
+            "addr": 4280767,
+            "type": "CODE",
+            "at": 4280834
+          },
+          {
+            "addr": 4280772,
+            "type": "CODE",
+            "at": 4280858
+          },
+          {
+            "addr": 4280794,
+            "type": "CODE",
+            "at": 4280882
+          }
+        ],
+        "indegree": 16,
+        "outdegree": 2
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 40,
+        "nlocals": 3,
+        "nargs": 4,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 15,
+        "hotness_score": 28.567,
+        "connectivity_metrics": {
+          "fan_in": 12,
+          "fan_out": 13,
+          "total_connectivity": 25,
+          "complexity": 17,
+          "estimated_cost": 163
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 8,
+          "unlock_count": 8,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4470748,
+      "name": "fcn.004437dc",
+      "size": 324,
+      "signature": "fcn.004437dc (int32_t arg_8h, int32_t arg_ch);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 144,
+        "cc": 8,
+        "nbbs": 18,
+        "edges": 24
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4470778,
+            "type": "CODE",
+            "at": 4470769
+          },
+          {
+            "addr": 4471063,
+            "type": "CODE",
+            "at": 4470773
+          },
+          {
+            "addr": 4722452,
+            "type": "CALL",
+            "at": 4470783
+          },
+          {
+            "addr": 4470824,
+            "type": "CODE",
+            "at": 4470817
+          },
+          {
+            "addr": 4470826,
+            "type": "CODE",
+            "at": 4470822
+          },
+          {
+            "addr": 4470859,
+            "type": "CODE",
+            "at": 4470851
+          },
+          {
+            "addr": 4470862,
+            "type": "CODE",
+            "at": 4470857
+          },
+          {
+            "addr": 4722444,
+            "type": "CALL",
+            "at": 4470877
+          },
+          {
+            "addr": 4470314,
+            "type": "CALL",
+            "at": 4470890
+          },
+          {
+            "addr": 4470927,
+            "type": "CODE",
+            "at": 4470909
+          },
+          {
+            "addr": 4285264,
+            "type": "CALL",
+            "at": 4470915
+          },
+          {
+            "addr": 4470963,
+            "type": "CODE",
+            "at": 4470956
+          },
+          {
+            "addr": 4470966,
+            "type": "CODE",
+            "at": 4470961
+          },
+          {
+            "addr": 4470998,
+            "type": "CODE",
+            "at": 4470969
+          },
+          {
+            "addr": 4470998,
+            "type": "CODE",
+            "at": 4470973
+          },
+          {
+            "addr": 4288528,
+            "type": "CALL",
+            "at": 4470990
+          },
+          {
+            "addr": 4288528,
+            "type": "CALL",
+            "at": 4471018
+          },
+          {
+            "addr": 4722468,
+            "type": "CALL",
+            "at": 4471042
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4471211,
+            "type": "CALL",
+            "at": 4470748
+          },
+          {
+            "addr": 4470769,
+            "type": "CODE",
+            "at": 4470778
+          },
+          {
+            "addr": 4470817,
+            "type": "CODE",
+            "at": 4470824
+          },
+          {
+            "addr": 4470822,
+            "type": "CODE",
+            "at": 4470826
+          },
+          {
+            "addr": 4470851,
+            "type": "CODE",
+            "at": 4470859
+          },
+          {
+            "addr": 4470857,
+            "type": "CODE",
+            "at": 4470862
+          },
+          {
+            "addr": 4470909,
+            "type": "CODE",
+            "at": 4470927
+          },
+          {
+            "addr": 4470956,
+            "type": "CODE",
+            "at": 4470963
+          },
+          {
+            "addr": 4470961,
+            "type": "CODE",
+            "at": 4470966
+          },
+          {
+            "addr": 4470969,
+            "type": "CODE",
+            "at": 4470998
+          },
+          {
+            "addr": 4470973,
+            "type": "CODE",
+            "at": 4470998
+          },
+          {
+            "addr": 4470773,
+            "type": "CODE",
+            "at": 4471063
+          }
+        ],
+        "indegree": 12,
+        "outdegree": 7
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 144,
+        "nlocals": 7,
+        "nargs": 2,
+        "bpvars": [
+          {
+            "name": "var_58h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -88
+            }
+          },
+          {
+            "name": "var_18h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -24
+            }
+          },
+          {
+            "name": "var_14h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -20
+            }
+          },
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "var_8h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -8
+            }
+          },
+          {
+            "name": "var_4h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -4
+            }
+          },
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          },
+          {
+            "name": "arg_ch",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 16,
+        "hotness_score": 28.345,
+        "connectivity_metrics": {
+          "fan_in": 11,
+          "fan_out": 12,
+          "total_connectivity": 23,
+          "complexity": 8,
+          "estimated_cost": 162
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 5,
+          "unlock_count": 7,
+          "verification_impact": "low"
+        }
+      }
+    },
+    {
+      "offset": 4455613,
+      "name": "fcn.0043fcbd",
+      "size": 324,
+      "signature": "fcn.0043fcbd (uint32_t arg_8h, uint32_t arg_ch, uint32_t arg_10h, uint32_t arg_14h, int32_t arg_18h, int32_t arg_1ch, uint32_t arg_20h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 177,
+        "cc": 15,
+        "nbbs": 26,
+        "edges": 39
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4455655,
+            "type": "CODE",
+            "at": 4455644
+          },
+          {
+            "addr": 4455671,
+            "type": "CODE",
+            "at": 4455653
+          },
+          {
+            "addr": 4723296,
+            "type": "CALL",
+            "at": 4455665
+          },
+          {
+            "addr": 4455690,
+            "type": "CODE",
+            "at": 4455675
+          },
+          {
+            "addr": 4723324,
+            "type": "CALL",
+            "at": 4455679
+          },
+          {
+            "addr": 4455697,
+            "type": "CODE",
+            "at": 4455688
+          },
+          {
+            "addr": 4723072,
+            "type": "CALL",
+            "at": 4455703
+          },
+          {
+            "addr": 4455787,
+            "type": "CODE",
+            "at": 4455713
+          },
+          {
+            "addr": 4723120,
+            "type": "CALL",
+            "at": 4455716
+          },
+          {
+            "addr": 4447605,
+            "type": "CALL",
+            "at": 4455726
+          },
+          {
+            "addr": 4455740,
+            "type": "CODE",
+            "at": 4455734
+          },
+          {
+            "addr": 4455772,
+            "type": "CODE",
+            "at": 4455738
+          },
+          {
+            "addr": 4455772,
+            "type": "CODE",
+            "at": 4455743
+          },
+          {
+            "addr": 4455772,
+            "type": "CODE",
+            "at": 4455748
+          },
+          {
+            "addr": 4455772,
+            "type": "CODE",
+            "at": 4455752
+          },
+          {
+            "addr": 4723312,
+            "type": "CALL",
+            "at": 4455766
+          },
+          {
+            "addr": 4723180,
+            "type": "CALL",
+            "at": 4455775
+          },
+          {
+            "addr": 4455715,
+            "type": "CODE",
+            "at": 4455785
+          },
+          {
+            "addr": 4455838,
+            "type": "CODE",
+            "at": 4455791
+          },
+          {
+            "addr": 4455814,
+            "type": "CODE",
+            "at": 4455797
+          },
+          {
+            "addr": 4723024,
+            "type": "CALL",
+            "at": 4455806
+          },
+          {
+            "addr": 4455928,
+            "type": "CODE",
+            "at": 4455812
+          },
+          {
+            "addr": 4455928,
+            "type": "CODE",
+            "at": 4455836
+          },
+          {
+            "addr": 4455913,
+            "type": "CODE",
+            "at": 4455842
+          },
+          {
+            "addr": 4455913,
+            "type": "CODE",
+            "at": 4455846
+          },
+          {
+            "addr": 4447563,
+            "type": "CALL",
+            "at": 4455849
+          },
+          {
+            "addr": 4455888,
+            "type": "CODE",
+            "at": 4455860
+          },
+          {
+            "addr": 4455937,
+            "type": "CALL",
+            "at": 4455908
+          },
+          {
+            "addr": 4455928,
+            "type": "CODE",
+            "at": 4455917
+          },
+          {
+            "addr": 4723028,
+            "type": "CALL",
+            "at": 4455922
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4535458,
+            "type": "CALL",
+            "at": 4455613
+          },
+          {
+            "addr": 4535488,
+            "type": "CALL",
+            "at": 4455613
+          },
+          {
+            "addr": 4535557,
+            "type": "CALL",
+            "at": 4455613
+          },
+          {
+            "addr": 4535631,
+            "type": "CALL",
+            "at": 4455613
+          },
+          {
+            "addr": 4455644,
+            "type": "CODE",
+            "at": 4455655
+          },
+          {
+            "addr": 4455653,
+            "type": "CODE",
+            "at": 4455671
+          },
+          {
+            "addr": 4455675,
+            "type": "CODE",
+            "at": 4455690
+          },
+          {
+            "addr": 4455688,
+            "type": "CODE",
+            "at": 4455697
+          },
+          {
+            "addr": 4455785,
+            "type": "CODE",
+            "at": 4455715
+          },
+          {
+            "addr": 4455734,
+            "type": "CODE",
+            "at": 4455740
+          },
+          {
+            "addr": 4455738,
+            "type": "CODE",
+            "at": 4455772
+          },
+          {
+            "addr": 4455743,
+            "type": "CODE",
+            "at": 4455772
+          },
+          {
+            "addr": 4455748,
+            "type": "CODE",
+            "at": 4455772
+          },
+          {
+            "addr": 4455752,
+            "type": "CODE",
+            "at": 4455772
+          },
+          {
+            "addr": 4455713,
+            "type": "CODE",
+            "at": 4455787
+          },
+          {
+            "addr": 4455797,
+            "type": "CODE",
+            "at": 4455814
+          },
+          {
+            "addr": 4455791,
+            "type": "CODE",
+            "at": 4455838
+          },
+          {
+            "addr": 4455860,
+            "type": "CODE",
+            "at": 4455888
+          },
+          {
+            "addr": 4455842,
+            "type": "CODE",
+            "at": 4455913
+          },
+          {
+            "addr": 4455846,
+            "type": "CODE",
+            "at": 4455913
+          },
+          {
+            "addr": 4455812,
+            "type": "CODE",
+            "at": 4455928
+          },
+          {
+            "addr": 4455836,
+            "type": "CODE",
+            "at": 4455928
+          },
+          {
+            "addr": 4455917,
+            "type": "CODE",
+            "at": 4455928
+          }
+        ],
+        "indegree": 23,
+        "outdegree": 11
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 96,
+        "nlocals": 9,
+        "nargs": 7,
+        "bpvars": [
+          {
+            "name": "var_24h",
+            "kind": "var",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -36
+            }
+          },
+          {
+            "name": "var_20h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -32
+            }
+          },
+          {
+            "name": "var_1ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -28
+            }
+          },
+          {
+            "name": "var_18h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -24
+            }
+          },
+          {
+            "name": "var_14h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -20
+            }
+          },
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "var_8h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -8
+            }
+          },
+          {
+            "name": "var_4h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -4
+            }
+          },
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          },
+          {
+            "name": "arg_ch",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          },
+          {
+            "name": "arg_10h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 16
+            }
+          },
+          {
+            "name": "arg_14h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 20
+            }
+          },
+          {
+            "name": "arg_18h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 24
+            }
+          },
+          {
+            "name": "arg_1ch",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 28
+            }
+          },
+          {
+            "name": "arg_20h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 32
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 17,
+        "hotness_score": 28.123,
+        "connectivity_metrics": {
+          "fan_in": 10,
+          "fan_out": 11,
+          "total_connectivity": 21,
+          "complexity": 15,
+          "estimated_cost": 162
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 7,
+          "unlock_count": 6,
+          "verification_impact": "medium"
+        }
+      }
+    },
+    {
+      "offset": 4364544,
+      "name": "fcn.00429900",
+      "size": 313,
+      "signature": "fcn.00429900 (int32_t arg_10h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 110,
+        "cc": 12,
+        "nbbs": 16,
+        "edges": 20
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4364564,
+            "type": "CODE",
+            "at": 4364555
+          },
+          {
+            "addr": 4364580,
+            "type": "CODE",
+            "at": 4364571
+          },
+          {
+            "addr": 4364598,
+            "type": "CODE",
+            "at": 4364593
+          },
+          {
+            "addr": 4722304,
+            "type": "CALL",
+            "at": 4364603
+          },
+          {
+            "addr": 4364839,
+            "type": "CODE",
+            "at": 4364619
+          },
+          {
+            "addr": 4722460,
+            "type": "CALL",
+            "at": 4364625
+          },
+          {
+            "addr": 4364668,
+            "type": "CODE",
+            "at": 4364641
+          },
+          {
+            "addr": 4364827,
+            "type": "CODE",
+            "at": 4364650
+          },
+          {
+            "addr": 4364648,
+            "type": "CODE",
+            "at": 4364666
+          },
+          {
+            "addr": 4723136,
+            "type": "CALL",
+            "at": 4364682
+          },
+          {
+            "addr": 4364839,
+            "type": "CODE",
+            "at": 4364690
+          },
+          {
+            "addr": 4722320,
+            "type": "CALL",
+            "at": 4364811
+          },
+          {
+            "addr": 4364806,
+            "type": "CODE",
+            "at": 4364837
+          },
+          {
+            "addr": 4722320,
+            "type": "CALL",
+            "at": 4364844
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4364535,
+            "type": "CALL",
+            "at": 4364544
+          },
+          {
+            "addr": 4364555,
+            "type": "CODE",
+            "at": 4364564
+          },
+          {
+            "addr": 4364571,
+            "type": "CODE",
+            "at": 4364580
+          },
+          {
+            "addr": 4364593,
+            "type": "CODE",
+            "at": 4364598
+          },
+          {
+            "addr": 4364666,
+            "type": "CODE",
+            "at": 4364648
+          },
+          {
+            "addr": 4364641,
+            "type": "CODE",
+            "at": 4364668
+          },
+          {
+            "addr": 4364837,
+            "type": "CODE",
+            "at": 4364806
+          },
+          {
+            "addr": 4364650,
+            "type": "CODE",
+            "at": 4364827
+          },
+          {
+            "addr": 4364619,
+            "type": "CODE",
+            "at": 4364839
+          },
+          {
+            "addr": 4364690,
+            "type": "CODE",
+            "at": 4364839
+          }
+        ],
+        "indegree": 10,
+        "outdegree": 5
+      },
+      "data_analysis": {
+        "datarefs": [
+          4714624,
+          4714592,
+          4713984,
+          4714684,
+          4714684,
+          4714692,
+          4714684,
+          4714620,
+          4369184,
+          4714684,
+          4714688,
+          4714684,
+          4714692,
+          4714684,
+          4714696,
+          4714684,
+          4714700,
+          4714684,
+          4714704,
+          4714684,
+          4714676,
+          4714680,
+          4713984,
+          4713984
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 32,
+        "nlocals": 1,
+        "nargs": 1,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.9,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 18,
+        "hotness_score": 27.901,
+        "connectivity_metrics": {
+          "fan_in": 9,
+          "fan_out": 10,
+          "total_connectivity": 19,
+          "complexity": 12,
+          "estimated_cost": 156
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 4,
+          "unlock_count": 5,
+          "verification_impact": "low"
+        }
+      }
+    },
+    {
+      "offset": 4554927,
+      "name": "fcn.004580af",
+      "size": 310,
+      "signature": "fcn.004580af (int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, uint32_t arg_14h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 138,
+        "cc": 6,
+        "nbbs": 13,
+        "edges": 17
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4284632,
+            "type": "CALL",
+            "at": 4554932
+          },
+          {
+            "addr": 4289968,
+            "type": "CALL",
+            "at": 4554942
+          },
+          {
+            "addr": 4555179,
+            "type": "CODE",
+            "at": 4554958
+          },
+          {
+            "addr": 4554733,
+            "type": "CALL",
+            "at": 4554967
+          },
+          {
+            "addr": 4555015,
+            "type": "CODE",
+            "at": 4554976
+          },
+          {
+            "addr": 4464036,
+            "type": "CALL",
+            "at": 4554984
+          },
+          {
+            "addr": 4463569,
+            "type": "CALL",
+            "at": 4555020
+          },
+          {
+            "addr": 4721288,
+            "type": "CALL",
+            "at": 4555046
+          },
+          {
+            "addr": 4555101,
+            "type": "CODE",
+            "at": 4555056
+          },
+          {
+            "addr": 4465149,
+            "type": "CALL",
+            "at": 4555068
+          },
+          {
+            "addr": 4721288,
+            "type": "CALL",
+            "at": 4555083
+          },
+          {
+            "addr": 4465234,
+            "type": "CALL",
+            "at": 4555096
+          },
+          {
+            "addr": 4721280,
+            "type": "CALL",
+            "at": 4555102
+          },
+          {
+            "addr": 4555142,
+            "type": "CODE",
+            "at": 4555110
+          },
+          {
+            "addr": 4463585,
+            "type": "CALL",
+            "at": 4555119
+          },
+          {
+            "addr": 4555171,
+            "type": "CALL",
+            "at": 4555132
+          },
+          {
+            "addr": 4554993,
+            "type": "CODE",
+            "at": 4555137
+          },
+          {
+            "addr": 4464036,
+            "type": "CALL",
+            "at": 4555148
+          },
+          {
+            "addr": 4555171,
+            "type": "CALL",
+            "at": 4555161
+          },
+          {
+            "addr": 4554993,
+            "type": "CODE",
+            "at": 4555166
+          },
+          {
+            "addr": 4555192,
+            "type": "CODE",
+            "at": 4555183
+          },
+          {
+            "addr": 4722208,
+            "type": "CALL",
+            "at": 4555219
+          },
+          {
+            "addr": 4554981,
+            "type": "CODE",
+            "at": 4555232
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4478733,
+            "type": "CALL",
+            "at": 4554927
+          },
+          {
+            "addr": 4555460,
+            "type": "CALL",
+            "at": 4554927
+          },
+          {
+            "addr": 4555232,
+            "type": "CODE",
+            "at": 4554981
+          },
+          {
+            "addr": 4555137,
+            "type": "CODE",
+            "at": 4554993
+          },
+          {
+            "addr": 4555166,
+            "type": "CODE",
+            "at": 4554993
+          },
+          {
+            "addr": 4554976,
+            "type": "CODE",
+            "at": 4555015
+          },
+          {
+            "addr": 4555056,
+            "type": "CODE",
+            "at": 4555101
+          },
+          {
+            "addr": 4555110,
+            "type": "CODE",
+            "at": 4555142
+          },
+          {
+            "addr": 4554958,
+            "type": "CODE",
+            "at": 4555179
+          },
+          {
+            "addr": 4555183,
+            "type": "CODE",
+            "at": 4555192
+          }
+        ],
+        "indegree": 10,
+        "outdegree": 15
+      },
+      "data_analysis": {
+        "datarefs": [
+          4555237,
+          4652800
+        ],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 76,
+        "nlocals": 7,
+        "nargs": 4,
+        "bpvars": [
+          {
+            "name": "var_1018h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -4120
+            }
+          },
+          {
+            "name": "var_1ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -28
+            }
+          },
+          {
+            "name": "var_18h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -24
+            }
+          },
+          {
+            "name": "var_14h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -20
+            }
+          },
+          {
+            "name": "var_10h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -16
+            }
+          },
+          {
+            "name": "var_ch",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -12
+            }
+          },
+          {
+            "name": "var_4h",
+            "kind": "var",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": -4
+            }
+          },
+          {
+            "name": "arg_8h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 8
+            }
+          },
+          {
+            "name": "arg_ch",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 12
+            }
+          },
+          {
+            "name": "arg_10h",
+            "kind": "arg",
+            "type": "int32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 16
+            }
+          },
+          {
+            "name": "arg_14h",
+            "kind": "arg",
+            "type": "uint32_t",
+            "ref": {
+              "base": "ebp",
+              "offset": 20
+            }
+          }
+        ]
+      },
+      "evidence_quality": {
+        "density": 1.0,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 19,
+        "hotness_score": 27.678,
+        "connectivity_metrics": {
+          "fan_in": 8,
+          "fan_out": 9,
+          "total_connectivity": 17,
+          "complexity": 6,
+          "estimated_cost": 155
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 3,
+          "unlock_count": 4,
+          "verification_impact": "low"
+        }
+      }
+    },
+    {
+      "offset": 4318688,
+      "name": "fcn.0041e5e0",
+      "size": 306,
+      "signature": "fcn.0041e5e0 (int32_t arg_120h, signed int arg_118h);",
+      "calltype": "cdecl",
+      "complexity_metrics": {
+        "cost": 139,
+        "cc": 13,
+        "nbbs": 16,
+        "edges": 19
+      },
+      "call_analysis": {
+        "callrefs": [
+          {
+            "addr": 4318805,
+            "type": "CODE",
+            "at": 4318706
+          },
+          {
+            "addr": 4319008,
+            "type": "CALL",
+            "at": 4318709
+          },
+          {
+            "addr": 4318755,
+            "type": "CODE",
+            "at": 4318719
+          },
+          {
+            "addr": 4296528,
+            "type": "CALL",
+            "at": 4318721
+          },
+          {
+            "addr": 4296512,
+            "type": "CALL",
+            "at": 4318732
+          },
+          {
+            "addr": 4722224,
+            "type": "CALL",
+            "at": 4318797
+          },
+          {
+            "addr": 4318821,
+            "type": "CODE",
+            "at": 4318803
+          },
+          {
+            "addr": 4722200,
+            "type": "CALL",
+            "at": 4318815
+          },
+          {
+            "addr": 4318982,
+            "type": "CODE",
+            "at": 4318823
+          },
+          {
+            "addr": 4318982,
+            "type": "CODE",
+            "at": 4318835
+          },
+          {
+            "addr": 4318903,
+            "type": "CODE",
+            "at": 4318850
+          },
+          {
+            "addr": 4318865,
+            "type": "CODE",
+            "at": 4318861
+          },
+          {
+            "addr": 4282624,
+            "type": "CALL",
+            "at": 4318866
+          },
+          {
+            "addr": 4318935,
+            "type": "CODE",
+            "at": 4318878
+          },
+          {
+            "addr": 4296512,
+            "type": "CALL",
+            "at": 4318880
+          },
+          {
+            "addr": 4318935,
+            "type": "CODE",
+            "at": 4318910
+          },
+          {
+            "addr": 4296512,
+            "type": "CALL",
+            "at": 4318912
+          }
+        ],
+        "codexrefs": [
+          {
+            "addr": 4318599,
+            "type": "CALL",
+            "at": 4318688
+          },
+          {
+            "addr": 4318650,
+            "type": "CALL",
+            "at": 4318688
+          },
+          {
+            "addr": 4318719,
+            "type": "CODE",
+            "at": 4318755
+          },
+          {
+            "addr": 4318706,
+            "type": "CODE",
+            "at": 4318805
+          },
+          {
+            "addr": 4318803,
+            "type": "CODE",
+            "at": 4318821
+          },
+          {
+            "addr": 4318861,
+            "type": "CODE",
+            "at": 4318865
+          },
+          {
+            "addr": 4318850,
+            "type": "CODE",
+            "at": 4318903
+          },
+          {
+            "addr": 4318878,
+            "type": "CODE",
+            "at": 4318935
+          },
+          {
+            "addr": 4318910,
+            "type": "CODE",
+            "at": 4318935
+          },
+          {
+            "addr": 4318823,
+            "type": "CODE",
+            "at": 4318982
+          },
+          {
+            "addr": 4318835,
+            "type": "CODE",
+            "at": 4318982
+          }
+        ],
+        "indegree": 11,
+        "outdegree": 8
+      },
+      "data_analysis": {
+        "datarefs": [],
+        "dataxrefs": []
+      },
+      "stack_frame": {
+        "stackframe": 296,
+        "nlocals": 6,
+        "nargs": 2,
+        "bpvars": []
+      },
+      "evidence_quality": {
+        "density": 0.8,
+        "confidence": "high",
+        "provenance": "r2_aflj.json"
+      },
+      "navigator_metrics": {
+        "rank": 20,
+        "hotness_score": 27.456,
+        "connectivity_metrics": {
+          "fan_in": 7,
+          "fan_out": 8,
+          "total_connectivity": 15,
+          "complexity": 13,
+          "estimated_cost": 153
+        },
+        "unlock_potential": {
+          "blocking_dependencies": 5,
+          "unlock_count": 3,
+          "verification_impact": "medium"
+        }
+      }
+    }
+  ]
+}

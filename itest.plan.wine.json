@@ -1,0 +1,579 @@
+{
+  "metadata": {
+    "stage": "SOTE Stage 10: Wine Integration Test Generation",
+    "timestamp": "2025-09-11T22:45:00Z",
+    "test_framework": "wine_sdl2_integration_validation",
+    "runtime_target": "Wine with SDL2 adapter layer",
+    "methodology": "evidence_only_wine_compatibility_testing",
+    "evidence_sources": [
+      "runtime/bootpath.manifest.json",
+      "runtime/resource.catalog.json", 
+      "layouts.curated.json",
+      "runtime/runtime.apis.json",
+      "src/adapter_*.c (5 adapters validated)"
+    ],
+    "wine_requirements": {
+      "wine_version": "stable (5.0+)",
+      "dlls": ["KERNEL32.dll", "USER32.dll", "GDI32.dll", "ADVAPI32.dll"],
+      "environment": "WINEDEBUG=minimal",
+      "log_capture": "runtime/wine.log"
+    },
+    "schema_version": "1.0"
+  },
+  "integration_scenarios": [
+    {
+      "scenario_id": "wine_init_sdl2_setup", 
+      "name": "Wine Environment Initialization and SDL2 Setup",
+      "description": "Validate Wine environment initialization and SDL2 subsystem setup",
+      "priority": 95,
+      "critical_path": true,
+      "entry_points": [
+        "entry_point @ 0x415240", 
+        "main @ 0x42bd3e"
+      ],
+      "fixtures": {
+        "wine_environment": {
+          "WINEDEBUG": "minimal",
+          "WINEPREFIX": "itest/wine_prefix",
+          "DISPLAY": ":0"
+        },
+        "sdl2_config": {
+          "SDL_VIDEODRIVER": "dummy",
+          "SDL_AUDIODRIVER": "dummy", 
+          "fallback_mode": true
+        }
+      },
+      "call_sequence": [
+        "entry_point() // Wine PE loader initialization",
+        "main() // SDL2 subsystem initialization via adapters",
+        "adapter_video_init() // SDL_Init(SDL_INIT_VIDEO)",
+        "adapter_audio_init() // SDL_Init(SDL_INIT_AUDIO)", 
+        "adapter_input_init() // SDL_Init(SDL_INIT_JOYSTICK|SDL_INIT_GAMECONTROLLER)"
+      ],
+      "assertions": [
+        {
+          "type": "return_code",
+          "description": "Entry point returns 0 (success)",
+          "expected": 0,
+          "provenance": "bootpath.manifest.json entry_point success pattern"
+        },
+        {
+          "type": "side_effect", 
+          "description": "Wine environment variables properly set",
+          "validation": "check WINEDEBUG=minimal in environment",
+          "provenance": "Wine compatibility requirements"
+        },
+        {
+          "type": "side_effect",
+          "description": "SDL2 dummy drivers initialize successfully", 
+          "validation": "SDL_Init returns 0 or graceful fallback",
+          "provenance": "src/adapter_video_sdl.c SDL_Init wrapper"
+        },
+        {
+          "type": "call_order",
+          "description": "Adapter initialization sequence correct",
+          "sequence": ["video", "audio", "input", "fs", "time"],
+          "provenance": "5 adapter files initialization order"
+        }
+      ],
+      "wine_specific_validation": [
+        "Check Wine prefix creation and registry setup",
+        "Verify PE executable loads correctly under Wine",
+        "Validate Windows API to Linux syscall translation",
+        "Confirm SDL2 libraries load in Wine environment"
+      ],
+      "success_criteria": {
+        "minimal": "No crash during initialization sequence",
+        "expected": "All adapters initialize (success or graceful failure)",
+        "optimal": "SDL2 contexts created successfully"
+      }
+    },
+    {
+      "scenario_id": "wine_asset_catalog_loading",
+      "name": "Asset Catalog Loading Through Wine File System",
+      "description": "Validate 277 assets can be accessed through adapter layer in Wine",
+      "priority": 85,
+      "critical_path": true, 
+      "entry_points": [
+        "file_system_setup @ 0x402100",
+        "asset_catalog_builder @ 0x402200"
+      ],
+      "fixtures": {
+        "asset_manifest": {
+          "bitmap_count": 43,
+          "sound_count": 183, 
+          "movie_count": 17,
+          "dll_count": 34,
+          "total_size_mb": 370,
+          "sdata_path": "Sdata/"
+        },
+        "sample_assets": [
+          {
+            "name": "astroids.bmp",
+            "size": 921654,
+            "sha256": "be4df53de5da1dcee06d8bc1540c445016416882db2ed21dd0ba094506101540",
+            "type": "bitmap"
+          },
+          {
+            "name": "hero.wav", 
+            "type": "sound",
+            "format": "RIFF/WAVE PCM 16-bit mono"
+          },
+          {
+            "name": "data00.dll",
+            "type": "data_archive",
+            "load_method": "LoadLibraryA"
+          }
+        ]
+      },
+      "call_sequence": [
+        "file_system_setup() // Wine file system access",
+        "asset_catalog_builder() // Build catalog of 277 assets", 
+        "file_open('Sdata/astroids.bmp') // Test bitmap access",
+        "file_open('Sdata/hero.wav') // Test sound access",
+        "dll_loader_context('data00.dll') // Test DLL loading"
+      ],
+      "assertions": [
+        {
+          "type": "return_code",
+          "description": "Asset catalog build returns success",
+          "expected": 0,
+          "provenance": "resource.catalog.json 277 assets total"
+        },
+        {
+          "type": "side_effect",
+          "description": "Bitmap files accessible through Wine file system",
+          "validation": "file_open() succeeds for .bmp files or returns consistent error",
+          "provenance": "resource.catalog.json 43 bitmap files"
+        },
+        {
+          "type": "side_effect", 
+          "description": "Sound files accessible through Wine file system",
+          "validation": "file_open() succeeds for .wav files or returns consistent error",
+          "provenance": "resource.catalog.json 183 sound files"
+        },
+        {
+          "type": "side_effect",
+          "description": "DLL archives accessible through Wine LoadLibraryA",
+          "validation": "LoadLibraryA succeeds or fails gracefully for data*.dll",
+          "provenance": "resource.catalog.json 34 DLL files, LoadLibraryA @ 0x4c450c"
+        },
+        {
+          "type": "branch_reached",
+          "description": "Both success and error paths exercised",
+          "branches": ["file_found", "file_not_found", "access_denied"],
+          "provenance": "File system error handling patterns"
+        }
+      ],
+      "wine_specific_validation": [
+        "Test Windows path separators (\\) vs POSIX (/)",
+        "Verify Wine file handle translation to Linux file descriptors", 
+        "Check Wine DLL loading compatibility with data archives",
+        "Validate file access permissions under Wine"
+      ],
+      "success_criteria": {
+        "minimal": "File system operations complete without crash",
+        "expected": "Asset catalog builds with correct count (277 total)", 
+        "optimal": "Sample assets from each category accessible"
+      }
+    },
+    {
+      "scenario_id": "wine_boot_path_execution",
+      "name": "Boot Path Execution (6 Stages) Under Wine",
+      "description": "Execute 6 boot stages from bootpath.manifest.json in Wine environment",
+      "priority": 90,
+      "critical_path": true,
+      "entry_points": [
+        "entry_init_stage // Priority 90-100",
+        "config_stage // Priority 80-89", 
+        "resource_open_stage // Priority 70-79",
+        "decode_stage // Priority 60-69",
+        "main_loop_stage // Priority 50-59",
+        "present_stage // Priority 40-49"
+      ],
+      "fixtures": {
+        "boot_stages": [
+          {
+            "stage": "entry_init", 
+            "priority_range": "90-100",
+            "functions": ["entry_point @ 0x415240", "main @ 0x42bd3e", "game_main_loop @ 0x44649e"],
+            "apis_used": ["GetStartupInfoA", "GetCommandLineA", "GetModuleHandleA"]
+          },
+          {
+            "stage": "config",
+            "priority_range": "80-89",
+            "functions": ["registry_config_loader @ 0x401000", "settings_parser @ 0x401100"], 
+            "apis_used": ["RegOpenKeyExA", "RegQueryValueExA", "GetPrivateProfileStringA"],
+            "implementation_status": "needs_implementation"
+          },
+          {
+            "stage": "resource_open",
+            "priority_range": "70-79", 
+            "functions": ["dll_data_archive_loader @ 0x402000", "file_system_setup @ 0x402100", "asset_catalog_builder @ 0x402200"],
+            "apis_used": ["LoadLibraryA", "CreateFileA", "FindFirstFileA"]
+          },
+          {
+            "stage": "decode",
+            "priority_range": "60-69",
+            "functions": ["bmp_format_parser @ 0x403000", "wav_format_parser @ 0x403100", "memory_allocator @ 0x43d2aa"],
+            "apis_used": ["CreateFileA", "ReadFile", "HeapAlloc"]
+          },
+          {
+            "stage": "main_loop",
+            "priority_range": "50-59", 
+            "functions": ["directdraw_init @ 0x404000", "input_system_init @ 0x404100", "audio_system_init @ 0x404200"],
+            "apis_used": ["DirectDrawCreate", "DirectInputCreateA", "DirectSoundCreate"],
+            "implementation_status": "needs_sdl2_replacement"
+          },
+          {
+            "stage": "present",
+            "priority_range": "40-49",
+            "functions": ["window_creation @ 0x405000", "graphics_context_setup @ 0x405100", "first_frame_render @ 0x405200"],
+            "apis_used": ["CreateWindowExA", "GetDC", "BitBlt"],
+            "implementation_status": "needs_sdl2_replacement"
+          }
+        ]
+      },
+      "call_sequence": [
+        "/* Stage 1: Entry Init */",
+        "entry_point() // Wine PE entry point",
+        "main() // Main function with Wine environment", 
+        "game_main_loop() // Main game loop initialization",
+        "/* Stage 2: Config (Stubbed) */",
+        "registry_config_loader() // Wine registry access (stubbed)",
+        "settings_parser() // INI file parsing (stubbed)",
+        "/* Stage 3: Resource Open */", 
+        "dll_data_archive_loader() // Load data*.dll files",
+        "file_system_setup() // Sdata directory access",
+        "asset_catalog_builder() // Build 277 asset catalog",
+        "/* Stage 4: Decode */",
+        "bmp_format_parser() // BMP header validation", 
+        "wav_format_parser() // WAV header validation",
+        "memory_allocator() // Memory management wrapper",
+        "/* Stage 5: Main Loop (SDL2 Replacement) */",
+        "directdraw_init() // SDL_CreateRenderer replacement",
+        "input_system_init() // SDL input system replacement",
+        "audio_system_init() // SDL audio system replacement",
+        "/* Stage 6: Present (SDL2 Replacement) */", 
+        "window_creation() // SDL_CreateWindow replacement",
+        "graphics_context_setup() // SDL renderer setup", 
+        "first_frame_render() // SDL_RenderPresent test"
+      ],
+      "assertions": [
+        {
+          "type": "call_order",
+          "description": "Boot stages execute in priority order (100 -> 47)",
+          "sequence": ["entry_init", "config", "resource_open", "decode", "main_loop", "present"],
+          "provenance": "bootpath.manifest.json priority ordering"
+        },
+        {
+          "type": "return_code", 
+          "description": "Critical stages return success or acceptable stub response",
+          "critical_stages": ["entry_init", "resource_open", "decode"],
+          "provenance": "boot_criticality: critical in bootpath.manifest.json"
+        },
+        {
+          "type": "side_effect",
+          "description": "Wine registry operations handled gracefully (stubbed)", 
+          "validation": "Registry functions return stub responses without crash",
+          "provenance": "config stage needs_implementation status"
+        },
+        {
+          "type": "side_effect",
+          "description": "DirectX to SDL2 replacement functions initialize",
+          "validation": "SDL2 replacement functions initialize or fail gracefully",
+          "provenance": "main_loop/present stages need SDL2 replacement"
+        }
+      ],
+      "wine_specific_validation": [
+        "Test Windows API emulation for each boot stage",
+        "Verify Wine registry access in config stage", 
+        "Check DirectX API replacement with SDL2 under Wine",
+        "Validate Windows message loop to SDL event translation"
+      ],
+      "success_criteria": {
+        "minimal": "All 6 boot stages execute without crash",
+        "expected": "Critical stages (1,3,4) complete successfully, others stub gracefully",
+        "optimal": "SDL2 replacements (stages 5,6) initialize successfully"
+      }
+    },
+    {
+      "scenario_id": "wine_adapter_layer_validation", 
+      "name": "Adapter Layer Validation (DirectX→SDL2 Translation)",
+      "description": "Validate 5 adapters work correctly in Wine environment with DirectX→SDL2 translation",
+      "priority": 80,
+      "critical_path": true,
+      "entry_points": [
+        "adapter_video_init",
+        "adapter_audio_init", 
+        "adapter_input_init",
+        "adapter_fs_init", 
+        "adapter_time_init"
+      ],
+      "fixtures": {
+        "adapters": [
+          {
+            "name": "video",
+            "source_file": "src/adapter_video_sdl.c",
+            "sdl_dependencies": ["SDL_INIT_VIDEO"],
+            "directx_replacement": "DirectDrawCreate -> SDL_CreateRenderer",
+            "wine_compatibility": "high"
+          },
+          {
+            "name": "audio", 
+            "source_file": "src/adapter_audio_sdl.c",
+            "sdl_dependencies": ["SDL_INIT_AUDIO"],
+            "directx_replacement": "DirectSoundCreate -> SDL_OpenAudio",
+            "wine_compatibility": "medium"
+          },
+          {
+            "name": "input",
+            "source_file": "src/adapter_input_sdl.c", 
+            "sdl_dependencies": ["SDL_INIT_JOYSTICK", "SDL_INIT_GAMECONTROLLER"],
+            "directx_replacement": "DirectInputCreateA -> SDL_Event system",
+            "wine_compatibility": "high"
+          },
+          {
+            "name": "filesystem",
+            "source_file": "src/adapter_fs_posix.c",
+            "sdl_dependencies": [],
+            "directx_replacement": "CreateFileA -> fopen, POSIX file I/O", 
+            "wine_compatibility": "high"
+          },
+          {
+            "name": "time",
+            "source_file": "src/adapter_time_sdl.c", 
+            "sdl_dependencies": ["SDL_INIT_TIMER"],
+            "directx_replacement": "timeGetTime -> SDL_GetTicks",
+            "wine_compatibility": "high"
+          }
+        ],
+        "directx_apis_replaced": [
+          {"original": "DirectDrawCreate", "replacement": "SDL_CreateRenderer", "iat_address": "0x4c4cec"},
+          {"original": "DirectSoundCreate", "replacement": "SDL_OpenAudio", "iat_address": "0x4c4d2c"},
+          {"original": "DirectInputCreateA", "replacement": "SDL_Event system", "iat_address": "0x4c4d0a"},
+          {"original": "CreateFileA", "replacement": "fopen", "iat_address": "0x4c4634"}, 
+          {"original": "timeGetTime", "replacement": "SDL_GetTicks", "iat_address": "0x4c488c"}
+        ]
+      },
+      "call_sequence": [
+        "/* Adapter Initialization Sequence */",
+        "adapter_video_init() // SDL_Init(SDL_INIT_VIDEO), SDL_CreateRenderer",
+        "adapter_audio_init() // SDL_Init(SDL_INIT_AUDIO), SDL_OpenAudio", 
+        "adapter_input_init() // SDL_Init(SDL_INIT_JOYSTICK), SDL event handling",
+        "adapter_fs_init() // POSIX file operations, directory access",
+        "adapter_time_init() // SDL_GetTicks timing replacement",
+        "/* DirectX API Replacement Tests */",
+        "directdraw_replacement_test() // DirectDraw -> SDL renderer mapping",
+        "directsound_replacement_test() // DirectSound -> SDL audio mapping",
+        "directinput_replacement_test() // DirectInput -> SDL input mapping", 
+        "win32_file_replacement_test() // Win32 file APIs -> POSIX mapping"
+      ],
+      "assertions": [
+        {
+          "type": "return_code",
+          "description": "All 5 adapters initialize successfully or fail gracefully",
+          "expected_pattern": "success|graceful_failure",
+          "provenance": "5 adapter source files in src/ directory"
+        },
+        {
+          "type": "side_effect",
+          "description": "SDL2 subsystems initialize correctly under Wine", 
+          "validation": "SDL_Init calls succeed or return predictable errors",
+          "provenance": "SDL2 compatibility requirements in Wine"
+        },
+        {
+          "type": "side_effect",
+          "description": "DirectX API calls redirected to SDL2 equivalents",
+          "validation": "DirectX function calls resolve to adapter implementations",
+          "provenance": "IAT addresses from runtime.apis.json"
+        },
+        {
+          "type": "call_order",
+          "description": "Adapter initialization follows dependency order", 
+          "sequence": ["filesystem", "time", "video", "audio", "input"],
+          "provenance": "Logical dependency order for adapter initialization"
+        },
+        {
+          "type": "branch_reached",
+          "description": "Both SDL2 success and fallback paths tested",
+          "branches": ["sdl2_available", "sdl2_unavailable", "dummy_drivers"],
+          "provenance": "Graceful degradation requirement"
+        }
+      ],
+      "wine_specific_validation": [
+        "Test DirectX DLL loading under Wine (ddraw.dll, dsound.dll, dinput.dll)",
+        "Verify SDL2 library loading in Wine environment", 
+        "Check Windows API translation performance", 
+        "Validate adapter layer overhead in Wine"
+      ],
+      "success_criteria": {
+        "minimal": "All adapters initialize without crash",
+        "expected": "SDL2 adapters work with dummy drivers, POSIX adapter succeeds",
+        "optimal": "Full SDL2 functionality available under Wine"
+      }
+    },
+    {
+      "scenario_id": "wine_main_loop_first_frame",
+      "name": "Main Loop Entry and First Frame Attempt", 
+      "description": "Test main game loop initialization and attempt to render first frame under Wine",
+      "priority": 75,
+      "critical_path": true,
+      "entry_points": [
+        "game_main_loop @ 0x44649e",
+        "window_creation @ 0x405000",
+        "first_frame_render @ 0x405200"
+      ],
+      "fixtures": {
+        "game_loop_config": {
+          "message_loop": "PeekMessageA -> SDL_PollEvent",
+          "window_properties": {
+            "class_name": "SOTE_Window_Class", 
+            "window_name": "Star Wars: Shadows of the Empire",
+            "style": "WS_OVERLAPPEDWINDOW",
+            "dimensions": "640x480"
+          },
+          "render_config": {
+            "pixel_format": "24-bit RGB",
+            "buffer_method": "BitBlt -> SDL_RenderCopy", 
+            "swap_method": "UpdateWindow -> SDL_RenderPresent"
+          }
+        },
+        "first_frame_assets": [
+          {
+            "name": "astroids.bmp",
+            "type": "background", 
+            "dimensions": "640x480x24",
+            "load_test": true
+          }
+        ]
+      },
+      "call_sequence": [
+        "/* Main Loop Initialization */",
+        "game_main_loop() // Initialize main game loop",
+        "window_creation() // SDL_CreateWindow under Wine",
+        "graphics_context_setup() // SDL_CreateRenderer", 
+        "/* Message Loop Test */", 
+        "message_loop_test() // PeekMessageA -> SDL_PollEvent translation",
+        "event_handling_test() // Windows messages -> SDL events",
+        "/* First Frame Render Attempt */",
+        "asset_load_test() // Load sample bitmap for first frame", 
+        "texture_creation_test() // Create SDL texture from bitmap",
+        "first_frame_render() // SDL_RenderCopy + SDL_RenderPresent",
+        "/* Cleanup Test */",
+        "context_cleanup() // Proper resource cleanup"
+      ],
+      "assertions": [
+        {
+          "type": "return_code",
+          "description": "Main loop initialization returns success",
+          "expected": 0, 
+          "provenance": "game_main_loop @ 0x44649e implementation"
+        },
+        {
+          "type": "side_effect",
+          "description": "SDL2 window created successfully under Wine",
+          "validation": "SDL_CreateWindow succeeds or returns informative error",
+          "provenance": "CreateWindowExA replacement with SDL2"
+        },
+        {
+          "type": "side_effect", 
+          "description": "Graphics context setup completes",
+          "validation": "SDL_CreateRenderer succeeds with dummy or software renderer",
+          "provenance": "DirectDraw replacement with SDL2 renderer"
+        },
+        {
+          "type": "call_order",
+          "description": "First frame render sequence executes correctly",
+          "sequence": ["window_create", "context_setup", "asset_load", "texture_create", "render", "present"],
+          "provenance": "Graphics pipeline initialization order"
+        },
+        {
+          "type": "side_effect",
+          "description": "Windows message loop to SDL event translation works", 
+          "validation": "PeekMessageA calls map to SDL_PollEvent successfully",
+          "provenance": "PeekMessageA @ 0x4c4bf0 usage in game loop"
+        }
+      ],
+      "wine_specific_validation": [
+        "Test Wine window creation and display integration",
+        "Verify SDL2 renderer performance under Wine", 
+        "Check Windows GDI to SDL2 translation accuracy",
+        "Validate message loop compatibility with Wine windowing system"
+      ],
+      "success_criteria": {
+        "minimal": "Main loop starts and first frame attempt completes without crash",
+        "expected": "Window creates successfully, graphics context initializes", 
+        "optimal": "First frame renders successfully (even if just black screen or test pattern)"
+      }
+    }
+  ],
+  "missing_evidence": {
+    "description": "Evidence gaps that prevent more comprehensive testing",
+    "requirements": [
+      {
+        "category": "Wine Registry Integration",
+        "commands": [
+          "wine regedit /E registry_export.reg",
+          "wine reg query 'HKEY_CURRENT_USER\\Software\\LucasArts\\Shadows of the Empire'"
+        ],
+        "purpose": "Test Wine registry access for game configuration"
+      },
+      {
+        "category": "SDL2 Wine Performance",
+        "commands": [
+          "WINEDEBUG=+dll wine ./SOTE.exe", 
+          "wine ./SOTE.exe 2>&1 | grep -i 'SDL\\|DirectDraw\\|DirectSound'"
+        ],
+        "purpose": "Measure SDL2 adapter performance under Wine"
+      },
+      {
+        "category": "Asset File Access Patterns", 
+        "commands": [
+          "WINEDEBUG=+file wine ./SOTE.exe",
+          "strace -e openat,read wine ./SOTE.exe 2>&1 | grep 'Sdata'"
+        ],
+        "purpose": "Analyze file access patterns through Wine file system layer"
+      },
+      {
+        "category": "DirectX DLL Resolution",
+        "commands": [
+          "wine winecfg # check ddraw.dll, dsound.dll, dinput.dll settings",
+          "WINEDLLOVERRIDES='ddraw,dsound,dinput=n' wine ./SOTE.exe"
+        ],
+        "purpose": "Test DirectX DLL override behavior with adapters"
+      }
+    ]
+  },
+  "execution_environment": {
+    "wine_configuration": {
+      "prefix": "itest/wine_prefix",
+      "windows_version": "win98",
+      "audio_driver": "alsa", 
+      "video_driver": "x11",
+      "dll_overrides": {
+        "ddraw": "native,builtin",
+        "dsound": "native,builtin", 
+        "dinput": "native,builtin"
+      }
+    },
+    "test_execution_sequence": [
+      "Create clean Wine prefix for testing",
+      "Set environment variables (WINEDEBUG=minimal)",
+      "Execute each scenario in dependency order", 
+      "Capture Wine logs to runtime/wine.log",
+      "Generate integration test results JSON",
+      "Clean up test Wine prefix"
+    ],
+    "success_metrics": {
+      "scenario_pass_threshold": "60% (3 of 5 scenarios)",
+      "critical_scenarios": ["wine_init_sdl2_setup", "wine_boot_path_execution"],
+      "log_analysis_requirements": [
+        "No SIGSEGV or unhandled exceptions",
+        "SDL2 initialization attempts logged", 
+        "File access operations logged",
+        "DirectX API replacement calls logged"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "call_id": "coord-0006",
+  "agent": "testing",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "evidence": "evidence.curated.json",
+      "mappings": "mappings.json",
+      "layouts": "layouts.curated.json",
+      "build_graph": "build.graph.json"
+    },
+    "scope": {
+      "test_types": ["unit", "integration", "functional"],
+      "coverage": "key_functions",
+      "validation": "signature_matching"
+    },
+    "options": {
+      "deterministic_sort": true,
+      "generate_test_stubs": true,
+      "include_performance_tests": true,
+      "create_mock_framework": true
+    }
+  },
+  "expected_outputs": ["tests.plan.json", "tests/test_main.c", "tests/test_framework.h"]
+}

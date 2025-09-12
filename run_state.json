@@ -1,0 +1,52 @@
+{
+  "run_state": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "inputs": {
+      "r2": {
+        "aflj": "inputs/r2_aflj.json",
+        "izzj": "inputs/r2_izzj.json",
+        "callers": "inputs/callers_analysis.json"
+      },
+      "ghidra": {
+        "functions": "inputs/ghidra_functions.json",
+        "structures": "inputs/ghidra_structures.json"
+      },
+      "source_roots": ["src", "include"],
+      "tooling": {
+        "pref": "make"
+      }
+    },
+    "db": {
+      "evidence": "evidence.curated.json",
+      "layouts": "layouts.curated.json",
+      "mappings": "mappings.json",
+      "navigator_manifest": "navigator.next_batch.manifest.json"
+    },
+    "build": {
+      "graph": "build.graph.json",
+      "missing": "build.missing.md"
+    },
+    "tests": {
+      "plan": "tests.plan.json",
+      "results": "tests.results.json"
+    },
+    "docs": {
+      "book": "docs/README.md"
+    },
+    "history": "CHANGELOG.md",
+    "current_stage": "FINAL_BATCH_COORDINATION",
+    "batch_info": {
+      "current_batch": "navigator_batch_13",
+      "functions_in_batch": 31,
+      "batch_start_rank": 1001,
+      "batch_end_rank": 1335,
+      "target_coverage": 1.00,
+      "milestone": "100_PERCENT_COMPLETION"
+    }
+  }
+}

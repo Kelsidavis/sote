@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32",
+      "sections": 6,
+      "imports": 209,
+      "exports": 0,
+      "functions": 1335
+    },
+    "verification_date": "2025-09-10T15:45:00Z",
+    "mode": "verification_only",
+    "resume": true,
+    "deterministic_sort": true
+  },
+  "inputs_used": {
+    "evidence_files": [
+      "evidence.curated.json",
+      "mappings.json", 
+      "layouts.curated.json",
+      "functions_26_100.json"
+    ],
+    "implementation_files": [
+      "src/entry.c",
+      "src/main.c",
+      "src/priority_functions.c",
+      "src/batch2_functions.c",
+      "src/batch3_functions.c",
+      "src/batch4_functions.c",
+      "src/missing_functions.c"
+    ],
+    "header_files": [
+      "include/sote.h",
+      "include/types.h",
+      "include/priority_functions.h",
+      "include/batch2_functions.h",
+      "include/batch3_functions.h", 
+      "include/batch4_functions.h",
+      "include/missing_functions.h"
+    ]
+  },
+  "summary": {
+    "total_functions_analyzed": 108,
+    "functions_with_evidence": 98,
+    "functions_missing_evidence": 10,
+    "total_issues": 47,
+    "critical_issues": 5,
+    "warnings": 18,
+    "info_messages": 24,
+    "provenance_density": 0.72,
+    "implementation_coverage": 0.073,
+    "quality_score": 6.8
+  },
+  "issues": [
+    {
+      "severity": "ERROR",
+      "kind": "SIGNATURE_MISMATCH",
+      "location": "src/main.c:25",
+      "function": "main",
+      "expected": "int main(char **argv, char **envp, int32_t envp)",
+      "observed": "int main(char** argv, char** envp, int envp_count)",
+      "provenance": "evidence.curated.json:functions.key_functions[1]",
+      "fix_suggestion": "Rename third parameter from 'envp_count' to match binary evidence parameter name 'envp'"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "CONTROL_FLOW_DRIFT",
+      "location": "src/main.c:25-41",
+      "function": "main",
+      "expected": "Size: 25 bytes indicates simple wrapper",
+      "observed": "Complex argument counting loop adds significant size",
+      "provenance": "evidence.curated.json:functions.key_functions[1].size",
+      "fix_suggestion": "Simplify main() to directly call game_main_loop without argument counting loop"
+    },
+    {
+      "severity": "WARN",
+      "kind": "MISSING_PROVENANCE",
+      "location": "src/entry.c:104-176",
+      "function": "entry_point",
+      "expected": "Provenance comments for command line parsing logic",
+      "observed": "No evidence cited for complex parsing implementation",
+      "provenance": "None",
+      "fix_suggestion": "Add provenance comments citing evidence for command line parsing approach"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "FABRICATION",
+      "location": "src/entry.c:206-282",
+      "function": "initialize_directdraw",
+      "expected": "Evidence for function existence and implementation",
+      "observed": "Helper function not found in binary evidence",
+      "provenance": "None",
+      "fix_suggestion": "Remove or mark as synthetic helper with clear provenance"
+    },
+    {
+      "severity": "WARN",
+      "kind": "LAYOUT_INFLATION",
+      "location": "include/types.h:26-36",
+      "structure": "GameState",
+      "expected": "Structure size based on stack frame evidence",
+      "observed": "Estimated 1024 bytes without binary evidence",
+      "provenance": "layouts.curated.json",
+      "fix_suggestion": "Use actual stack frame sizes from layouts.curated.json"
+    },
+    {
+      "severity": "INFO",
+      "kind": "NAMING_DRIFT",
+      "location": "src/main.c:49",
+      "function": "game_main_loop",
+      "expected": "fcn.0044649e",
+      "observed": "game_main_loop",
+      "provenance": "mappings.json:functions.4482206",
+      "fix_suggestion": "Add comment showing original name mapping"
+    },
+    {
+      "severity": "WARN",
+      "kind": "EVIDENCE_GAP",
+      "location": "src/priority_functions.c:88-96",
+      "function": "fcn.00419d60",
+      "expected": "Complete switch cases for CC=117",
+      "observed": "Only 4 cases implemented, TODO for remaining",
+      "provenance": "evidence.curated.json",
+      "fix_suggestion": "Mark clearly as incomplete with evidence request"
+    },
+    {
+      "severity": "ERROR",
+      "kind": "CONSTANT_MISMATCH",
+      "location": "src/entry.c:219",
+      "function": "initialize_directdraw",
+      "expected": "Display mode from binary analysis",
+      "observed": "Hardcoded 640x480x8 without evidence",
+      "provenance": "None",
+      "fix_suggestion": "Cite evidence for display mode values"
+    },
+    {
+      "severity": "INFO",
+      "kind": "IMPORT_USAGE",
+      "location": "Multiple files",
+      "expected": "209 imports from evidence",
+      "observed": "18 import usages found",
+      "provenance": "evidence.curated.json:imports.summary",
+      "fix_suggestion": "Low import coverage is acceptable for partial implementation"
+    },
+    {
+      "severity": "WARN",
+      "kind": "MISSING_FUNCTIONS",
+      "location": "Implementation coverage",
+      "expected": "1335 functions in binary",
+      "observed": "98 functions implemented",
+      "provenance": "evidence.curated.json:functions.summary.total_functions",
+      "fix_suggestion": "Implementation covers 7.3% of binary functions"
+    }
+  ],
+  "function_results": [
+    {
+      "offset": 4279744,
+      "name": "entry_point",
+      "status": "PARTIAL",
+      "issues": ["Complex command line parsing not evidenced", "DirectDraw helpers lack provenance"],
+      "provenance_density": 0.65
+    },
+    {
+      "offset": 4377150,
+      "name": "main", 
+      "status": "MISMATCH",
+      "issues": ["Size mismatch (25 bytes expected)", "Parameter naming incorrect"],
+      "provenance_density": 0.80
+    },
+    {
+      "offset": 4482206,
+      "name": "game_main_loop",
+      "status": "PARTIAL",
+      "issues": ["Size compliance (103 bytes)", "Message loop not evidenced"],
+      "provenance_density": 0.70
+    },
+    {
+      "offset": 4444842,
+      "name": "memory_allocator",
+      "status": "OK",
+      "issues": [],
+      "provenance_density": 0.85
+    },
+    {
+      "offset": 4284632,
+      "name": "debug_output",
+      "status": "OK",
+      "issues": ["Small size (31 bytes) correctly implemented"],
+      "provenance_density": 0.90
+    },
+    {
+      "offset": 4446520,
+      "name": "error_handler",
+      "status": "PARTIAL",
+      "issues": ["Size reasonable (74 bytes)"],
+      "provenance_density": 0.75
+    },
+    {
+      "offset": 4461941,
+      "name": "system_info_getter",
+      "status": "PARTIAL",
+      "issues": ["Size compliance (83 bytes)"],
+      "provenance_density": 0.70
+    },
+    {
+      "offset": 4284544,
+      "name": "string_utility",
+      "status": "OK",
+      "issues": ["Size reasonable (88 bytes)"],
+      "provenance_density": 0.80
+    },
+    {
+      "offset": 4463569,
+      "name": "cleanup_handler",
+      "status": "MISMATCH",
+      "issues": ["Size mismatch (16 bytes expected, implementation too large)"],
+      "provenance_density": 0.60
+    },
+    {
+      "offset": 4463563,
+      "name": "exit_handler",
+      "status": "OK",
+      "issues": ["Tiny size (6 bytes) correctly implemented"],
+      "provenance_density": 0.95
+    }
+  ],
+  "struct_results": [
+    {
+      "name": "GameState",
+      "status": "UNVERIFIED",
+      "issues": ["No binary evidence for structure layout", "Size estimation without backing"],
+      "provenance_density": 0.0
+    },
+    {
+      "name": "GraphicsContext",
+      "status": "UNVERIFIED", 
+      "issues": ["DirectDraw structure inferred from imports only"],
+      "provenance_density": 0.3
+    },
+    {
+      "name": "ConfigData",
+      "status": "UNVERIFIED",
+      "issues": ["Registry pattern inferred, no structure evidence"],
+      "provenance_density": 0.2
+    }
+  ],
+  "quality_metrics": {
+    "provenance_density": {
+      "value": 0.72,
+      "target": 0.60,
+      "status": "PASS",
+      "description": "Percentage of code with evidence citations"
+    },
+    "implementation_coverage": {
+      "value": 0.073,
+      "target": 1.0,
+      "status": "PARTIAL",
+      "description": "Percentage of binary functions implemented"
+    },
+    "signature_accuracy": {
+      "value": 0.80,
+      "target": 1.0,
+      "status": "WARN",
+      "description": "Percentage of functions with correct signatures"
+    },
+    "control_flow_fidelity": {
+      "value": 0.65,
+      "target": 0.90,
+      "status": "FAIL",
+      "description": "Percentage matching binary control flow"
+    },
+    "constant_accuracy": {
+      "value": 0.75,
+      "target": 1.0,
+      "status": "WARN",
+      "description": "Percentage of constants correctly matched"
+    },
+    "layout_fidelity": {
+      "value": 0.10,
+      "target": 0.80,
+      "status": "FAIL",
+      "description": "Structure layouts matching binary evidence"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "EVIDENCE",
+      "recommendation": "Obtain decompiler output for main() to verify 25-byte implementation",
+      "impact": "Critical for signature accuracy"
+    },
+    {
+      "priority": "HIGH", 
+      "category": "REFACTOR",
+      "recommendation": "Remove fabricated DirectDraw helper functions or mark as synthetic",
+      "impact": "Eliminates fabrication issues"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "DOCUMENTATION",
+      "recommendation": "Add provenance comments to command line parsing in entry_point",
+      "impact": "Improves traceability"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "CORRECTNESS",
+      "recommendation": "Simplify cleanup_handler to match 16-byte size constraint",
+      "impact": "Ensures binary fidelity"
+    },
+    {
+      "priority": "LOW",
+      "category": "COMPLETENESS",
+      "recommendation": "Continue implementing priority functions from functions_26_100.json",
+      "impact": "Increases coverage incrementally"
+    }
+  ],
+  "conclusion": {
+    "status": "PARTIAL_IMPLEMENTATION",
+    "quality_score": 6.8,
+    "strengths": [
+      "Good provenance density (72%) exceeds target",
+      "Core entry point and main functions present",
+      "Import usage aligns with binary evidence",
+      "Priority function framework established"
+    ],
+    "weaknesses": [
+      "Low implementation coverage (7.3%)",
+      "Fabricated helper functions without evidence",
+      "Structure layouts lack binary backing",
+      "Some function sizes don't match evidence"
+    ],
+    "verdict": "Implementation demonstrates good evidence discipline but requires refinement for binary fidelity. Remove fabricated code and focus on evidence-backed implementations."
+  }
+}

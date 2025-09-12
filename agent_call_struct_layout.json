@@ -1,0 +1,33 @@
+{
+  "call_id": "coord-003",
+  "agent": "struct_layout",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "evidence_db": "evidence_navigator_sample.json",
+      "r2_izzj": "inputs/r2_izzj.json",
+      "existing_layouts": "layouts.curated.json"
+    },
+    "scope": {
+      "function_ranks": [1, 20],
+      "analysis_type": "parameter_and_local_structures",
+      "stack_frame_analysis": true,
+      "data_ref_analysis": true
+    },
+    "options": {
+      "deterministic_sort": true,
+      "evidence_only": true,
+      "min_struct_size": 8,
+      "merge_with_existing": true
+    }
+  },
+  "expected_outputs": [
+    "layouts.curated.json"
+  ]
+}

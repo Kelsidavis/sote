@@ -1,0 +1,35 @@
+{
+  "call_id": "coord-006",
+  "agent": "testing",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "implementation": "src/navigator_batch_1_functions.c",
+      "headers": "include/navigator_batch_1_functions.h",
+      "evidence": "evidence_navigator_sample.json",
+      "mappings": "mappings.json"
+    },
+    "scope": {
+      "function_ranks": [1, 20],
+      "test_types": ["unit", "integration", "evidence_validation"],
+      "coverage_target": 95.0,
+      "batch_name": "navigator_batch_1"
+    },
+    "options": {
+      "deterministic_sort": true,
+      "evidence_driven_testing": true,
+      "re_agent_compliance": true,
+      "include_performance_tests": true
+    }
+  },
+  "expected_outputs": [
+    "tests.plan.json",
+    "tests/test_navigator_batch_1.c"
+  ]
+}

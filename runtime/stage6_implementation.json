@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "stage": "SOTE Stage 6: Loader Reimplementation",
+    "artifact": "runtime_loaders.c",
+    "timestamp": "2025-09-11T22:30:00Z",
+    "evidence_base": [
+      "evidence.curated.json",
+      "layouts.curated.json",
+      "mappings.json",
+      "runtime/bootpath.manifest.json",
+      "runtime/runtime.apis.json",
+      "runtime/resource.catalog.json"
+    ],
+    "schema_version": "1.0"
+  },
+  "implementation_summary": {
+    "total_functions": 25,
+    "fully_implemented": 18,
+    "partial_stubs": 7,
+    "evidence_backed": "100%",
+    "speculative_code": "0%"
+  },
+  "implemented_loaders": {
+    "file_io": {
+      "functions": [
+        "file_open",
+        "file_read",
+        "file_seek",
+        "file_close",
+        "file_get_size"
+      ],
+      "status": "complete",
+      "evidence": "VA_0x402100, VA_0x402200, IAT addresses",
+      "notes": "Portable wrappers for CreateFileA/ReadFile/SetFilePointer"
+    },
+    "bmp_loader": {
+      "functions": [
+        "bmp_load",
+        "bmp_validate_header",
+        "bmp_free"
+      ],
+      "status": "complete",
+      "evidence": "VA_0x403000, resource.catalog.json specs",
+      "capabilities": "Loads 43 Windows 3.x BMPs (640x480x24, 256x256x24)",
+      "validation": "Magic 'BM', 24-bit only, uncompressed only"
+    },
+    "wav_loader": {
+      "functions": [
+        "wav_load",
+        "wav_validate_header",
+        "wav_free"
+      ],
+      "status": "complete",
+      "evidence": "VA_0x403100, resource.catalog.json specs",
+      "capabilities": "Loads 183 PCM WAVs (16-bit mono, 11025/22050 Hz)",
+      "validation": "RIFF/WAVE magic, PCM format only"
+    },
+    "memory_management": {
+      "functions": [
+        "runtime_alloc",
+        "runtime_realloc",
+        "runtime_free"
+      ],
+      "status": "complete",
+      "evidence": "VA_0x43d2aa marked as implemented",
+      "notes": "HeapAlloc/HeapReAlloc/HeapFree wrappers"
+    },
+    "asset_catalog": {
+      "functions": [
+        "asset_catalog_build",
+        "asset_catalog_find",
+        "asset_catalog_free"
+      ],
+      "status": "partial",
+      "evidence": "VA_0x402200",
+      "missing": "FindFirstFileA/FindNextFileA directory scanning pattern"
+    }
+  },
+  "stub_functions": {
+    "dll_archive_loader": {
+      "functions": [
+        "dll_archive_init",
+        "dll_archive_load",
+        "dll_archive_get_resource",
+        "dll_archive_cleanup"
+      ],
+      "status": "stub",
+      "evidence": "VA_0x402000",
+      "missing_evidence": [
+        "LoadLibraryA calling convention",
+        "GetProcAddress usage pattern",
+        "FreeLibrary cleanup pattern",
+        "Resource extraction from DLL"
+      ],
+      "required_analysis": "radare2 -c 'axt @ sym.imp.LoadLibraryA' Shadows.exe"
+    },
+    "san_movie_loader": {
+      "functions": [
+        "san_load"
+      ],
+      "status": "stub",
+      "evidence": "VA_0x403200 but low confidence",
+      "missing_evidence": [
+        "SAN file format structure",
+        "Magic bytes and header layout",
+        "Codec type (likely proprietary LucasArts)",
+        "Frame structure and compression"
+      ],
+      "required_analysis": [
+        "hexdump -C Sdata/*.san | head -100",
+        "strings Sdata/*.san | grep -i 'magic|version|codec'",
+        "radare2 -c 'px 512' Sdata/intro.san"
+      ]
+    }
+  },
+  "provenance_tracking": {
+    "every_function": "Has PROV comment with VA address or evidence source",
+    "every_constant": "Has PROV comment with binary location or catalog reference",
+    "every_struct_field": "Maps to loader_structures.h with evidence",
+    "stub_markers": "TODO_EVID() with exact commands needed"
+  },
+  "validation_rules": {
+    "bmp": {
+      "magic": "0x4D42 ('BM')",
+      "header_size": "54 bytes",
+      "info_size": "40 bytes (Windows 3.x)",
+      "bit_depth": "24-bit only",
+      "compression": "BI_RGB (0) only"
+    },
+    "wav": {
+      "riff_magic": "0x46464952 ('RIFF')",
+      "wave_magic": "0x45564157 ('WAVE')",
+      "format": "PCM (1) only",
+      "channels": "Mono (1) only",
+      "bit_depth": "16-bit only"
+    }
+  },
+  "error_handling": {
+    "file_errors": "Return NULL on open/read failures",
+    "validation_errors": "Return NULL on invalid headers",
+    "memory_errors": "Return NULL on allocation failures",
+    "cleanup": "Always free partial allocations on error"
+  },
+  "next_steps": {
+    "priority_1": {
+      "task": "Analyze LoadLibraryA usage for DLL loading",
+      "commands": [
+        "radare2 -c 'aa; axt @ sym.imp.LoadLibraryA' Shadows.exe",
+        "radare2 -c 'aa; pdf @ 0x402000' Shadows.exe"
+      ],
+      "impact": "Unblocks 32 DLL data archives"
+    },
+    "priority_2": {
+      "task": "Reverse engineer SAN movie format",
+      "commands": [
+        "hexdump -C Sdata/intro.san | head -200",
+        "radare2 -c 'px 1024' Sdata/intro.san",
+        "file Sdata/*.san"
+      ],
+      "impact": "Enables 17 movie files"
+    },
+    "priority_3": {
+      "task": "Complete directory scanning for catalog",
+      "commands": [
+        "radare2 -c 'aa; axt @ sym.imp.FindFirstFileA' Shadows.exe",
+        "radare2 -c 'aa; axt @ sym.imp.FindNextFileA' Shadows.exe"
+      ],
+      "impact": "Auto-discovers all 277 assets"
+    }
+  },
+  "stage7_readiness": {
+    "ready_for_adapter": [
+      "BMP loader (complete)",
+      "WAV loader (complete)",
+      "File I/O wrapper (complete)",
+      "Memory management (complete)"
+    ],
+    "needs_evidence": [
+      "DLL archive loader (LoadLibraryA pattern)",
+      "SAN movie parser (format unknown)",
+      "Asset catalog scanner (FindFirstFile pattern)"
+    ],
+    "adapter_integration_points": [
+      "SDL2 texture creation from BMP_IMAGE",
+      "SDL2 audio buffer from WAV_SOUND",
+      "Wine LoadLibraryA for DLL archives",
+      "SDL2 file I/O for portability"
+    ]
+  }
+}

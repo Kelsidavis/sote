@@ -1,0 +1,504 @@
+{
+  "integration_test_metadata": {
+    "timestamp": "2025-09-11T22:30:00Z",
+    "generator": "Integration Test Agent v2.0",
+    "version": "2.0.0",
+    "deterministic_sort": true,
+    "schema_version": "2.1.0",
+    "project_phase": "sote-m100-norm-final"
+  },
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "inputs_used": {
+    "evidence_file": "evidence.curated.json",
+    "layouts_file": "layouts.curated.json",
+    "mappings_file": "mappings.json",
+    "unit_test_results": "tests.results.json",
+    "existing_itest_results": "itest.results.json"
+  },
+  "test_overview": {
+    "total_scenarios": 7,
+    "evidence_based": true,
+    "fabrication_tolerance": 0,
+    "build_on_unit_success": "95.1% unit test pass rate",
+    "milestone_context": "97.7% function coverage (1304/1335) with 710 normalized functions",
+    "focus_areas": [
+      "Entry point → main → game_main_loop execution chain",
+      "Normalized function integration (fcn_XXXXXXXX)",
+      "Windows API stub integration with real functions",
+      "Batch function processing workflows",
+      "Memory management integration patterns",
+      "Error handling and recovery chains",
+      "Full system initialization and shutdown"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "program_initialization_chain",
+      "name": "Program Initialization Chain",
+      "description": "Tests complete program startup from entry_point through main to game_main_loop",
+      "type": "initialization_integration",
+      "priority": "critical",
+      "evidence_backing": {
+        "function_chain": [
+          {
+            "offset": 4279744,
+            "name": "entry_point",
+            "role": "system initialization",
+            "size": 423,
+            "provenance": "evidence.curated.json @ functions.key_functions[0]"
+          },
+          {
+            "offset": 4377150,
+            "name": "main",
+            "role": "orchestration",
+            "size": 25,
+            "provenance": "evidence.curated.json @ functions.key_functions[1]"
+          },
+          {
+            "offset": 4482206,
+            "name": "game_main_loop",
+            "role": "main processing",
+            "size": 103,
+            "provenance": "mappings.json @ 4482206.game_main_loop"
+          }
+        ],
+        "api_sequence": [
+          "GetStartupInfoA",
+          "GetCommandLineA",
+          "GetEnvironmentStrings",
+          "HeapCreate",
+          "SetErrorMode"
+        ],
+        "data_structures": [
+          "STARTUPINFOA",
+          "GameState",
+          "GraphicsContext"
+        ]
+      },
+      "fixtures": {
+        "command_line_args": ["./sote.exe", "--test-mode"],
+        "environment_vars": 10,
+        "heap_size": 4096,
+        "expected_return_code": 0
+      },
+      "test_sequence": [
+        "Initialize system via entry_point",
+        "Parse command line arguments",
+        "Set up environment and heap",
+        "Call main function with parsed arguments",
+        "Initialize game loop with correct parameters",
+        "Verify proper function call chain execution"
+      ],
+      "assertions": [
+        {
+          "type": "call_order",
+          "sequence": ["entry_point", "main", "game_main_loop"],
+          "provenance": "Function call chain from src/main.c line 62 and src/entry.c line 191"
+        },
+        {
+          "type": "return_code",
+          "target": "main",
+          "expected": 0,
+          "provenance": "evidence.curated.json @ functions.key_functions[1] - successful execution pattern"
+        },
+        {
+          "type": "side_effect",
+          "target": "entry_point",
+          "effect": "initializes_system_state",
+          "provenance": "src/entry.c initialization sequence lines 70-108"
+        }
+      ]
+    },
+    {
+      "id": "normalized_function_integration",
+      "name": "Normalized Function Integration",
+      "description": "Tests integration of normalized fcn_XXXXXXXX functions with core system",
+      "type": "normalization_integration",
+      "priority": "high",
+      "evidence_backing": {
+        "normalized_functions": [
+          {
+            "offset": 4199696,
+            "name": "fcn_00401510",
+            "mapped_name": "dispatch_handler_00401510_small",
+            "connectivity": 16,
+            "provenance": "mappings.json @ 4199696"
+          },
+          {
+            "offset": 4323232,
+            "name": "fcn_0041f7a0",
+            "mapped_name": "process_hub_0041f7a0_small",
+            "connectivity": 13,
+            "provenance": "mappings.json @ 4323232"
+          },
+          {
+            "offset": 4445135,
+            "name": "fcn_0043d3cf",
+            "mapped_name": "process_hub_0043d3cf_large",
+            "connectivity": 44,
+            "provenance": "mappings.json @ 4445135"
+          }
+        ],
+        "normalization_pattern": "fcn_XXXXXXXX",
+        "total_normalized": 710
+      },
+      "fixtures": {
+        "test_functions": 5,
+        "connectivity_threshold": 10,
+        "test_data_size": 1024
+      },
+      "test_sequence": [
+        "Initialize normalized function registry",
+        "Test high-connectivity hub functions",
+        "Verify fcn_XXXXXXXX naming compliance",
+        "Test inter-function communication",
+        "Validate parameter passing patterns"
+      ],
+      "assertions": [
+        {
+          "type": "call_order",
+          "sequence": ["fcn_00401510", "fcn_0041f7a0", "fcn_0043d3cf"],
+          "provenance": "Navigator rank ordering from mappings.json"
+        },
+        {
+          "type": "side_effect",
+          "target": "fcn_0041f7a0",
+          "effect": "processes_hub_data",
+          "provenance": "mappings.json descriptor: process_hub_0041f7a0_small"
+        }
+      ]
+    },
+    {
+      "id": "windows_api_stub_integration",
+      "name": "Windows API Stub Integration",
+      "description": "Tests Windows API stubs working with real function implementations",
+      "type": "api_integration",
+      "priority": "high",
+      "evidence_backing": {
+        "api_functions": [
+          "CreateFileA",
+          "ReadFile",
+          "WriteFile",
+          "HeapAlloc",
+          "HeapFree",
+          "MessageBoxA",
+          "OutputDebugStringA",
+          "GetVersion"
+        ],
+        "wrapper_functions": [
+          {
+            "offset": 4444842,
+            "name": "memory_allocator",
+            "wraps": "HeapAlloc",
+            "provenance": "src/main.c lines 149-170"
+          },
+          {
+            "offset": 4284632,
+            "name": "debug_output",
+            "wraps": "OutputDebugStringA",
+            "provenance": "src/main.c lines 177-186"
+          }
+        ],
+        "stub_definitions": "src/main.c lines 22-36, src/entry.c lines 22-42"
+      },
+      "fixtures": {
+        "file_operations": 3,
+        "memory_operations": 5,
+        "debug_messages": 4,
+        "test_file_size": 2048
+      },
+      "test_sequence": [
+        "Initialize API stub layer",
+        "Test memory allocation through memory_allocator",
+        "Test file operations with CreateFileA/ReadFile",
+        "Test debug output through debug_output",
+        "Verify error handling in API failures"
+      ],
+      "assertions": [
+        {
+          "type": "call_order",
+          "sequence": ["memory_allocator", "HeapAlloc", "debug_output"],
+          "provenance": "API wrapper pattern from src/main.c"
+        },
+        {
+          "type": "side_effect",
+          "target": "memory_allocator",
+          "effect": "allocates_memory",
+          "provenance": "HeapAlloc call in src/main.c line 163"
+        },
+        {
+          "type": "side_effect",
+          "target": "debug_output",
+          "effect": "outputs_debug_info",
+          "provenance": "OutputDebugStringA call in src/main.c line 184"
+        }
+      ]
+    },
+    {
+      "id": "batch_function_processing",
+      "name": "Navigator Batch Function Processing",
+      "description": "Tests systematic processing of navigator batch functions",
+      "type": "batch_processing_integration",
+      "priority": "medium",
+      "evidence_backing": {
+        "batch_functions": [
+          {
+            "batch": "navigator_batch_11",
+            "functions": 100,
+            "rank_range": "801-900",
+            "milestone": "90% coverage achievement",
+            "provenance": "evidence.curated.json @ implementation_batches.navigator_batch_11"
+          },
+          {
+            "batch": "navigator_batch_12",
+            "functions": 100,
+            "rank_range": "901-1000",
+            "achievement": "97.7% near-complete binary coverage",
+            "provenance": "evidence.curated.json @ implementation_batches.navigator_batch_12"
+          }
+        ],
+        "sample_functions": [
+          {
+            "offset": 4300128,
+            "name": "func_00419d60",
+            "size": 2199,
+            "batch": "navigator_batch_4"
+          },
+          {
+            "offset": 4481024,
+            "name": "func_00446000",
+            "size": 673,
+            "batch": "navigator_batch_4"
+          }
+        ]
+      },
+      "fixtures": {
+        "batch_count": 2,
+        "functions_per_batch": 10,
+        "connectivity_threshold": 50
+      },
+      "test_sequence": [
+        "Initialize batch processing infrastructure",
+        "Process navigator_batch_11 functions",
+        "Process navigator_batch_12 functions",
+        "Verify inter-batch dependencies",
+        "Validate milestone achievements"
+      ],
+      "assertions": [
+        {
+          "type": "return_code",
+          "target": "func_00419d60",
+          "expected": "UNSPECIFIED",
+          "provenance": "Missing Evidence - function implementation needs decompiler output"
+        },
+        {
+          "type": "call_order",
+          "sequence": ["navigator_batch_11", "navigator_batch_12"],
+          "provenance": "evidence.curated.json implementation order"
+        }
+      ]
+    },
+    {
+      "id": "memory_management_integration",
+      "name": "Memory Management Integration",
+      "description": "Tests memory allocation, deallocation, and heap management patterns",
+      "type": "memory_integration",
+      "priority": "high",
+      "evidence_backing": {
+        "memory_functions": [
+          {
+            "offset": 4444842,
+            "name": "memory_allocator",
+            "size": 95,
+            "provenance": "evidence.curated.json @ functions.key_functions"
+          }
+        ],
+        "api_functions": ["HeapCreate", "HeapAlloc", "HeapFree", "HeapDestroy"],
+        "global_variables": ["g_game_state", "g_graphics_context", "g_config_data"],
+        "data_structures": [
+          "GameState",
+          "GraphicsContext", 
+          "ConfigData"
+        ]
+      },
+      "fixtures": {
+        "allocation_sizes": [64, 512, 4096, 65536],
+        "allocation_count": 20,
+        "test_heap_size": 1048576
+      },
+      "test_sequence": [
+        "Initialize heap management system",
+        "Test memory_allocator wrapper function",
+        "Allocate game state structures",
+        "Test memory leak detection",
+        "Verify cleanup and deallocation"
+      ],
+      "assertions": [
+        {
+          "type": "side_effect",
+          "target": "memory_allocator",
+          "effect": "manages_heap_memory",
+          "provenance": "src/main.c HeapCreate/HeapAlloc pattern lines 154-163"
+        },
+        {
+          "type": "return_code",
+          "target": "memory_allocator",
+          "expected": "non_null_on_success",
+          "provenance": "Pointer return pattern from src/main.c line 163"
+        }
+      ]
+    },
+    {
+      "id": "error_handling_integration",
+      "name": "Error Handling Integration",
+      "description": "Tests error detection, reporting, and recovery workflows",
+      "type": "error_handling_integration",
+      "priority": "medium",
+      "evidence_backing": {
+        "error_functions": [
+          {
+            "offset": 4446520,
+            "name": "error_handler",
+            "size": 74,
+            "provenance": "src/main.c lines 193-203"
+          },
+          {
+            "offset": 4284632,
+            "name": "debug_output",
+            "size": 31,
+            "provenance": "src/main.c lines 177-186"
+          }
+        ],
+        "error_conditions": [
+          "memory_allocation_failure",
+          "file_access_failure",
+          "api_call_failure"
+        ],
+        "recovery_mechanisms": [
+          "cleanup_handler",
+          "exit_handler"
+        ]
+      },
+      "fixtures": {
+        "error_scenarios": 6,
+        "recovery_attempts": 3,
+        "test_error_codes": [1, 2, 5, 10]
+      },
+      "test_sequence": [
+        "Initialize error handling system",
+        "Trigger memory allocation failure",
+        "Test error_handler response",
+        "Verify debug_output error logging",
+        "Test recovery mechanisms",
+        "Validate graceful degradation"
+      ],
+      "assertions": [
+        {
+          "type": "branch_reached",
+          "target": "error_handler",
+          "branches": ["error_detected", "cleanup_initiated"],
+          "provenance": "Function exists per src/main.c implementation"
+        },
+        {
+          "type": "side_effect",
+          "target": "debug_output",
+          "effect": "logs_error_info",
+          "provenance": "debug_output(2) call in src/main.c line 196"
+        }
+      ]
+    },
+    {
+      "id": "full_system_workflow",
+      "name": "Full System Workflow Integration",
+      "description": "Tests complete system workflow from startup through shutdown",
+      "type": "end_to_end_integration",
+      "priority": "critical",
+      "evidence_backing": {
+        "workflow_functions": [
+          {"offset": 4279744, "name": "entry_point", "role": "startup"},
+          {"offset": 4377150, "name": "main", "role": "orchestration"},
+          {"offset": 4482206, "name": "game_main_loop", "role": "processing"},
+          {"offset": 4444842, "name": "memory_allocator", "role": "resource_management"},
+          {"offset": 4463569, "name": "cleanup_handler", "role": "cleanup"},
+          {"offset": 4463563, "name": "exit_handler", "role": "shutdown"}
+        ],
+        "system_states": [
+          "UNINITIALIZED",
+          "INITIALIZING", 
+          "RUNNING",
+          "CLEANING_UP",
+          "TERMINATED"
+        ]
+      },
+      "fixtures": {
+        "runtime_duration": 100,
+        "resource_cleanup_items": 15,
+        "expected_final_state": "TERMINATED"
+      },
+      "test_sequence": [
+        "Execute full startup sequence",
+        "Run main processing loop",
+        "Monitor resource usage",
+        "Trigger shutdown sequence",
+        "Verify complete cleanup",
+        "Validate final system state"
+      ],
+      "assertions": [
+        {
+          "type": "call_order",
+          "sequence": ["entry_point", "main", "game_main_loop", "cleanup_handler", "exit_handler"],
+          "provenance": "Complete workflow from src/main.c and src/entry.c"
+        },
+        {
+          "type": "return_code",
+          "target": "exit_handler",
+          "expected": 0,
+          "provenance": "ExitProcess(0) call in src/main.c line 275"
+        },
+        {
+          "type": "side_effect",
+          "target": "cleanup_handler",
+          "effect": "releases_all_resources",
+          "provenance": "cleanup pattern in src/main.c lines 254-265"
+        }
+      ]
+    }
+  ],
+  "missing_evidence": [
+    "Detailed decompiler output for navigator batch function implementations",
+    "Complete call graph analysis for cross-function dependencies",
+    "Structure field offset validation for complex data types",
+    "API sequence timing constraints for real-time operations",
+    "Error code mapping documentation for comprehensive error handling",
+    "Memory layout validation for heap management patterns",
+    "DirectDraw initialization sequence validation"
+  ],
+  "build_requirements": {
+    "compiler": "gcc",
+    "compiler_flags": ["-std=c99", "-Wall", "-Wextra", "-g", "-DINTEGRATION_TEST"],
+    "include_paths": ["include/", "itest/", "src/"],
+    "libraries": [],
+    "output_directory": "itest/build/"
+  },
+  "execution_plan": {
+    "parallel_execution": false,
+    "timeout_per_scenario": 300,
+    "total_estimated_time": 2100,
+    "result_format": "json",
+    "deterministic_output": true,
+    "execution_order": [
+      "program_initialization_chain",
+      "normalized_function_integration", 
+      "windows_api_stub_integration",
+      "memory_management_integration",
+      "error_handling_integration",
+      "batch_function_processing",
+      "full_system_workflow"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "call_id": "coord-EXP200-001",
+  "agent": "evidence_curator",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "r2_functions": "inputs/r2_aflj.json",
+      "expansion_targets": "navigator.expansion.json",
+      "existing_evidence": "evidence.curated.json"
+    },
+    "scope": {
+      "function_range": "ranks_105_304",
+      "total_functions": 200,
+      "expansion_basis": "size_and_complexity_ranking"
+    },
+    "options": {
+      "merge_mode": "extend",
+      "preserve_existing": true,
+      "deterministic_sort": true,
+      "evidence_level": "comprehensive"
+    }
+  },
+  "expected_outputs": [
+    "evidence.curated.expanded.json"
+  ]
+}

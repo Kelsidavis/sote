@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "stage": "NAVIGATOR_BATCH_IMPLEMENTATION",
+    "produced": [
+      "/media/k/vbox1/Shadows/SOTE/run_state.json",
+      "/media/k/vbox1/Shadows/SOTE/evidence_navigator_sample.json", 
+      "/media/k/vbox1/Shadows/SOTE/mappings.json",
+      "/media/k/vbox1/Shadows/SOTE/layouts.curated.json",
+      "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_1_functions.c",
+      "/media/k/vbox1/Shadows/SOTE/include/navigator_batch_1_functions.h",
+      "/media/k/vbox1/Shadows/SOTE/CMakeLists.txt",
+      "/media/k/vbox1/Shadows/SOTE/Makefile",
+      "/media/k/vbox1/Shadows/SOTE/build.graph.json",
+      "/media/k/vbox1/Shadows/SOTE/tests.plan.json",
+      "/media/k/vbox1/Shadows/SOTE/verification.report.json",
+      "/media/k/vbox1/Shadows/SOTE/metrics.report.json",
+      "/media/k/vbox1/Shadows/SOTE/CHANGELOG.md"
+    ],
+    "issues": {
+      "ERROR": 0,
+      "FABRICATION": 0, 
+      "WARN": 0
+    },
+    "next_route": [
+      {
+        "to": "reimplementation",
+        "reason": "navigator_batch_2_expansion", 
+        "scope": ["ranks_21_40"]
+      },
+      {
+        "to": "build_integration",
+        "reason": "compilation_testing",
+        "scope": ["navigator_batch_1"]
+      },
+      {
+        "to": "testing",
+        "reason": "test_execution",
+        "scope": ["navigator_batch_1_comprehensive_testing"]
+      }
+    ]
+  }
+}

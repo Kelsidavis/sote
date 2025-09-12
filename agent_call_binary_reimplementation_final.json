@@ -1,0 +1,40 @@
+{
+  "call_id": "coord-REIMPL13",
+  "agent": "binary-reimplementation-engineer",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "project_root": "/media/k/vbox1/Shadows/SOTE",
+      "evidence": "/media/k/vbox1/Shadows/SOTE/evidence.curated.json",
+      "mappings": "/media/k/vbox1/Shadows/SOTE/mappings.json",
+      "layouts": "/media/k/vbox1/Shadows/SOTE/layouts.curated.json",
+      "navigator_manifest": "/media/k/vbox1/Shadows/SOTE/navigator.final_batch.manifest.json",
+      "src_dir": "/media/k/vbox1/Shadows/SOTE/src",
+      "include_dir": "/media/k/vbox1/Shadows/SOTE/include"
+    },
+    "scope": {
+      "batch_id": "navigator_batch_13",
+      "target_functions": 31,
+      "rank_range": "1001-1031",
+      "milestone": "100_PERCENT_COMPLETION",
+      "evidence_only": true
+    },
+    "options": {
+      "deterministic_sort": true,
+      "forbid_fabrication": true,
+      "minimal_stub_approach": true,
+      "re_agent_compliance": true,
+      "provenance_density_min": 0.20
+    }
+  },
+  "expected_outputs": [
+    "src/navigator_batch_13_functions.c",
+    "include/navigator_batch_13_functions.h"
+  ]
+}

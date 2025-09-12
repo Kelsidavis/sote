@@ -1,0 +1,31 @@
+{
+  "call_id": "coord-0004",
+  "agent": "reimplementation",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "evidence": "evidence.curated.json",
+      "mappings": "mappings.json",
+      "layouts": "layouts.curated.json"
+    },
+    "scope": {
+      "symbols": "key_functions",
+      "ranges": "all",
+      "modules": ["main", "entry_point", "game_main_loop"]
+    },
+    "options": {
+      "deterministic_sort": true,
+      "respect_existing": true,
+      "generate_headers": true,
+      "include_comments": true,
+      "target_language": "C"
+    }
+  },
+  "expected_outputs": ["src/main.c", "src/entry.c", "include/sote.h", "include/types.h"]
+}

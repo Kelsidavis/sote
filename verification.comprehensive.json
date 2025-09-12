@@ -1,0 +1,60 @@
+{
+  "verification_metadata": {
+    "timestamp": "2025-09-11T19:41:15.495410",
+    "artifact": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77"
+  },
+  "coverage_analysis": {
+    "total_binary_functions": 1335,
+    "implemented_functions": 532,
+    "coverage_percentage": 39.9,
+    "missing_functions": 803
+  },
+  "implementation_details": {
+    "total_source_files": 27,
+    "file_statistics": {
+      "batch10_functions.c": 0,
+      "batch11_functions.c": 0,
+      "batch12_functions.c": 0,
+      "batch13_functions.c": 0,
+      "batch14_functions.c": 0,
+      "batch2_functions.c": 25,
+      "batch3_functions.c": 25,
+      "batch4_functions.c": 24,
+      "batch5_functions.c": 40,
+      "batch6_functions.c": 40,
+      "batch7_functions.c": 40,
+      "batch8_functions.c": 40,
+      "batch9_functions.c": 40,
+      "entry.c": 1,
+      "final_31_functions.c": 62,
+      "main.c": 2,
+      "missing_functions.c": 3,
+      "navigator_batch_11_functions.c": 96,
+      "navigator_batch_12_functions.c": 90,
+      "navigator_batch_13_functions.c": 29,
+      "navigator_batch_1_functions.c": 0,
+      "navigator_batch_2_functions.c": 0,
+      "navigator_batch_3_functions.c": 0,
+      "navigator_batch_4_functions.c": 59,
+      "navigator_batch_5_functions.c": 69,
+      "navigator_batch_6_functions.c": 70,
+      "priority_functions.c": 24
+    },
+    "final_31_functions": {
+      "expected": 31,
+      "found": 62,
+      "status": "INCOMPLETE"
+    },
+    "navigator_batch_13": {
+      "found": 29,
+      "status": "IMPLEMENTED"
+    }
+  },
+  "verification_result": {
+    "is_100_percent": false,
+    "has_final_31": false,
+    "has_navigator_13": true,
+    "verdict": "39.9% COVERAGE"
+  }
+}

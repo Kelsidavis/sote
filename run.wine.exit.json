@@ -1,0 +1,39 @@
+{
+  "wine_execution": {
+    "timestamp_start": "2025-09-12T07:05:53Z",
+    "timestamp_end": "2025-09-12T07:05:53Z",
+    "execution_duration_seconds": 0,
+    "exit_code": 0,
+    "exit_status": "SUCCESS",
+    "timeout_seconds": 120,
+    "timed_out": false
+  },
+  "command": {
+    "executable": "wine",
+    "arguments": ["SOTE.EXE", "--smoke"],
+    "working_directory": "/media/k/vbox1/Shadows/SOTE/build/bin",
+    "environment": {
+      "WINEDEBUG": "-all",
+      "SOTE_ASSET_DIR": "/media/k/vbox1/Shadows/SOTE/build/bin/Sdata"
+    }
+  },
+  "results": {
+    "successful_execution": true,
+    "clean_exit": true,
+    "smoke_test_passed": true,
+    "asset_directory_available": true,
+    "binary_compatibility": "CONFIRMED"
+  },
+  "performance": {
+    "quick_startup": true,
+    "no_hanging": true,
+    "responsive_exit": true
+  },
+  "validation": {
+    "wine_version": "wine-9.0 (Ubuntu 9.0~repack-4build3)",
+    "platform": "linux",
+    "architecture": "x86_64_hosting_i386",
+    "asset_count": 277,
+    "asset_staging_successful": true
+  }
+}

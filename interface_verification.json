@@ -1,0 +1,441 @@
+{
+  "verification_type": "interface_compliance",
+  "summary": {
+    "total_verified": 466,
+    "passed": 170,
+    "passed_with_warnings": 0,
+    "failed": 292,
+    "not_found": 4,
+    "compliance_percentage": 36.48068669527897
+  },
+  "by_check": {
+    "naming_correct": 462,
+    "signature_preserved": 170,
+    "calling_convention_ok": 462,
+    "has_provenance": 461
+  },
+  "sample_results": [
+    {
+      "address": "4284632",
+      "function": "fcn_004160d8",
+      "original": "fcn.004160d8",
+      "file": "src/batch5_functions.c",
+      "status": "PASS",
+      "checks": {
+        "naming": true,
+        "signature": true,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_004160d8(int32_t arg_ch)"
+    },
+    {
+      "address": "4284544",
+      "function": "fcn_00416080",
+      "original": "fcn.00416080",
+      "file": "src/batch5_functions.c",
+      "status": "PASS",
+      "checks": {
+        "naming": true,
+        "signature": true,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00416080(int32_t arg_4h, int32_t arg_8h, int32_t arg_ch)"
+    },
+    {
+      "address": "4463569",
+      "function": "fcn_00441bd1",
+      "original": "fcn.00441bd1",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00441bd1(int32_t argc)"
+    },
+    {
+      "address": "4549771",
+      "function": "fcn_00456c8b",
+      "original": "fcn.00456c8b",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00456c8b(int32_t argc)"
+    },
+    {
+      "address": "4375776",
+      "function": "fcn_0042c4e0",
+      "original": "fcn.0042c4e0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0042c4e0(int32_t arg_20h, int32_t arg_30h, int32_t arg_14h, int32_t arg_30h_2)"
+    },
+    {
+      "address": "4379840",
+      "function": "fcn_0042d4c0",
+      "original": "fcn.0042d4c0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0042d4c0(int32_t arg_18h)"
+    },
+    {
+      "address": "4304016",
+      "function": "fcn_0041ac90",
+      "original": "fcn.0041ac90",
+      "file": "src/batch5_functions.c",
+      "status": "PASS",
+      "checks": {
+        "naming": true,
+        "signature": true,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0041ac90(int32_t arg_14h, int32_t arg_18h)"
+    },
+    {
+      "address": "4299792",
+      "function": "fcn_00419c10",
+      "original": "fcn.00419c10",
+      "file": "src/batch5_functions.c",
+      "status": "PASS",
+      "checks": {
+        "naming": true,
+        "signature": true,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00419c10(int32_t arg_14h, int32_t arg_18h)"
+    },
+    {
+      "address": "4474031",
+      "function": "fcn_004444af",
+      "original": "fcn.004444af",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_004444af(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h)"
+    },
+    {
+      "address": "4355008",
+      "function": "fcn_004273c0",
+      "original": "fcn.004273c0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_004273c0(int32_t arg_18h_2, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t a..."
+    }
+  ],
+  "issues": [
+    {
+      "address": "4463569",
+      "function": "fcn_00441bd1",
+      "original": "fcn.00441bd1",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00441bd1(int32_t argc)"
+    },
+    {
+      "address": "4549771",
+      "function": "fcn_00456c8b",
+      "original": "fcn.00456c8b",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00456c8b(int32_t argc)"
+    },
+    {
+      "address": "4375776",
+      "function": "fcn_0042c4e0",
+      "original": "fcn.0042c4e0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0042c4e0(int32_t arg_20h, int32_t arg_30h, int32_t arg_14h, int32_t arg_30h_2)"
+    },
+    {
+      "address": "4379840",
+      "function": "fcn_0042d4c0",
+      "original": "fcn.0042d4c0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0042d4c0(int32_t arg_18h)"
+    },
+    {
+      "address": "4474031",
+      "function": "fcn_004444af",
+      "original": "fcn.004444af",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_004444af(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h)"
+    },
+    {
+      "address": "4355008",
+      "function": "fcn_004273c0",
+      "original": "fcn.004273c0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_004273c0(int32_t arg_18h_2, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t a..."
+    },
+    {
+      "address": "4329856",
+      "function": "fcn_00421180",
+      "original": "fcn.00421180",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00421180(int32_t argc)"
+    },
+    {
+      "address": "4354704",
+      "function": "fcn_00427290",
+      "original": "fcn.00427290",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00427290(int32_t arg_18h_2, int32_t arg_18h, int32_t arg_1ch, int32_t arg_20h, int32_t a..."
+    },
+    {
+      "address": "4449560",
+      "function": "fcn_0043e518",
+      "original": "fcn.0043e518",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0043e518(int32_t argc)"
+    },
+    {
+      "address": "4478822",
+      "function": "fcn_00445766",
+      "original": "fcn.00445766",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00445766(int32_t arg_8h, signed int arg_ch, uint32_t arg_10h)"
+    },
+    {
+      "address": "4532230",
+      "function": "fcn_00452806",
+      "original": "fcn.00452806",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00452806(int32_t arg_8h, uint32_t arg_ch, int32_t arg_10h)"
+    },
+    {
+      "address": "4456746",
+      "function": "fcn_0044012a",
+      "original": "fcn.0044012a",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0044012a(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, int32_t arg_8h)"
+    },
+    {
+      "address": "4266630",
+      "function": "fcn_00411a86",
+      "original": "fcn.00411a86",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00411a86(uint32_t arg_8h)"
+    },
+    {
+      "address": "4471755",
+      "function": "fcn_00443bcb",
+      "original": "fcn.00443bcb",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00443bcb(uint32_t arg_14h)"
+    },
+    {
+      "address": "4517373",
+      "function": "fcn_0044edfd",
+      "original": "fcn.0044edfd",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0044edfd(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, signed int arg_14h)"
+    },
+    {
+      "address": "4513886",
+      "function": "fcn_0044e05e",
+      "original": "fcn.0044e05e",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_0044e05e(int32_t arg_8h, int32_t arg_10h, int32_t arg_ch)"
+    },
+    {
+      "address": "4284752",
+      "function": "fcn_00416150",
+      "original": "fcn.00416150",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00416150(int32_t arg_4h, int32_t arg_10h, int32_t arg_ch)"
+    },
+    {
+      "address": "4285840",
+      "function": "fcn_00416590",
+      "original": "fcn.00416590",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00416590(int32_t arg_4h, int32_t arg_1ch, signed int arg_20h, int32_t arg_24h)"
+    },
+    {
+      "address": "4353744",
+      "function": "fcn_00426ed0",
+      "original": "fcn.00426ed0",
+      "file": "src/batch5_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int32_t fcn_00426ed0(int32_t arg_4h, int32_t arg_9ch_2, int32_t arg_9ch, int32_t arg_a0h)"
+    },
+    {
+      "address": "4445135",
+      "function": "fcn_0043d3cf",
+      "original": "fcn.0043d3cf",
+      "file": "src/batch3_functions.c",
+      "status": "FAIL",
+      "checks": {
+        "naming": true,
+        "signature": false,
+        "calling_convention": true,
+        "provenance": true
+      },
+      "definition": "int fcn_0043d3cf(void)"
+    }
+  ]
+}

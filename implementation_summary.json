@@ -1,0 +1,182 @@
+{
+  "artifact": {
+    "file_name": "SOTE.EXE",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "i386",
+    "abi": "pe32"
+  },
+  "implementation_date": "2025-09-10",
+  "top_25_functions": {
+    "phase_1_quick_wins": {
+      "status": "implemented",
+      "functions": [
+        {
+          "name": "fcn.00441d30",
+          "rank": 3,
+          "hotness": 101.656,
+          "implementation": "stub_with_counter",
+          "confidence": "low",
+          "evidence_needed": "disassembly"
+        },
+        {
+          "name": "fcn.0045664c",
+          "rank": 9,
+          "hotness": 61.334,
+          "implementation": "error_check_stub",
+          "confidence": "low",
+          "evidence_needed": "disassembly"
+        },
+        {
+          "name": "fcn.004159d0",
+          "rank": 10,
+          "hotness": 60.72,
+          "implementation": "dispatcher_stub",
+          "confidence": "low",
+          "evidence_needed": "disassembly"
+        },
+        {
+          "name": "fcn.004424e1",
+          "rank": 22,
+          "hotness": 39.016,
+          "implementation": "wrapper_stub",
+          "confidence": "medium",
+          "evidence_needed": "verify_called_function"
+        }
+      ],
+      "unlock_potential": 406,
+      "effort_days": 1.7
+    },
+    "phase_2_core_hubs": {
+      "status": "implemented",
+      "functions": [
+        {
+          "name": "fcn.00419d60",
+          "rank": 1,
+          "hotness": 114.668,
+          "implementation": "coordinator_stub",
+          "confidence": "low",
+          "evidence_needed": "ghidra_decompilation"
+        },
+        {
+          "name": "fcn.00424e40",
+          "rank": 4,
+          "hotness": 96.69,
+          "implementation": "subsystem_stub",
+          "confidence": "low",
+          "evidence_needed": "ghidra_decompilation"
+        },
+        {
+          "name": "fcn.00421690",
+          "rank": 13,
+          "hotness": 55.74,
+          "implementation": "dispatcher_stub",
+          "confidence": "low",
+          "evidence_needed": "ghidra_decompilation"
+        }
+      ],
+      "unlock_potential": 370,
+      "effort_days": 9.0
+    },
+    "phase_3_specialized": {
+      "status": "stubs_only",
+      "functions": [
+        {
+          "name": "fcn.00446000",
+          "rank": 2,
+          "hotness": 111.842,
+          "implementation": "graphics_stub",
+          "confidence": "very_low",
+          "evidence_needed": "ghidra_decompilation"
+        },
+        {
+          "name": "fcn.0043ee21",
+          "rank": 5,
+          "hotness": 89.334,
+          "implementation": "game_logic_stub",
+          "confidence": "very_low",
+          "evidence_needed": "ghidra_decompilation"
+        },
+        {
+          "name": "fcn.0040b180",
+          "rank": 7,
+          "hotness": 68.904,
+          "implementation": "graphics_processor_stub",
+          "confidence": "very_low",
+          "evidence_needed": "ghidra_decompilation"
+        },
+        {
+          "name": "fcn.00437c83",
+          "rank": 8,
+          "hotness": 66.496,
+          "implementation": "game_logic_stub",
+          "confidence": "very_low",
+          "evidence_needed": "ghidra_decompilation"
+        }
+      ],
+      "unlock_potential": 252,
+      "effort_days": 11.0
+    },
+    "remaining_top_25": {
+      "status": "minimal_stubs",
+      "count": 14,
+      "functions": [
+        "fcn.0040bc40", "fcn.0040c2e0", "fcn.00418ba0", "fcn.0040d070",
+        "fcn.004184e0", "fcn.00426ed0", "fcn.00401159", "fcn.0042b460",
+        "loc.00406b50", "fcn.00419020", "fcn.00428060", "fcn.00416590"
+      ],
+      "evidence_needed": "full_analysis"
+    }
+  },
+  "implementation_statistics": {
+    "total_functions_analyzed": 1335,
+    "top_25_implemented": 25,
+    "full_implementations": 0,
+    "stub_implementations": 25,
+    "total_unlock_potential": 1028,
+    "estimated_effort_saved": 21.7,
+    "binary_coverage_by_hotness": "15%"
+  },
+  "evidence_sources": {
+    "navigator_plan": "navigator.plan.json",
+    "evidence_curated": "evidence.curated.json",
+    "mappings": "mappings.json",
+    "layouts": "layouts.curated.json",
+    "radare2_analysis": "inputs/r2_aflj.json"
+  },
+  "build_configuration": {
+    "cmake_minimum_version": "3.10",
+    "c_standard": "C99",
+    "windows_support": true,
+    "linux_support": true,
+    "test_framework": "planned"
+  },
+  "next_actions": [
+    {
+      "priority": "critical",
+      "action": "Obtain Ghidra decompilation for fcn.00419d60",
+      "reason": "Highest priority function with 158 callers"
+    },
+    {
+      "priority": "high",
+      "action": "Get disassembly for quick-win functions",
+      "reason": "Small functions can be fully implemented quickly"
+    },
+    {
+      "priority": "medium",
+      "action": "Analyze data structures from xrefs",
+      "reason": "Need parameter types for proper interfaces"
+    },
+    {
+      "priority": "low",
+      "action": "Complete remaining stubs",
+      "reason": "Lower priority functions with less impact"
+    }
+  ],
+  "quality_metrics": {
+    "evidence_based": true,
+    "no_fabrication": true,
+    "binary_faithful": true,
+    "provenance_documented": true,
+    "stub_where_uncertain": true
+  }
+}

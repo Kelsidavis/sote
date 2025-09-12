@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "policy_version": "1.0.0",
+    "creation_date": "2025-09-11T03:15:00Z",
+    "policy_type": "coverage_milestone_auto_archiver",
+    "target_binary": "SOTE.EXE",
+    "total_functions": 1335
+  },
+  "auto_archive": {
+    "enabled": true,
+    "trigger_type": "coverage_threshold",
+    "activation_condition": "implemented_functions / total_functions >= threshold"
+  },
+  "thresholds": {
+    "coverage_checkpoints": [0.50, 0.60, 0.70, 0.80, 0.90],
+    "function_count_equivalents": [668, 801, 935, 1068, 1202],
+    "next_threshold": {
+      "percentage": 0.50,
+      "functions_required": 668,
+      "current_coverage": 0.378,
+      "current_functions": 504,
+      "functions_needed": 164,
+      "gap_percentage": 0.122
+    }
+  },
+  "tag_template": {
+    "format": "sote-m{pct}-auto",
+    "examples": [
+      "sote-m50-auto",
+      "sote-m60-auto", 
+      "sote-m70-auto",
+      "sote-m80-auto",
+      "sote-m90-auto"
+    ]
+  },
+  "archive_configuration": {
+    "include_patterns": [
+      "evidence.curated.json",
+      "layouts.curated.json", 
+      "mappings.json",
+      "src/**",
+      "include/**",
+      "tests/**",
+      "itest/**",
+      "docs/**",
+      "verification.report.json",
+      "apis.manifest.json",
+      "metrics.report.json",
+      "compliance.report.json",
+      "compliance.md"
+    ],
+    "deterministic_settings": {
+      "sort": true,
+      "fixed_mtime": "2025-09-10T20:16:00Z",
+      "uid": 0,
+      "gid": 0,
+      "reproducible_builds": true
+    }
+  },
+  "output_configuration": {
+    "distribution_directory": "dist",
+    "archive_formats": ["tar.gz", "zip"],
+    "generated_files": [
+      "archive.manifest.json",
+      "*.tar.gz",
+      "*.zip", 
+      "SHA256SUMS.txt",
+      "RELEASE_NOTES.md"
+    ]
+  },
+  "behavior_specification": {
+    "trigger_condition": "after successful expansion/verification cycle",
+    "threshold_check": "if coverage >= next_threshold",
+    "archive_action": "run project-archiver with computed tag",
+    "distribution_action": "write to dist/<tag>/ with all generated files",
+    "changelog_action": "append CHANGELOG.md entry with coverage%, functions, metrics snapshot"
+  },
+  "current_state": {
+    "baseline_coverage": 0.378,
+    "baseline_functions": 504,
+    "baseline_date": "2025-09-11T03:00:00Z",
+    "last_milestone": "sote-m002-compliant-tested",
+    "navigator_achievement": "37.8% TARGET ACHIEVED"
+  },
+  "milestone_progression": {
+    "achieved": [
+      {
+        "milestone": "22.8% baseline",
+        "functions": 304,
+        "date": "2025-09-11T00:00:00Z"
+      },
+      {
+        "milestone": "37.8% navigator target",
+        "functions": 504, 
+        "date": "2025-09-11T03:00:00Z"
+      }
+    ],
+    "pending": [
+      {
+        "milestone": "50% first auto-archive",
+        "functions_required": 668,
+        "functions_remaining": 164,
+        "estimated_effort": "moderate expansion"
+      }
+    ]
+  },
+  "quality_requirements": {
+    "re_agent_compliance": "mandatory",
+    "zero_fabrication": "enforced",
+    "evidence_traceability": "complete",
+    "test_success_rate": "≥95%",
+    "build_integration": "verified"
+  },
+  "activation_status": {
+    "policy_active": true,
+    "monitoring_enabled": true,
+    "next_check_threshold": 0.50,
+    "functions_to_next_milestone": 164,
+    "percentage_gap_to_fill": "12.2%"
+  }
+}

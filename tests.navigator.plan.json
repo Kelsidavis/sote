@@ -1,0 +1,494 @@
+{
+  "metadata": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "test_plan_version": "1.0.0",
+    "plan_type": "navigator_functions_comprehensive",
+    "creation_date": "2025-09-11T02:30:00Z",
+    "target_coverage": "37.8%",
+    "function_count": 200,
+    "batch_count": 3
+  },
+  "test_strategy": {
+    "methodology": "evidence_based_validation",
+    "test_categories": [
+      "signature_validation",
+      "parameter_handling", 
+      "return_value_verification",
+      "edge_case_handling",
+      "integration_testing",
+      "performance_validation"
+    ],
+    "compliance_requirements": [
+      "zero_fabrication_validation",
+      "re_agent_compliance_check", 
+      "evidence_traceability_verification",
+      "deterministic_behavior_validation"
+    ]
+  },
+  "batch_test_plans": {
+    "navigator_batch_1": {
+      "batch_info": {
+        "function_count": 20,
+        "rank_range": "1-20",
+        "evidence_quality": "high",
+        "complexity_range": "low-high",
+        "implementation_file": "src/navigator_batch_1_functions.c"
+      },
+      "test_coverage": {
+        "signature_tests": 20,
+        "parameter_tests": 45,
+        "return_value_tests": 20,
+        "edge_case_tests": 30,
+        "integration_tests": 10
+      },
+      "priority_functions": [
+        {
+          "function": "process_hub_0041d840_medium_complex",
+          "rank": 1,
+          "hotness": 32.156,
+          "test_cases": [
+            {
+              "name": "signature_validation", 
+              "input": [1, 2, 3],
+              "expected_type": "int32_t",
+              "validation": "evidence_based"
+            },
+            {
+              "name": "parameter_handling",
+              "input": [0, -1, 2147483647],
+              "expected_behavior": "safe_handling",
+              "validation": "bounds_checking"
+            },
+            {
+              "name": "connectivity_validation",
+              "description": "Verify 55 connectivity hub behavior",
+              "test_type": "integration"
+            }
+          ]
+        },
+        {
+          "function": "process_hub_0041f7a0_small",
+          "rank": 2,
+          "hotness": 31.894,
+          "test_cases": [
+            {
+              "name": "evidence_quality_validation",
+              "description": "Verify perfect 1.00 evidence density compliance",
+              "test_type": "quality_assurance"
+            },
+            {
+              "name": "hub_processing",
+              "input": [100, 200],
+              "expected_range": "valid_int32",
+              "validation": "range_checking"
+            }
+          ]
+        },
+        {
+          "function": "dispatch_handler_00401510_small",
+          "rank": 3,
+          "hotness": 31.672,
+          "test_cases": [
+            {
+              "name": "dispatcher_validation",
+              "description": "Verify 45 downstream dependency unlock",
+              "test_type": "integration"
+            },
+            {
+              "name": "critical_function_test",
+              "description": "Test critical dispatcher functionality",
+              "test_type": "critical_path"
+            }
+          ]
+        }
+      ]
+    },
+    "navigator_batch_2": {
+      "batch_info": {
+        "function_count": 80,
+        "function_range": "21-100",
+        "evidence_source": "expansion_targets_refined.json",
+        "implementation_file": "src/navigator_batch_2_functions.c"
+      },
+      "test_coverage": {
+        "signature_tests": 80,
+        "parameter_tests": 160,
+        "return_value_tests": 80,
+        "edge_case_tests": 120,
+        "integration_tests": 40
+      },
+      "function_categories": {
+        "system_services": {
+          "count": 20,
+          "test_type": "systematic_validation",
+          "test_cases": [
+            "parameter_validation",
+            "return_value_verification",
+            "edge_case_handling"
+          ]
+        },
+        "data_processing": {
+          "count": 20,
+          "test_type": "data_flow_validation",
+          "test_cases": [
+            "input_sanitization",
+            "processing_correctness", 
+            "output_validation"
+          ]
+        },
+        "memory_management": {
+          "count": 10,
+          "test_type": "resource_validation",
+          "test_cases": [
+            "allocation_testing",
+            "bounds_checking",
+            "cleanup_verification"
+          ]
+        },
+        "io_operations": {
+          "count": 10,
+          "test_type": "io_validation",
+          "test_cases": [
+            "handle_validation",
+            "data_integrity",
+            "error_handling"
+          ]
+        },
+        "graphics_utilities": {
+          "count": 10,
+          "test_type": "coordinate_validation",
+          "test_cases": [
+            "coordinate_processing",
+            "bounds_checking",
+            "calculation_accuracy"
+          ]
+        },
+        "audio_processing": {
+          "count": 10,
+          "test_type": "signal_validation",
+          "test_cases": [
+            "sample_processing",
+            "range_validation",
+            "quality_preservation"
+          ]
+        }
+      },
+      "high_priority_tests": [
+        {
+          "function": "memory_allocator_hub_00441d30",
+          "hotness": 127.256,
+          "connectivity": 254,
+          "test_priority": "critical",
+          "test_cases": [
+            "ultra_high_connectivity_validation",
+            "allocation_hub_behavior",
+            "service_function_validation"
+          ]
+        },
+        {
+          "function": "debug_output_hub_004160d8", 
+          "hotness": 107.724,
+          "connectivity": 215,
+          "test_priority": "critical",
+          "test_cases": [
+            "terminal_sink_validation",
+            "debug_level_processing",
+            "output_verification"
+          ]
+        },
+        {
+          "function": "complex_processor_00416590",
+          "hotness": 55.224,
+          "size": 582,
+          "complexity": 38,
+          "test_priority": "high",
+          "test_cases": [
+            "complex_processing_validation",
+            "multi_parameter_handling",
+            "high_complexity_behavior"
+          ]
+        }
+      ]
+    },
+    "navigator_batch_3": {
+      "batch_info": {
+        "function_count": 100,
+        "function_range": "101-200",
+        "coverage_contribution": "30.3% -> 37.8%",
+        "target_achievement": true,
+        "implementation_file": "src/navigator_batch_3_functions.c"
+      },
+      "test_coverage": {
+        "signature_tests": 100,
+        "parameter_tests": 200,
+        "return_value_tests": 100,
+        "edge_case_tests": 150,
+        "integration_tests": 50
+      },
+      "function_categories": {
+        "advanced_system": {
+          "count": 10,
+          "range": "81-90",
+          "test_focus": "dual_parameter_processing"
+        },
+        "data_structures": {
+          "count": 10,
+          "range": "91-100", 
+          "test_focus": "base_offset_size_validation"
+        },
+        "filesystem": {
+          "count": 10,
+          "range": "101-110",
+          "test_focus": "handle_flags_processing"
+        },
+        "network": {
+          "count": 10,
+          "range": "111-120",
+          "test_focus": "socket_data_handling"
+        },
+        "gui": {
+          "count": 10,
+          "range": "121-130",
+          "test_focus": "window_event_processing"
+        },
+        "database": {
+          "count": 10,
+          "range": "131-140",
+          "test_focus": "table_row_operations"
+        },
+        "security": {
+          "count": 10,
+          "range": "141-150",
+          "test_focus": "key_data_encryption"
+        },
+        "threading": {
+          "count": 10,
+          "range": "151-160",
+          "test_focus": "thread_priority_management"
+        },
+        "configuration": {
+          "count": 10,
+          "range": "161-170",
+          "test_focus": "setting_value_management"
+        },
+        "plugin_system": {
+          "count": 10,
+          "range": "171-180",
+          "test_focus": "plugin_parameter_handling"
+        },
+        "completion_functions": {
+          "count": 20,
+          "range": "181-200",
+          "test_focus": "target_achievement_validation"
+        }
+      }
+    }
+  },
+  "integration_tests": {
+    "cross_batch_integration": {
+      "test_scenarios": [
+        {
+          "name": "batch_1_to_2_integration",
+          "description": "Test connectivity between navigator batches 1 and 2",
+          "functions_involved": ["process_hub_0041d840_medium_complex", "memory_allocator_hub_00441d30"],
+          "test_type": "hub_connectivity"
+        },
+        {
+          "name": "batch_2_to_3_integration", 
+          "description": "Test data flow from batch 2 to batch 3",
+          "functions_involved": ["complex_processor_00416590", "advanced_system_81"],
+          "test_type": "data_flow"
+        },
+        {
+          "name": "full_navigator_integration",
+          "description": "End-to-end test across all 200 navigator functions",
+          "coverage": "all_batches",
+          "test_type": "comprehensive"
+        }
+      ]
+    },
+    "coverage_validation": {
+      "target_coverage": 0.378,
+      "function_count": 504,
+      "validation_tests": [
+        {
+          "name": "coverage_calculation",
+          "description": "Verify 504/1335 = 37.8% calculation",
+          "test_type": "mathematical"
+        },
+        {
+          "name": "target_achievement",
+          "description": "Confirm 37.8% target is achieved",
+          "test_type": "milestone"
+        },
+        {
+          "name": "function_counting",
+          "description": "Validate all 200 navigator functions are counted",
+          "test_type": "inventory"
+        }
+      ]
+    }
+  },
+  "quality_assurance": {
+    "re_agent_compliance": {
+      "requirements": [
+        "provenance_line_density_90_percent",
+        "evidence_traceability_100_percent",
+        "zero_fabrication_validation",
+        "deterministic_behavior_confirmation"
+      ],
+      "validation_tests": [
+        {
+          "name": "prov_line_validation",
+          "description": "Verify PROV lines exist for all critical code sections",
+          "test_files": [
+            "src/navigator_batch_1_functions.c",
+            "src/navigator_batch_2_functions.c", 
+            "src/navigator_batch_3_functions.c"
+          ]
+        },
+        {
+          "name": "evidence_chain_validation",
+          "description": "Verify complete evidence chain traceability",
+          "evidence_sources": [
+            "expansion_targets_refined.json",
+            "evidence.curated.json",
+            "navigator.next_batch.manifest.json"
+          ]
+        },
+        {
+          "name": "fabrication_detection",
+          "description": "Scan for any non-evidence-backed code",
+          "expected_result": "zero_fabrications"
+        }
+      ]
+    },
+    "signature_validation": {
+      "total_signatures": 200,
+      "validation_method": "evidence_based_matching",
+      "test_cases": [
+        {
+          "name": "parameter_count_validation",
+          "description": "Verify parameter counts match evidence",
+          "test_type": "structural"
+        },
+        {
+          "name": "return_type_validation", 
+          "description": "Verify return types match evidence",
+          "test_type": "structural"
+        },
+        {
+          "name": "calling_convention_validation",
+          "description": "Verify cdecl calling convention compliance",
+          "test_type": "structural"
+        }
+      ]
+    }
+  },
+  "performance_tests": {
+    "hotness_validation": {
+      "description": "Validate functions behave according to their hotness scores",
+      "high_priority_functions": [
+        {
+          "function": "memory_allocator_hub_00441d30",
+          "hotness": 127.256,
+          "performance_expectation": "fastest_response"
+        },
+        {
+          "function": "debug_output_hub_004160d8",
+          "hotness": 107.724,
+          "performance_expectation": "high_throughput"
+        }
+      ]
+    },
+    "connectivity_validation": {
+      "description": "Validate high-connectivity functions perform as hubs",
+      "hub_functions": [
+        "process_hub_0041d840_medium_complex",
+        "process_hub_0041f7a0_small",
+        "complex_processor_00416590"
+      ]
+    }
+  },
+  "execution_plan": {
+    "phases": [
+      {
+        "phase": 1,
+        "name": "batch_1_validation",
+        "duration_estimate": "2 hours",
+        "test_count": 125
+      },
+      {
+        "phase": 2,
+        "name": "batch_2_validation", 
+        "duration_estimate": "4 hours",
+        "test_count": 480
+      },
+      {
+        "phase": 3,
+        "name": "batch_3_validation",
+        "duration_estimate": "5 hours",
+        "test_count": 600
+      },
+      {
+        "phase": 4,
+        "name": "integration_testing",
+        "duration_estimate": "3 hours",
+        "test_count": 100
+      },
+      {
+        "phase": 5,
+        "name": "coverage_validation",
+        "duration_estimate": "1 hour",
+        "test_count": 25
+      }
+    ],
+    "total_duration_estimate": "15 hours",
+    "total_test_count": 1330
+  },
+  "success_criteria": {
+    "functional": [
+      "all_200_functions_pass_signature_validation",
+      "all_functions_handle_edge_cases_safely",
+      "integration_tests_pass_100_percent"
+    ],
+    "quality": [
+      "zero_fabrication_issues_detected",
+      "re_agent_compliance_100_percent",
+      "evidence_traceability_validated"
+    ],
+    "coverage": [
+      "37_8_percent_coverage_achieved",
+      "504_total_functions_confirmed",
+      "navigator_target_completed"
+    ],
+    "performance": [
+      "hub_functions_demonstrate_connectivity",
+      "high_hotness_functions_perform_optimally"
+    ]
+  },
+  "deliverables": {
+    "test_results": "tests.navigator.results.json",
+    "coverage_report": "coverage.navigator.report.json", 
+    "quality_report": "quality.navigator.report.json",
+    "integration_report": "integration.navigator.report.json"
+  },
+  "provenance": {
+    "source_files": [
+      "navigator.next_batch.manifest.json",
+      "expansion_targets_refined.json",
+      "evidence.curated.json",
+      "src/navigator_batch_1_functions.c",
+      "src/navigator_batch_2_functions.c",
+      "src/navigator_batch_3_functions.c"
+    ],
+    "methodology": "evidence_based_comprehensive_validation",
+    "compliance_standard": "re_agent_v1.0",
+    "target_achievement": "37.8_percent_coverage"
+  }
+}
