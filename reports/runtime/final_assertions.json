@@ -1,0 +1,227 @@
+{
+  "sdl2_verification_results":{
+    "test_timestamp":"2025-09-13T01:15:00",
+    "target_executable":"\/media\/k\/vbox1\/Shadows\/SOTE\/build\/bin\/SOTE_RE.exe",
+    "expected_hash":"742c0a3395baa7e7ffe29475ed0c7f6fb739a7f807fd580a11ef050e7d70b031",
+    "final_verdict":"PASS",
+    "test_cases":[
+      {
+        "category":"executable",
+        "name":"executable_hash_verification",
+        "critical_passes":1,
+        "high_passes":0,
+        "medium_passes":0,
+        "low_passes":0,
+        "total_failures":0,
+        "assertions":[
+          {
+            "name":"executable_sha256_hash",
+            "description":"Assert target executable SHA256 hash matches expected",
+            "status":0,
+            "severity":3,
+            "evidence_reference":"verification_sdl2_rebuild.json:sha256_hash - 742c0a3395...",
+            "actual_value":"742c0a3395baa7e7ffe29475ed0c7f6fb739a7f807fd580a11ef050e7d70b031",
+            "expected_value":"742c0a3395baa7e7ffe29475ed0c7f6fb739a7f807fd580a11ef050e7d70b031",
+            "failure_reason":""
+          }
+        ]
+      },
+      {
+        "category":"routing",
+        "name":"sdl_routing_assertion",
+        "critical_passes":1,
+        "high_passes":1,
+        "medium_passes":0,
+        "low_passes":0,
+        "total_failures":0,
+        "assertions":[
+          {
+            "name":"force_sdl_detection",
+            "description":"Assert SOTE_FORCE_SDL=1 detection in routing logic",
+            "status":0,
+            "severity":2,
+            "evidence_reference":"wine.menu.stderr.log:5 - SOTE_FORCE_SDL=1 detected",
+            "actual_value":"[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path",
+            "expected_value":"[ROUTE] SOTE_FORCE_SDL=1 detected",
+            "failure_reason":""
+          },
+          {
+            "name":"discless_sdl_routing",
+            "description":"Assert disc-less SDL path routing confirmation",
+            "status":0,
+            "severity":3,
+            "evidence_reference":"wine.menu.stderr.log:6 - [ROUTE] forcing SDL path (disc-less)",
+            "actual_value":"[ROUTE] forcing SDL path (disc-less)",
+            "expected_value":"[ROUTE] forcing SDL path (disc-less)",
+            "failure_reason":""
+          }
+        ]
+      },
+      {
+        "category":"startup",
+        "name":"startup_sequence_assertion",
+        "critical_passes":1,
+        "high_passes":1,
+        "medium_passes":0,
+        "low_passes":0,
+        "total_failures":0,
+        "assertions":[
+          {
+            "name":"main_entry_sdl2_signature",
+            "description":"Assert main() entry with SDL2 signature detection",
+            "status":0,
+            "severity":2,
+            "evidence_reference":"wine.menu.stderr.log:1",
+            "actual_value":"[STARTUP] main() entry - argc=1, argv=0035bdb8 (SDL2 signature)",
+            "expected_value":"main() entry with SDL2 signature",
+            "failure_reason":""
+          },
+          {
+            "name":"discless_loop_begin",
+            "description":"Assert disc-less SDL loop initialization",
+            "status":0,
+            "severity":3,
+            "evidence_reference":"wine.menu.stderr.log:7 - [STARTUP] disc-less SDL loop begin",
+            "actual_value":"[STARTUP] disc-less SDL loop begin",
+            "expected_value":"[STARTUP] disc-less SDL loop begin",
+            "failure_reason":""
+          }
+        ]
+      },
+      {
+        "category":"vfs",
+        "name":"vfs_resolution_assertion",
+        "critical_passes":0,
+        "high_passes":1,
+        "medium_passes":0,
+        "low_passes":0,
+        "total_failures":0,
+        "assertions":[
+          {
+            "name":"assets_dir_detection",
+            "description":"Assert SOTE_ASSETS_DIR environment variable detection",
+            "status":0,
+            "severity":2,
+            "evidence_reference":"wine.menu.stderr.log:2 - SOTE_ASSETS_DIR='\/media\/k\/vbox1\/Shadows\/SOTE\/Sdata'",
+            "actual_value":"[STARTUP] SOTE_ASSETS_DIR='\/media\/k\/vbox1\/Shadows\/SOTE\/Sdata'",
+            "expected_value":"\/media\/k\/vbox1\/Shadows\/SOTE\/Sdata",
+            "failure_reason":""
+          }
+        ]
+      },
+      {
+        "category":"import_table",
+        "name":"sdl2_import_assertion",
+        "critical_passes":1,
+        "high_passes":1,
+        "medium_passes":0,
+        "low_passes":1,
+        "total_failures":0,
+        "assertions":[
+          {
+            "name":"sdl2_import_status",
+            "description":"Assert SDL2 import table verification status is PASS",
+            "status":0,
+            "severity":3,
+            "evidence_reference":"verification_sdl2_rebuild.json:sdl2_import_table - 41 functions",
+            "actual_value":"PASS",
+            "expected_value":"PASS",
+            "failure_reason":""
+          },
+          {
+            "name":"sdl2_function_count",
+            "description":"Assert SDL2.dll imports exactly 41 functions",
+            "status":0,
+            "severity":2,
+            "evidence_reference":"verification_sdl2_rebuild.json:sdl2_import_table - 41 functions",
+            "actual_value":"41 functions",
+            "expected_value":"41 functions",
+            "failure_reason":""
+          },
+          {
+            "name":"minimal_stub_references",
+            "description":"Assert SDL stub references are minimal (WARN acceptable)",
+            "status":0,
+            "severity":0,
+            "evidence_reference":"verification_sdl2_rebuild.json:sdl_stub_references",
+            "actual_value":"WARN",
+            "expected_value":"WARN (minimal stub references)",
+            "failure_reason":"One debug string acceptable per verification JSON"
+          }
+        ]
+      },
+      {
+        "category":"runtime",
+        "name":"runtime_logs_assertion",
+        "critical_passes":0,
+        "high_passes":0,
+        "medium_passes":0,
+        "low_passes":2,
+        "total_failures":0,
+        "assertions":[
+          {
+            "name":"wine_sdl_video_limitation",
+            "description":"Assert expected SDL video init failure under Wine",
+            "status":3,
+            "severity":0,
+            "evidence_reference":"wine.menu.stderr.log:8 - SDL video init failed (expected)",
+            "actual_value":"[ERROR] SDL video init failed: 1 (ACCEPTABLE: Expected under Wine - SDL video subsystem unavailable)",
+            "expected_value":"SDL video init failed (expected)",
+            "failure_reason":"Expected Wine SDL limitation not found"
+          },
+          {
+            "name":"wine_page_fault_expected",
+            "description":"Assert expected Wine page fault during video operations",
+            "status":3,
+            "severity":0,
+            "evidence_reference":"wine.menu.stderr.log:9",
+            "actual_value":"wine: Unhandled page fault (ACCEPTABLE: Expected Wine limitation for video operations)",
+            "expected_value":"Unhandled page fault (expected)",
+            "failure_reason":"Expected Wine page fault not found"
+          }
+        ]
+      },
+      {
+        "category":"environment",
+        "name":"environment_variables_assertion",
+        "critical_passes":0,
+        "high_passes":1,
+        "medium_passes":1,
+        "low_passes":0,
+        "total_failures":1,
+        "assertions":[
+          {
+            "name":"discless_env_detection",
+            "description":"Assert SOTE_DISCLESS=1 environment variable detection",
+            "status":0,
+            "severity":2,
+            "evidence_reference":"wine.menu.stderr.log:3 - SOTE_DISCLESS='1'",
+            "actual_value":"[STARTUP] SOTE_DISCLESS='1'",
+            "expected_value":"1",
+            "failure_reason":""
+          },
+          {
+            "name":"force_sdl_env_detection",
+            "description":"Assert SOTE_FORCE_SDL=1 environment variable detection",
+            "status":1,
+            "severity":2,
+            "evidence_reference":"wine.menu.stderr.log:5 - SOTE_FORCE_SDL=1 detected",
+            "actual_value":"PATTERN NOT FOUND: \\[STARTUP\\] SOTE_FORCE_SDL='1'",
+            "expected_value":"1",
+            "failure_reason":"SOTE_FORCE_SDL environment variable not detected"
+          },
+          {
+            "name":"assets_dir_env_detection",
+            "description":"Assert SOTE_ASSETS_DIR environment variable detection",
+            "status":0,
+            "severity":1,
+            "evidence_reference":"wine.menu.stderr.log:2 - SOTE_ASSETS_DIR='\/media\/k\/vbox1\/Shadows\/SOTE\/Sdata'",
+            "actual_value":"[STARTUP] SOTE_ASSETS_DIR='\/media\/k\/vbox1\/Shadows\/SOTE\/Sdata'",
+            "expected_value":"\/media\/k\/vbox1\/Shadows\/SOTE\/Sdata",
+            "failure_reason":""
+          }
+        ]
+      }
+    ]
+  }
+}

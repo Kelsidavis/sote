@@ -3,6 +3,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+
+// SDL stub functions for cross-compilation builds
+#if defined(WIN32_BUILD) || !defined(HAVE_ADAPTER_SDL)
+static int SDL_Init(uint32_t flags) { return 0; }
+static const char* SDL_GetError(void) { return "SDL not available"; }
+static void SDL_Quit(void) { }
+static int Mix_OpenAudio(int frequency, uint16_t format, int channels, int chunksize) { return -1; }
+static const char* Mix_GetError(void) { return "SDL_mixer not available"; }
+static void Mix_CloseAudio(void) { }
+static int Mix_AllocateChannels(int numchans) { return 0; }
+static int Mix_VolumeMusic(int volume) { return 0; }
+static int Mix_Volume(int channel, int volume) { return 0; }
+static int Mix_PlayChannel(int channel, Mix_Chunk *chunk, int loops) { return -1; }
+static void Mix_HaltChannel(int channel) { }
+static int Mix_VolumeChunk(Mix_Chunk *chunk, int volume) { return 0; }
+static void Mix_FreeChunk(Mix_Chunk *chunk) { }
+static void Mix_FreeMusic(Mix_Music *music) { }
+static Mix_Chunk* Mix_LoadWAV_RW(void *src, int freesrc) { return NULL; }
+static void* SDL_RWFromMem(void *mem, int size) { return NULL; }
+
+// WAV stubs for cross-compilation (use external definitions)
+#endif
 
 // PROV: DirectSound/WinMM API replacements based on runtime.apis.json analysis
 // Evidence: DirectSoundCreate at IAT_0x4c4cd0, used for audio initialization
@@ -216,7 +239,7 @@ DSOUND_BUFFER* adapter_LoadWAV(const char *filename)
     }
     
     // Create Mix_Chunk from WAV data
-    SDL_RWops *rw = SDL_RWFromMem(wav->samples, wav->data_size);
+    void *rw = SDL_RWFromMem(wav->samples, wav->data_size);
     if (rw) {
         buffer->chunk = Mix_LoadWAV_RW(rw, 1); // 1 = free RW automatically
     }
@@ -306,4 +329,35 @@ void adapter_audio_shutdown(void)
 DSOUND_CONTEXT* adapter_get_audio_context(void)
 {
     return &g_audio_context;
+}
+
+// PROV: SDL main loop audio functions (optional, with HAVE_ADAPTER_AUDIO guards)
+// Optional audio initialization for main loop
+int adapter_audio_sdl_init(void)
+{
+#ifdef HAVE_ADAPTER_AUDIO
+    // PROV: Main loop audio init - optional for disc-less mode
+    // Returns 0 on success, negative on failure (no-audio is acceptable)
+    int result = adapter_audio_init();
+    if (result != 0) {
+        // TODO_EVID: Log audio init failure but continue without audio
+        fprintf(stderr, "[AUDIO] SDL audio init failed, continuing without audio\n");
+        return -1;  // Non-fatal failure
+    }
+    return 0;  // Success
+#else
+    // TODO_EVID: Audio disabled at compile time
+    fprintf(stderr, "[AUDIO] Audio support disabled at compile time\n");
+    return -1;  // No audio support
+#endif
+}
+
+// Optional audio shutdown for main loop  
+void adapter_audio_sdl_shutdown(void)
+{
+#ifdef HAVE_ADAPTER_AUDIO
+    // PROV: Main loop audio shutdown - clean up resources
+    adapter_audio_shutdown();
+#endif
+    // No-op if audio not enabled
 }

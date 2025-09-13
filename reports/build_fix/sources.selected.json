@@ -1,0 +1,71 @@
+{
+  "source_selection": {
+    "timestamp": "2025-09-12T19:02:00Z", 
+    "generator": "mapping_agent",
+    "version": "1.0.0",
+    "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "methodology": "deterministic_build_graph_enumeration"
+  },
+  "target": {
+    "name": "SOTE_RE.EXE",
+    "type": "executable",
+    "build_system": "make"
+  },
+  "sources": {
+    "main_sources": [
+      "src/main.c"
+    ],
+    "library_sources": [
+      "src/batch10_functions.c",
+      "src/batch11_functions.c", 
+      "src/batch12_functions.c",
+      "src/batch13_functions.c",
+      "src/batch14_functions.c",
+      "src/batch2_functions.c",
+      "src/batch3_functions.c",
+      "src/batch4_functions.c",
+      "src/batch5_functions.c",
+      "src/batch6_functions.c",
+      "src/batch7_functions.c",
+      "src/batch8_functions.c",
+      "src/batch9_functions.c",
+      "src/build_stamp.c",
+      "src/entry.c",
+      "src/final_31_functions.c",
+      "src/missing_functions.c",
+      "src/navigator_batch_11_functions.c",
+      "src/navigator_batch_12_functions.c",
+      "src/navigator_batch_13_functions.c",
+      "src/navigator_batch_1_functions.c",
+      "src/navigator_batch_2_functions.c",
+      "src/navigator_batch_3_functions.c",
+      "src/navigator_batch_4_functions.c",
+      "src/navigator_batch_5_functions.c",
+      "src/navigator_batch_6_functions.c",
+      "src/priority_functions.c"
+    ]
+  },
+  "statistics": {
+    "total_sources": 27,
+    "main_sources": 1,
+    "library_sources": 26,
+    "new_sources": 1,
+    "build_stamp_added": true
+  },
+  "build_configuration": {
+    "defines": [
+      "LINUX_BUILD", 
+      "GNU_SOURCE",
+      "SOTE_REIMPL_BUILD",
+      "REAGENT_BUILD_TAG=rebuild-m100"
+    ],
+    "target_executable": "build/bin/SOTE_RE.EXE",
+    "deterministic_sort": true
+  },
+  "verification": {
+    "all_sources_exist": true,
+    "build_stamp_included": true,
+    "deterministic_order": true,
+    "no_duplicates": true
+  }
+}

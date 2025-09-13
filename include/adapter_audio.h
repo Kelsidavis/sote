@@ -1,8 +1,20 @@
 #ifndef ADAPTER_AUDIO_H
 #define ADAPTER_AUDIO_H
 
+#if 0 /* PROV: SDL2 include disabled for RE-AGENT REBUILD m100 - using forward declarations */
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_mixer.h>
+// SDL_mixer not available in basic SDL2 setup
+typedef struct Mix_Chunk Mix_Chunk;
+typedef struct Mix_Music Mix_Music;
+#else
+// PROV: Using real SDL2 headers, no stub declarations needed
+// NOTE: All SDL types and functions provided by linked SDL2 library
+typedef struct Mix_Chunk Mix_Chunk;
+typedef struct Mix_Music Mix_Music;
+#define AUDIO_S16LSB 0x8010
+#define AUDIO_U8 0x0008
+#define MIX_MAX_VOLUME 128
+#endif
 #include <stdint.h>
 #include <windows.h>
 
@@ -74,6 +86,10 @@ HRESULT adapter_Unlock(DSOUND_BUFFER *buffer, void *ptr1, uint32_t bytes1, void 
 int adapter_audio_init(void);
 void adapter_audio_shutdown(void);
 DSOUND_CONTEXT* adapter_get_audio_context(void);
+
+// PROV: SDL main loop audio functions (optional, with HAVE_ADAPTER_AUDIO guards)
+int adapter_audio_sdl_init(void);     // PROV: Optional audio init, returns 0 or negative on no-audio
+void adapter_audio_sdl_shutdown(void); // PROV: Optional audio shutdown
 
 // Load WAV files using runtime loader integration
 // PROV: 183 WAV files from resource.catalog.json, 16-bit mono PCM format

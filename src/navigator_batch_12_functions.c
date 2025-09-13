@@ -878,13 +878,8 @@ void fcn_004298f0(void)
 }
 
 /* Rank 982: main @ 0x42ca3e - Already implemented in main.c */
-int main(int argc, char **argv, char **envp)
-{
-    /* PROV: r2 @ 0x42ca3e, size: 25 bytes, cyclomatic complexity: 1 */
-    /* PROV: Main entry point, already implemented */
-    /* NOTE: Stub for completeness, actual implementation in main.c */
-    return 0;
-}
+/* NOTE: main() function removed to avoid symbol conflict with main.c */
+/* The actual main() implementation is in src/main.c */
 
 /* Rank 983: fcn_00438276 @ 0x438276 */
 void fcn_00438276(void)

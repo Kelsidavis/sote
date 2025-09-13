@@ -27,7 +27,7 @@
  * ========================================================================
  */
 
-#include "sote_symbols.h"
+// #include "sote_symbols.h" // PROV: Removed missing header for startup fault build
 #include <stdint.h>
 
 /*

@@ -1,0 +1,337 @@
+{
+  "level1_access_report": {
+    "report_metadata": {
+      "timestamp": "2025-09-13T01:45:00Z",
+      "agent": "evidence-curator",
+      "call_id": "coord-0007", 
+      "artifact": {
+        "file_name": "SOTE_RE.exe",
+        "sha256": "df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a",
+        "build_type": "Enhanced Start Game Skeleton",
+        "size_bytes": 630064,
+        "sections": [
+          {
+            "name": ".text",
+            "size": "0x00010124",
+            "vma": "0x00401000",
+            "characteristics": "CODE"
+          },
+          {
+            "name": ".data", 
+            "size": "0x00000074",
+            "vma": "0x00412000",
+            "characteristics": "DATA"
+          },
+          {
+            "name": ".rdata",
+            "size": "0x00001c54",
+            "vma": "0x00413000",
+            "characteristics": "READONLY DATA"
+          },
+          {
+            "name": ".idata",
+            "size": "0x00001120",
+            "vma": "0x00420000",
+            "characteristics": "IMPORT DATA"
+          }
+        ]
+      },
+      "execution_environment": {
+        "runtime": "Wine 9.x on Linux",
+        "working_directory": "/media/k/vbox1/Shadows/SOTE",
+        "execution_date": "2025-09-13T01:37:00Z"
+      }
+    },
+    "environment_detection": {
+      "variables_detected": [
+        {
+          "name": "SOTE_ASSETS_DIR",
+          "value": "/media/k/vbox1/Shadows/SOTE/Sdata",
+          "provenance": {
+            "source": "wine.start.stderr.log",
+            "line": 8266,
+            "context": "[STARTUP] SOTE_ASSETS_DIR='/media/k/vbox1/Shadows/SOTE/Sdata'"
+          }
+        },
+        {
+          "name": "SOTE_DISCLESS", 
+          "value": "1",
+          "provenance": {
+            "source": "wine.start.stderr.log",
+            "line": 8270,
+            "context": "[STARTUP] SOTE_DISCLESS='1'"
+          }
+        },
+        {
+          "name": "SOTE_FORCE_SDL",
+          "value": "1",
+          "provenance": {
+            "source": "wine.start.stderr.log", 
+            "line": 8288,
+            "context": "[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path"
+          }
+        }
+      ],
+      "routing_decision": {
+        "path": "SDL",
+        "reason": "SOTE_FORCE_SDL=1 environment variable",
+        "provenance": {
+          "source": "wine.start.stderr.log",
+          "lines": [8288, 8292, 8296],
+          "context": [
+            "[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path",
+            "[ROUTE] forcing SDL path (disc-less)",
+            "[STARTUP] disc-less SDL loop begin"
+          ]
+        }
+      }
+    },
+    "execution_flow": {
+      "startup_phase": {
+        "status": "SUCCESSFUL",
+        "evidence": [
+          {
+            "stage": "entry_point",
+            "message": "[STARTUP] main() entry - argc=1, argv=0035bcd0 (SDL2 signature)",
+            "provenance": {
+              "source": "wine.start.stderr.log",
+              "line": 8262
+            }
+          },
+          {
+            "stage": "routing_check",
+            "message": "[STARTUP] initialize_directdraw entry - checking routing gates",
+            "provenance": {
+              "source": "wine.start.stderr.log",
+              "line": 8284
+            }
+          }
+        ]
+      },
+      "sdl_initialization": {
+        "status": "FAILED",
+        "failure_point": "SDL_VideoInit",
+        "evidence": [
+          {
+            "stage": "video_init_failure",
+            "message": "[ERROR] SDL video init failed: 1",
+            "provenance": {
+              "source": "wine.start.stderr.log",
+              "line": 9030
+            }
+          }
+        ],
+        "termination": {
+          "type": "ACCESS_VIOLATION",
+          "exception_code": "c0000005",
+          "address": "0x00000000",
+          "provenance": {
+            "source": "wine.start.stderr.log",
+            "context": "EXCEPTION_ACCESS_VIOLATION exception (code=c0000005) raised"
+          }
+        }
+      }
+    },
+    "vfs_access_analysis": {
+      "vfs_trace_file": {
+        "expected_path": "/media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl",
+        "status": "NOT_CREATED",
+        "reason": "SDL initialization failed before VFS operations could be logged"
+      },
+      "asset_directory": {
+        "root_path": "/media/k/vbox1/Shadows/SOTE/Sdata",
+        "status": "ACCESSIBLE",
+        "total_files": 277,
+        "file_types": {
+          "audio_files": 183,
+          "image_files": 43,
+          "executable_files": 1,
+          "other_files": 50
+        },
+        "provenance": {
+          "source": "resources.manifest.json",
+          "last_verified": "2025-09-12T19:57:00Z"
+        }
+      },
+      "file_access_attempts": {
+        "detected": "NONE",
+        "reason": "Execution terminated before resource loading phase",
+        "expected_patterns": {
+          "vfs_resolution_order": [
+            "env:SOTE_ASSETS_DIR",
+            "./Sdata",
+            "../Sdata", 
+            "../../Sdata"
+          ],
+          "trace_format": "[VFS] resolved: %s -> %s",
+          "missing_format": "[WARN][VFS] missing: %s (searched all VFS roots)"
+        }
+      },
+      "wine_file_operations": {
+        "binary_loads": [
+          {
+            "path": "Z:/media/k/vbox1/Shadows/SOTE/build/bin/SOTE_RE.exe",
+            "status": "LOADED",
+            "provenance": {
+              "source": "wine.start.stderr.log",
+              "line": 7004,
+              "context": "nt_to_unix_file_name_no_root"
+            }
+          },
+          {
+            "path": "Z:/media/k/vbox1/Shadows/SOTE/build/bin/SDL2.dll",
+            "status": "LOADED", 
+            "provenance": {
+              "source": "wine.start.stderr.log",
+              "line": 7042,
+              "context": "nt_to_unix_file_name_no_root"
+            }
+          }
+        ],
+        "dependency_failures": [
+          {
+            "file": "libgcc_s_dw2-1.dll",
+            "status": "NOT_FOUND",
+            "error_code": "c0000034",
+            "impact": "NONE_DETECTED"
+          }
+        ]
+      }
+    },
+    "resource_manifest": {
+      "source": "/media/k/vbox1/Shadows/SOTE/runtime/resources.manifest.json",
+      "timestamp": "2025-09-12T19:57:00Z",
+      "asset_classification": {
+        "audio": {
+          "format": "Microsoft PCM, 16 bit",
+          "sample_rates": ["11025 Hz", "22050 Hz"],
+          "channels": "mono",
+          "example_files": [
+            "Sdata/atat_2.wav",
+            "Sdata/atst_2.wav",
+            "Sdata/badbike.wav",
+            "Sdata/beamlp1.wav",
+            "Sdata/bikeaccel1.wav"
+          ]
+        },
+        "images": {
+          "format": "Windows 3.x format BMP",
+          "resolution": "640 x 480 x 24",
+          "color_depth": "24-bit",
+          "example_files": [
+            "Sdata/astroids.bmp", 
+            "Sdata/battle.bmp",
+            "Sdata/boba.bmp",
+            "Sdata/controof.bmp",
+            "Sdata/cpanckof.bmp"
+          ]
+        }
+      },
+      "accessibility": {
+        "all_files_accessible": true,
+        "missing_count": 0
+      }
+    },
+    "missing_resources": {
+      "vfs_trace": {
+        "expected_file": "/media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl",
+        "status": "NOT_CREATED",
+        "reason": "SDL initialization failure prevented VFS subsystem activation"
+      },
+      "screenshots": {
+        "expected_files": [
+          "/media/k/vbox1/Shadows/SOTE/reports/runtime/title_frame.bmp",
+          "/media/k/vbox1/Shadows/SOTE/reports/runtime/title_frame_initial.bmp",
+          "/media/k/vbox1/Shadows/SOTE/reports/runtime/start_frame.bmp"
+        ],
+        "status": "NOT_CREATED",
+        "reason": "SDL renderer required for screenshot capture"
+      },
+      "input_trace": {
+        "expected_file": "/media/k/vbox1/Shadows/SOTE/reports/runtime/input.start.trace.json",
+        "status": "NOT_CREATED", 
+        "reason": "SDL event loop never reached"
+      }
+    },
+    "state_machine_analysis": {
+      "intended_flow": {
+        "phases": ["Splash", "Title", "StartSkeleton"],
+        "transition_triggers": [
+          "Timer expiration (splash → title)", 
+          "ENTER key detection (title → start)"
+        ]
+      },
+      "actual_execution": {
+        "phase_reached": "INITIALIZATION",
+        "termination_point": "SDL_VideoInit",
+        "phases_not_reached": ["Splash", "Title", "StartSkeleton"]
+      },
+      "enhanced_features_status": {
+        "menu_navigation": "NOT_TESTED",
+        "vfs_tracing": "NOT_TESTED", 
+        "screenshot_capture": "NOT_TESTED",
+        "enter_key_detection": "NOT_TESTED"
+      }
+    },
+    "build_verification": {
+      "source": "/media/k/vbox1/Shadows/SOTE/reports/build/verify.json",
+      "timestamp": "2025-09-13T01:35:00",
+      "verification_result": "PASSED",
+      "enhanced_features_verified": [
+        "Three-phase menu state machine (Splash → Title → StartSkeleton)",
+        "ENTER key detection for menu navigation", 
+        "VFS tracing to vfs.start.trace.jsonl",
+        "Screenshot capture for title_frame.bmp and start_frame.bmp"
+      ],
+      "sdl2_integration": {
+        "import_table_verified": true,
+        "dll_staged": true,
+        "function_count": 42,
+        "key_functions": [
+          "SDL_Init",
+          "SDL_Quit",
+          "SDL_CreateWindow",
+          "SDL_CreateRenderer",
+          "SDL_PollEvent",
+          "SDL_GetKeyboardState",
+          "SDL_RenderPresent",
+          "SDL_SaveBMP_RW",
+          "SDL_LoadBMP_RW"
+        ]
+      }
+    },
+    "conclusions": {
+      "vfs_system_status": "IMPLEMENTATION_VERIFIED_BUT_NOT_EXECUTED",
+      "execution_barrier": "SDL video subsystem initialization failure in Wine environment",
+      "resource_accessibility": "CONFIRMED_AVAILABLE",
+      "enhanced_features": {
+        "implemented": true,
+        "runtime_tested": false,
+        "static_analysis_passed": true
+      },
+      "evidence_quality": "LEVEL_1_COMPLETE",
+      "missing_evidence_reason": "Runtime termination before VFS operations",
+      "recommended_next_steps": [
+        "Test on Windows system with native SDL2 support",
+        "Implement Wine-compatible fallback mode",
+        "Add SDL error reporting with SDL_GetError()",
+        "Consider headless testing mode"
+      ]
+    },
+    "provenance": {
+      "evidence_sources": [
+        "/media/k/vbox1/Shadows/SOTE/reports/runtime/wine.start.stderr.log",
+        "/media/k/vbox1/Shadows/SOTE/reports/runtime/wine_start_test_results.md", 
+        "/media/k/vbox1/Shadows/SOTE/reports/build/verify.json",
+        "/media/k/vbox1/Shadows/SOTE/runtime/resources.manifest.json"
+      ],
+      "analysis_method": "Evidence-only curation without speculation",
+      "confidence_level": "HIGH_FOR_DETECTED_EVIDENCE",
+      "limitations": [
+        "VFS operation evidence not available due to early termination",
+        "Resource access patterns could not be observed",
+        "State machine transitions not evidenced at runtime"
+      ]
+    }
+  }
+}

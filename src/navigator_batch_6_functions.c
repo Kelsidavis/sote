@@ -345,14 +345,7 @@ void fcn_00442252(int32_t arg_8h)
  * DOMAIN-SPECIFIC UTILITIES (Ranks 361-370)
  * ======================================================================== */
 
-/* Rank 361: Processing function */
-void fcn_0041d430(signed int arg_18h)
-{
-    /* PROV: r2 @ 0x41d430, size: 215 bytes, cyclomatic complexity: 15 */
-    /* PROV: Fan-in: 15, Fan-out: 2, Total connectivity: 17 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x41d430 */
-    return; /* Stub implementation pending evidence */
-}
+
 
 /* Rank 362: Multi-parameter processor */
 void fcn_004183c0(int32_t arg_1ch, int32_t arg_20h, int32_t arg_24h, 

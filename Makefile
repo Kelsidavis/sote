@@ -6,10 +6,11 @@
 # Architecture: i386 (32-bit)
 # Target ABI: Linux with Windows API compatibility
 
-# Compiler and tools
-CC = gcc
-AR = ar
-STRIP = strip
+# Compiler and tools (MinGW-w64 cross-compilation) - RE-AGENT REBUILD m100
+CC = i686-w64-mingw32-gcc
+AR = i686-w64-mingw32-ar
+STRIP = i686-w64-mingw32-strip
+PKG_CONFIG = i686-w64-mingw32-pkg-config
 
 # Build directories
 SRCDIR = src
@@ -19,33 +20,39 @@ OBJDIR = $(BUILDDIR)/obj
 BINDIR = $(BUILDDIR)/bin
 LIBDIR = $(BUILDDIR)/lib
 
+# PROV: SDL2 configuration for MinGW cross-compilation - RE-AGENT REBUILD m100
+# Evidence: Using local SDL2 development files for deterministic builds
+SDL2_PATH = /media/k/vbox1/Shadows/SDL2-2.30.7/i686-w64-mingw32
+SDL2_CFLAGS = -I$(SDL2_PATH)/include/SDL2 -D_REENTRANT -Dmain=SDL_main
+SDL2_LIBS = -L$(SDL2_PATH)/lib -lmingw32 -lSDL2main -lSDL2 -mwindows -Wl,--dynamicbase -Wl,--nxcompat -lm -ldinput8 -ldxguid -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lsetupapi -lversion -luuid
+
 # Compilation flags (deterministic ordering)
-CFLAGS_COMMON = -std=c99 -m32 -Wall -Wextra -g
-CFLAGS_DEFINES = -DLINUX_BUILD -D_GNU_SOURCE -DSOTE_REIMPL_BUILD
-CFLAGS_INCLUDES = -I$(INCDIR)
+CFLAGS_COMMON = -std=c99 -m32 -Wall -Wextra -g -fno-omit-frame-pointer
+CFLAGS_DEFINES = -DWIN32 -DWIN32_BUILD -DSOTE_DISCLESS=1 -DSOTE_NO_CD=1 -DSOTE_REIMPL_BUILD -DREAGENT_BUILD_TAG="RE-AGENT REBUILD m100" -DRESOURCE_WARNINGS=1 -DADAPTER_TRACE=1 -DHAVE_ADAPTER_SDL=1 -DSDL_MAIN_HANDLED -DSOTE_FORCE_SDL=1 -DADAPTER_INPUT_SDL=1 -DADAPTER_VIDEO_SDL=1 -UHAVE_ADAPTER_SDL_STUB -USDL_STUB -UHAVE_SDL_STUB
+CFLAGS_INCLUDES = -I$(INCDIR) $(SDL2_CFLAGS)
 CFLAGS_DEBUG = -DDEBUG -g3 -O0
 CFLAGS_RELEASE = -DNDEBUG -O2 -s
 
 # Default flags
 CFLAGS = $(CFLAGS_COMMON) $(CFLAGS_DEFINES) $(CFLAGS_INCLUDES) $(CFLAGS_RELEASE)
-LDFLAGS = -m32
+LDFLAGS = -m32 -Wl,--subsystem,console -Wl,--Map,$(BINDIR)/SOTE_RE.map -Wl,--enable-auto-import -static-libgcc
+LIBS = -lwinmm -lddraw -lkernel32 -luser32 -lgdi32 $(SDL2_LIBS)
 
 # Source files (sorted alphabetically for deterministic builds)
 MAIN_SRCS = $(SRCDIR)/main.c
 
-LIB_SRCS = $(SRCDIR)/batch10_functions.c \
+LIB_SRCS = $(SRCDIR)/adapter_fs_posix.c \
+           $(SRCDIR)/adapter_input_sdl.c \
+           $(SRCDIR)/adapter_time_sdl.c \
+           $(SRCDIR)/adapter_video_sdl.c \
+           $(SRCDIR)/batch10_functions.c \
            $(SRCDIR)/batch11_functions.c \
            $(SRCDIR)/batch12_functions.c \
            $(SRCDIR)/batch13_functions.c \
            $(SRCDIR)/batch14_functions.c \
-           $(SRCDIR)/batch2_functions.c \
-           $(SRCDIR)/batch3_functions.c \
-           $(SRCDIR)/batch4_functions.c \
-           $(SRCDIR)/batch5_functions.c \
-           $(SRCDIR)/batch6_functions.c \
-           $(SRCDIR)/batch7_functions.c \
            $(SRCDIR)/batch8_functions.c \
            $(SRCDIR)/batch9_functions.c \
+           $(SRCDIR)/build_stamp.c \
            $(SRCDIR)/entry.c \
            $(SRCDIR)/final_31_functions.c \
            $(SRCDIR)/missing_functions.c \
@@ -56,8 +63,6 @@ LIB_SRCS = $(SRCDIR)/batch10_functions.c \
            $(SRCDIR)/navigator_batch_2_functions.c \
            $(SRCDIR)/navigator_batch_3_functions.c \
            $(SRCDIR)/navigator_batch_4_functions.c \
-           $(SRCDIR)/navigator_batch_5_functions.c \
-           $(SRCDIR)/navigator_batch_6_functions.c \
            $(SRCDIR)/priority_functions.c
 
 ALL_SRCS = $(MAIN_SRCS) $(LIB_SRCS)
@@ -68,7 +73,8 @@ LIB_OBJS = $(LIB_SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 ALL_OBJS = $(ALL_SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 # Header files (for dependency tracking)
-HEADERS = $(INCDIR)/batch10_functions.h \
+HEADERS = $(INCDIR)/adapter_video.h \
+          $(INCDIR)/batch10_functions.h \
           $(INCDIR)/batch11_functions.h \
           $(INCDIR)/batch12_functions.h \
           $(INCDIR)/batch13_functions.h \
@@ -95,10 +101,11 @@ HEADERS = $(INCDIR)/batch10_functions.h \
           $(INCDIR)/priority_functions.h \
           $(INCDIR)/sote.h \
           $(INCDIR)/types.h \
+          $(INCDIR)/windows_api_stubs.h \
           $(INCDIR)/windows_compat.h
 
 # Build targets
-TARGET_EXE = $(BINDIR)/sote_reimpl
+TARGET_EXE = $(BINDIR)/SOTE_RE.exe
 TARGET_LIB = $(LIBDIR)/libsote.a
 
 # Default target
@@ -123,13 +130,19 @@ release: $(TARGET_EXE)
 $(OBJDIR) $(BINDIR) $(LIBDIR):
 	mkdir -p $@
 
+# Stage SDL2.dll for runtime
+$(BINDIR)/SDL2.dll: | $(BINDIR)
+	cp $(SDL2_PATH)/bin/SDL2.dll $@
+	@echo "Staged SDL2.dll: $@"
+
 # Build executable
-$(TARGET_EXE): $(ALL_OBJS) | $(BINDIR)
-	$(CC) $(LDFLAGS) -o $@ $(ALL_OBJS)
+$(TARGET_EXE): $(ALL_OBJS) $(BINDIR)/SDL2.dll | $(BINDIR)
+	$(CC) $(LDFLAGS) -o $@ $(ALL_OBJS) $(LIBS)
 	@echo "=== SOTE Executable Built ==="
 	@echo "Binary: $@"
 	@echo "Size: $$(stat -c%s $@) bytes"
 	@echo "Objects: $(words $(ALL_OBJS)) files"
+	@echo "SDL2.dll staged for runtime"
 	@echo "========================="
 
 # Build static library
@@ -233,6 +246,15 @@ check-deps:
 	done
 	@echo "===================="
 
+# Wine run target for disc-less testing
+.PHONY: run-wine
+run-wine: $(TARGET_EXE)
+	@echo "=== WINE DISC-LESS TEST ==="
+	@echo "Running SOTE_RE.exe under Wine with disc-less flags"
+	@echo "Environment: SOTE_DISCLESS=1 WINEDEBUG=-all"
+	cd $(BINDIR) && SOTE_DISCLESS=1 WINEDEBUG=-all wine SOTE_RE.exe
+	@echo "=========================="
+
 # Help target
 .PHONY: help
 help:
@@ -246,6 +268,7 @@ help:
 	@echo "  release       - Build optimized release"
 	@echo "  compile-all   - Force compile all files"
 	@echo "  compile-errors- Gather compilation errors"
+	@echo "  run-wine      - Test executable under Wine"
 	@echo "  clean-build   - Remove build artifacts"
 	@echo "  clean         - Full clean including logs"
 	@echo "  stats         - Show build statistics"

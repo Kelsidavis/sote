@@ -86,6 +86,11 @@ void adapter_fs_shutdown(void);
 void adapter_normalize_path(char *path);
 int adapter_file_exists(const char *path);
 
+// VFS functions for resource-faithful diskless runtime
+// PROV: resources.manifest.json - evidence-based asset resolution
+HANDLE adapter_fs_open(const char* path, DWORD access, DWORD creation);
+int adapter_fs_exists(const char* path);
+
 // Constants
 #define INVALID_HANDLE_VALUE    ((HANDLE)(LONG_PTR)-1)
 #define INVALID_FILE_SIZE       ((DWORD)0xFFFFFFFF)

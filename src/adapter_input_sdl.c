@@ -3,6 +3,38 @@
 #include <stdlib.h>
 #include <string.h>
 
+// PROV: SDL2 include disabled for RE-AGENT REBUILD m100 - using forward declarations
+#if 0 /* disabled for RE-AGENT REBUILD m100 */
+#include <SDL2/SDL.h>
+// Forward declarations for SDL input functions
+extern int SDL_PollEvent(SDL_Event *event);
+extern const uint8_t* SDL_GetKeyboardState(int *numkeys);
+extern uint32_t SDL_GetMouseState(int *x, int *y);
+extern uint32_t SDL_GetTicks(void);
+extern void SDL_StartTextInput(void);
+extern void SDL_StopTextInput(void);
+extern void SDL_Delay(uint32_t ms);
+#endif
+
+// SDL stub functions for cross-compilation builds
+#if (defined(WIN32_BUILD) && !defined(SOTE_FORCE_SDL)) || !defined(HAVE_ADAPTER_SDL)
+static int SDL_PollEvent(SDL_Event *event) { return 0; }
+static const uint8_t* SDL_GetKeyboardState(int *numkeys) { static uint8_t keys[512] = {0}; return keys; }
+static uint32_t SDL_GetMouseState(int *x, int *y) { return 0; }
+static uint32_t SDL_GetTicks(void) { return 0; }
+static void SDL_StartTextInput(void) { }
+static void SDL_StopTextInput(void) { }
+static void SDL_Delay(uint32_t ms) { }
+// PROV: Stub for keycode to scancode conversion
+typedef int SDL_Scancode;
+static SDL_Scancode SDL_GetScancodeFromKey(int keycode) { 
+    // Simple stub mapping for common keys
+    if (keycode == SDLK_RETURN) return 40; // Return key scancode estimate
+    if (keycode == SDLK_ESCAPE) return SDL_SCANCODE_ESCAPE;
+    return SDL_SCANCODE_UNKNOWN;
+}
+#endif
+
 // PROV: DirectInput/Windows message API replacements based on runtime.apis.json
 // Evidence: DirectInputCreateA at IAT_0x4c4ce8 for input device creation
 // Evidence: PeekMessageA at IAT_0x4c4bf0 for non-blocking event polling
@@ -303,4 +335,52 @@ void adapter_input_shutdown(void)
 INPUT_CONTEXT* adapter_get_input_context(void)
 {
     return &g_input_context;
+}
+
+// PROV: SDL main loop input functions for disc-less mode
+// Event pump for main loop - processes all pending SDL events
+void adapter_input_sdl_pump(void)
+{
+    // PROV: Main loop requires event processing for window/input management
+    adapter_input_update();  // Use existing update function to process events
+}
+
+// PROV: ESC/close detection for main loop quit condition
+int adapter_input_sdl_should_quit(void)
+{
+    // PROV: Main loop needs to detect quit conditions (ESC key or window close)
+    
+    // Check for queued quit messages
+    if (g_queue_head != g_queue_tail) {
+        for (uint32_t i = g_queue_head; i != g_queue_tail; i = (i + 1) % 256) {
+            if (g_message_queue[i].message == WM_QUIT || g_message_queue[i].message == WM_CLOSE) {
+                return 1;  // Found quit message
+            }
+        }
+    }
+    
+    // Check for ESC key directly from SDL state
+    const uint8_t *state = SDL_GetKeyboardState(NULL);
+    if (state[SDL_SCANCODE_ESCAPE]) {
+        return 1;  // ESC key pressed
+    }
+    
+    return 0;  // No quit condition detected
+}
+
+// PROV: Key state detection for menu system
+// Evidence: ENTER key detection required for title -> start skeleton transition
+int adapter_input_sdl_is_key_pressed(int sdl_keycode)
+{
+    // PROV: Direct key state query for menu navigation
+    const uint8_t *state = SDL_GetKeyboardState(NULL);
+    
+    // Convert SDL keycode to scancode for state array lookup
+    SDL_Scancode scancode = SDL_GetScancodeFromKey(sdl_keycode);
+    
+    if (scancode != SDL_SCANCODE_UNKNOWN && scancode < SDL_NUM_SCANCODES) {
+        return state[scancode] ? 1 : 0;
+    }
+    
+    return 0;  // Key not found or invalid
 }

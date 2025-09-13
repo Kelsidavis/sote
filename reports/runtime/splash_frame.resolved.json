@@ -1,0 +1,95 @@
+{
+  "resolution_id": "coord-splash-001",
+  "agent": "resource_runtime_annotator",
+  "intent": "produce",
+  "timestamp": "2025-09-12T22:06:00Z",
+  "splash_frame_resolution": {
+    "analysis": {
+      "primary_selection_status": "REJECTED",
+      "primary_path": "/media/k/vbox1/Shadows/SOTE/Sdata/l00logo.san",
+      "rejection_reason": "SAN format disallowed - no SAN decoding implementation",
+      "fallback_strategy": "evidence_only_bmp_selection"
+    },
+    "evidence_only_search": {
+      "search_scope": [
+        "/media/k/vbox1/Shadows/SOTE/Sdata/*.bmp",
+        "/media/k/vbox1/Shadows/SOTE/Sdata/**/*.bmp"
+      ],
+      "found_candidates": [
+        {
+          "path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+          "size": 921654,
+          "format": "bmp",
+          "resolution": "640x480",
+          "color_depth": "24-bit",
+          "classification": "character_screen",
+          "suitability": "high",
+          "reason": "Character portrait - suitable for splash screen"
+        },
+        {
+          "path": "/media/k/vbox1/Shadows/SOTE/Sdata/astroids.bmp",
+          "size": 921654,
+          "format": "bmp",
+          "resolution": "640x480",
+          "color_depth": "24-bit",
+          "classification": "game_background",
+          "suitability": "medium",
+          "reason": "Space scene - thematically appropriate"
+        },
+        {
+          "path": "/media/k/vbox1/Shadows/SOTE/Sdata/battle.bmp",
+          "size": 921654,
+          "format": "bmp",
+          "resolution": "640x480",
+          "color_depth": "24-bit",
+          "classification": "game_background",
+          "suitability": "medium",
+          "reason": "Battle scene - action-oriented theme"
+        }
+      ],
+      "fallback_candidates_checked": [
+        "TITLE.BMP",
+        "title.bmp",
+        "splash.bmp",
+        "logos/title.bmp",
+        "front/title.bmp",
+        "art/title.bmp"
+      ],
+      "fallback_candidates_found": [],
+      "total_bmp_files": 43
+    },
+    "final_selection": {
+      "selected_path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+      "absolute_path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+      "relative_path": "Sdata/boba.bmp",
+      "format": "bmp",
+      "size": 921654,
+      "resolution": "640x480",
+      "color_depth": "24-bit",
+      "status": "RESOLVED",
+      "confidence": "high",
+      "selection_reason": "Character portrait (Boba Fett) - iconic Star Wars imagery suitable for title/splash screen"
+    },
+    "runtime_configuration": {
+      "splash_bmp_path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+      "assets_base_dir": "/media/k/vbox1/Shadows/SOTE/Sdata",
+      "render_method": "sdl_bmp_direct_load",
+      "environment_variables": {
+        "SOTE_ASSETS_DIR": "/media/k/vbox1/Shadows/SOTE/Sdata",
+        "SOTE_SPLASH_BMP": "boba.bmp"
+      }
+    },
+    "verification": {
+      "file_exists": true,
+      "file_readable": true,
+      "format_supported_by_sdl": true,
+      "expected_render_log": "[RENDER] splash presented: boba.bmp (640x480)"
+    }
+  },
+  "provenance": {
+    "evidence_sources": ["filesystem scan", "title_frame.selection.json", "resources.manifest.json"],
+    "coord_call_id": "coord-splash-001",
+    "selection_algorithm": "evidence_only_bmp_fallback",
+    "san_decoder_bypass": true
+  }
+}

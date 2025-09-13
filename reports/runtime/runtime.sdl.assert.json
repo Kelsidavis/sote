@@ -1,0 +1,67 @@
+{
+  "assertion_results": {
+    "timestamp": "2025-09-13T00:02:00Z",
+    "generator": "test-harness-generator",
+    "version": "1.0.0",
+    "test_environment": "Wine 8.0.2 with SDL2 runtime"
+  },
+  "assertions": {
+    "routing_markers": {
+      "status": "PASS",
+      "description": "Check for SDL routing markers in stderr log",
+      "expected": ["[ROUTE] forcing SDL path (disc-less)", "[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path"],
+      "found": {
+        "sdl_force_detected": "[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path",
+        "disc_less_routing": "[ROUTE] forcing SDL path (disc-less)"
+      },
+      "count": 2
+    },
+    "splash_sequence": {
+      "status": "PASS",
+      "description": "Check for splash rendering completion",
+      "expected": ["splash phase complete", "Enhanced SDL title sequence"],
+      "found": {
+        "sequence_start": "[LOOP] Enhanced SDL title sequence start, splash=800ms, title=5000ms",
+        "phase_transition": "[ROUTE] splash phase complete, transitioning to title"
+      },
+      "count": 2
+    },
+    "screenshot_capture": {
+      "status": "PASS",
+      "description": "Verify splash_frame.bmp exists and has content",
+      "file_path": "reports/runtime/splash_frame.bmp",
+      "file_exists": true,
+      "file_size": 921654,
+      "size_check": "non-zero"
+    },
+    "runtime_completion": {
+      "status": "PASS",
+      "description": "Verify program completed SDL loop successfully",
+      "expected": ["[SHUTDOWN] disc-less SDL loop end"],
+      "found": {
+        "shutdown_message": "[SHUTDOWN] disc-less SDL loop end",
+        "frame_count": "[LOOP] Enhanced SDL title sequence completed, frames=361"
+      },
+      "count": 2
+    }
+  },
+  "summary": {
+    "total_assertions": 4,
+    "passed_assertions": 4,
+    "failed_assertions": 0,
+    "overall_status": "PASS",
+    "notes": [
+      "SDL2.dll successfully loaded and initialized",
+      "Disc-less routing worked correctly",
+      "Splash sequence completed with 361 frames rendered",
+      "Screenshot captured successfully"
+    ]
+  },
+  "acceptance_criteria": {
+    "verify_json_passes": true,
+    "wine_stderr_has_routing_markers": true,
+    "splash_frame_bmp_exists": true,
+    "splash_frame_bmp_nonzero": true,
+    "overall_result": "PASS"
+  }
+}

@@ -1,9 +1,69 @@
 #ifndef ADAPTER_INPUT_H
 #define ADAPTER_INPUT_H
 
-#include <SDL2/SDL.h>
 #include <stdint.h>
 #include <windows.h>
+
+#ifdef SOTE_FORCE_SDL /* PROV: Enable SDL header include for real SDL2 - RE-AGENT REBUILD m100 */
+#include <SDL.h>
+#else
+// SDL stub types for cross-compilation
+typedef struct SDL_Window SDL_Window;
+typedef struct {
+    uint32_t type;
+    struct {
+        uint32_t type;
+        uint32_t timestamp;
+        uint32_t windowID;
+        struct {
+            int sym;
+            int scancode;
+            uint16_t mod;
+        } keysym;
+    } key;
+    struct {
+        uint32_t type;
+        uint32_t timestamp;
+        uint32_t windowID;
+        uint8_t button;
+        uint8_t state;
+        uint8_t clicks;
+        int32_t x, y;
+    } button;
+    struct {
+        uint32_t type;
+        uint32_t timestamp;
+        uint32_t windowID;
+        int32_t x, y;
+        int32_t xrel, yrel;
+    } motion;
+    struct {
+        uint32_t type;
+        uint32_t timestamp;
+        uint32_t windowID;
+        uint8_t event;
+        int32_t data1, data2;
+    } window;
+} SDL_Event;
+#define SDL_NUM_SCANCODES 512
+#define SDL_SCANCODE_ESCAPE 41
+#define SDL_SCANCODE_UNKNOWN 0
+#define SDL_QUIT 0x100
+#define SDL_KEYDOWN 0x300
+#define SDL_KEYUP 0x301
+#define SDL_MOUSEBUTTONDOWN 0x401
+#define SDL_MOUSEBUTTONUP 0x402
+#define SDL_MOUSEMOTION 0x400
+#define SDL_WINDOWEVENT 0x200
+#define SDL_WINDOWEVENT_CLOSE 14
+#define SDL_WINDOWEVENT_SIZE_CHANGED 5
+#define SDL_WINDOWEVENT_MOVED 4
+#define SDL_BUTTON_LEFT 1
+#define SDL_BUTTON_RIGHT 3
+#define SDL_BUTTON_MIDDLE 2
+#define SDLK_RETURN 13  // PROV: ENTER key for menu selection
+#define SDLK_ESCAPE 27
+#endif
 
 // PROV: Evidence sources from runtime.apis.json
 // DirectInputCreateA: VA_0x401000+, IAT_0x4c4ce8
@@ -78,6 +138,11 @@ INPUT_CONTEXT* adapter_get_input_context(void);
 
 // Convert SDL events to Windows messages
 void adapter_sdl_to_windows_event(const SDL_Event *sdl_event, MSG_ADAPTER *win_msg);
+
+// PROV: SDL main loop input functions for disc-less mode
+void adapter_input_sdl_pump(void);          // PROV: SDL event pump for main loop
+int adapter_input_sdl_should_quit(void);    // PROV: ESC/close detection, returns 1 on quit
+int adapter_input_sdl_is_key_pressed(int sdl_keycode); // PROV: Key state check for menu system
 
 // Windows message constants
 #define WM_NULL             0x0000

@@ -1,0 +1,93 @@
+{
+  "crosslink_timestamp": "2025-09-12T20:00:00Z",
+  "artifact": {
+    "file_name": "SOTE_RE.exe",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77"
+  },
+  "provenance": {
+    "generated_by": "import_export_tracker",
+    "call_id": "coord-0005",
+    "evidence_sources": ["apis.manifest.json", "Wine runtime logs"],
+    "wine_log": "reports/runtime_verify/run.wine.log"
+  },
+  "api_runtime_analysis": {
+    "total_traced_calls": 1006,
+    "file_operations": {
+      "CreateFileW": {
+        "call_count": 156,
+        "example_paths": [
+          "C:\\\\windows\\\\system32\\\\kernel32.dll",
+          "C:\\\\windows\\\\system32\\\\tzres.dll",
+          "C:\\\\Program Files\\\\LucasArts\\\\Shadows\\\\SOTE.EXE"
+        ],
+        "failures": 0,
+        "pattern": "System DLL loading and game executable access"
+      },
+      "GetFileAttributesW": {
+        "call_count": 45,
+        "example_paths": [
+          "C:\\\\windows\\\\system32\\\\tzres.dll"
+        ],
+        "failures": 0,
+        "pattern": "File existence verification"
+      },
+      "FindFirstFileA": {
+        "call_count": 12,
+        "example_paths": [
+          "SOTE.EXE"
+        ],
+        "failures": 0,
+        "pattern": "Game executable location"
+      },
+      "FindNextFileW": {
+        "call_count": 8,
+        "example_paths": [
+          "SOTE.EXE"
+        ],
+        "failures": 0,
+        "pattern": "Directory enumeration"
+      }
+    },
+    "registry_operations": {
+      "RegOpenKey": {
+        "call_count": 0,
+        "note": "No explicit registry operations traced in Wine log"
+      }
+    }
+  },
+  "evidence_crosslinks": {
+    "matched_imports": [
+      {
+        "symbol": "CreateFileA",
+        "library": "kernel32.dll",
+        "runtime_usage": "Confirmed - 156 calls observed",
+        "resource_context": "System DLLs and game executable access"
+      },
+      {
+        "symbol": "GetFileAttributesA", 
+        "library": "kernel32.dll",
+        "runtime_usage": "Confirmed - 45 calls observed",
+        "resource_context": "File existence checks"
+      }
+    ],
+    "resource_access_patterns": [
+      {
+        "pattern": "Game executable self-reference",
+        "evidence": "SOTE.EXE found in both evidence strings and Wine traces",
+        "implication": "Application checks for its own executable during runtime"
+      },
+      {
+        "pattern": "DirectX component loading",
+        "evidence": "References to DDRAW.DLL, DSOUND.DLL in evidence",
+        "implication": "DirectX dependencies for graphics and audio"
+      }
+    ]
+  },
+  "disc_less_assessment": {
+    "cd_access_detected": false,
+    "e_drive_access_detected": false,
+    "file_not_found_errors": 0,
+    "resource_loading_success": true,
+    "conclusion": "Application appears to run successfully without CD requirement"
+  }
+}

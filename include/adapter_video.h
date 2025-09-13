@@ -1,7 +1,15 @@
 #ifndef ADAPTER_VIDEO_H
 #define ADAPTER_VIDEO_H
 
-#include <SDL2/SDL.h>
+#ifdef SOTE_FORCE_SDL /* PROV: SDL2 include enabled for real SDL2 - RE-AGENT REBUILD m100 */
+#include <SDL.h>
+#else
+// SDL stub types for cross-compilation
+typedef struct SDL_Window SDL_Window;
+typedef struct SDL_Renderer SDL_Renderer;
+typedef struct SDL_Texture SDL_Texture;
+#endif
+
 #include <stdint.h>
 #include <windows.h>
 
@@ -79,6 +87,18 @@ void adapter_FreeSurface(DDRAW_SURFACE *surface);
 int adapter_video_init(void);
 void adapter_video_shutdown(void);
 DDRAW_CONTEXT* adapter_get_context(void);
+
+// PROV: SDL BMP splash rendering - coord-splash-002 + SDL main loop requirements
+int adapter_video_sdl_init(int w, int h);  // PROV: Main loop init with dimensions
+int adapter_video_sdl_present(void);       // PROV: Frame presentation for main loop  
+int adapter_video_sdl_shutdown(void);      // PROV: Clean shutdown for main loop
+int adapter_video_sdl_show_bmp(const char* bmp_path);  // PROV: BMP rendering function
+int adapter_resolve_splash_bmp(char* resolved_path, size_t path_size);  // PROV: BMP path resolution from JSON
+
+// PROV: Title scene helper APIs - coord-title-001
+int adapter_video_sdl_clear(uint8_t r, uint8_t g, uint8_t b);  // PROV: Clear window with RGB color
+int adapter_video_sdl_draw_bmp_centered(const char* bmp_path);  // PROV: Load and center draw BMP
+int adapter_video_sdl_save_screenshot(const char* out_bmp_path);  // PROV: Screenshot capture for verification
 
 // Constants from evidence
 // PROV: Screen dimensions from resource analysis (640x480 BMP files)

@@ -1,177 +1,67 @@
 {
-  "metadata": {
-    "artifact": {
-      "file_name": "SOTE.EXE",
-      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
-      "arch": "i386",
-      "abi": "pe32"
+  "manifest_timestamp": "2025-09-12T19:57:00Z",
+  "artifact": {
+    "file_name": "SOTE_RE.exe",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77"
+  },
+  "provenance": {
+    "generated_by": "binary_artifact_extractor",
+    "call_id": "coord-0004",
+    "evidence_sources": ["filesystem scan", "file signature analysis"],
+    "asset_root": "/media/k/vbox1/Shadows/SOTE/Sdata"
+  },
+  "resource_summary": {
+    "total_files": 277,
+    "audio_files": 183,
+    "image_files": 43,
+    "executable_files": 1,
+    "other_files": 50
+  },
+  "classified_resources": {
+    "audio": {
+      "type": "WAVE audio",
+      "format": "Microsoft PCM, 16 bit",
+      "sample_rates": ["11025 Hz", "22050 Hz"],
+      "channels": "mono",
+      "examples": [
+        "Sdata/atat_2.wav",
+        "Sdata/atst_2.wav", 
+        "Sdata/badbike.wav",
+        "Sdata/beamlp1.wav",
+        "Sdata/bikeaccel1.wav"
+      ],
+      "usage_context": "Game sound effects, ambient audio, vehicle sounds"
     },
-    "manifest": {
-      "timestamp": "2025-09-11T22:05:00Z",
-      "stage": "Resource Existence Verification",
-      "tool": "RE-AGENT Resource Annotator",
-      "schema_version": "1.0",
-      "source_catalog": "runtime/resource.catalog.json",
-      "source_index": "runtime/resource.index.json"
+    "images": {
+      "type": "PC bitmap",
+      "format": "Windows 3.x format",
+      "resolution": "640 x 480 x 24",
+      "color_depth": "24-bit",
+      "examples": [
+        "Sdata/astroids.bmp",
+        "Sdata/battle.bmp",
+        "Sdata/boba.bmp",
+        "Sdata/controof.bmp",
+        "Sdata/cpanckof.bmp"
+      ],
+      "usage_context": "Game textures, UI elements, background images"
+    },
+    "executables": {
+      "examples": [
+        "Sdata/Shadows.exe"
+      ],
+      "usage_context": "Game launcher or auxiliary program"
     }
   },
-  "statistics": {
-    "total_resources": 277,
-    "verified_exists": 277,
-    "missing": 0,
-    "by_type": {
-      "bitmap": 43,
-      "sound": 183,
-      "movie": 17,
-      "dll": 34
-    }
+  "resource_access_patterns": {
+    "cd_audio_reference": "Found string 'CD Audio' in evidence",
+    "directx_dependency": "DirectX DLLs referenced (DDRAW.DLL, DSOUND.DLL)",
+    "registry_paths": "Uses LucasArts\\Shadows_of_the_Empire registry entries",
+    "install_paths": "References Install Path and Source Dir"
   },
-  "resources": [
-    {
-      "name": "astroids.bmp",
-      "path": "Sdata/astroids.bmp",
-      "kind": "bitmap",
-      "size": 921654,
-      "sha256": "be4df53de5da1dcee06d8bc1540c445016416882db2ed21dd0ba094506101540",
-      "exists": true,
-      "referenced_at": ["va=0x403000", "BMP loader"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c"
-    },
-    {
-      "name": "battle.bmp",
-      "path": "Sdata/battle.bmp",
-      "kind": "bitmap",
-      "size": 921654,
-      "sha256": "1b20b6007d317d5d00462b1a99978d2563e3184ea2ba4554c9cd124cf4ba93ec",
-      "exists": true,
-      "referenced_at": ["va=0x403000", "BMP loader"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c"
-    },
-    {
-      "name": "boba.bmp",
-      "path": "Sdata/boba.bmp",
-      "kind": "bitmap",
-      "size": 921654,
-      "sha256": "c5b229e044b8ae33b05d5fe52ffc9878325e5780da14a904fa46cdc7d94df0ae",
-      "exists": true,
-      "referenced_at": ["va=0x403000", "BMP loader"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c"
-    },
-    {
-      "name": "controof.bmp",
-      "path": "Sdata/controof.bmp",
-      "kind": "bitmap",
-      "size": 49208,
-      "sha256": "542d666568ad5702db41193ba766d03ac6866c2625af42f345f51b60a2dd70ef",
-      "exists": true,
-      "referenced_at": ["va=0x403000", "UI controls"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c"
-    },
-    {
-      "name": "controon.bmp",
-      "path": "Sdata/controon.bmp",
-      "kind": "bitmap",
-      "size": 49208,
-      "sha256": "5f475842fda70e283b0a1c0716077ee9da21da3c39a8579a33d0d03c23462999",
-      "exists": true,
-      "referenced_at": ["va=0x403000", "UI controls"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c"
-    },
-    {
-      "name": "data00.dll",
-      "path": "Sdata/data00.dll",
-      "kind": "dll",
-      "size": 14274244,
-      "sha256": "5c8eb9c92f1e33a33f24f3dcf2bc0e02f67c946c8a76c3c8a3e5e01a3e983abc",
-      "exists": true,
-      "referenced_at": ["va=0x402000", "DLL archive loader"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c",
-      "note": "Packed resource archive"
-    },
-    {
-      "name": "data01.dll",
-      "path": "Sdata/data01.dll",
-      "kind": "dll",
-      "size": 3732356,
-      "sha256": "4b74b40c0c4fe4e52c1e8f5b9c964b8b93c40ee0bc3f8e69bb00e1863a89b9e9",
-      "exists": true,
-      "referenced_at": ["va=0x402000", "DLL archive loader"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c",
-      "note": "Packed resource archive"
-    },
-    {
-      "name": "intro.san",
-      "path": "Sdata/intro.san",
-      "kind": "movie",
-      "size": 9476704,
-      "sha256": "74b3f2cfbeae08b4a1a8e56fa3c90187bb87e65a1e84c4bb0f056c82e1bd8f77",
-      "exists": true,
-      "referenced_at": ["va=0x403200", "SAN movie loader"],
-      "adapter": "FS → adapter_fs.h / adapter_fs_posix.c",
-      "note": "LucasArts SMUSH format"
-    }
-  ],
-  "resource_patterns": [
-    {
-      "pattern": "Sdata/*.bmp",
-      "count": 43,
-      "all_exist": true,
-      "loader": "bmp_load",
-      "va": "0x403000"
-    },
-    {
-      "pattern": "Sdata/*.wav",
-      "count": 183,
-      "all_exist": true,
-      "loader": "wav_load",
-      "va": "0x403100"
-    },
-    {
-      "pattern": "Sdata/data*.dll",
-      "count": 34,
-      "all_exist": true,
-      "loader": "dll_archive_load",
-      "va": "0x402000"
-    },
-    {
-      "pattern": "Sdata/*.san",
-      "count": 17,
-      "all_exist": true,
-      "loader": "san_load",
-      "va": "0x403200"
-    }
-  ],
-  "api_usage": {
-    "CreateFileA": {
-      "iat": "0x4c4c20",
-      "references": 15,
-      "adapter": "adapter_CreateFileA",
-      "resources": ["*.bmp", "*.wav", "*.dll", "*.san"]
-    },
-    "ReadFile": {
-      "iat": "0x4c4c2c",
-      "references": 20,
-      "adapter": "adapter_ReadFile",
-      "resources": ["Binary asset data"]
-    },
-    "LoadLibraryA": {
-      "iat": "0x4c4c44",
-      "references": 5,
-      "adapter": "adapter_LoadLibraryA",
-      "resources": ["data00.dll-data31.dll"]
-    },
-    "FindFirstFileA": {
-      "iat": "0x4c4c50",
-      "references": 4,
-      "adapter": "adapter_FindFirstFileA",
-      "resources": ["Sdata/ directory enumeration"]
-    }
-  },
-  "verification": {
-    "all_resources_exist": true,
-    "missing_resources": [],
-    "adapter_coverage": "100%",
-    "runtime_checks_enabled": true,
-    "compile_warnings_enabled": true
+  "file_existence_check": {
+    "all_referenced_found": true,
+    "missing_count": 0,
+    "accessible": true
   }
 }

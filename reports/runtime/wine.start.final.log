@@ -1,0 +1,8 @@
+[STARTUP] main() entry - argc=1, argv=0035bcd0 (SDL2 signature)
+[STARTUP] SOTE_ASSETS_DIR='/media/k/vbox1/Shadows/SOTE/Sdata'
+[STARTUP] SOTE_DISCLESS='1'
+[STARTUP] initialize_directdraw entry - checking routing gates
+[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path
+[ROUTE] forcing SDL path (disc-less)
+[STARTUP] disc-less SDL loop begin
+[ERROR] SDL video init failed: 1

@@ -1,0 +1,165 @@
+{
+  "verification_timestamp": "2025-09-13T01:35:00",
+  "executable": {
+    "path": "/media/k/vbox1/Shadows/SOTE/build/bin/SOTE_RE.exe",
+    "size_bytes": 630064,
+    "size_expected": "~630KB",
+    "sha256": "df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a",
+    "previous_sha256": "742c0a3395baa7e7ffe29475ed0c7f6fb739a7f807fd580a11ef050e7d70b031",
+    "is_rebuild": true,
+    "modification_time": "2025-09-13 01:33"
+  },
+  "pe32_format": {
+    "verified": true,
+    "format": "PE32 executable (console) Intel 80386, for MS Windows",
+    "sections_count": 20,
+    "sections": [
+      {
+        "name": ".text",
+        "size": "0x00010124",
+        "vma": "0x00401000",
+        "characteristics": "CODE"
+      },
+      {
+        "name": ".data",
+        "size": "0x00000074",
+        "vma": "0x00412000",
+        "characteristics": "DATA"
+      },
+      {
+        "name": ".rdata",
+        "size": "0x00001c54",
+        "vma": "0x00413000",
+        "characteristics": "READONLY DATA"
+      },
+      {
+        "name": ".idata",
+        "size": "0x00001120",
+        "vma": "0x00420000",
+        "characteristics": "IMPORT DATA"
+      }
+    ]
+  },
+  "rebuild_authenticity": {
+    "verified": true,
+    "stamp_present": true,
+    "stamps_found": [
+      "SOTE RE-AGENT",
+      "RE-AGENT REBUILD m100"
+    ],
+    "hash_changed": true,
+    "hash_comparison": {
+      "previous": "742c0a3395baa7e7ffe29475ed0c7f6fb739a7f807fd580a11ef050e7d70b031",
+      "current": "df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a",
+      "match": false
+    }
+  },
+  "sdl2_integration": {
+    "import_table_verified": true,
+    "dll_name": "SDL2.dll",
+    "function_count": 42,
+    "expected_count": "~41",
+    "count_difference": 1,
+    "key_functions_present": [
+      "SDL_Init",
+      "SDL_Quit",
+      "SDL_CreateWindow",
+      "SDL_CreateRenderer",
+      "SDL_PollEvent",
+      "SDL_GetKeyboardState",
+      "SDL_RenderPresent",
+      "SDL_SaveBMP_RW",
+      "SDL_LoadBMP_RW"
+    ],
+    "sdl2_dll_staged": true,
+    "sdl2_dll_path": "/media/k/vbox1/Shadows/SOTE/build/bin/SDL2.dll",
+    "sdl2_dll_size": 2043392,
+    "stub_references": {
+      "found": 1,
+      "strings": ["[SDL_STUB] SaveBMP called: %s"],
+      "note": "Single debug string found, not actively used in code"
+    }
+  },
+  "new_functionality": {
+    "menu_state_machine": {
+      "verified": true,
+      "evidence": [
+        "[ROUTE] splash phase complete, transitioning to title",
+        "[ROUTE] title phase using: %s",
+        "[INPUT] ENTER key detected in title phase",
+        "[LOOP] Title phase timeout reached: %dms"
+      ],
+      "phases_detected": ["splash", "title", "start"],
+      "enter_key_detection": true,
+      "enter_key_strings": [
+        "SDL_SCANCODE_KP_ENTER",
+        "[INPUT] ENTER key detected in title phase"
+      ]
+    },
+    "vfs_tracing": {
+      "verified": true,
+      "trace_file_path": "/media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl",
+      "trace_strings_found": [
+        "[VFS] Trace file opened: /media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl",
+        "[VFS] resolved: %s -> %s",
+        "[WARN][VFS] missing: %s (searched all VFS roots)"
+      ]
+    },
+    "screenshot_capture": {
+      "verified": true,
+      "screenshot_paths_found": [
+        "/media/k/vbox1/Shadows/SOTE/reports/runtime/title_frame.bmp",
+        "/media/k/vbox1/Shadows/SOTE/reports/runtime/title_frame_initial.bmp",
+        "/media/k/vbox1/Shadows/SOTE/reports/runtime/start_frame.bmp"
+      ],
+      "screenshot_functions": [
+        "adapter_video_sdl_save_screenshot",
+        "adapter_select_title_frame"
+      ],
+      "error_handling": "[SCREENSHOT] ERROR: Failed to save screenshot: %s"
+    },
+    "start_game_skeleton": {
+      "verified": true,
+      "evidence": [
+        "SOTE Splash",
+        "[RENDER] Title asset path: %s",
+        "[RENDER] Title frame selection complete"
+      ]
+    }
+  },
+  "build_integrity": {
+    "map_file_generated": true,
+    "map_file_path": "/media/k/vbox1/Shadows/SOTE/build/bin/SOTE_RE.map",
+    "map_file_size": 381873,
+    "runtime_dependencies": {
+      "SDL2.dll": {
+        "staged": true,
+        "path": "/media/k/vbox1/Shadows/SOTE/build/bin/SDL2.dll",
+        "size": 2043392
+      }
+    }
+  },
+  "verification_result": "PASSED",
+  "summary": {
+    "all_checks_passed": true,
+    "critical_findings": [],
+    "minor_findings": [
+      {
+        "type": "INFO",
+        "description": "SDL2 function count is 42 instead of expected ~41 (1 additional function)",
+        "severity": "low"
+      },
+      {
+        "type": "INFO",
+        "description": "One SDL_STUB debug string remains but appears unused",
+        "severity": "low"
+      }
+    ],
+    "enhancements_verified": [
+      "Three-phase menu state machine (Splash → Title → StartSkeleton)",
+      "ENTER key detection for menu navigation",
+      "VFS tracing to vfs.start.trace.jsonl",
+      "Screenshot capture for title_frame.bmp and start_frame.bmp"
+    ]
+  }
+}

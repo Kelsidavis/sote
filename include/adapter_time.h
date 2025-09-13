@@ -1,7 +1,9 @@
 #ifndef ADAPTER_TIME_H
 #define ADAPTER_TIME_H
 
-#include <SDL2/SDL.h>
+#ifdef SOTE_FORCE_SDL
+#include <SDL.h>  // Enabled for real SDL2 - RE-AGENT REBUILD m100
+#endif
 #include <stdint.h>
 #include <windows.h>
 

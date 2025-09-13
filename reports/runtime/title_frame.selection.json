@@ -1,0 +1,125 @@
+{
+  "selection_id": "coord-startup-003",
+  "agent": "resource_runtime_annotator",
+  "intent": "select",
+  "timestamp": "2025-09-12T21:45:00Z",
+  "title_frame_analysis": {
+    "search_results": {
+      "direct_candidates": {
+        "checked": ["TITLE.BMP", "TITLE_PC.BMP", "art/title.bmp", "front/title.bmp", "splash.bmp", "logos/title.png"],
+        "found": [],
+        "status": "none_found"
+      },
+      "fallback_patterns": {
+        "title_pattern": {
+          "pattern": "**/title*.bmp",
+          "matches": [],
+          "status": "no_matches"
+        },
+        "splash_pattern": {
+          "pattern": "**/splash*.bmp", 
+          "matches": [],
+          "status": "no_matches"
+        },
+        "logo_pattern": {
+          "pattern": "**/logo*.bmp",
+          "matches": [],
+          "status": "no_matches"
+        }
+      },
+      "discovered_assets": {
+        "video_titles": [
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/l00logo.san",
+            "size": 9275340,
+            "format": "san",
+            "classification": "logo_video",
+            "priority": "high"
+          }
+        ],
+        "large_bitmaps": [
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/astroids.bmp",
+            "size": 921654,
+            "format": "bmp",
+            "classification": "game_background",
+            "priority": "medium"
+          },
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/battle.bmp", 
+            "size": 921654,
+            "format": "bmp",
+            "classification": "game_background",
+            "priority": "medium"
+          },
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+            "size": 921654,
+            "format": "bmp",
+            "classification": "character_screen",
+            "priority": "medium"
+          },
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/skyhook.bmp",
+            "size": 921654,
+            "format": "bmp", 
+            "classification": "level_background",
+            "priority": "low"
+          },
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/walker.bmp",
+            "size": 921654,
+            "format": "bmp",
+            "classification": "level_background",
+            "priority": "low"
+          }
+        ],
+        "audio_splash": [
+          {
+            "path": "/media/k/vbox1/Shadows/SOTE/Sdata/splash-3.wav",
+            "size": 43116,
+            "format": "wav",
+            "classification": "splash_audio",
+            "priority": "low"
+          }
+        ]
+      }
+    },
+    "selection": {
+      "primary_choice": {
+        "path": "/media/k/vbox1/Shadows/SOTE/Sdata/l00logo.san",
+        "reason": "Dedicated logo video file - highest probability title sequence",
+        "format": "san",
+        "size": 9275340,
+        "runtime_accessible": true
+      },
+      "fallback_choice": {
+        "path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+        "reason": "Character screen bitmap - likely main menu/title area background",
+        "format": "bmp",
+        "size": 921654,
+        "runtime_accessible": true
+      },
+      "status": "FOUND",
+      "confidence": "high"
+    }
+  },
+  "runtime_configuration": {
+    "title_sequence_path": "/media/k/vbox1/Shadows/SOTE/Sdata/l00logo.san",
+    "title_background_path": "/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp",
+    "assets_base_dir": "/media/k/vbox1/Shadows/SOTE/Sdata",
+    "render_format": "san_video_primary_bmp_fallback"
+  },
+  "verification": {
+    "file_exists": true,
+    "format_supported": "san_requires_decoder",
+    "bmp_fallback_available": true,
+    "expected_render_log": "[RENDER] title candidate: l00logo.san"
+  },
+  "provenance": {
+    "assets_root": "/media/k/vbox1/Shadows/SOTE/Sdata",
+    "search_patterns": ["title", "splash", "logo"],
+    "coord_call_id": "coord-startup-003",
+    "selection_algorithm": "priority_weighted_file_discovery"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "resource_verification_report": {
+    "timestamp": "2025-09-12T20:42:00Z",
+    "agent": "evidence_curator",
+    "call_id": "coord-0005",
+    "manifest_source": "/media/k/vbox1/Shadows/SOTE/runtime/resources.manifest.json",
+    "assets_root": "/media/k/vbox1/Shadows/SOTE/Sdata",
+    "verification_summary": {
+      "manifest_files_declared": 277,
+      "filesystem_files_found": 277,
+      "files_verified": 277,
+      "files_missing": 0,
+      "verification_status": "PASS"
+    },
+    "sample_verification": {
+      "audio_files": {
+        "verified": [
+          "Sdata/atat_2.wav",
+          "Sdata/atst_2.wav",
+          "Sdata/badbike.wav",
+          "Sdata/beamlp1.wav",
+          "Sdata/bikeaccel1.wav"
+        ],
+        "status": "ALL_FOUND"
+      },
+      "image_files": {
+        "verified": [
+          "Sdata/astroids.bmp",
+          "Sdata/battle.bmp",
+          "Sdata/boba.bmp",
+          "Sdata/controof.bmp",
+          "Sdata/cpanckof.bmp"
+        ],
+        "status": "ALL_FOUND"
+      },
+      "executable_files": {
+        "verified": [
+          "Sdata/Shadows.exe"
+        ],
+        "status": "ALL_FOUND"
+      }
+    },
+    "integrity_analysis": {
+      "file_count_match": true,
+      "sample_files_present": true,
+      "directory_accessible": true,
+      "permission_check": "readable"
+    },
+    "access_patterns": {
+      "asset_lookup_chain": [
+        "SOTE_ASSETS_DIR environment variable",
+        "Direct file system access to /media/k/vbox1/Shadows/SOTE/Sdata",
+        "Resource files available for game execution"
+      ],
+      "expected_usage": {
+        "audio_loading": "WAVE files for sound effects and music",
+        "texture_loading": "BMP files for game graphics and UI",
+        "auxiliary_programs": "Shadows.exe as game launcher"
+      }
+    },
+    "environment_context": {
+      "SOTE_DISCLESS": "1",
+      "SOTE_NO_CD": "1", 
+      "SOTE_ASSETS_DIR": "/media/k/vbox1/Shadows/SOTE/Sdata",
+      "SOTE_DISCLESS_TRACE": "1"
+    }
+  }
+}

@@ -1,0 +1,2431 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-12T20:18:38.147475",
+    "total_actions": 199,
+    "agent": "binary_reimplementation_engineer"
+  },
+  "applied_actions": [
+    {
+      "file": "navigator_batch_13_functions.c",
+      "reason": "Core symbol entry_point should only be in main/entry files",
+      "symbol": "entry_point",
+      "type": "remove_symbol_from_file"
+    },
+    {
+      "file": "navigator_batch_13_functions.c",
+      "reason": "Core symbol game_main_loop should only be in main/entry files",
+      "symbol": "game_main_loop",
+      "type": "remove_symbol_from_file"
+    },
+    {
+      "file": "navigator_batch_13_functions.c",
+      "reason": "Core symbol memory_allocator should only be in main/entry files",
+      "symbol": "memory_allocator",
+      "type": "remove_symbol_from_file"
+    },
+    {
+      "file": "navigator_batch_13_functions.c",
+      "reason": "Core symbol debug_output should only be in main/entry files",
+      "symbol": "debug_output",
+      "type": "remove_symbol_from_file"
+    },
+    {
+      "file": "navigator_batch_13_functions.c",
+      "reason": "Core symbol error_handler should only be in main/entry files",
+      "symbol": "error_handler",
+      "type": "remove_symbol_from_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00416080 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441bd1 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441bd1 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441edd - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441edd - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441edd - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00416200 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00416200 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00416200 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441d30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_00441d30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_004159d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_004159d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041aa30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041aa30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041d430 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041d430 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041aaa0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041aaa0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_13_functions.c",
+      "reason": "Duplicate symbol fcn_0041aaa0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004160d8 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0045664c - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00416590 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041b150 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004177c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004177c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00426ed0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00426590 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00426590 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00426900 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00426900 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00427520 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00427520 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041c950 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041c950 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0042d0f4 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0042d0f4 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0042d0f4 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004255e0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004255e0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004255e0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00410260 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00410260 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004242c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004242c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004242c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0044f383 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0044f383 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041ece0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041ece0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00422f60 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00422f60 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041c720 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041c720 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0042bc90 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0042bc90 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00427750 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00427750 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00409020 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00409020 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00409020 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00422030 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00422030 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004249f0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004249f0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041d5c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041d5c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00415c60 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00415c60 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0044176e - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0044176e - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004421a8 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004421a8 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00428380 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00428380 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041b6b0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041b6b0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004202d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_004202d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0043cfc3 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch2_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0043cfc3 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00419720 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00419720 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00409fe0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00409fe0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0040abe0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0040abe0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0040b9a0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0040b9a0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041d840 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_0041d840 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00420080 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_4_functions.c",
+      "reason": "Duplicate symbol fcn_00420080 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00410ed0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00415530 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0041b520 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0040a420 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0044164a - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00417280 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00414b40 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00415900 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0043e483 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0042c150 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0042b120 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0044f0a8 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00415a40 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0044f263 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00444d53 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00440adb - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0043dd4b - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00440c64 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0041fa10 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0043d3cf - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0042bfd0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00417010 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0044070f - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00422dc0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0043fcbd - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0041eff0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00421d60 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch3_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00441e8d - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0041ac90 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0041ccd0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_0042d4c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch5_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00445f5f - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_5_functions.c",
+      "reason": "Duplicate symbol fcn_00442c75 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00423710 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00419ad0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0042a000 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00441da4 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0040fc20 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00422836 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004259f0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch4_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00423390 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0043dc7d - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00456390 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0044eb2d - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00414cc0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00415100 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00429520 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041f250 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00420820 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004208d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041abc0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0042a620 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041d260 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041ea30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0044bdbe - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0043e64e - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041c4d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00416430 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00416c20 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00416cd0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0044ef1a - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041e4c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00442252 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004183c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041c5a0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0044f6a5 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00429710 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041ba90 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004385e4 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0044bfdd - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00451a3f - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0045738d - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch6_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00442a80 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0042af00 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0043f99a - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041d9c0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00417b30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0040a980 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00440004 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00429b70 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00443678 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0043f91e - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0044bf62 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004205b0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00425c70 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0043de40 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041e5e0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004580af - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00429260 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0045a221 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00416370 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004421fd - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00416b30 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00429210 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00451b9b - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004437dc - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041e7f0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00416a50 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_004144d0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_00418ec0 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    },
+    {
+      "file": "batch7_functions.c",
+      "preferred_file": "navigator_batch_6_functions.c",
+      "reason": "Duplicate symbol fcn_0041e350 - prefer navigator_batch_* over batch*",
+      "type": "exclude_file"
+    }
+  ],
+  "summary": {
+    "actions": [
+      {
+        "file": "navigator_batch_13_functions.c",
+        "reason": "Core symbol entry_point should only be in main/entry files",
+        "symbol": "entry_point",
+        "type": "remove_symbol_from_file"
+      },
+      {
+        "file": "navigator_batch_13_functions.c",
+        "reason": "Core symbol game_main_loop should only be in main/entry files",
+        "symbol": "game_main_loop",
+        "type": "remove_symbol_from_file"
+      },
+      {
+        "file": "navigator_batch_13_functions.c",
+        "reason": "Core symbol memory_allocator should only be in main/entry files",
+        "symbol": "memory_allocator",
+        "type": "remove_symbol_from_file"
+      },
+      {
+        "file": "navigator_batch_13_functions.c",
+        "reason": "Core symbol debug_output should only be in main/entry files",
+        "symbol": "debug_output",
+        "type": "remove_symbol_from_file"
+      },
+      {
+        "file": "navigator_batch_13_functions.c",
+        "reason": "Core symbol error_handler should only be in main/entry files",
+        "symbol": "error_handler",
+        "type": "remove_symbol_from_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00416080 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441bd1 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441bd1 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441edd - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441edd - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441edd - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00416200 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00416200 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00416200 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441d30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_00441d30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_004159d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_004159d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041aa30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041aa30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041d430 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041d430 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041aaa0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041aaa0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_13_functions.c",
+        "reason": "Duplicate symbol fcn_0041aaa0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004160d8 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0045664c - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00416590 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041b150 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004177c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004177c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00426ed0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00426590 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00426590 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00426900 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00426900 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00427520 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00427520 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041c950 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041c950 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0042d0f4 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0042d0f4 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0042d0f4 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004255e0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004255e0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004255e0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00410260 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00410260 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004242c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004242c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004242c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0044f383 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0044f383 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041ece0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041ece0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00422f60 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00422f60 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041c720 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041c720 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0042bc90 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0042bc90 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00427750 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00427750 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00409020 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00409020 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00409020 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00422030 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00422030 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004249f0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004249f0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041d5c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041d5c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00415c60 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00415c60 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0044176e - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0044176e - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004421a8 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004421a8 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00428380 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00428380 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041b6b0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041b6b0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004202d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_004202d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0043cfc3 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch2_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0043cfc3 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00419720 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00419720 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00409fe0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00409fe0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0040abe0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0040abe0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0040b9a0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0040b9a0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041d840 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_0041d840 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00420080 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_4_functions.c",
+        "reason": "Duplicate symbol fcn_00420080 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00410ed0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00415530 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0041b520 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0040a420 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0044164a - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00417280 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00414b40 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00415900 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0043e483 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0042c150 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0042b120 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0044f0a8 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00415a40 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0044f263 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00444d53 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00440adb - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0043dd4b - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00440c64 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0041fa10 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0043d3cf - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0042bfd0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00417010 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0044070f - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00422dc0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0043fcbd - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0041eff0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00421d60 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch3_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00441e8d - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0041ac90 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0041ccd0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_0042d4c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch5_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00445f5f - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_5_functions.c",
+        "reason": "Duplicate symbol fcn_00442c75 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00423710 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00419ad0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0042a000 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00441da4 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0040fc20 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00422836 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004259f0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch4_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00423390 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0043dc7d - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00456390 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0044eb2d - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00414cc0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00415100 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00429520 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041f250 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00420820 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004208d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041abc0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0042a620 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041d260 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041ea30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0044bdbe - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0043e64e - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041c4d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00416430 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00416c20 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00416cd0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0044ef1a - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041e4c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00442252 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004183c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041c5a0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0044f6a5 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00429710 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041ba90 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004385e4 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0044bfdd - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00451a3f - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0045738d - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch6_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00442a80 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0042af00 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0043f99a - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041d9c0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00417b30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0040a980 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00440004 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00429b70 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00443678 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0043f91e - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0044bf62 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004205b0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00425c70 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0043de40 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041e5e0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004580af - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00429260 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0045a221 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00416370 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004421fd - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00416b30 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00429210 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00451b9b - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004437dc - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041e7f0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00416a50 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_004144d0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_00418ec0 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      },
+      {
+        "file": "batch7_functions.c",
+        "preferred_file": "navigator_batch_6_functions.c",
+        "reason": "Duplicate symbol fcn_0041e350 - prefer navigator_batch_* over batch*",
+        "type": "exclude_file"
+      }
+    ],
+    "files_excluded": [
+      "batch2_functions.c",
+      "batch3_functions.c",
+      "batch4_functions.c",
+      "batch5_functions.c",
+      "batch6_functions.c",
+      "batch7_functions.c"
+    ],
+    "symbols_removed": [
+      [
+        "entry_point",
+        "navigator_batch_13_functions.c"
+      ],
+      [
+        "game_main_loop",
+        "navigator_batch_13_functions.c"
+      ],
+      [
+        "memory_allocator",
+        "navigator_batch_13_functions.c"
+      ],
+      [
+        "debug_output",
+        "navigator_batch_13_functions.c"
+      ],
+      [
+        "error_handler",
+        "navigator_batch_13_functions.c"
+      ]
+    ]
+  }
+}

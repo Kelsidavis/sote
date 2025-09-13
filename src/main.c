@@ -18,6 +18,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+// PROV: Include SDL2 headers for main handling - RE-AGENT REBUILD m100
+// Evidence: SDL2 documentation recommends SDL_SetMainReady() for custom main functions
+// PROV: Forward declaration for SDL_SetMainReady when headers not available
+#ifndef _SDL_main_h
+extern void SDL_SetMainReady(void);
+#endif
 
 #ifndef _WIN32
 // Linux stub implementations
@@ -51,15 +57,31 @@ ConfigData* g_config_data = NULL;
  * PROV: Third param named envp per evidence (C syntax requires envp_count disambiguation)
  * TODO_EVID: Evidence shows duplicate param name 'envp' - using envp_count for valid C syntax
  */
-int main(char** argv, char** envp, int32_t envp_count)
+int main(int argc, char** argv)
 {
+    // PROV: Using real SDL2, no stub initialization needed - RE-AGENT REBUILD m100
+    // Evidence: Real SDL2 library handles initialization automatically
+    
+    // PROV: Initialize SDL main handling before any other operations - RE-AGENT REBUILD m100
+    // Evidence: SDL2 documentation states SDL_SetMainReady() should be called before SDL_Init()
+    SDL_SetMainReady();
+    
+    // PROV: Ultra-early logging for startup fault triage per coord-startup-002
+    #ifdef RESOURCE_WARNINGS
+    fprintf(stderr, "[STARTUP] main() entry - argc=%d, argv=%p (SDL2 signature)\n", 
+            argc, (void*)argv);
+    fprintf(stderr, "[STARTUP] SOTE_ASSETS_DIR='%s'\n", getenv("SOTE_ASSETS_DIR") ? getenv("SOTE_ASSETS_DIR") : "(null)");
+    fprintf(stderr, "[STARTUP] SOTE_DISCLESS='%s'\n", getenv("SOTE_DISCLESS") ? getenv("SOTE_DISCLESS") : "(null)");
+    #endif
+
     // PROV: 25-byte size constraint @ 0x0042d63e requires direct call only
     // PROV: cdecl calling convention from evidence.curated.json
     // PROV: No argument processing loops fit in 25 bytes
     // PROV: Direct jmp/call pattern observed in binary
     
     // PROV: Call to fcn_0044649e @ 0x0044649e (offset 4482206)
-    return game_main_loop(argv, envp, envp_count, 0);
+    // NOTE: Adapted for SDL2 signature - envp and envp_count no longer available
+    return game_main_loop(argv, NULL, argc, 0);
 }
 
 /*

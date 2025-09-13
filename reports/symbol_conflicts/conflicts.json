@@ -1,0 +1,5154 @@
+{
+  "categories": {
+    "conflicting_prototypes": {},
+    "duplicate_compilation_units": {
+      "navigator_vs_batch": [
+        "fcn_00416080",
+        "fcn_00441bd1",
+        "fcn_00441edd",
+        "fcn_00416200",
+        "fcn_00441d30",
+        "fcn_004159d0",
+        "fcn_0041aa30",
+        "fcn_0041d430",
+        "fcn_0041aaa0",
+        "fcn_004160d8",
+        "fcn_0045664c",
+        "fcn_00416590",
+        "fcn_0041b150",
+        "fcn_004177c0",
+        "fcn_00426ed0",
+        "fcn_00426590",
+        "fcn_00426900",
+        "fcn_00427520",
+        "fcn_0041c950",
+        "fcn_0042d0f4",
+        "fcn_004255e0",
+        "fcn_00410260",
+        "fcn_004242c0",
+        "fcn_0044f383",
+        "fcn_0041ece0",
+        "fcn_00422f60",
+        "fcn_0041c720",
+        "fcn_0042bc90",
+        "fcn_00427750",
+        "fcn_00409020",
+        "fcn_00422030",
+        "fcn_004249f0",
+        "fcn_0041d5c0",
+        "fcn_00415c60",
+        "fcn_0044176e",
+        "fcn_004421a8",
+        "fcn_00428380",
+        "fcn_0041b6b0",
+        "fcn_004202d0",
+        "fcn_0043cfc3",
+        "fcn_00419720",
+        "fcn_00409fe0",
+        "fcn_0040abe0",
+        "fcn_0040b9a0",
+        "fcn_0041d840",
+        "fcn_00420080",
+        "fcn_00410ed0",
+        "fcn_00415530",
+        "fcn_0041b520",
+        "fcn_0040a420",
+        "fcn_0044164a",
+        "fcn_00417280",
+        "fcn_00414b40",
+        "fcn_00415900",
+        "fcn_0043e483",
+        "fcn_0042c150",
+        "fcn_0042b120",
+        "fcn_0044f0a8",
+        "fcn_00415a40",
+        "fcn_0044f263",
+        "fcn_00444d53",
+        "fcn_00440adb",
+        "fcn_0043dd4b",
+        "fcn_00440c64",
+        "fcn_0041fa10",
+        "fcn_0043d3cf",
+        "fcn_0042bfd0",
+        "fcn_00417010",
+        "fcn_0044070f",
+        "fcn_00422dc0",
+        "fcn_0043fcbd",
+        "fcn_0041eff0",
+        "fcn_00421d60",
+        "fcn_00441e8d",
+        "fcn_0041ac90",
+        "fcn_0041ccd0",
+        "fcn_0042d4c0",
+        "fcn_00445f5f",
+        "fcn_00442c75",
+        "fcn_00423710",
+        "fcn_00419ad0",
+        "fcn_0042a000",
+        "fcn_00441da4",
+        "fcn_0040fc20",
+        "fcn_00422836",
+        "fcn_004259f0",
+        "fcn_00423390",
+        "fcn_0043dc7d",
+        "fcn_00456390",
+        "fcn_0044eb2d",
+        "fcn_00414cc0",
+        "fcn_00415100",
+        "fcn_00429520",
+        "fcn_0041f250",
+        "fcn_00420820",
+        "fcn_004208d0",
+        "fcn_0041abc0",
+        "fcn_0042a620",
+        "fcn_0041d260",
+        "fcn_0041ea30",
+        "fcn_0044bdbe",
+        "fcn_0043e64e",
+        "fcn_0041c4d0",
+        "fcn_00416430",
+        "fcn_00416c20",
+        "fcn_00416cd0",
+        "fcn_0044ef1a",
+        "fcn_0041e4c0",
+        "fcn_00442252",
+        "fcn_004183c0",
+        "fcn_0041c5a0",
+        "fcn_0044f6a5",
+        "fcn_00429710",
+        "fcn_0041ba90",
+        "fcn_004385e4",
+        "fcn_0044bfdd",
+        "fcn_00451a3f",
+        "fcn_0045738d",
+        "fcn_00442a80",
+        "fcn_0042af00",
+        "fcn_0043f99a",
+        "fcn_0041d9c0",
+        "fcn_00417b30",
+        "fcn_0040a980",
+        "fcn_00440004",
+        "fcn_00429b70",
+        "fcn_00443678",
+        "fcn_0043f91e",
+        "fcn_0044bf62",
+        "fcn_004205b0",
+        "fcn_00425c70",
+        "fcn_0043de40",
+        "fcn_0041e5e0",
+        "fcn_004580af",
+        "fcn_00429260",
+        "fcn_0045a221",
+        "fcn_00416370",
+        "fcn_004421fd",
+        "fcn_00416b30",
+        "fcn_00429210",
+        "fcn_00451b9b",
+        "fcn_004437dc",
+        "fcn_0041e7f0",
+        "fcn_00416a50",
+        "fcn_004144d0",
+        "fcn_00418ec0",
+        "fcn_0041e350"
+      ]
+    },
+    "duplicate_prototypes": {
+      "batch2_functions.c": [
+        "fcn_00441edd",
+        "fcn_00441edd",
+        "fcn_00441edd",
+        "fcn_0041aaa0",
+        "fcn_0041aaa0",
+        "fcn_0041aaa0",
+        "fcn_0041b150",
+        "fcn_004177c0",
+        "fcn_004177c0",
+        "fcn_00426590",
+        "fcn_00426590",
+        "fcn_00426900",
+        "fcn_00426900",
+        "fcn_00427520",
+        "fcn_00427520",
+        "fcn_0041c950",
+        "fcn_0041c950",
+        "fcn_0042d0f4",
+        "fcn_0042d0f4",
+        "fcn_0042d0f4",
+        "fcn_004255e0",
+        "fcn_004255e0",
+        "fcn_004255e0",
+        "fcn_00410260",
+        "fcn_00410260",
+        "fcn_004242c0",
+        "fcn_004242c0",
+        "fcn_004242c0",
+        "fcn_0044f383",
+        "fcn_0044f383",
+        "fcn_0041ece0",
+        "fcn_0041ece0",
+        "fcn_00422f60",
+        "fcn_00422f60",
+        "fcn_0041c720",
+        "fcn_0041c720",
+        "fcn_0042bc90",
+        "fcn_0042bc90",
+        "fcn_00427750",
+        "fcn_00427750",
+        "fcn_00409020",
+        "fcn_00409020",
+        "fcn_00409020",
+        "fcn_00422030",
+        "fcn_00422030",
+        "fcn_004249f0",
+        "fcn_004249f0",
+        "fcn_0041d5c0",
+        "fcn_0041d5c0",
+        "fcn_004421a8",
+        "fcn_004421a8",
+        "fcn_00428380",
+        "fcn_00428380",
+        "fcn_0043cfc3",
+        "fcn_0043cfc3"
+      ],
+      "batch3_functions.c": [
+        "fcn_00416200",
+        "fcn_00416200",
+        "fcn_00416200",
+        "fcn_0041aa30",
+        "fcn_0041aa30",
+        "fcn_00415c60",
+        "fcn_00415c60",
+        "fcn_0044176e",
+        "fcn_0044176e",
+        "fcn_0041b6b0",
+        "fcn_0041b6b0",
+        "fcn_004202d0",
+        "fcn_004202d0",
+        "fcn_00419720",
+        "fcn_00419720",
+        "fcn_00409fe0",
+        "fcn_00409fe0",
+        "fcn_0040abe0",
+        "fcn_0040abe0",
+        "fcn_0040b9a0",
+        "fcn_0040b9a0",
+        "fcn_0041d840",
+        "fcn_0041d840",
+        "fcn_00420080",
+        "fcn_00420080",
+        "fcn_0041b520",
+        "fcn_00417280",
+        "fcn_00415900",
+        "fcn_0043e483",
+        "fcn_0042c150",
+        "fcn_0042b120",
+        "fcn_0044f0a8",
+        "fcn_00415a40",
+        "fcn_0044f263",
+        "fcn_0043dd4b",
+        "fcn_00440c64",
+        "fcn_0043d3cf",
+        "fcn_00441e8d"
+      ],
+      "batch4_functions.c": [
+        "fcn_00410ed0",
+        "fcn_00415530",
+        "fcn_0040a420",
+        "fcn_0044164a",
+        "fcn_00414b40",
+        "fcn_00444d53",
+        "fcn_00440adb",
+        "fcn_0041fa10",
+        "fcn_0042bfd0",
+        "fcn_00417010",
+        "fcn_0044070f",
+        "fcn_00422dc0",
+        "fcn_0043fcbd",
+        "fcn_0041eff0",
+        "fcn_00421d60",
+        "fcn_0041ccd0",
+        "fcn_00442c75",
+        "fcn_00423710",
+        "fcn_00423390"
+      ],
+      "batch5_functions.c": [
+        "fcn_00416080",
+        "fcn_00441bd1",
+        "fcn_00441bd1",
+        "fcn_00441d30",
+        "fcn_00441d30",
+        "fcn_004159d0",
+        "fcn_004159d0",
+        "fcn_004160d8",
+        "fcn_0045664c",
+        "fcn_00416590",
+        "fcn_00426ed0",
+        "fcn_0041ac90",
+        "fcn_0042d4c0",
+        "fcn_00445f5f"
+      ],
+      "batch6_functions.c": [
+        "fcn_0041d430",
+        "fcn_0041d430",
+        "fcn_00419ad0",
+        "fcn_0042a000",
+        "fcn_00441da4",
+        "fcn_0040fc20",
+        "fcn_00422836",
+        "fcn_004259f0",
+        "fcn_0043dc7d",
+        "fcn_00456390",
+        "fcn_0044eb2d",
+        "fcn_00414cc0",
+        "fcn_00415100",
+        "fcn_00429520",
+        "fcn_0041f250",
+        "fcn_00420820",
+        "fcn_004208d0",
+        "fcn_0041abc0",
+        "fcn_0042a620",
+        "fcn_0041d260",
+        "fcn_0041ea30",
+        "fcn_0044bdbe",
+        "fcn_0043e64e",
+        "fcn_0041c4d0",
+        "fcn_00416430",
+        "fcn_00416c20",
+        "fcn_00416cd0",
+        "fcn_0044ef1a",
+        "fcn_0041e4c0",
+        "fcn_00442252",
+        "fcn_004183c0",
+        "fcn_0041c5a0",
+        "fcn_0044f6a5",
+        "fcn_00429710",
+        "fcn_0041ba90",
+        "fcn_004385e4",
+        "fcn_0044bfdd",
+        "fcn_00451a3f",
+        "fcn_0045738d",
+        "fcn_00442a80"
+      ],
+      "batch7_functions.c": [
+        "fcn_0042af00",
+        "fcn_0043f99a",
+        "fcn_0041d9c0",
+        "fcn_00417b30",
+        "fcn_0040a980",
+        "fcn_00440004",
+        "fcn_00429b70",
+        "fcn_00443678",
+        "fcn_0043f91e",
+        "fcn_0044bf62",
+        "fcn_004205b0",
+        "fcn_00425c70",
+        "fcn_0043de40",
+        "fcn_0041e5e0",
+        "fcn_004580af",
+        "fcn_00429260",
+        "fcn_0045a221",
+        "fcn_00416370",
+        "fcn_004421fd",
+        "fcn_00416b30",
+        "fcn_00429210",
+        "fcn_00451b9b",
+        "fcn_004437dc",
+        "fcn_0041e7f0",
+        "fcn_00416a50",
+        "fcn_004144d0",
+        "fcn_00418ec0",
+        "fcn_0041e350"
+      ],
+      "entry.c": [
+        "entry_point"
+      ],
+      "main.c": [
+        "game_main_loop",
+        "memory_allocator",
+        "debug_output",
+        "error_handler"
+      ],
+      "navigator_batch_13_functions.c": [
+        "entry_point",
+        "game_main_loop",
+        "memory_allocator",
+        "debug_output",
+        "error_handler",
+        "fcn_00416080",
+        "fcn_00441bd1",
+        "fcn_00441edd",
+        "fcn_00416200",
+        "fcn_00441d30",
+        "fcn_004159d0",
+        "fcn_0041aa30",
+        "fcn_0041d430",
+        "fcn_0041aaa0"
+      ],
+      "navigator_batch_4_functions.c": [
+        "fcn_00441bd1",
+        "fcn_00441edd",
+        "fcn_00416200",
+        "fcn_00441d30",
+        "fcn_004159d0",
+        "fcn_0041aaa0",
+        "fcn_004160d8",
+        "fcn_0045664c",
+        "fcn_00416590",
+        "fcn_0041b150",
+        "fcn_004177c0",
+        "fcn_00426ed0",
+        "fcn_00426590",
+        "fcn_00426900",
+        "fcn_00427520",
+        "fcn_0041c950",
+        "fcn_0042d0f4",
+        "fcn_004255e0",
+        "fcn_00410260",
+        "fcn_004242c0",
+        "fcn_0044f383",
+        "fcn_0041ece0",
+        "fcn_00422f60",
+        "fcn_0041c720",
+        "fcn_0042bc90",
+        "fcn_00427750",
+        "fcn_00409020",
+        "fcn_00422030",
+        "fcn_004249f0",
+        "fcn_0041d5c0",
+        "fcn_00415c60",
+        "fcn_0044176e",
+        "fcn_004421a8",
+        "fcn_00428380",
+        "fcn_0041b6b0",
+        "fcn_004202d0",
+        "fcn_0043cfc3",
+        "fcn_00419720",
+        "fcn_00409fe0",
+        "fcn_0040abe0",
+        "fcn_0040b9a0",
+        "fcn_0041d840",
+        "fcn_00420080",
+        "fcn_00428060",
+        "fcn_00428060",
+        "fcn_00401159",
+        "fcn_00401159",
+        "loc_00406b50",
+        "loc_00406b50",
+        "fcn_00419d60",
+        "fcn_00424e40",
+        "fcn_00446000",
+        "fcn_0040b180",
+        "fcn_0043ee21",
+        "fcn_0040bc40",
+        "fcn_0040c2e0",
+        "fcn_00437c83",
+        "fcn_0040d070",
+        "fcn_00421690",
+        "fcn_004184e0",
+        "fcn_0042b460",
+        "fcn_00418ba0",
+        "fcn_00419020"
+      ],
+      "navigator_batch_5_functions.c": [
+        "fcn_00441edd",
+        "fcn_00416200",
+        "fcn_0041aa30",
+        "fcn_0041aaa0",
+        "fcn_00426900",
+        "fcn_00427520",
+        "fcn_0041c950",
+        "fcn_0042d0f4",
+        "fcn_004255e0",
+        "fcn_00410260",
+        "fcn_004242c0",
+        "fcn_0044f383",
+        "fcn_0041ece0",
+        "fcn_00422f60",
+        "fcn_0041c720",
+        "fcn_0042bc90",
+        "fcn_00427750",
+        "fcn_00409020",
+        "fcn_00422030",
+        "fcn_004249f0",
+        "fcn_0041d5c0",
+        "fcn_00415c60",
+        "fcn_0044176e",
+        "fcn_004421a8",
+        "fcn_00428380",
+        "fcn_0041b6b0",
+        "fcn_004202d0",
+        "fcn_0043cfc3",
+        "fcn_00419720",
+        "fcn_00409fe0",
+        "fcn_0040abe0",
+        "fcn_0040b9a0",
+        "fcn_0041d840",
+        "fcn_00420080",
+        "fcn_00428060",
+        "fcn_00401159",
+        "loc_00406b50",
+        "fcn_00410ed0",
+        "fcn_00415530",
+        "fcn_0041b520",
+        "fcn_0040a420",
+        "fcn_0044164a",
+        "fcn_00417280",
+        "fcn_00414b40",
+        "fcn_00415900",
+        "fcn_0043e483",
+        "fcn_0042c150",
+        "fcn_0042b120",
+        "fcn_0044f0a8",
+        "fcn_00415a40",
+        "fcn_0044f263",
+        "fcn_00444d53",
+        "fcn_00440adb",
+        "fcn_0043dd4b",
+        "fcn_00440c64",
+        "fcn_0041fa10",
+        "fcn_0043d3cf",
+        "fcn_0042bfd0",
+        "fcn_00417010",
+        "fcn_0044070f",
+        "fcn_00422dc0",
+        "fcn_0043fcbd",
+        "fcn_0041eff0",
+        "fcn_00421d60",
+        "fcn_00441e8d",
+        "fcn_0041ac90",
+        "fcn_0041ccd0",
+        "fcn_0042d4c0",
+        "fcn_00445f5f",
+        "fcn_00442c75"
+      ],
+      "navigator_batch_6_functions.c": [
+        "fcn_0041d430",
+        "fcn_00423710",
+        "fcn_00419ad0",
+        "fcn_0042a000",
+        "fcn_00441da4",
+        "fcn_0040fc20",
+        "fcn_00422836",
+        "fcn_004259f0",
+        "fcn_00423390",
+        "fcn_0043dc7d",
+        "fcn_00456390",
+        "fcn_0044eb2d",
+        "fcn_00414cc0",
+        "fcn_00415100",
+        "fcn_00429520",
+        "fcn_0041f250",
+        "fcn_00420820",
+        "fcn_004208d0",
+        "fcn_0041abc0",
+        "fcn_0042a620",
+        "fcn_0041d260",
+        "fcn_0041ea30",
+        "fcn_0044bdbe",
+        "fcn_0043e64e",
+        "fcn_0041c4d0",
+        "fcn_00416430",
+        "fcn_00416c20",
+        "fcn_00416cd0",
+        "fcn_0044ef1a",
+        "fcn_0041e4c0",
+        "fcn_00442252",
+        "fcn_004183c0",
+        "fcn_0041c5a0",
+        "fcn_0044f6a5",
+        "fcn_00429710",
+        "fcn_0041ba90",
+        "fcn_004385e4",
+        "fcn_0044bfdd",
+        "fcn_00451a3f",
+        "fcn_0045738d",
+        "fcn_00442a80",
+        "fcn_0042af00",
+        "fcn_0043f99a",
+        "fcn_0041d9c0",
+        "fcn_00417b30",
+        "fcn_0040a980",
+        "fcn_00440004",
+        "fcn_00429b70",
+        "fcn_00443678",
+        "fcn_0043f91e",
+        "fcn_0044bf62",
+        "fcn_004205b0",
+        "fcn_00425c70",
+        "fcn_0043de40",
+        "fcn_0041e5e0",
+        "fcn_004580af",
+        "fcn_00429260",
+        "fcn_0045a221",
+        "fcn_00416370",
+        "fcn_004421fd",
+        "fcn_00416b30",
+        "fcn_00429210",
+        "fcn_00451b9b",
+        "fcn_004437dc",
+        "fcn_0041e7f0",
+        "fcn_00416a50",
+        "fcn_004144d0",
+        "fcn_00418ec0",
+        "fcn_0041e350",
+        "fcn_004011a4"
+      ],
+      "priority_functions.c": [
+        "fcn_004177c0",
+        "fcn_00426590",
+        "fcn_0042d0f4",
+        "fcn_004255e0",
+        "fcn_004242c0",
+        "fcn_00409020",
+        "fcn_00428060",
+        "fcn_00401159",
+        "loc_00406b50",
+        "fcn_00419d60",
+        "fcn_00424e40",
+        "fcn_00446000",
+        "fcn_0040b180",
+        "fcn_0043ee21",
+        "fcn_0040bc40",
+        "fcn_0040c2e0",
+        "fcn_00437c83",
+        "fcn_0040d070",
+        "fcn_00421690",
+        "fcn_004184e0",
+        "fcn_0042b460",
+        "fcn_004011a4",
+        "fcn_00418ba0",
+        "fcn_00419020"
+      ]
+    },
+    "multiply_defined_symbols": {
+      "debug_output": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 51,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "main.c",
+          "line": "186",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/main.c"
+        }
+      ],
+      "entry_point": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 19,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "entry.c",
+          "line": "60",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/entry.c"
+        }
+      ],
+      "error_handler": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 54,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "main.c",
+          "line": "202",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/main.c"
+        }
+      ],
+      "fcn_00401159": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 45,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "346",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 130,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "346",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_004011a4": [
+        {
+          "file": "priority_functions.c",
+          "line": 846,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": "672",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        }
+      ],
+      "fcn_00409020": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 512,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "923",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 209,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "923",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 968,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "923",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00409fe0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 652,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "482",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 341,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "482",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0040a420": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 456,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "375",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_0040a980": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 503,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "129",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0040abe0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 663,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "598",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 355,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "598",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0040b180": [
+        {
+          "file": "priority_functions.c",
+          "line": 410,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "105",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0040b9a0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 683,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "700",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 373,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "700",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0040bc40": [
+        {
+          "file": "priority_functions.c",
+          "line": 518,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "131",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0040c2e0": [
+        {
+          "file": "priority_functions.c",
+          "line": 546,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "143",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0040d070": [
+        {
+          "file": "priority_functions.c",
+          "line": 654,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "201",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0040fc20": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 73,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "192",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00410260": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 426,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "706",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 128,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "706",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00410ed0": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 413,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "449",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_004144d0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 734,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "507",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00414b40": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 484,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "307",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00414cc0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 158,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "255",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00415100": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 169,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "360",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00415530": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 432,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "62",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00415900": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 493,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "214",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_004159d0": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 144,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "95",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 191,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "95",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00415a40": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 543,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "760",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_00415c60": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 554,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "107",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 252,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "107",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_00416080": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 70,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "451",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_004160d8": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 108,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "49",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00416200": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 115,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "331",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 673,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "331",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 364,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "331",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_00416370": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 637,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "423",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00416430": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 287,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "570",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00416590": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 240,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "152",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00416a50": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 724,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "549",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00416b30": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 660,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "486",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00416c20": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 297,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "591",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00416cd0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 307,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "612",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00417010": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 633,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "660",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00417280": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 474,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "510",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_004177c0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 280,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "26",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 1234,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "26",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00417b30": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 494,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "87",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_004183c0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 358,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "654",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_004184e0": [
+        {
+          "file": "priority_functions.c",
+          "line": 744,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "237",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_00418ba0": [
+        {
+          "file": "priority_functions.c",
+          "line": 893,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "178",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_00418ec0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 743,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "591",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00419020": [
+        {
+          "file": "priority_functions.c",
+          "line": 1056,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "307",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_00419720": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 642,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "135",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 331,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "135",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_00419ad0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 48,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "45",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00419d60": [
+        {
+          "file": "priority_functions.c",
+          "line": 26,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "40",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0041aa30": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 151,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "43",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 423,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "43",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0041aaa0": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 181,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "746",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 585,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "746",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 288,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "746",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0041abc0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 215,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "276",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041ac90": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 702,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "209",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_0041b150": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 259,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "146",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0041b520": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 442,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "642",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0041b6b0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 606,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "286",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 301,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "286",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0041ba90": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 399,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "822",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041c4d0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 278,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "507",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041c5a0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 369,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "696",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041c720": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 476,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "877",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 176,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "877",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0041c950": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 378,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "507",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 85,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "507",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0041ccd0": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 712,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "802",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_0041d260": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 234,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "402",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041d430": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 173,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "675",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        },
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 349,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "675",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041d5c0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 544,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1152",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 238,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1152",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0041d840": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 695,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "829",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 383,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "829",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0041d9c0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 484,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "150",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0041e350": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 752,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "717",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0041e4c0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 326,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "633",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041e5e0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 597,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "381",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0041e7f0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 714,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "528",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0041ea30": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 256,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "381",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041ece0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 456,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "795",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 156,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "795",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0041eff0": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 673,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "723",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_0041f250": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 193,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "297",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0041fa10": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 604,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "549",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00420080": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 716,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "394",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 403,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "394",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_004202d0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 620,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "63",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 311,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "63",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_004205b0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 567,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "360",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00420820": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 196,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "318",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_004208d0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 205,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "339",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00421690": [
+        {
+          "file": "priority_functions.c",
+          "line": 699,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "167",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_00421d60": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 683,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "863",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00422030": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 531,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "810",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 218,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "810",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00422836": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 94,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "213",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00422dc0": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 655,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "779",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00422f60": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 466,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "833",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 166,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "833",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00423390": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 108,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "232",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00423710": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 38,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "151",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_004242c0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 443,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "678",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 131,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "678",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 1279,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "678",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_004249f0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 534,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1030",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 228,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1030",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00424e40": [
+        {
+          "file": "priority_functions.c",
+          "line": 249,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "66",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_004255e0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 423,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "611",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 111,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "611",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 1144,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "611",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_004259f0": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 105,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "129",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00425c70": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 584,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "297",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00426590": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 310,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "343",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 1172,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "343",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00426900": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 357,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "433",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 65,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "433",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00426ed0": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 287,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "156",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00427520": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 367,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "387",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 75,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "387",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00427750": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 496,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "986",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 197,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "986",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00428060": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 40,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "332",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 938,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "332",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_00428380": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 596,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1107",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 291,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1107",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_00429210": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 684,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "402",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00429260": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 618,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "339",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00429520": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 179,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "234",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00429710": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 388,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "717",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00429b70": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 523,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "255",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0042a000": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 60,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "66",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0042a620": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 231,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "423",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0042af00": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 463,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "66",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0042b120": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 522,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "306",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0042b460": [
+        {
+          "file": "priority_functions.c",
+          "line": 772,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "262",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0042bc90": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 493,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "478",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 186,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "478",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0042bfd0": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 623,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "419",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_0042c150": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 512,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "568",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0042d0f4": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 389,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "323",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 97,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "323",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 1085,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "323",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0042d4c0": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 722,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "239",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00437c83": [
+        {
+          "file": "priority_functions.c",
+          "line": 608,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "128",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_004385e4": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 410,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "738",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0043cfc3": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 639,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1103",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 321,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "1103",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0043d3cf": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 614,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "438",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0043dc7d": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 118,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "150",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0043dd4b": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 585,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "234",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0043de40": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 587,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "171",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0043e483": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 503,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "375",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0043e64e": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 269,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "444",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0043ee21": [
+        {
+          "file": "priority_functions.c",
+          "line": 472,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "78",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0043f91e": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 549,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "108",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0043f99a": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 481,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "24",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0043fcbd": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 664,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "509",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00440004": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 520,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "45",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0044070f": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 642,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "255",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00440adb": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 576,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "66",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00440c64": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 595,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "900",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0044164a": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 465,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "118",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_0044176e": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 564,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "186",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 268,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "186",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_00441bd1": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 81,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "186",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 321,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "186",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00441d30": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 129,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "26",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 90,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "26",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00441da4": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 63,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "108",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00441e8d": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 693,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "873",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_00441edd": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 93,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "963",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 706,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "963",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 393,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "963",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_004421a8": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 575,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "639",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 271,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "639",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_004421fd": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 646,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "318",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00442252": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 335,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "528",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00442a80": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 453,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "759",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00442c75": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 742,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "688",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00443678": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 533,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "192",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_004437dc": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 704,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "465",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00444d53": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 573,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch4_functions.c",
+          "line": "189",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c"
+        }
+      ],
+      "fcn_00445f5f": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 732,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "417",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_00446000": [
+        {
+          "file": "priority_functions.c",
+          "line": 405,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "52",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "fcn_0044bdbe": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 266,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "465",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0044bf62": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 556,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "234",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0044bfdd": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 420,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "843",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0044eb2d": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 149,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "171",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0044ef1a": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 317,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "486",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0044f0a8": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 533,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "673",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0044f263": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 557,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch3_functions.c",
+          "line": "805",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c"
+        }
+      ],
+      "fcn_0044f383": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 446,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "567",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        },
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 146,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "batch2_functions.c",
+          "line": "567",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c"
+        }
+      ],
+      "fcn_0044f6a5": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 385,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "549",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00451a3f": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 429,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "801",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_00451b9b": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 694,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "444",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_00456390": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 128,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "87",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_0045664c": [
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": 181,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "batch5_functions.c",
+          "line": "72",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c"
+        }
+      ],
+      "fcn_0045738d": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 439,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch6_functions.c",
+          "line": "780",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c"
+        }
+      ],
+      "fcn_004580af": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 615,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "213",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "fcn_0045a221": [
+        {
+          "file": "navigator_batch_6_functions.c",
+          "line": 628,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c"
+        },
+        {
+          "file": "batch7_functions.c",
+          "line": "276",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c"
+        }
+      ],
+      "game_main_loop": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 35,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "main.c",
+          "line": "73",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/main.c"
+        }
+      ],
+      "loc_00406b50": [
+        {
+          "file": "navigator_batch_5_functions.c",
+          "line": 108,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "403",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        },
+        {
+          "file": "priority_functions.c",
+          "line": 1035,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c"
+        },
+        {
+          "file": "navigator_batch_4_functions.c",
+          "line": "403",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c"
+        }
+      ],
+      "memory_allocator": [
+        {
+          "file": "navigator_batch_13_functions.c",
+          "line": 43,
+          "path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c"
+        },
+        {
+          "file": "main.c",
+          "line": "158",
+          "path": "/media/k/vbox1/Shadows/SOTE/src/main.c"
+        }
+      ]
+    }
+  },
+  "conflicts": [
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 19,
+      "first_file": "entry.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/entry.c",
+      "first_line": "60",
+      "symbol": "entry_point"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 35,
+      "first_file": "main.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/main.c",
+      "first_line": "73",
+      "symbol": "game_main_loop"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 43,
+      "first_file": "main.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/main.c",
+      "first_line": "158",
+      "symbol": "memory_allocator"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 51,
+      "first_file": "main.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/main.c",
+      "first_line": "186",
+      "symbol": "debug_output"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 54,
+      "first_file": "main.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/main.c",
+      "first_line": "202",
+      "symbol": "error_handler"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 70,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "451",
+      "symbol": "fcn_00416080"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 81,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "186",
+      "symbol": "fcn_00441bd1"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 93,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "963",
+      "symbol": "fcn_00441edd"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 115,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "331",
+      "symbol": "fcn_00416200"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 129,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "26",
+      "symbol": "fcn_00441d30"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 144,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "95",
+      "symbol": "fcn_004159d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 151,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "43",
+      "symbol": "fcn_0041aa30"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 173,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "675",
+      "symbol": "fcn_0041d430"
+    },
+    {
+      "duplicate_file": "navigator_batch_13_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_13_functions.c",
+      "duplicate_line": 181,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "746",
+      "symbol": "fcn_0041aaa0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 90,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "26",
+      "symbol": "fcn_00441d30"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 108,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "49",
+      "symbol": "fcn_004160d8"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 181,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "72",
+      "symbol": "fcn_0045664c"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 191,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "95",
+      "symbol": "fcn_004159d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 240,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "152",
+      "symbol": "fcn_00416590"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 259,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "146",
+      "symbol": "fcn_0041b150"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 280,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "26",
+      "symbol": "fcn_004177c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 287,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "156",
+      "symbol": "fcn_00426ed0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 310,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "343",
+      "symbol": "fcn_00426590"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 321,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "186",
+      "symbol": "fcn_00441bd1"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 357,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "433",
+      "symbol": "fcn_00426900"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 367,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "387",
+      "symbol": "fcn_00427520"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 378,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "507",
+      "symbol": "fcn_0041c950"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 389,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "323",
+      "symbol": "fcn_0042d0f4"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 423,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "611",
+      "symbol": "fcn_004255e0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 426,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "706",
+      "symbol": "fcn_00410260"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 443,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "678",
+      "symbol": "fcn_004242c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 446,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "567",
+      "symbol": "fcn_0044f383"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 456,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "795",
+      "symbol": "fcn_0041ece0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 466,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "833",
+      "symbol": "fcn_00422f60"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 476,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "877",
+      "symbol": "fcn_0041c720"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 493,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "478",
+      "symbol": "fcn_0042bc90"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 496,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "986",
+      "symbol": "fcn_00427750"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 512,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "923",
+      "symbol": "fcn_00409020"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 531,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "810",
+      "symbol": "fcn_00422030"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 534,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1030",
+      "symbol": "fcn_004249f0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 544,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1152",
+      "symbol": "fcn_0041d5c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 554,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "107",
+      "symbol": "fcn_00415c60"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 564,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "186",
+      "symbol": "fcn_0044176e"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 575,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "639",
+      "symbol": "fcn_004421a8"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 585,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "746",
+      "symbol": "fcn_0041aaa0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 596,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1107",
+      "symbol": "fcn_00428380"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 606,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "286",
+      "symbol": "fcn_0041b6b0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 620,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "63",
+      "symbol": "fcn_004202d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 639,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1103",
+      "symbol": "fcn_0043cfc3"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 642,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "135",
+      "symbol": "fcn_00419720"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 652,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "482",
+      "symbol": "fcn_00409fe0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 663,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "598",
+      "symbol": "fcn_0040abe0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 673,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "331",
+      "symbol": "fcn_00416200"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 683,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "700",
+      "symbol": "fcn_0040b9a0"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 695,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "829",
+      "symbol": "fcn_0041d840"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 706,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "963",
+      "symbol": "fcn_00441edd"
+    },
+    {
+      "duplicate_file": "navigator_batch_4_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "duplicate_line": 716,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "394",
+      "symbol": "fcn_00420080"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 40,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "332",
+      "symbol": "fcn_00428060"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 45,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "346",
+      "symbol": "fcn_00401159"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 65,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "433",
+      "symbol": "fcn_00426900"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 75,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "387",
+      "symbol": "fcn_00427520"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 85,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "507",
+      "symbol": "fcn_0041c950"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 97,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "323",
+      "symbol": "fcn_0042d0f4"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 108,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "403",
+      "symbol": "loc_00406b50"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 111,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "611",
+      "symbol": "fcn_004255e0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 128,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "706",
+      "symbol": "fcn_00410260"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 131,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "678",
+      "symbol": "fcn_004242c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 146,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "567",
+      "symbol": "fcn_0044f383"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 156,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "795",
+      "symbol": "fcn_0041ece0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 166,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "833",
+      "symbol": "fcn_00422f60"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 176,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "877",
+      "symbol": "fcn_0041c720"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 186,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "478",
+      "symbol": "fcn_0042bc90"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 197,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "986",
+      "symbol": "fcn_00427750"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 209,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "923",
+      "symbol": "fcn_00409020"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 218,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "810",
+      "symbol": "fcn_00422030"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 228,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1030",
+      "symbol": "fcn_004249f0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 238,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1152",
+      "symbol": "fcn_0041d5c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 252,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "107",
+      "symbol": "fcn_00415c60"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 268,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "186",
+      "symbol": "fcn_0044176e"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 271,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "639",
+      "symbol": "fcn_004421a8"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 288,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "746",
+      "symbol": "fcn_0041aaa0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 291,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1107",
+      "symbol": "fcn_00428380"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 301,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "286",
+      "symbol": "fcn_0041b6b0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 311,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "63",
+      "symbol": "fcn_004202d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 321,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "1103",
+      "symbol": "fcn_0043cfc3"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 331,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "135",
+      "symbol": "fcn_00419720"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 341,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "482",
+      "symbol": "fcn_00409fe0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 355,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "598",
+      "symbol": "fcn_0040abe0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 364,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "331",
+      "symbol": "fcn_00416200"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 373,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "700",
+      "symbol": "fcn_0040b9a0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 383,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "829",
+      "symbol": "fcn_0041d840"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 393,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "963",
+      "symbol": "fcn_00441edd"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 403,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "394",
+      "symbol": "fcn_00420080"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 413,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "449",
+      "symbol": "fcn_00410ed0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 423,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "43",
+      "symbol": "fcn_0041aa30"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 432,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "62",
+      "symbol": "fcn_00415530"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 442,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "642",
+      "symbol": "fcn_0041b520"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 456,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "375",
+      "symbol": "fcn_0040a420"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 465,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "118",
+      "symbol": "fcn_0044164a"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 474,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "510",
+      "symbol": "fcn_00417280"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 484,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "307",
+      "symbol": "fcn_00414b40"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 493,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "214",
+      "symbol": "fcn_00415900"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 503,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "375",
+      "symbol": "fcn_0043e483"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 512,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "568",
+      "symbol": "fcn_0042c150"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 522,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "306",
+      "symbol": "fcn_0042b120"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 533,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "673",
+      "symbol": "fcn_0044f0a8"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 543,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "760",
+      "symbol": "fcn_00415a40"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 557,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "805",
+      "symbol": "fcn_0044f263"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 573,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "189",
+      "symbol": "fcn_00444d53"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 576,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "66",
+      "symbol": "fcn_00440adb"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 585,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "234",
+      "symbol": "fcn_0043dd4b"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 595,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "900",
+      "symbol": "fcn_00440c64"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 604,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "549",
+      "symbol": "fcn_0041fa10"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 614,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "438",
+      "symbol": "fcn_0043d3cf"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 623,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "419",
+      "symbol": "fcn_0042bfd0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 633,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "660",
+      "symbol": "fcn_00417010"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 642,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "255",
+      "symbol": "fcn_0044070f"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 655,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "779",
+      "symbol": "fcn_00422dc0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 664,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "509",
+      "symbol": "fcn_0043fcbd"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 673,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "723",
+      "symbol": "fcn_0041eff0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 683,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "863",
+      "symbol": "fcn_00421d60"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 693,
+      "first_file": "batch3_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch3_functions.c",
+      "first_line": "873",
+      "symbol": "fcn_00441e8d"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 702,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "209",
+      "symbol": "fcn_0041ac90"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 712,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "802",
+      "symbol": "fcn_0041ccd0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 722,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "239",
+      "symbol": "fcn_0042d4c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 732,
+      "first_file": "batch5_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch5_functions.c",
+      "first_line": "417",
+      "symbol": "fcn_00445f5f"
+    },
+    {
+      "duplicate_file": "navigator_batch_5_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_5_functions.c",
+      "duplicate_line": 742,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "688",
+      "symbol": "fcn_00442c75"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 38,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "151",
+      "symbol": "fcn_00423710"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 48,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "45",
+      "symbol": "fcn_00419ad0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 60,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "66",
+      "symbol": "fcn_0042a000"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 63,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "108",
+      "symbol": "fcn_00441da4"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 73,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "192",
+      "symbol": "fcn_0040fc20"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 94,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "213",
+      "symbol": "fcn_00422836"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 105,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "129",
+      "symbol": "fcn_004259f0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 108,
+      "first_file": "batch4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch4_functions.c",
+      "first_line": "232",
+      "symbol": "fcn_00423390"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 118,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "150",
+      "symbol": "fcn_0043dc7d"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 128,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "87",
+      "symbol": "fcn_00456390"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 149,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "171",
+      "symbol": "fcn_0044eb2d"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 158,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "255",
+      "symbol": "fcn_00414cc0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 169,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "360",
+      "symbol": "fcn_00415100"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 179,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "234",
+      "symbol": "fcn_00429520"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 193,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "297",
+      "symbol": "fcn_0041f250"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 196,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "318",
+      "symbol": "fcn_00420820"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 205,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "339",
+      "symbol": "fcn_004208d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 215,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "276",
+      "symbol": "fcn_0041abc0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 231,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "423",
+      "symbol": "fcn_0042a620"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 234,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "402",
+      "symbol": "fcn_0041d260"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 256,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "381",
+      "symbol": "fcn_0041ea30"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 266,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "465",
+      "symbol": "fcn_0044bdbe"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 269,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "444",
+      "symbol": "fcn_0043e64e"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 278,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "507",
+      "symbol": "fcn_0041c4d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 287,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "570",
+      "symbol": "fcn_00416430"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 297,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "591",
+      "symbol": "fcn_00416c20"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 307,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "612",
+      "symbol": "fcn_00416cd0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 317,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "486",
+      "symbol": "fcn_0044ef1a"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 326,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "633",
+      "symbol": "fcn_0041e4c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 335,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "528",
+      "symbol": "fcn_00442252"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 349,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "675",
+      "symbol": "fcn_0041d430"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 358,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "654",
+      "symbol": "fcn_004183c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 369,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "696",
+      "symbol": "fcn_0041c5a0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 385,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "549",
+      "symbol": "fcn_0044f6a5"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 388,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "717",
+      "symbol": "fcn_00429710"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 399,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "822",
+      "symbol": "fcn_0041ba90"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 410,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "738",
+      "symbol": "fcn_004385e4"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 420,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "843",
+      "symbol": "fcn_0044bfdd"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 429,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "801",
+      "symbol": "fcn_00451a3f"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 439,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "780",
+      "symbol": "fcn_0045738d"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 453,
+      "first_file": "batch6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch6_functions.c",
+      "first_line": "759",
+      "symbol": "fcn_00442a80"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 463,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "66",
+      "symbol": "fcn_0042af00"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 481,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "24",
+      "symbol": "fcn_0043f99a"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 484,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "150",
+      "symbol": "fcn_0041d9c0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 494,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "87",
+      "symbol": "fcn_00417b30"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 503,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "129",
+      "symbol": "fcn_0040a980"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 520,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "45",
+      "symbol": "fcn_00440004"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 523,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "255",
+      "symbol": "fcn_00429b70"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 533,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "192",
+      "symbol": "fcn_00443678"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 549,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "108",
+      "symbol": "fcn_0043f91e"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 556,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "234",
+      "symbol": "fcn_0044bf62"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 567,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "360",
+      "symbol": "fcn_004205b0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 584,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "297",
+      "symbol": "fcn_00425c70"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 587,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "171",
+      "symbol": "fcn_0043de40"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 597,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "381",
+      "symbol": "fcn_0041e5e0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 615,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "213",
+      "symbol": "fcn_004580af"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 618,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "339",
+      "symbol": "fcn_00429260"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 628,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "276",
+      "symbol": "fcn_0045a221"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 637,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "423",
+      "symbol": "fcn_00416370"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 646,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "318",
+      "symbol": "fcn_004421fd"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 660,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "486",
+      "symbol": "fcn_00416b30"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 684,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "402",
+      "symbol": "fcn_00429210"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 694,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "444",
+      "symbol": "fcn_00451b9b"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 704,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "465",
+      "symbol": "fcn_004437dc"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 714,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "528",
+      "symbol": "fcn_0041e7f0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 724,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "549",
+      "symbol": "fcn_00416a50"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 734,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "507",
+      "symbol": "fcn_004144d0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 743,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "591",
+      "symbol": "fcn_00418ec0"
+    },
+    {
+      "duplicate_file": "navigator_batch_6_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "duplicate_line": 752,
+      "first_file": "batch7_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch7_functions.c",
+      "first_line": "717",
+      "symbol": "fcn_0041e350"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 26,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "40",
+      "symbol": "fcn_00419d60"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 130,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "346",
+      "symbol": "fcn_00401159"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 249,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "66",
+      "symbol": "fcn_00424e40"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 405,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "52",
+      "symbol": "fcn_00446000"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 410,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "105",
+      "symbol": "fcn_0040b180"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 472,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "78",
+      "symbol": "fcn_0043ee21"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 518,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "131",
+      "symbol": "fcn_0040bc40"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 546,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "143",
+      "symbol": "fcn_0040c2e0"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 608,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "128",
+      "symbol": "fcn_00437c83"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 654,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "201",
+      "symbol": "fcn_0040d070"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 699,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "167",
+      "symbol": "fcn_00421690"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 744,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "237",
+      "symbol": "fcn_004184e0"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 772,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "262",
+      "symbol": "fcn_0042b460"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 846,
+      "first_file": "navigator_batch_6_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_6_functions.c",
+      "first_line": "672",
+      "symbol": "fcn_004011a4"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 893,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "178",
+      "symbol": "fcn_00418ba0"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 938,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "332",
+      "symbol": "fcn_00428060"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 968,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "923",
+      "symbol": "fcn_00409020"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1035,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "403",
+      "symbol": "loc_00406b50"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1056,
+      "first_file": "navigator_batch_4_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/navigator_batch_4_functions.c",
+      "first_line": "307",
+      "symbol": "fcn_00419020"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1085,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "323",
+      "symbol": "fcn_0042d0f4"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1144,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "611",
+      "symbol": "fcn_004255e0"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1172,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "343",
+      "symbol": "fcn_00426590"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1234,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "26",
+      "symbol": "fcn_004177c0"
+    },
+    {
+      "duplicate_file": "priority_functions.c",
+      "duplicate_full_path": "/media/k/vbox1/Shadows/SOTE/src/priority_functions.c",
+      "duplicate_line": 1279,
+      "first_file": "batch2_functions.c",
+      "first_full_path": "/media/k/vbox1/Shadows/SOTE/src/batch2_functions.c",
+      "first_line": "678",
+      "symbol": "fcn_004242c0"
+    }
+  ],
+  "metadata": {
+    "agent": "binary_symbol_mapper",
+    "source_log": "build.compile.log",
+    "timestamp": "2025-09-13T03:15:00Z",
+    "total_conflicts": 220
+  }
+}

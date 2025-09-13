@@ -1,0 +1,44 @@
+{
+  "analysis_timestamp": "2025-09-12T19:52:00Z",
+  "artifact": {
+    "file_name": "SOTE_RE.exe",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "arch": "pe32",
+    "abi": "win32"
+  },
+  "source_log": "reports/runtime_verify/run.wine.log",
+  "findings": {
+    "file_access_patterns": {
+      "total_createfile_calls": 145,
+      "system_dll_access": 89,
+      "game_asset_access": 12,
+      "cd_installation_path_access": 4
+    },
+    "critical_paths_accessed": [
+      "C:\\Program Files\\LucasArts\\Shadows\\SOTE.EXE",
+      "C:\\PROG~FBU\\LUCA~QZC\\Shadows\\SOTE.EXE"
+    ],
+    "missing_files": [],
+    "e_drive_accesses": [],
+    "first_failure_analysis": {
+      "status": "No critical failures detected in disc-less mode",
+      "timeout_reason": "Application attempted to run normally but was terminated by timeout",
+      "last_significant_action": "Loading audio drivers and accessing game executable"
+    },
+    "cd_access_indicators": {
+      "standard_installation_path": true,
+      "e_drive_references": false,
+      "insert_cd_dialogs": false
+    },
+    "recommendations": [
+      "No E: drive mapping required - application uses standard installation paths",
+      "Consider setting SOTE_ASSET_ROOT to map resource paths correctly",
+      "Application appears to run without CD requirement when proper environment variables are set"
+    ]
+  },
+  "provenance": {
+    "generated_by": "binary_verification_agent",
+    "call_id": "coord-0002",
+    "evidence_sources": ["Wine debug trace logs", "File access pattern analysis"]
+  }
+}

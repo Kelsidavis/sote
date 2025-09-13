@@ -1,0 +1,62 @@
+{
+  "resource_access_report": {
+    "timestamp": "2025-09-12T21:40:00Z",
+    "agent": "resource-runtime-annotator",
+    "call_id": "coord-0004",
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77"
+    },
+    "manifest_source": "/media/k/vbox1/Shadows/SOTE/runtime/resources.manifest.json",
+    "assets_root": "/media/k/vbox1/Shadows/SOTE/Sdata",
+    "title_bitmap_probe": {
+      "candidates": ["TITLE.BMP", "TITLE_PC.BMP", "front\\title.bmp", "art\\title.bmp"],
+      "results": {
+        "TITLE.BMP": "NOT_FOUND",
+        "TITLE_PC.BMP": "NOT_FOUND", 
+        "front\\title.bmp": "NOT_FOUND",
+        "art\\title.bmp": "NOT_FOUND"
+      },
+      "alternative_candidates": {
+        "found_bitmaps": [
+          "Sdata/astroids.bmp",
+          "Sdata/battle.bmp", 
+          "Sdata/boba.bmp",
+          "Sdata/controof.bmp",
+          "Sdata/cpanckof.bmp"
+        ],
+        "resolution": "640 x 480 x 24",
+        "format": "Windows 3.x format"
+      }
+    },
+    "runtime_scan_results": {
+      "wine_stdout": {
+        "file": "/media/k/vbox1/Shadows/SOTE/reports/runtime/wine.stdout.txt",
+        "lines": 0,
+        "resource_open_hooks": 0
+      },
+      "wine_stderr": {
+        "file": "/media/k/vbox1/Shadows/SOTE/reports/runtime/wine.stderr.txt", 
+        "lines": 1157,
+        "adapter_messages": [
+          "No [DISCLESS] Video adapter: SDL found",
+          "No [ADAPTER] messages found"
+        ],
+        "resource_access_detected": false
+      }
+    },
+    "assets_directory_check": {
+      "path": "/media/k/vbox1/Shadows/SOTE/Sdata",
+      "exists": true,
+      "total_files": 277,
+      "bitmap_count": 43,
+      "accessible": true
+    },
+    "conclusions": {
+      "title_bitmap_status": "NOT_FOUND",
+      "asset_directory_accessible": "YES",
+      "runtime_execution": "TIMEOUT_EXPECTED",
+      "adapter_logs": "LIMITED_OUTPUT"
+    }
+  }
+}

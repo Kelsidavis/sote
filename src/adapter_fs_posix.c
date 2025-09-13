@@ -2,10 +2,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+#ifndef _WIN32
 #include <unistd.h>
 #include <dirent.h>
 #include <sys/stat.h>
 #include <dlfcn.h>
+#else
+// Windows compatibility
+#include <direct.h>
+#include <io.h>
+#include <sys/stat.h>
+#define S_ISDIR(x) ((x) & _S_IFDIR)
+#endif
+
+// PROV: VFS trace file handle for logging all file access operations
+static FILE* g_vfs_trace_file = NULL;
+
+// Forward declarations for VFS functions
+static void vfs_init_trace(void);
+static void vfs_log_trace(const char* operation, const char* path, const char* result, const char* resolved_path);
+static char* vfs_resolve_path(const char* relative_path);
 
 /*
  * [RESOURCE] File System Adapter Module
@@ -30,9 +47,15 @@ typedef struct {
 
 // Directory enumeration structure
 typedef struct {
+#ifndef _WIN32
     DIR *dir;
-    char *pattern;
     struct dirent *current;
+#else
+    HANDLE win_handle;
+    WIN32_FIND_DATAA win_data;
+    int first_call;
+#endif
+    char *pattern;
 } FIND_HANDLE_INTERNAL;
 
 /*
@@ -62,6 +85,9 @@ HANDLE adapter_CreateFileA(
     char *normalized_path = strdup(lpFileName);
     adapter_normalize_path(normalized_path);
     
+    // PROV: Log file open attempt to VFS trace during Title/Start phases
+    vfs_log_trace("open", normalized_path, "attempt", NULL);
+    
     const char *mode;
     if (dwDesiredAccess & GENERIC_WRITE) {
         if (dwCreationDisposition == CREATE_ALWAYS || dwCreationDisposition == CREATE_NEW) {
@@ -86,10 +112,15 @@ HANDLE adapter_CreateFileA(
 #endif
     handle->file = fopen(normalized_path, mode);
     if (!handle->file) {
+        // PROV: Log failed file open to VFS trace
+        vfs_log_trace("open", normalized_path, "failed", NULL);
         free(normalized_path);
         free(handle);
         return INVALID_HANDLE_VALUE;
     }
+    
+    // PROV: Log successful file open to VFS trace
+    vfs_log_trace("open", normalized_path, "success", normalized_path);
     
     handle->path = normalized_path;
     handle->access = dwDesiredAccess;
@@ -124,6 +155,13 @@ BOOL adapter_ReadFile(
     
     if (lpNumberOfBytesRead) {
         *lpNumberOfBytesRead = (DWORD)bytes_read;
+    }
+    
+    // PROV: Log read operation to VFS trace with byte count
+    if (handle->path) {
+        char result_str[64];
+        snprintf(result_str, sizeof(result_str), "read_%zu_bytes", bytes_read);
+        vfs_log_trace("read", handle->path, result_str, NULL);
     }
     
     return (bytes_read > 0 || nNumberOfBytesToRead == 0);
@@ -234,6 +272,12 @@ BOOL adapter_CloseHandle(HANDLE hObject)
     if (hObject == INVALID_HANDLE_VALUE) return FALSE;
     
     FILE_HANDLE_INTERNAL *handle = (FILE_HANDLE_INTERNAL*)hObject;
+    
+    // PROV: Log file close to VFS trace
+    if (handle->path) {
+        vfs_log_trace("close", handle->path, "success", NULL);
+    }
+    
     if (handle->file) {
         fclose(handle->file);
     }
@@ -258,6 +302,10 @@ HANDLE adapter_FindFirstFileA(LPCSTR lpFileName, LPWIN32_FIND_DATAA lpFindFileDa
 {
     if (!lpFileName || !lpFindFileData) return INVALID_HANDLE_VALUE;
     
+#ifdef _WIN32
+    // Use native Windows implementation
+    return FindFirstFileA(lpFileName, lpFindFileData);
+#else
     FIND_HANDLE_INTERNAL *find_handle = calloc(1, sizeof(FIND_HANDLE_INTERNAL));
     if (!find_handle) return INVALID_HANDLE_VALUE;
     
@@ -302,12 +350,17 @@ HANDLE adapter_FindFirstFileA(LPCSTR lpFileName, LPWIN32_FIND_DATAA lpFindFileDa
     }
     
     return (HANDLE)find_handle;
+#endif
 }
 
 BOOL adapter_FindNextFileA(HANDLE hFindFile, LPWIN32_FIND_DATAA lpFindFileData)
 {
     if (hFindFile == INVALID_HANDLE_VALUE || !lpFindFileData) return FALSE;
     
+#ifdef _WIN32
+    // Use native Windows implementation
+    return FindNextFileA(hFindFile, lpFindFileData);
+#else
     FIND_HANDLE_INTERNAL *find_handle = (FIND_HANDLE_INTERNAL*)hFindFile;
     if (!find_handle->dir) return FALSE;
     
@@ -338,12 +391,17 @@ BOOL adapter_FindNextFileA(HANDLE hFindFile, LPWIN32_FIND_DATAA lpFindFileData)
     }
     
     return FALSE;
+#endif
 }
 
 BOOL adapter_FindClose(HANDLE hFindFile)
 {
     if (hFindFile == INVALID_HANDLE_VALUE) return FALSE;
     
+#ifdef _WIN32
+    // Use native Windows implementation
+    return FindClose(hFindFile);
+#else
     FIND_HANDLE_INTERNAL *find_handle = (FIND_HANDLE_INTERNAL*)hFindFile;
     
     if (find_handle->dir) {
@@ -355,6 +413,7 @@ BOOL adapter_FindClose(HANDLE hFindFile)
     free(find_handle);
     
     return TRUE;
+#endif
 }
 
 /*
@@ -384,10 +443,16 @@ HMODULE adapter_LoadLibraryA(LPCSTR lpLibFileName)
         }
     }
 #endif
+#ifndef _WIN32
     void *handle = dlopen(normalized_path, RTLD_LAZY);
     free(normalized_path);
-    
     return (HMODULE)handle;
+#else
+    // Windows LoadLibraryA implementation
+    HMODULE handle = LoadLibraryA(normalized_path);
+    free(normalized_path);
+    return handle;
+#endif
 }
 
 /*
@@ -402,7 +467,11 @@ FARPROC adapter_GetProcAddress(HMODULE hModule, LPCSTR lpProcName)
 {
     if (!hModule || !lpProcName) return NULL;
     
+#ifndef _WIN32    
     return (FARPROC)dlsym((void*)hModule, lpProcName);
+#else
+    return GetProcAddress(hModule, lpProcName);
+#endif
 }
 
 // PROV: FreeLibrary for DLL cleanup
@@ -410,7 +479,11 @@ BOOL adapter_FreeLibrary(HMODULE hLibModule)
 {
     if (!hLibModule) return FALSE;
     
+#ifndef _WIN32
     return (dlclose((void*)hLibModule) == 0);
+#else
+    return FreeLibrary(hLibModule);
+#endif
 }
 
 // File dialog stubs (return failure - not commonly used in games)
@@ -429,7 +502,11 @@ DWORD adapter_GetCurrentDirectoryA(DWORD nBufferLength, LPSTR lpBuffer)
 {
     if (!lpBuffer || nBufferLength == 0) return 0;
     
+#ifndef _WIN32
     if (getcwd(lpBuffer, nBufferLength) != NULL) {
+#else
+    if (_getcwd(lpBuffer, nBufferLength) != NULL) {
+#endif
         adapter_normalize_path(lpBuffer);
         return strlen(lpBuffer);
     }
@@ -444,7 +521,11 @@ BOOL adapter_SetCurrentDirectoryA(LPCSTR lpPathName)
     char *normalized_path = strdup(lpPathName);
     adapter_normalize_path(normalized_path);
     
+#ifndef _WIN32
     int result = chdir(normalized_path);
+#else
+    int result = _chdir(normalized_path);
+#endif
     free(normalized_path);
     
     return (result == 0);
@@ -455,12 +536,21 @@ DWORD adapter_GetModuleFileNameA(HMODULE hModule, LPSTR lpFilename, DWORD nSize)
     if (!lpFilename || nSize == 0) return 0;
     
     // Return executable path (simplified)
+#ifndef _WIN32
     ssize_t len = readlink("/proc/self/exe", lpFilename, nSize - 1);
     if (len != -1) {
         lpFilename[len] = '\0';
         adapter_normalize_path(lpFilename);
         return len;
     }
+#else
+    // Windows implementation
+    DWORD len = GetModuleFileNameA(hModule, lpFilename, nSize);
+    if (len > 0 && len < nSize) {
+        adapter_normalize_path(lpFilename);
+        return len;
+    }
+#endif
     
     return 0;
 }
@@ -493,5 +583,180 @@ int adapter_fs_init(void)
 
 void adapter_fs_shutdown(void)
 {
-    // No cleanup needed for POSIX
+    // PROV: Close VFS trace file if open
+    if (g_vfs_trace_file) {
+        vfs_log_trace("shutdown", "adapter_fs", "complete", NULL);
+        fclose(g_vfs_trace_file);
+        g_vfs_trace_file = NULL;
+    }
+    // No other cleanup needed for POSIX
+}
+
+/* RESOURCE_VFS_START */
+/*
+ * [RESOURCE] Minimal Resource VFS Implementation
+ * PROV: resources.manifest.json - 277 files total (43 BMP, 183 WAV, 34 DLL, 17 SAN)
+ * VFS: Deterministic search order for diskless runtime: env → ./Sdata → ../Sdata → ../../Sdata
+ * ADAPTER: FS → adapter_fs_posix.c (POSIX VFS implementation)
+ * NOTE: Evidence-based file resolution with logging for troubleshooting
+ */
+
+// PROV: Based on runtime/resources.manifest.json asset inventory
+static const char* vfs_search_roots[] = {
+    NULL,           // Will be filled with SOTE_ASSETS_DIR from environment
+    "./Sdata",      // Current directory relative
+    "../Sdata",     // Parent directory relative  
+    "../../Sdata",  // Grandparent directory relative
+    NULL
+};
+
+/*
+ * [RESOURCE] Initialize VFS tracing to JSONL file
+ * PROV: Output VFS trace to /media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl
+ * NOTE: Creates directory if needed and opens trace file for append
+ */
+static void vfs_init_trace(void) {
+    if (g_vfs_trace_file) return;  // Already initialized
+    
+    // PROV: Ensure reports/runtime directory exists
+    #ifndef _WIN32
+    system("mkdir -p /media/k/vbox1/Shadows/SOTE/reports/runtime");
+    #else
+    system("mkdir /media/k/vbox1/Shadows/SOTE/reports/runtime 2>nul");
+    #endif
+    
+    g_vfs_trace_file = fopen("/media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl", "a");
+    if (g_vfs_trace_file) {
+        // PROV: Log trace file initialization
+        fprintf(stderr, "[VFS] Trace file opened: /media/k/vbox1/Shadows/SOTE/reports/runtime/vfs.start.trace.jsonl\n");
+    }
+}
+
+/*
+ * [RESOURCE] Log VFS operation to trace file in JSONL format
+ * PROV: JSON Lines format for easy parsing and analysis
+ * NOTE: Logs timestamp, operation, path, result, and resolved path
+ */
+static void vfs_log_trace(const char* operation, const char* path, const char* result, const char* resolved_path) {
+    vfs_init_trace();  // Ensure trace file is open
+    
+    if (!g_vfs_trace_file) return;
+    
+    // Get current timestamp
+    time_t now = time(NULL);
+    
+    // Write JSONL entry
+    fprintf(g_vfs_trace_file, "{\"timestamp\":%ld,\"operation\":\"%s\",\"path\":\"%s\",\"result\":\"%s\",\"resolved\":\"%s\"}\n",
+            now, operation ? operation : "unknown", 
+            path ? path : "null", 
+            result ? result : "unknown",
+            resolved_path ? resolved_path : "null");
+    
+    // Flush to ensure data is written immediately
+    fflush(g_vfs_trace_file);
+}
+
+/*
+ * [RESOURCE] VFS Path Resolution Function
+ * PROV: resources.manifest.json - handles 277 game assets with deterministic search
+ * SEARCH: env(SOTE_ASSETS_DIR) → ./Sdata → ../Sdata → ../../Sdata
+ * LOGGING: [VFS] resolved for success, [WARN][VFS] missing for failures
+ * NOTE: Returns allocated path string that must be freed by caller
+ */
+static char* vfs_resolve_path(const char* relative_path) {
+    if (!relative_path) return NULL;
+    
+    // Initialize environment path if not already done
+    static int env_initialized = 0;
+    if (!env_initialized) {
+        vfs_search_roots[0] = getenv("SOTE_ASSETS_DIR");
+        env_initialized = 1;
+    }
+    
+    // Try each search root in order
+    for (int i = 0; vfs_search_roots[i] != NULL; i++) {
+        const char* root = vfs_search_roots[i];
+        if (!root) continue;
+        
+        // Construct full path
+        size_t root_len = strlen(root);
+        size_t rel_len = strlen(relative_path);
+        char* full_path = malloc(root_len + rel_len + 2); // +2 for '/' and '\0'
+        
+        if (!full_path) continue;
+        
+        strcpy(full_path, root);
+        if (root[root_len - 1] != '/') {
+            strcat(full_path, "/");
+        }
+        strcat(full_path, relative_path);
+        
+        // Normalize path separators
+        adapter_normalize_path(full_path);
+        
+        // Check if file exists
+        if (adapter_file_exists(full_path)) {
+            fprintf(stderr, "[VFS] resolved: %s -> %s\n", relative_path, full_path);
+            // PROV: Log successful resolution to trace file
+            vfs_log_trace("resolve", relative_path, "success", full_path);
+            return full_path;
+        }
+        
+        free(full_path);
+    }
+    
+    // File not found in any search root
+    fprintf(stderr, "[WARN][VFS] missing: %s (searched all VFS roots)\n", relative_path);
+    // PROV: Log failed resolution to trace file
+    vfs_log_trace("resolve", relative_path, "missing", NULL);
+    return NULL;
+}
+
+/*
+ * [RESOURCE] VFS-aware file open adapter
+ * PROV: resources.manifest.json evidence for asset access patterns
+ * ROUTE: All adapter_fs_open() calls through VFS resolution
+ * LOGGING: [ERR][VFS] fopen failed for troubleshooting
+ * NOTE: Routes to CreateFileA after VFS path resolution
+ */
+HANDLE adapter_fs_open(const char* path, DWORD access, DWORD creation) {
+    if (!path) return INVALID_HANDLE_VALUE;
+    
+    char* resolved_path = vfs_resolve_path(path);
+    if (!resolved_path) {
+        // Fallback to original path for absolute paths or non-Sdata files
+        resolved_path = strdup(path);
+        if (!resolved_path) return INVALID_HANDLE_VALUE;
+    }
+    
+    HANDLE result = adapter_CreateFileA(resolved_path, access, 0, NULL, creation, 
+                                       FILE_ATTRIBUTE_NORMAL, NULL);
+    
+    if (result == INVALID_HANDLE_VALUE) {
+        fprintf(stderr, "[ERR][VFS] fopen failed: %s\n", resolved_path);
+    }
+    
+    free(resolved_path);
+    return result;
+}
+
+/*
+ * [RESOURCE] VFS-aware file existence check
+ * PROV: resources.manifest.json asset verification
+ * CHECK: Uses VFS resolution before existence test
+ * LOGGING: Leverages vfs_resolve_path logging
+ * NOTE: Returns 1 if file found in VFS, 0 otherwise
+ */
+int adapter_fs_exists(const char* path) {
+    if (!path) return 0;
+    
+    char* resolved_path = vfs_resolve_path(path);
+    if (!resolved_path) {
+        // Fallback check for non-VFS paths
+        return adapter_file_exists(path);
+    }
+    
+    int exists = adapter_file_exists(resolved_path);
+    free(resolved_path);
+    return exists;
 }

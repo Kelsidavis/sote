@@ -1,0 +1,53 @@
+{
+  "fault_addresses": [
+    {
+      "va": "0x0041007e",
+      "section": ".rdata",
+      "offset_in_section": 126,
+      "nearest_symbol": {
+        "name": "build/obj/main.o:.rdata",
+        "start_va": "0x00410044", 
+        "size": 76,
+        "offset_from_symbol": 58
+      },
+      "context": "Data reference in main.o rdata section",
+      "classification": "RDATA_ACCESS_FAULT",
+      "probable_cause": "null pointer dereference or uninitialized data structure access",
+      "source_file": "main.c",
+      "guard_expressions": ["ptr != NULL", "ptr->lpVtbl != NULL"]
+    },
+    {
+      "va": "0x0041004a",
+      "section": ".rdata", 
+      "offset_in_section": 74,
+      "nearest_symbol": {
+        "name": "build/obj/main.o:.rdata",
+        "start_va": "0x00410044",
+        "size": 76,
+        "offset_from_symbol": 6
+      },
+      "context": "Early data reference in main.o rdata section",
+      "classification": "RDATA_ACCESS_FAULT",
+      "probable_cause": "early startup data structure access before initialization",
+      "source_file": "main.c",
+      "guard_expressions": ["ptr != NULL", "ptr->lpVtbl != NULL"]
+    }
+  ],
+  "analysis": {
+    "total_faults": 2,
+    "common_module": "main.o",
+    "section_type": ".rdata",
+    "likely_root_cause": "STARTUP_DATA_FAULT - accessing data structures before proper initialization",
+    "recommended_guards": [
+      "Insert null pointer checks before struct member access",
+      "Add early logging in main function to trace initialization order",
+      "Verify DirectDraw/graphics context initialization before use"
+    ]
+  },
+  "provenance": {
+    "map_file": "/media/k/vbox1/Shadows/SOTE/build/bin/SOTE_RE.map",
+    "tool": "binary_symbol_mapper",
+    "timestamp": "2025-09-12T21:42:00Z",
+    "coord_call_id": "coord-startup-001"
+  }
+}

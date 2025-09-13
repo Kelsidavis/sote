@@ -85,16 +85,7 @@ void fcn_0041c950(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h,
 }
 
 /* Rank 266: Dispatcher with good fan-out */
-void fcn_0042d0f4(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, 
-                  int32_t arg_44h, int32_t arg_48h, int32_t arg_4ch, 
-                  int32_t arg_50h)
-{
-    /* PROV: r2 @ 0x42d0f4, size: 832 bytes, cyclomatic complexity: 32 */
-    /* PROV: Fan-in: 34, Fan-out: 58, Total connectivity: 92 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x42d0f4 */
-    /* NOTE: High fan-out suggests dispatcher or routing function */
-    return; /* Stub implementation pending evidence */
-}
+/* NOTE: fcn_0042d0f4 implementation moved to priority_functions.c */
 
 /* Rank 267: High fan-out dispatcher */
 void loc_00406b50(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, 
@@ -108,15 +99,7 @@ void loc_00406b50(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h,
 }
 
 /* Rank 268: Processing hub */
-void fcn_004255e0(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, 
-                  int32_t arg_44h, int32_t arg_48h, int32_t arg_4ch, 
-                  int32_t arg_50h)
-{
-    /* PROV: r2 @ 0x4255e0, size: 923 bytes, cyclomatic complexity: 36 */
-    /* PROV: Fan-in: 38, Fan-out: 45, Total connectivity: 83 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x4255e0 */
-    return; /* Stub implementation pending evidence */
-}
+/* NOTE: fcn_004255e0 implementation moved to priority_functions.c */
 
 /* Rank 269: Balanced processing function */
 void fcn_00410260(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h)
@@ -128,15 +111,7 @@ void fcn_00410260(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h)
 }
 
 /* Rank 270: Processing component */
-void fcn_004242c0(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, 
-                  int32_t arg_44h, int32_t arg_48h, int32_t arg_4ch, 
-                  int32_t arg_50h, int32_t arg_54h)
-{
-    /* PROV: r2 @ 0x4242c0, size: 767 bytes, cyclomatic complexity: 40 */
-    /* PROV: Fan-in: 34, Fan-out: 43, Total connectivity: 77 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x4242c0 */
-    return; /* Stub implementation pending evidence */
-}
+/* NOTE: fcn_004242c0 implementation moved to priority_functions.c */
 
 /* ========================================================================
  * MEDIUM COMPLEXITY PROCESSING FUNCTIONS (Ranks 271-280)
@@ -277,15 +252,7 @@ void fcn_004421a8(int32_t arg_38h)
     return; /* Stub implementation pending evidence */
 }
 
-/* Rank 284: Small utility */
-void fcn_0041aaa0(void)
-{
-    /* PROV: r2 @ 0x41aaa0, size: 23 bytes, cyclomatic complexity: 1 */
-    /* PROV: Fan-in: 72, Fan-out: 1, Total connectivity: 73 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x41aaa0 */
-    /* NOTE: Tiny function with extreme fan-in - likely getter or flag check */
-    return; /* Stub implementation pending evidence */
-}
+
 
 /* Rank 285: Processing function */
 void fcn_00428380(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, 
@@ -360,14 +327,7 @@ void fcn_0040abe0(int32_t arg_1ch)
     return; /* Stub implementation pending evidence */
 }
 
-/* Rank 292: Utility function */
-void fcn_00416200(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h)
-{
-    /* PROV: r2 @ 0x416200, size: 334 bytes, cyclomatic complexity: 26 */
-    /* PROV: Fan-in: 38, Fan-out: 20, Total connectivity: 58 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x416200 */
-    return; /* Stub implementation pending evidence */
-}
+
 
 /* Rank 293: Processing function */
 void fcn_0040b9a0(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, 
@@ -389,15 +349,7 @@ void fcn_0041d840(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h,
     return; /* Stub implementation pending evidence */
 }
 
-/* Rank 295: Small utility with high fan-in */
-void fcn_00441edd(int32_t arg_8h)
-{
-    /* PROV: r2 @ 0x441edd, size: 40 bytes, cyclomatic complexity: 2 */
-    /* PROV: Fan-in: 62, Fan-out: 3, Total connectivity: 65 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x441edd */
-    /* NOTE: High fan-in terminal utility function */
-    return; /* Stub implementation pending evidence */
-}
+
 
 /* Rank 296: Processing function */
 void fcn_00420080(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h, 
@@ -419,14 +371,7 @@ void fcn_00410ed0(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h,
     return; /* Stub implementation pending evidence */
 }
 
-/* Rank 298: Small utility with high fan-in */
-void fcn_0041aa30(int32_t arg_8h)
-{
-    /* PROV: r2 @ 0x41aa30, size: 104 bytes, cyclomatic complexity: 4 */
-    /* PROV: Fan-in: 51, Fan-out: 11, Total connectivity: 62 */
-    /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x41aa30 */
-    return; /* Stub implementation pending evidence */
-}
+
 
 /* Rank 299: Processing function */
 void fcn_00415530(int32_t arg_ch, int32_t arg_10h, int32_t arg_14h, 

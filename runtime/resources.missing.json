@@ -1,53 +1,24 @@
 {
-  "metadata": {
-    "artifact": {
-      "file_name": "SOTE.EXE",
-      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
-      "arch": "i386",
-      "abi": "pe32"
-    },
-    "analysis": {
-      "timestamp": "2025-09-11T22:10:00Z",
-      "stage": "Missing Resource Detection",
-      "tool": "RE-AGENT Resource Annotator",
-      "schema_version": "1.0"
-    }
+  "missing_timestamp": "2025-09-12T19:58:00Z",
+  "artifact": {
+    "file_name": "SOTE_RE.exe",
+    "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77"
   },
-  "statistics": {
-    "total_checked": 277,
-    "missing_count": 0,
-    "percentage_missing": 0.0
+  "provenance": {
+    "generated_by": "binary_artifact_extractor",
+    "call_id": "coord-0004",
+    "evidence_sources": ["filesystem scan", "evidence cross-reference"]
   },
   "missing_resources": [],
-  "recommendations": {
-    "status": "All resources verified",
-    "notes": [
-      "All 277 game assets from Sdata/ directory are present",
-      "43 BMP files verified",
-      "183 WAV files verified",
-      "17 SAN movie files verified",
-      "34 DLL archive files verified"
-    ],
-    "runtime_protection": {
-      "compile_warnings": "Added via #ifdef RESOURCE_WARNINGS",
-      "runtime_checks": "Added file existence checks with stderr logging",
-      "adapter_layer": "Full adapter coverage for all resource APIs"
-    }
+  "analysis": {
+    "missing_count": 0,
+    "severity": "none",
+    "status": "All referenced resources found and accessible",
+    "disc_less_feasible": true
   },
-  "potential_issues": [
-    {
-      "type": "format",
-      "resource": "SAN movie files",
-      "issue": "Format undocumented - stub implementation only",
-      "affected_files": ["*.san"],
-      "recommendation": "Reverse engineer SAN format or use existing decoder library"
-    },
-    {
-      "type": "packed",
-      "resource": "DLL archives",
-      "issue": "Resources packed inside DLL containers",
-      "affected_files": ["data00.dll-data31.dll"],
-      "recommendation": "Implement PE resource extraction from DLL archives"
-    }
+  "recommendations": [
+    "All game assets are present in Sdata directory",
+    "No missing dependencies detected for disc-less operation",
+    "Environment variable SOTE_ASSET_ROOT should point to Sdata directory"
   ]
 }

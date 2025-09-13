@@ -1,0 +1,72 @@
+{
+  "assertion_id": "coord-title-004",
+  "agent": "test-harness-generator",
+  "intent": "verify",
+  "timestamp": "2025-09-12T23:25:00Z",
+  "wine_execution_analysis": {
+    "execution_status": {
+      "timeout_duration": 25,
+      "completed_normally": true,
+      "stderr_lines": 1171,
+      "stdout_lines": 0
+    },
+    "required_markers": {
+      "markers_found": [
+        "[ROUTE] forcing SDL path (disc-less)",
+        "[STARTUP] disc-less SDL loop begin",
+        "[AUDIO] SDL audio init failed, continuing without audio", 
+        "[LOOP] Enhanced SDL title sequence start, splash=800ms, title=5000ms"
+      ],
+      "markers_missing": [
+        "[RENDER] splash presented:",
+        "[ROUTE] title phase using:",
+        "[RENDER] title presented:",
+        "[SHUTDOWN] disc-less SDL loop end"
+      ],
+      "status": "PARTIAL_SUCCESS"
+    },
+    "artifacts_check": {
+      "splash_frame_bmp": {
+        "path": "/media/k/vbox1/Shadows/SOTE/reports/runtime/splash_frame.bmp",
+        "exists": false,
+        "status": "MISSING"
+      },
+      "title_frame_bmp": {
+        "path": "/media/k/vbox1/Shadows/SOTE/reports/runtime/title_frame.bmp", 
+        "exists": false,
+        "status": "MISSING"
+      }
+    },
+    "analysis": {
+      "sdl_path_taken": true,
+      "title_sequence_started": true,
+      "rendering_reached": false,
+      "likely_cause": "SDL stub mode - video adapter init may have failed silently",
+      "evidence": [
+        "SDL path correctly detected and activated",
+        "Audio init failed as expected in stub mode",
+        "Title sequence timing started",
+        "No render outputs produced"
+      ]
+    }
+  },
+  "acceptance_criteria": {
+    "verify_json_passes": true,
+    "six_required_markers": false,
+    "bmp_artifacts_exist": false,
+    "overall_status": "FAIL"
+  },
+  "next_steps": [
+    "Check SDL video adapter initialization in stub mode",
+    "Verify BMP loading functions in cross-compilation environment", 
+    "Review SDL_GetTicks() and timing functions",
+    "Consider native Linux build for testing",
+    "Top 5 BMP candidates from Sdata: boba.bmp, astroids.bmp, battle.bmp, skyhook.bmp, walker.bmp"
+  ],
+  "provenance": {
+    "wine_stderr": "/media/k/vbox1/Shadows/SOTE/reports/runtime/wine.stderr.txt",
+    "wine_stdout": "/media/k/vbox1/Shadows/SOTE/reports/runtime/wine.stdout.txt",
+    "build_verify": "/media/k/vbox1/Shadows/SOTE/reports/build/verify.json",
+    "coord_call_id": "coord-title-004"
+  }
+}

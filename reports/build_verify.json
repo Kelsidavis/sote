@@ -1,0 +1,77 @@
+{
+  "verification_report": {
+    "timestamp": "2025-09-12T20:05:30Z",
+    "agent": "binary_verification_agent",
+    "version": "1.0.0",
+    "call_id": "coord-BVA-001",
+    "verification_type": "strict_pe32_rebuild"
+  },
+  "artifact": {
+    "original_file": "/media/k/vbox1/Shadows/SOTE/inputs/original/SOTE.original.exe",
+    "original_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+    "rebuilt_file": "/media/k/vbox1/Shadows/SOTE/build/bin/SOTE_RE.exe",
+    "rebuilt_sha256": "NOT_BUILT"
+  },
+  "verification_checks": {
+    "executable_exists": {
+      "status": "FAIL",
+      "expected": "File exists at /media/k/vbox1/Shadows/SOTE/build/bin/SOTE_RE.exe",
+      "actual": "File does not exist",
+      "reason": "Build failed due to multiple symbol definitions"
+    },
+    "pe32_format": {
+      "status": "SKIP",
+      "expected": "file command contains 'PE32 executable'",
+      "actual": "Cannot check - file does not exist",
+      "reason": "Executable not built"
+    },
+    "rebuild_stamp": {
+      "status": "SKIP", 
+      "expected": "strings command contains 'RE-AGENT REBUILD m100'",
+      "actual": "Cannot check - file does not exist",
+      "reason": "Executable not built"
+    },
+    "hash_difference": {
+      "status": "SKIP",
+      "expected": "SHA256 different from original",
+      "actual": "Cannot compare - rebuilt file does not exist",
+      "reason": "Executable not built"
+    },
+    "build_evidence": {
+      "status": "PASS",
+      "expected": "Build log contains i686-w64-mingw32-gcc link command",
+      "actual": "Build attempted with proper toolchain, failed at link stage",
+      "evidence": "Found mingw compiler invocations and link attempt in build.compile.log"
+    }
+  },
+  "build_analysis": {
+    "build_attempted": true,
+    "build_success": false,
+    "failure_reason": "multiple_symbol_definitions",
+    "symbol_conflicts_detected": 47,
+    "toolchain_configured": true,
+    "disc_less_flags": true,
+    "rebuild_stamp_scaffolded": true,
+    "no_copy_rules": true
+  },
+  "acceptance_criteria_status": {
+    "executable_missing": "FAIL",
+    "hash_match_with_original": "N/A - no executable built",
+    "rebuild_stamp_missing": "N/A - no executable built",
+    "all_checks_succeed": "FAIL"
+  },
+  "overall_status": "FAIL",
+  "failure_summary": "Build configuration is correct but executable build failed due to multiple symbol definitions. Need symbol conflict resolution before successful PE32 rebuild can be achieved.",
+  "next_steps": [
+    "Resolve duplicate symbol definitions across source files",
+    "Run build-integration-agent with symbol conflict resolution",
+    "Re-attempt PE32 build with mingw toolchain",
+    "Re-run verification once executable is successfully built"
+  ],
+  "contingency_status": {
+    "mingw_toolchain_available": true,
+    "copy_rules_detected": false,
+    "configuration_correct": true,
+    "symbol_conflicts_require_resolution": true
+  }
+}

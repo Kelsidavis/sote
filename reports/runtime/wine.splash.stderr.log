@@ -1,0 +1,7 @@
+0208:trace:file:find_drive_rootA "/media/k/vbox1/Shadows/SOTE/build/bin" -> drive Z:, root="/", name="/media/k/vbox1/Shadows/SOTE/build/bin"
+0208:trace:file:find_drive_rootA "/usr/lib/wine/../../share/wine" -> drive Z:, root="/", name="/usr/lib/wine/../../share/wine"
+0208:trace:file:find_drive_rootA "/home/k" -> drive Z:, root="/", name="/home/k"
+0208:trace:file:find_drive_rootA "/home/k/.wine" -> drive Z:, root="/", name="/home/k/.wine"
+0208:trace:file:find_drive_rootA "/usr/lib/i386-linux-gnu/wine" -> drive Z:, root="/", name="/usr/lib/i386-linux-gnu/wine"
+0208:trace:file:nt_to_unix_file_name_no_root L"media\\k\\vbox1\\Shadows\\SOTE\\build\\bin\\SOTE_RE.exe" not found in "/home/k/.wine/dosdevices/z:"
+wine: failed to open "./SOTE_RE.exe": c0000135

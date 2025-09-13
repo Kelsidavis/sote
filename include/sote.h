@@ -24,8 +24,9 @@
 // Evidence: Offset 4279744, Size: 423, Signature: entry0 ();
 void entry_point(void);
 
-// Evidence: Offset 4377150, Size: 25, Signature: int main (char **argv, char **envp, int32_t envp);
-int main(char** argv, char** envp, int envp_count);
+// Evidence: Offset 4377150, Size: 25, Signature adapted for SDL2 compatibility  
+// NOTE: SDL2 redefines main to SDL_main(int argc, char *argv[])
+int main(int argc, char** argv);
 
 // Evidence: Offset 4482206, Size: 103, Signature: fcn_0044649e (char **arg_8h, char **arg_ch, int32_t arg_10h, int32_t arg_14h);
 int game_main_loop(char** argv, char** envp, int argc, DWORD init_flags);

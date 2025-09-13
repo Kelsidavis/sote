@@ -1,0 +1,109 @@
+# Wine Crash Analysis - SOTE Disc-less Execution
+# Generated: 2025-09-12T21:41:00Z
+# Agent: binary-symbol-mapper
+# Call ID: coord-0005
+
+## Fault Address Analysis
+
+### Primary Exception: 0x0041007e
+**Memory Section**: .rdata (Read-only data)
+**Map File Reference**: 
+```
+.rdata          0x00410044       0x4c build/obj/main.o
+```
+**Analysis**: Address 0x0041007e falls within main.o rdata section (0x410044 + 0x3A offset)
+**Symbol Context**: Likely accessing string literals or constant data from main.c
+**Severity**: DATA_ACCESS_FAULT
+**Source Mapping**: src/main.c static data or string constants
+
+### Secondary Exception: 0x0041004a  
+**Memory Section**: .rdata (Read-only data)
+**Map File Reference**: Same section as above
+**Analysis**: Address 0x0041004a is 0x6 bytes into main.o rdata section
+**Symbol Context**: Early string literal or configuration data access
+**Severity**: DATA_ACCESS_FAULT
+**Source Mapping**: src/main.c static initialization data
+
+## Crash Classification
+
+**Type**: READ_DATA_FAULT
+**Location**: Application startup phase (rdata access)
+**Root Cause**: Likely startup sequence issue or initialization order problem
+**Wine Compatibility**: Data access pattern may differ between native Windows and Wine
+
+## Stack Frame Analysis (Reconstructed)
+
+```
+#0  0x0041007e in <main.o rdata> (SOTE_RE.exe)
+    => Data access fault in main.c static data
+    => Potential string literal or configuration access
+
+#1  Wine SEH Handler Chain
+    => 0x7B662597 (wine internal)
+    => Exception dispatch and handling
+
+#2  Application Context Unknown  
+    => Insufficient backtrace depth from wine logs
+    => Early termination prevented full stack capture
+```
+
+## Memory Layout Context
+
+**Executable Base**: 0x00400000
+**Text Section**: 0x00401000 - 0x0040E200 (Code)
+**RData Section**: 0x00410000 - 0x00410E00 (Constants/Strings)
+**Fault Region**: 0x00410044 - 0x00410090 (main.o rdata, 76 bytes)
+
+## Source Code Correlation
+
+Based on map file symbols and fault addresses:
+
+**src/main.c rdata likely contains**:
+- String literals for error messages
+- Configuration data structures  
+- Static initialization arrays
+- Function pointer tables
+- Debug output strings
+
+**Potential Fault Triggers**:
+1. Accessing uninitialized global string pointer
+2. Reading configuration data before proper setup
+3. Debug output string access in Wine environment
+4. Static array bounds access issue
+
+## Wine Environment Analysis
+
+**Wine Debug Output**: 1,157 lines of trace data
+**SEH Exceptions**: Multiple dispatch cycles detected
+**Process State**: Timeout termination (30s), not fatal crash
+**DLL Loading**: Standard Wine DLL resolution observed
+
+## Video Adapter Assessment  
+
+**SDL Guard Status**: UNKNOWN - Application may not reach video initialization
+**Expected Logs**: "[DISCLESS] Video adapter: SDL" - NOT FOUND
+**Adapter Integration**: Guard code compiled successfully but not triggered
+
+## Recommendations
+
+### Immediate Actions
+1. **Debug Build**: Add more verbose startup logging to main.c
+2. **String Analysis**: Review static string initialization in main.c
+3. **Wine Debugging**: Enable more detailed memory access tracing
+4. **Initialization Order**: Verify global data setup sequence
+
+### Long-term Investigation  
+1. **Address Mapping**: Correlate 0x41007e to specific source line
+2. **Data Layout**: Analyze main.o object file symbol offsets
+3. **Wine Compatibility**: Test data access patterns separately
+4. **Startup Sequence**: Trace execution flow from entry point
+
+## Exit Status
+
+**Classification**: STARTUP_DATA_FAULT (Non-fatal)
+**Video Adapter**: Guard not reached, but code present
+**Resource Access**: Directory accessible, no resource opens detected
+**Overall Status**: Partial success - executable loads and runs briefly
+
+---
+*Symbolization based on SOTE_RE.map | Addresses cross-referenced with object file layout*
