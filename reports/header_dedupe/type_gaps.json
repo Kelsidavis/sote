@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "agent": "struct_layout_analyzer",
+    "call_id": "coord-004-struct-layout-analyzer",
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "created": "2025-09-12T18:47:00Z",
+    "canonical_prototypes_validated": 5,
+    "deterministic_sort": true
+  },
+  "validation_results": {
+    "fcn_00401159": {
+      "signature": "int fcn_00401159(void);",
+      "type_validation": "PASS",
+      "return_type": "int",
+      "parameters": [],
+      "missing_types": [],
+      "type_dependencies_satisfied": true
+    },
+    "fcn_004011a4": {
+      "signature": "int fcn_004011a4(int32_t param1);",
+      "type_validation": "PASS", 
+      "return_type": "int",
+      "parameters": ["int32_t"],
+      "missing_types": [],
+      "type_dependencies_satisfied": true
+    },
+    "fcn_004011b3": {
+      "signature": "int fcn_004011b3(void);",
+      "type_validation": "PASS",
+      "return_type": "int", 
+      "parameters": [],
+      "missing_types": [],
+      "type_dependencies_satisfied": true
+    },
+    "fcn_00409020": {
+      "signature": "int fcn_00409020(int32_t param1);",
+      "type_validation": "PASS",
+      "return_type": "int",
+      "parameters": ["int32_t"],
+      "missing_types": [],
+      "type_dependencies_satisfied": true
+    },
+    "fcn_0040b180": {
+      "signature": "int fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);",
+      "type_validation": "PASS",
+      "return_type": "int",
+      "parameters": ["int32_t", "int32_t", "int32_t", "int32_t", "int32_t", "int32_t"],
+      "missing_types": [],
+      "type_dependencies_satisfied": true
+    }
+  },
+  "type_system_analysis": {
+    "required_includes": ["<stdint.h>"],
+    "available_types": ["int", "int32_t", "uint32_t", "void", "signed int"],
+    "type_gaps": [],
+    "missing_definitions": [],
+    "circular_dependencies": [],
+    "validation_status": "ALL_PASS"
+  },
+  "recommendations": {
+    "canonical_header_includes": ["#include <stdint.h>"],
+    "additional_type_definitions": [],
+    "forward_declarations_needed": [],
+    "type_system_ready": true
+  }
+}

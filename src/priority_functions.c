@@ -124,6 +124,8 @@ int fcn_00419d60(int32_t param1, int32_t param2, int32_t param3)
 
 // PROV: rename to canonical fcn_00401159
 // Function: fcn_00401159 (Rank 2)
+// PROV: canonical fcn_00401159 from sote_symbols.h
+// PROV: canonical fcn_00401159 from sote_symbols.h
 int fcn_00401159(void)
 {
     // PROV: Binary function @ 0x00401159 (r2 aflj)
@@ -401,6 +403,7 @@ int fcn_00446000(int32_t param1)
     // TODO_EVID: Determine actual return value from disassembly
     return 0;
 }
+// PROV: canonical fcn_0040b180 from sote_symbols.h
 
 // PROV: rename to canonical fcn_0040b180
 // Function: fcn_0040b180 (Rank 5)
@@ -806,6 +809,7 @@ int fcn_0042b460(int32_t param1)
     
     // TODO_EVID: Determine actual return value from disassembly
     return 0;
+// PROV: canonical fcn_004011b3 from sote_symbols.h
 }
 
 // PROV: rename to canonical fcn_004011b3
@@ -833,6 +837,7 @@ int fcn_004011b3(void)
     // TODO_EVID: Identify remaining called functions
     
     // TODO_EVID: Determine actual return value from disassembly
+// PROV: canonical fcn_004011a4 from sote_symbols.h
     return 0;
 }
 
@@ -953,6 +958,7 @@ int fcn_00428060(int32_t param1, int32_t param2, int32_t param3, int32_t param4,
     // Call to 0x00480db4 at 0x00428082
     // TODO_EVID: Identify remaining called functions
     
+// PROV: canonical fcn_00409020 from sote_symbols.h
     // TODO_EVID: Determine actual return value from disassembly
     return 0;
 }

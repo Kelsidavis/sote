@@ -9,7 +9,7 @@
 
 #include <stdint.h>
 #include <stddef.h>
-#include "navigator_batch_13_functions.h"
+#include "sote_symbols.h"
 
 /* PROV: navigator.final_batch.manifest.json rank 1001 - Critical entry point */
 void entry_point(void) {

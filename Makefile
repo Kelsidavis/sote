@@ -407,3 +407,10 @@ itest-clean:
 	rm -rf $(ITEST_BUILDDIR)
 	rm -f itest.results.json
 	@echo "Integration test artifacts cleaned"
+
+# Header deduplication check
+.PHONY: header-dedupe-check
+header-dedupe-check:
+	@echo "Running header deduplication CI checks..."
+	./ci_check.sh
+	@echo "Header deduplication check completed successfully"

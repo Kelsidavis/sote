@@ -918,6 +918,8 @@ int fcn_0041c720(int32_t param1, int32_t param2, int32_t param3)
 
 // PROV: rename to canonical fcn_00409020
 // Function: fcn_00409020 (Rank 44)
+// PROV: canonical fcn_00409020 from sote_symbols.h
+// PROV: canonical fcn_00409020 from sote_symbols.h
 int fcn_00409020(int32_t param1)
 {
     // PROV: Binary function @ 0x00409020 (r2 aflj)

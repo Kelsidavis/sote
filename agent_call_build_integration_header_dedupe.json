@@ -1,0 +1,35 @@
+{
+  "call_id": "coord-006-build-integration",
+  "agent": "build_integration",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386", 
+      "abi": "pe32"
+    },
+    "paths": {
+      "project_root": "/media/k/vbox1/Shadows/SOTE",
+      "makefile": "/media/k/vbox1/Shadows/SOTE/Makefile",
+      "sote_symbols_h": "/media/k/vbox1/Shadows/SOTE/include/sote_symbols.h",
+      "patch_file": "/media/k/vbox1/Shadows/SOTE/header_dedupe.patch",
+      "output_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe"
+    },
+    "scope": {
+      "operation": "header_dedupe_integration",
+      "add_ci_targets": true,
+      "create_validation_checks": true
+    },
+    "options": {
+      "ci_check_name": "header-dedupe-check",
+      "preserve_existing_targets": true,
+      "deterministic_sort": true,
+      "create_validation_script": true
+    }
+  },
+  "expected_outputs": [
+    "/media/k/vbox1/Shadows/SOTE/ci_check.sh",
+    "Updated Makefile with header-dedupe-check target"
+  ]
+}

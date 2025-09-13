@@ -1,0 +1,101 @@
+# Header Canonicalization Propagation Patch
+# Generated: 2025-09-12T18:53:35.694515
+# Call ID: coord-009-reimplementation-propagation
+# Operation: surgical_propagation
+
+## File: include/batch2_functions.h
+Changes: 2
+  - Line 72: remove_redundant_declaration
+  - Line 72: add_provenance_comment
+
+## File: include/navigator_batch_4_functions.h
+Changes: 5
+  - Line 185: remove_redundant_declaration
+  - Line 257: remove_redundant_declaration
+  - Line 65: add_provenance_comment
+  - Line 185: add_provenance_comment
+  - Line 257: add_provenance_comment
+
+## File: include/navigator_batch_5_functions.h
+Changes: 4
+  - Line 47: remove_redundant_declaration
+  - Line 129: remove_redundant_declaration
+  - Line 47: add_provenance_comment
+  - Line 129: add_provenance_comment
+
+## File: include/navigator_batch_6_functions.h
+Changes: 2
+  - Line 325: remove_redundant_declaration
+  - Line 325: add_provenance_comment
+
+## File: include/priority_functions.h
+Changes: 10
+  - Line 21: remove_redundant_declaration
+  - Line 30: remove_redundant_declaration
+  - Line 57: remove_redundant_declaration
+  - Line 60: remove_redundant_declaration
+  - Line 69: remove_redundant_declaration
+  - Line 21: add_provenance_comment
+  - Line 30: add_provenance_comment
+  - Line 57: add_provenance_comment
+  - Line 60: add_provenance_comment
+  - Line 69: add_provenance_comment
+
+## File: include/sote_symbols.h
+Changes: 5
+  - Line 45: remove_redundant_declaration
+  - Line 49: remove_redundant_declaration
+  - Line 58: remove_redundant_declaration
+  - Line 62: remove_redundant_declaration
+  - Line 66: remove_redundant_declaration
+
+## File: src/batch2_functions.c
+Changes: 2
+  - Line 921: add_provenance_comment
+  - Line 921: add_provenance_comment
+
+## File: src/navigator_batch_4_functions.c
+Changes: 6
+  - Line 93: add_provenance_comment
+  - Line 342: add_provenance_comment
+  - Line 506: add_provenance_comment
+  - Line 93: add_provenance_comment
+  - Line 342: add_provenance_comment
+  - Line 506: add_provenance_comment
+
+## File: src/navigator_batch_5_functions.c
+Changes: 4
+  - Line 43: add_provenance_comment
+  - Line 205: add_provenance_comment
+  - Line 43: add_provenance_comment
+  - Line 205: add_provenance_comment
+
+## File: src/navigator_batch_6_functions.c
+Changes: 2
+  - Line 670: add_provenance_comment
+  - Line 670: add_provenance_comment
+
+## File: src/priority_functions.c
+Changes: 6
+  - Line 127: add_provenance_comment
+  - Line 127: add_provenance_comment
+  - Line 406: add_provenance_comment
+  - Line 812: add_provenance_comment
+  - Line 840: add_provenance_comment
+  - Line 961: add_provenance_comment
+
+## File: src/navigator_batch_13_functions.c
+Changes: 1
+  - Line 12: replace_include
+
+## File: src/navigator_batch_1_functions.c
+Changes: 1
+  - Line 31: replace_include
+
+## File: src/navigator_batch_2_functions.c
+Changes: 1
+  - Line 30: replace_include
+
+## File: src/navigator_batch_3_functions.c
+Changes: 1
+  - Line 31: replace_include

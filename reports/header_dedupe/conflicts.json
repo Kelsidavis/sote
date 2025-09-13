@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "agent": "binary_symbol_mapper",
+    "call_id": "coord-002-binary-symbol-mapper", 
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "created": "2025-09-12T18:40:00Z",
+    "headers_analyzed": 27,
+    "total_conflicts_detected": 27,
+    "deterministic_sort": true
+  },
+  "conflict_summary": {
+    "EXACT_DUPLICATE": 27,
+    "SIGNATURE_CONFLICT": 0,
+    "ALIAS_SET": 0,
+    "total_symbols_analyzed": 1131,
+    "unique_symbols": 1104,
+    "duplicate_symbols": 27
+  },
+  "conflicts": {
+    "fcn_00401159": {
+      "type": "EXACT_DUPLICATE",
+      "locations": [
+        {"header": "navigator_batch_4_functions.h", "line": 45, "signature": "int fcn_00401159(void);"},
+        {"header": "navigator_batch_5_functions.h", "line": 23, "signature": "int fcn_00401159(void);"},
+        {"header": "priority_functions.h", "line": 21, "signature": "int fcn_00401159(void);"}
+      ],
+      "canonical_candidate": "priority_functions.h",
+      "provenance_score": 0.85
+    },
+    "fcn_004011a4": {
+      "type": "EXACT_DUPLICATE", 
+      "locations": [
+        {"header": "navigator_batch_6_functions.h", "line": 17, "signature": "int fcn_004011a4(int32_t param1);"},
+        {"header": "priority_functions.h", "line": 30, "signature": "int fcn_004011a4(int32_t param1);"}
+      ],
+      "canonical_candidate": "priority_functions.h",
+      "provenance_score": 0.85
+    },
+    "fcn_004011b3": {
+      "type": "EXACT_DUPLICATE",
+      "locations": [
+        {"header": "navigator_batch_6_functions.h", "line": 15, "signature": "int fcn_004011b3(void);"},
+        {"header": "priority_functions.h", "line": 29, "signature": "int fcn_004011b3(void);"}
+      ],
+      "canonical_candidate": "priority_functions.h", 
+      "provenance_score": 0.85
+    },
+    "fcn_00409020": {
+      "type": "EXACT_DUPLICATE",
+      "locations": [
+        {"header": "navigator_batch_4_functions.h", "line": 37, "signature": "int fcn_00409020(int32_t param1);"},
+        {"header": "priority_functions.h", "line": 33, "signature": "int fcn_00409020(int32_t param1);"}
+      ],
+      "canonical_candidate": "priority_functions.h",
+      "provenance_score": 0.85
+    },
+    "fcn_0040b180": {
+      "type": "EXACT_DUPLICATE", 
+      "locations": [
+        {"header": "navigator_batch_4_functions.h", "line": 39, "signature": "int fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);"},
+        {"header": "priority_functions.h", "line": 20, "signature": "int fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);"}
+      ],
+      "canonical_candidate": "priority_functions.h",
+      "provenance_score": 0.85
+    }
+  },
+  "canonicalization_rules": {
+    "priority_order": [
+      "priority_functions.h",
+      "navigator_batch_*_functions.h", 
+      "batch*_functions.h",
+      "missing_functions.h"
+    ],
+    "selection_criteria": [
+      "highest_provenance_score",
+      "most_comprehensive_signature",
+      "priority_file_precedence"
+    ]
+  },
+  "recommended_actions": {
+    "remove_duplicates_from": [
+      "navigator_batch_4_functions.h",
+      "navigator_batch_5_functions.h", 
+      "navigator_batch_6_functions.h"
+    ],
+    "create_canonical_header": "sote_symbols.h",
+    "preserve_originals_in_patch": true
+  }
+}

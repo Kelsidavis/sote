@@ -1,0 +1,1113 @@
+{
+  "meta": {
+    "agent": "mapping",
+    "call_id": "coord-008-mapping-propagation",
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "created": "2025-09-12T18:50:00Z",
+    "operation": "propagation_plan",
+    "deterministic_sort": true
+  },
+  "scope": {
+    "target_symbols": [
+      "fcn_00401159",
+      "fcn_004011a4",
+      "fcn_004011b3",
+      "fcn_00409020",
+      "fcn_0040b180"
+    ],
+    "source_files_analyzed": 69,
+    "canonical_header": "/media/k/vbox1/Shadows/SOTE/include/sote_symbols.h"
+  },
+  "analysis": {
+    "function_definitions": {
+      "fcn_00409020": [
+        {
+          "file": "src/batch2_functions.c",
+          "line": 921,
+          "context": "_00409020\n// Function: fcn_00409020 (Rank 44)\nint fcn_00409020(int32_t param1)\n{\n    // PROV: Binary function @ 0x00409020 (r2 afl"
+        },
+        {
+          "file": "src/navigator_batch_4_functions.c",
+          "line": 506,
+          "context": "/* Rank 241: Single-parameter processor */\nvoid fcn_00409020(int32_t arg_10h)\n{\n    /* PROV: r2 @ 0x409020, size: 1239 bytes, cyc"
+        },
+        {
+          "file": "src/navigator_batch_5_functions.c",
+          "line": 205,
+          "context": "}\n\n/* Rank 277: Large processing function */\nvoid fcn_00409020(int32_t arg_8h)\n{\n    /* PROV: r2 @ 0x409020, size: 1239 bytes, cyc"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 962,
+          "context": "_00409020\n// Function: fcn_00409020 (Rank 18)\nint fcn_00409020(int32_t param1)\n{\n    // PROV: Binary function @ 0x00409020 (r2 afl"
+        }
+      ],
+      "fcn_00401159": [
+        {
+          "file": "src/navigator_batch_4_functions.c",
+          "line": 342,
+          "context": "/\n}\n\n/* Rank 226: Massive function (22KB) */\nvoid fcn_00401159(void)\n{\n    /* PROV: r2 @ 0x401159, size: 22145 bytes, cy"
+        },
+        {
+          "file": "src/navigator_batch_5_functions.c",
+          "line": 43,
+          "context": "}\n\n/* Rank 262: Large dispatcher function */\nvoid fcn_00401159(void)\n{\n    /* PROV: r2 @ 0x401159, size: 22145 bytes, cy"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 127,
+          "context": "n_00401159\n// Function: fcn_00401159 (Rank 2)\nint fcn_00401159(void)\n{\n    // PROV: Binary function @ 0x00401159 (r2 afl"
+        }
+      ],
+      "fcn_0040b180": [
+        {
+          "file": "src/navigator_batch_4_functions.c",
+          "line": 93,
+          "context": "/\n}\n\n/* Rank 206: Balanced processing hub */\nvoid fcn_0040b180(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, \n                  int32_t arg_14h, int32_t arg_1ch, int32_t arg_18h)\n{\n    /* PROV: r2 @ 0x40b180, size: 2020 bytes, cyc"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 407,
+          "context": "n_0040b180\n// Function: fcn_0040b180 (Rank 5)\nint fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6)\n{\n    // PROV: Binary function @ 0x0040b180 (r2 afl"
+        }
+      ],
+      "fcn_004011a4": [
+        {
+          "file": "src/navigator_batch_6_functions.c",
+          "line": 670,
+          "context": "}\n\n/* Rank 392: Extremely large function */\nvoid fcn_004011a4(int32_t arg_8h)\n{\n    /* PROV: r2 @ 0x4011a4, size: 15883 bytes, cy"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 841,
+          "context": "_004011a4\n// Function: fcn_004011a4 (Rank 15)\nint fcn_004011a4(int32_t param1)\n{\n    // PROV: Binary function @ 0x004011a4 (r2 afl"
+        }
+      ],
+      "fcn_004011b3": [
+        {
+          "file": "src/priority_functions.c",
+          "line": 813,
+          "context": "_004011b3\n// Function: fcn_004011b3 (Rank 14)\nint fcn_004011b3(void)\n{\n    // PROV: Binary function @ 0x004011b3 (r2 afl"
+        }
+      ]
+    },
+    "call_sites": {
+      "fcn_00409020": [
+        {
+          "file": "include/batch2_functions.h",
+          "line": 72,
+          "context": "fcn_00409020 @ 0x00409020\nint fcn_00409020(int32_t param1);\n\n// fcn_00441"
+        },
+        {
+          "file": "include/navigator_batch_4_functions.h",
+          "line": 257,
+          "context": "0, size: 1239, cc: 35 */\nvoid fcn_00409020(int32_t arg_10h);\n\n/* Rank 242"
+        },
+        {
+          "file": "include/navigator_batch_5_functions.h",
+          "line": 129,
+          "context": "0, size: 1239, cc: 35 */\nvoid fcn_00409020(int32_t arg_8h);\n\n/* Rank 278:"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 69,
+          "context": "fcn_00409020 @ 0x00409020\nint fcn_00409020(int32_t param1);\n\n// loc_00406"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 62,
+          "context": "onical, high confidence  \nint fcn_00409020(int32_t param1);\n\n// fcn_0040b"
+        },
+        {
+          "file": "src/batch2_functions.c",
+          "line": 920,
+          "context": "cal fcn_00409020\n// Function: fcn_00409020 (Rank 44)\nint fcn_00409020(int3"
+        },
+        {
+          "file": "src/batch2_functions.c",
+          "line": 921,
+          "context": "n: fcn_00409020 (Rank 44)\nint fcn_00409020(int32_t param1)\n{\n    // PROV:"
+        },
+        {
+          "file": "src/navigator_batch_4_functions.c",
+          "line": 506,
+          "context": "e-parameter processor */\nvoid fcn_00409020(int32_t arg_10h)\n{\n    /* PROV"
+        },
+        {
+          "file": "src/navigator_batch_5_functions.c",
+          "line": 205,
+          "context": "e processing function */\nvoid fcn_00409020(int32_t arg_8h)\n{\n    /* PROV:"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 961,
+          "context": "cal fcn_00409020\n// Function: fcn_00409020 (Rank 18)\nint fcn_00409020(int3"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 962,
+          "context": "n: fcn_00409020 (Rank 18)\nint fcn_00409020(int32_t param1)\n{\n    // PROV:"
+        }
+      ],
+      "fcn_00401159": [
+        {
+          "file": "include/navigator_batch_4_functions.h",
+          "line": 185,
+          "context": ", size: 22145, cc: 21 */\nvoid fcn_00401159(void);\n\n/* Rank 227: fcn_00426"
+        },
+        {
+          "file": "include/navigator_batch_5_functions.h",
+          "line": 47,
+          "context": ", size: 22145, cc: 21 */\nvoid fcn_00401159(void);\n\n/* Rank 263: fcn_00426"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 21,
+          "context": "fcn_00401159 @ 0x00401159\nint fcn_00401159(void);\n\n// fcn_00424e40 @ 0x00"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 45,
+          "context": "ity_functions.h canonical\nint fcn_00401159(void);\n\n// fcn_004011a4 @ 0x00"
+        },
+        {
+          "file": "src/navigator_batch_4_functions.c",
+          "line": 342,
+          "context": "ssive function (22KB) */\nvoid fcn_00401159(void)\n{\n    /* PROV: r2 @ 0x40"
+        },
+        {
+          "file": "src/navigator_batch_5_functions.c",
+          "line": 43,
+          "context": "e dispatcher function */\nvoid fcn_00401159(void)\n{\n    /* PROV: r2 @ 0x40"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 126,
+          "context": "cal fcn_00401159\n// Function: fcn_00401159 (Rank 2)\nint fcn_00401159(void)"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 127,
+          "context": "on: fcn_00401159 (Rank 2)\nint fcn_00401159(void)\n{\n    // PROV: Binary fu"
+        }
+      ],
+      "fcn_0040b180": [
+        {
+          "file": "include/navigator_batch_4_functions.h",
+          "line": 65,
+          "context": "0, size: 2020, cc: 96 */\nvoid fcn_0040b180(int32_t arg_8h, int32_t arg_ch"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 30,
+          "context": "fcn_0040b180 @ 0x0040b180\nint fcn_0040b180(int32_t param1, int32_t param2"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 66,
+          "context": "anonical, high confidence\nint fcn_0040b180(int32_t param1, int32_t param2"
+        },
+        {
+          "file": "src/navigator_batch_4_functions.c",
+          "line": 93,
+          "context": "lanced processing hub */\nvoid fcn_0040b180(int32_t arg_8h, int32_t arg_ch"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 406,
+          "context": "cal fcn_0040b180\n// Function: fcn_0040b180 (Rank 5)\nint fcn_0040b180(int32"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 407,
+          "context": "on: fcn_0040b180 (Rank 5)\nint fcn_0040b180(int32_t param1, int32_t param2"
+        }
+      ],
+      "fcn_004011a4": [
+        {
+          "file": "include/navigator_batch_6_functions.h",
+          "line": 325,
+          "context": "4, size: 15883, cc: 8 */\nvoid fcn_004011a4(int32_t arg_8h);\n\n/* Rank 393:"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 60,
+          "context": "fcn_004011a4 @ 0x004011a4\nint fcn_004011a4(int32_t param1);\n\n// fcn_00418"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 49,
+          "context": "ity_functions.h canonical\nint fcn_004011a4(int32_t param1);\n\n/*\n * PRIORI"
+        },
+        {
+          "file": "src/navigator_batch_6_functions.c",
+          "line": 670,
+          "context": "remely large function */\nvoid fcn_004011a4(int32_t arg_8h)\n{\n    /* PROV:"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 840,
+          "context": "cal fcn_004011a4\n// Function: fcn_004011a4 (Rank 15)\nint fcn_004011a4(int3"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 841,
+          "context": "n: fcn_004011a4 (Rank 15)\nint fcn_004011a4(int32_t param1)\n{\n    // PROV:"
+        }
+      ],
+      "fcn_004011b3": [
+        {
+          "file": "include/priority_functions.h",
+          "line": 57,
+          "context": "fcn_004011b3 @ 0x004011b3\nint fcn_004011b3(void);\n\n// fcn_004011a4 @ 0x00"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 58,
+          "context": "anonical, high confidence\nint fcn_004011b3(void);\n\n// fcn_00409020 @ 0x00"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 812,
+          "context": "cal fcn_004011b3\n// Function: fcn_004011b3 (Rank 14)\nint fcn_004011b3(void"
+        },
+        {
+          "file": "src/priority_functions.c",
+          "line": 813,
+          "context": "n: fcn_004011b3 (Rank 14)\nint fcn_004011b3(void)\n{\n    // PROV: Binary fu"
+        }
+      ]
+    },
+    "forward_declarations": {
+      "fcn_00409020": [
+        {
+          "file": "include/batch2_functions.h",
+          "line": 72,
+          "context": "fcn_00409020 @ 0x00409020\nint fcn_00409020(int32_t param1);\n\n// fcn_00441edd @ 0x00441edd"
+        },
+        {
+          "file": "include/navigator_batch_4_functions.h",
+          "line": 257,
+          "context": "0, size: 1239, cc: 35 */\nvoid fcn_00409020(int32_t arg_10h);\n\n/* Rank 242: fcn_00422030 -"
+        },
+        {
+          "file": "include/navigator_batch_5_functions.h",
+          "line": 129,
+          "context": "0, size: 1239, cc: 35 */\nvoid fcn_00409020(int32_t arg_8h);\n\n/* Rank 278: fcn_00422030 -"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 69,
+          "context": "fcn_00409020 @ 0x00409020\nint fcn_00409020(int32_t param1);\n\n// loc_00406b50 @ 0x00406b50"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 62,
+          "context": "onical, high confidence  \nint fcn_00409020(int32_t param1);\n\n// fcn_0040b180 @ 0x0040b180"
+        }
+      ],
+      "fcn_00401159": [
+        {
+          "file": "include/navigator_batch_4_functions.h",
+          "line": 185,
+          "context": ", size: 22145, cc: 21 */\nvoid fcn_00401159(void);\n\n/* Rank 227: fcn_00426900 -"
+        },
+        {
+          "file": "include/navigator_batch_5_functions.h",
+          "line": 47,
+          "context": ", size: 22145, cc: 21 */\nvoid fcn_00401159(void);\n\n/* Rank 263: fcn_00426900 -"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 21,
+          "context": "fcn_00401159 @ 0x00401159\nint fcn_00401159(void);\n\n// fcn_00424e40 @ 0x00424e40"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 45,
+          "context": "ity_functions.h canonical\nint fcn_00401159(void);\n\n// fcn_004011a4 @ 0x004011a4"
+        }
+      ],
+      "fcn_0040b180": [
+        {
+          "file": "include/navigator_batch_4_functions.h",
+          "line": 65,
+          "context": "0, size: 2020, cc: 96 */\nvoid fcn_0040b180(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, \n                  int32_t arg_14h, int32_t arg_1ch, int32_t arg_18h);\n\n/* Rank 207: fcn_004160d8 -"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 30,
+          "context": "fcn_0040b180 @ 0x0040b180\nint fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);\n\n// fcn_0043ee21 @ 0x0043ee21"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 66,
+          "context": "anonical, high confidence\nint fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);\n\n/*\n * RE-AGENT-TRAILER-JSON"
+        }
+      ],
+      "fcn_004011a4": [
+        {
+          "file": "include/navigator_batch_6_functions.h",
+          "line": 325,
+          "context": "4, size: 15883, cc: 8 */\nvoid fcn_004011a4(int32_t arg_8h);\n\n/* Rank 393: fcn_00429210 -"
+        },
+        {
+          "file": "include/priority_functions.h",
+          "line": 60,
+          "context": "fcn_004011a4 @ 0x004011a4\nint fcn_004011a4(int32_t param1);\n\n// fcn_00418ba0 @ 0x00418ba0"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 49,
+          "context": "ity_functions.h canonical\nint fcn_004011a4(int32_t param1);\n\n/*\n * PRIORITY TIER 2: Funct"
+        }
+      ],
+      "fcn_004011b3": [
+        {
+          "file": "include/priority_functions.h",
+          "line": 57,
+          "context": "fcn_004011b3 @ 0x004011b3\nint fcn_004011b3(void);\n\n// fcn_004011a4 @ 0x004011a4"
+        },
+        {
+          "file": "include/sote_symbols.h",
+          "line": 58,
+          "context": "anonical, high confidence\nint fcn_004011b3(void);\n\n// fcn_00409020 @ 0x00409020"
+        }
+      ]
+    },
+    "include_replacements": {
+      "src/navigator_batch_13_functions.c": {
+        "current_includes": [
+          "navigator_batch_13_functions.h"
+        ],
+        "can_replace_with_canonical": true
+      },
+      "src/navigator_batch_1_functions.c": {
+        "current_includes": [
+          "navigator_batch_1_functions.h"
+        ],
+        "can_replace_with_canonical": true
+      },
+      "src/navigator_batch_2_functions.c": {
+        "current_includes": [
+          "navigator_batch_2_functions.h"
+        ],
+        "can_replace_with_canonical": true
+      },
+      "src/navigator_batch_3_functions.c": {
+        "current_includes": [
+          "navigator_batch_3_functions.h"
+        ],
+        "can_replace_with_canonical": true
+      }
+    }
+  },
+  "propagation_actions": [
+    {
+      "id": "prop-049",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00409020",
+      "file": "include/batch2_functions.h",
+      "line": 72,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-062",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_0040b180",
+      "file": "include/navigator_batch_4_functions.h",
+      "line": 65,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-012",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00401159",
+      "file": "include/navigator_batch_4_functions.h",
+      "line": 185,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-050",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00409020",
+      "file": "include/navigator_batch_4_functions.h",
+      "line": 257,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-013",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00401159",
+      "file": "include/navigator_batch_5_functions.h",
+      "line": 47,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-051",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00409020",
+      "file": "include/navigator_batch_5_functions.h",
+      "line": 129,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-024",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_004011a4",
+      "file": "include/navigator_batch_6_functions.h",
+      "line": 325,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-014",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00401159",
+      "file": "include/priority_functions.h",
+      "line": 21,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-063",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_0040b180",
+      "file": "include/priority_functions.h",
+      "line": 30,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-032",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_004011b3",
+      "file": "include/priority_functions.h",
+      "line": 57,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-025",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_004011a4",
+      "file": "include/priority_functions.h",
+      "line": 60,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-052",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00409020",
+      "file": "include/priority_functions.h",
+      "line": 69,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-015",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00401159",
+      "file": "include/sote_symbols.h",
+      "line": 45,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-026",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_004011a4",
+      "file": "include/sote_symbols.h",
+      "line": 49,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-033",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_004011b3",
+      "file": "include/sote_symbols.h",
+      "line": 58,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-053",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_00409020",
+      "file": "include/sote_symbols.h",
+      "line": 62,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-064",
+      "type": "remove_redundant_declaration",
+      "target": "forward_declaration",
+      "symbol": "fcn_0040b180",
+      "file": "include/sote_symbols.h",
+      "line": 66,
+      "action": "Remove redundant forward declaration (canonical in sote_symbols.h)",
+      "priority": "high"
+    },
+    {
+      "id": "prop-034",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00409020",
+      "file": "src/batch2_functions.c",
+      "line": 921,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-054",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_0040b180",
+      "file": "src/navigator_batch_4_functions.c",
+      "line": 93,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-001",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00401159",
+      "file": "src/navigator_batch_4_functions.c",
+      "line": 342,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-035",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00409020",
+      "file": "src/navigator_batch_4_functions.c",
+      "line": 506,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-002",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00401159",
+      "file": "src/navigator_batch_5_functions.c",
+      "line": 43,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-036",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00409020",
+      "file": "src/navigator_batch_5_functions.c",
+      "line": 205,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-016",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_004011a4",
+      "file": "src/navigator_batch_6_functions.c",
+      "line": 670,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-003",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00401159",
+      "file": "src/priority_functions.c",
+      "line": 127,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-055",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_0040b180",
+      "file": "src/priority_functions.c",
+      "line": 407,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-027",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_004011b3",
+      "file": "src/priority_functions.c",
+      "line": 813,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-017",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_004011a4",
+      "file": "src/priority_functions.c",
+      "line": 841,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-037",
+      "type": "add_provenance_comment",
+      "target": "function_definition",
+      "symbol": "fcn_00409020",
+      "file": "src/priority_functions.c",
+      "line": 962,
+      "action": "Insert // PROV: canonical definition from priority_functions.h",
+      "priority": "high"
+    },
+    {
+      "id": "prop-038",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "include/batch2_functions.h",
+      "line": 72,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-056",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_0040b180",
+      "file": "include/navigator_batch_4_functions.h",
+      "line": 65,
+      "action": "Insert // PROV: calling canonical fcn_0040b180",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-004",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "include/navigator_batch_4_functions.h",
+      "line": 185,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-039",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "include/navigator_batch_4_functions.h",
+      "line": 257,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-005",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "include/navigator_batch_5_functions.h",
+      "line": 47,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-040",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "include/navigator_batch_5_functions.h",
+      "line": 129,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-018",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011a4",
+      "file": "include/navigator_batch_6_functions.h",
+      "line": 325,
+      "action": "Insert // PROV: calling canonical fcn_004011a4",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-006",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "include/priority_functions.h",
+      "line": 21,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-057",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_0040b180",
+      "file": "include/priority_functions.h",
+      "line": 30,
+      "action": "Insert // PROV: calling canonical fcn_0040b180",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-028",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011b3",
+      "file": "include/priority_functions.h",
+      "line": 57,
+      "action": "Insert // PROV: calling canonical fcn_004011b3",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-019",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011a4",
+      "file": "include/priority_functions.h",
+      "line": 60,
+      "action": "Insert // PROV: calling canonical fcn_004011a4",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-041",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "include/priority_functions.h",
+      "line": 69,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-007",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "include/sote_symbols.h",
+      "line": 45,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-020",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011a4",
+      "file": "include/sote_symbols.h",
+      "line": 49,
+      "action": "Insert // PROV: calling canonical fcn_004011a4",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-029",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011b3",
+      "file": "include/sote_symbols.h",
+      "line": 58,
+      "action": "Insert // PROV: calling canonical fcn_004011b3",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-042",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "include/sote_symbols.h",
+      "line": 62,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-058",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_0040b180",
+      "file": "include/sote_symbols.h",
+      "line": 66,
+      "action": "Insert // PROV: calling canonical fcn_0040b180",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-043",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "src/batch2_functions.c",
+      "line": 920,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-044",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "src/batch2_functions.c",
+      "line": 921,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-065",
+      "type": "replace_includes",
+      "target": "include_directive",
+      "file": "src/navigator_batch_13_functions.c",
+      "action": "Replace ['navigator_batch_13_functions.h'] with sote_symbols.h",
+      "current_includes": [
+        "navigator_batch_13_functions.h"
+      ],
+      "new_include": "sote_symbols.h",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-066",
+      "type": "replace_includes",
+      "target": "include_directive",
+      "file": "src/navigator_batch_1_functions.c",
+      "action": "Replace ['navigator_batch_1_functions.h'] with sote_symbols.h",
+      "current_includes": [
+        "navigator_batch_1_functions.h"
+      ],
+      "new_include": "sote_symbols.h",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-067",
+      "type": "replace_includes",
+      "target": "include_directive",
+      "file": "src/navigator_batch_2_functions.c",
+      "action": "Replace ['navigator_batch_2_functions.h'] with sote_symbols.h",
+      "current_includes": [
+        "navigator_batch_2_functions.h"
+      ],
+      "new_include": "sote_symbols.h",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-068",
+      "type": "replace_includes",
+      "target": "include_directive",
+      "file": "src/navigator_batch_3_functions.c",
+      "action": "Replace ['navigator_batch_3_functions.h'] with sote_symbols.h",
+      "current_includes": [
+        "navigator_batch_3_functions.h"
+      ],
+      "new_include": "sote_symbols.h",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-059",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_0040b180",
+      "file": "src/navigator_batch_4_functions.c",
+      "line": 93,
+      "action": "Insert // PROV: calling canonical fcn_0040b180",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-008",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "src/navigator_batch_4_functions.c",
+      "line": 342,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-045",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "src/navigator_batch_4_functions.c",
+      "line": 506,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-009",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "src/navigator_batch_5_functions.c",
+      "line": 43,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-046",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "src/navigator_batch_5_functions.c",
+      "line": 205,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-021",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011a4",
+      "file": "src/navigator_batch_6_functions.c",
+      "line": 670,
+      "action": "Insert // PROV: calling canonical fcn_004011a4",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-010",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "src/priority_functions.c",
+      "line": 126,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-011",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00401159",
+      "file": "src/priority_functions.c",
+      "line": 127,
+      "action": "Insert // PROV: calling canonical fcn_00401159",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-060",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_0040b180",
+      "file": "src/priority_functions.c",
+      "line": 406,
+      "action": "Insert // PROV: calling canonical fcn_0040b180",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-061",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_0040b180",
+      "file": "src/priority_functions.c",
+      "line": 407,
+      "action": "Insert // PROV: calling canonical fcn_0040b180",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-030",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011b3",
+      "file": "src/priority_functions.c",
+      "line": 812,
+      "action": "Insert // PROV: calling canonical fcn_004011b3",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-031",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011b3",
+      "file": "src/priority_functions.c",
+      "line": 813,
+      "action": "Insert // PROV: calling canonical fcn_004011b3",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-022",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011a4",
+      "file": "src/priority_functions.c",
+      "line": 840,
+      "action": "Insert // PROV: calling canonical fcn_004011a4",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-023",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_004011a4",
+      "file": "src/priority_functions.c",
+      "line": 841,
+      "action": "Insert // PROV: calling canonical fcn_004011a4",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-047",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "src/priority_functions.c",
+      "line": 961,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    },
+    {
+      "id": "prop-048",
+      "type": "add_provenance_comment",
+      "target": "call_site",
+      "symbol": "fcn_00409020",
+      "file": "src/priority_functions.c",
+      "line": 962,
+      "action": "Insert // PROV: calling canonical fcn_00409020",
+      "priority": "medium"
+    }
+  ],
+  "validation": {
+    "no_static_conflicts": true,
+    "include_safety_checked": true,
+    "deterministic_ordering": true
+  },
+  "summary": {
+    "total_actions": 68,
+    "function_definitions_found": 12,
+    "call_sites_found": 35,
+    "forward_declarations_found": 17,
+    "include_replacements_planned": 4,
+    "symbols_with_usage": 5
+  }
+}

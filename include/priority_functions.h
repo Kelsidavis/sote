@@ -18,7 +18,8 @@
 int fcn_00419d60(int32_t param1, int32_t param2, int32_t param3);
 
 // fcn_00401159 @ 0x00401159
-int fcn_00401159(void);
+// PROV: canonical fcn_00401159 from sote_symbols.h
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 // fcn_00424e40 @ 0x00424e40
 int fcn_00424e40(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6, uint32_t param7);
@@ -26,8 +27,9 @@ int fcn_00424e40(int32_t param1, int32_t param2, int32_t param3, int32_t param4,
 // fcn_00446000 @ 0x00446000
 int fcn_00446000(int32_t param1);
 
+// PROV: canonical fcn_0040b180 from sote_symbols.h
 // fcn_0040b180 @ 0x0040b180
-int fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 // fcn_0043ee21 @ 0x0043ee21
 int fcn_0043ee21(uint32_t param1, int32_t param2, int32_t param3, int32_t param4);
@@ -52,21 +54,24 @@ int fcn_004184e0(int32_t param1, int32_t param2, int32_t param3, int32_t param4,
 
 // fcn_0042b460 @ 0x0042b460
 int fcn_0042b460(int32_t param1);
+// PROV: canonical fcn_004011b3 from sote_symbols.h
 
 // fcn_004011b3 @ 0x004011b3
-int fcn_004011b3(void);
+// PROV: canonical fcn_004011a4 from sote_symbols.h
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 // fcn_004011a4 @ 0x004011a4
-int fcn_004011a4(int32_t param1);
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 // fcn_00418ba0 @ 0x00418ba0
 int fcn_00418ba0(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5);
 
+// PROV: canonical fcn_00409020 from sote_symbols.h
 // fcn_00428060 @ 0x00428060
 int fcn_00428060(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6, uint32_t param7);
 
 // fcn_00409020 @ 0x00409020
-int fcn_00409020(int32_t param1);
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 // loc_00406b50 @ 0x00406b50 (renamed from loc.00406b50)
 int loc_00406b50(void);

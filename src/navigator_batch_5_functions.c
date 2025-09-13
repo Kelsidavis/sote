@@ -40,6 +40,8 @@ void fcn_00428060(int32_t arg_38h_2, int32_t arg_38h, int32_t arg_3ch,
 }
 
 /* Rank 262: Large dispatcher function */
+// PROV: canonical fcn_00401159 from sote_symbols.h
+// PROV: canonical fcn_00401159 from sote_symbols.h
 void fcn_00401159(void)
 {
     /* PROV: r2 @ 0x401159, size: 22145 bytes, cyclomatic complexity: 21 */
@@ -200,7 +202,9 @@ void fcn_00427750(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h,
     /* TODO: EVIDENCE REQUIRED — Extract decompilation from Ghidra @ 0x427750 */
     return; /* Stub implementation pending evidence */
 }
+// PROV: canonical fcn_00409020 from sote_symbols.h
 
+// PROV: canonical fcn_00409020 from sote_symbols.h
 /* Rank 277: Large processing function */
 void fcn_00409020(int32_t arg_8h)
 {

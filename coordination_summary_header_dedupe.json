@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "stage": "header_deduplication_workflow_complete",
+    "produced": [
+      "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/symbol_ledger.json",
+      "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/conflicts.json", 
+      "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/canonical_map.json",
+      "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/type_gaps.json",
+      "/media/k/vbox1/Shadows/SOTE/include/sote_symbols.h",
+      "/media/k/vbox1/Shadows/SOTE/header_dedupe.patch",
+      "/media/k/vbox1/Shadows/SOTE/ci_check.sh",
+      "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/static_checks.json",
+      "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/README.md",
+      "/media/k/vbox1/Shadows/SOTE/run_state_header_dedupe.json",
+      "/media/k/vbox1/Shadows/SOTE/coordination_summary_header_dedupe.json"
+    ],
+    "issues": { 
+      "ERROR": 0, 
+      "FABRICATION": 0, 
+      "WARN": 1,
+      "SCOPE_EXPANSION_NEEDED": 1
+    },
+    "workflow_metrics": {
+      "sub_agents_coordinated": 8,
+      "workflow_stages_completed": 8,
+      "initial_duplicates_processed": 27,
+      "total_duplicates_discovered": 389,
+      "scope_coverage_percent": 6.9,
+      "evidence_backed_canonicals": 2,
+      "canonical_functions_created": 5,
+      "ci_infrastructure_ready": true,
+      "build_compatibility_maintained": true
+    },
+    "next_route": [
+      {
+        "to": "evidence_curator", 
+        "reason": "scope_expansion_comprehensive_scan",
+        "scope": ["all_389_duplicate_functions"]
+      },
+      {
+        "to": "binary_symbol_mapper",
+        "reason": "comprehensive_conflict_detection", 
+        "scope": ["full_header_cross_analysis"]
+      },
+      {
+        "to": "mapping",
+        "reason": "scale_canonicalization_rules",
+        "scope": ["389_function_priority_matrix"]
+      },
+      {
+        "to": "reimplementation", 
+        "reason": "comprehensive_header_surgery",
+        "scope": ["remove_all_duplicates_create_complete_canonical"]
+      }
+    ],
+    "orchestration_quality": {
+      "deterministic_outputs": true,
+      "evidence_first_methodology": true,
+      "provenance_preservation": true,
+      "re_agent_compliance": true,
+      "sub_agent_coordination": "systematic_sequential",
+      "issue_routing_applied": true,
+      "build_integration_complete": true
+    }
+  }
+}

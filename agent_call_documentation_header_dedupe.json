@@ -1,0 +1,33 @@
+{
+  "call_id": "coord-008-documentation",
+  "agent": "documentation",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "project_root": "/media/k/vbox1/Shadows/SOTE",
+      "reports_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe",
+      "static_checks": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/static_checks.json",
+      "canonical_map": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/canonical_map.json",
+      "conflicts": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/conflicts.json",
+      "output_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe"
+    },
+    "scope": {
+      "operation": "header_deduplication_workflow",
+      "include_lessons_learned": true,
+      "document_scope_expansion": true,
+      "provide_next_steps": true
+    },
+    "options": {
+      "deterministic_sort": true,
+      "include_technical_details": true,
+      "create_human_readable_summary": true
+    }
+  },
+  "expected_outputs": ["/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/README.md"]
+}

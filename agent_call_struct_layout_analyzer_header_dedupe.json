@@ -1,0 +1,36 @@
+{
+  "call_id": "coord-004-struct-layout-analyzer",
+  "agent": "struct_layout",
+  "intent": "verify",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386", 
+      "abi": "pe32"
+    },
+    "paths": {
+      "canonical_map": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/canonical_map.json",
+      "layouts_json": "/media/k/vbox1/Shadows/SOTE/layouts.curated.json",
+      "include_dir": "/media/k/vbox1/Shadows/SOTE/include",
+      "output_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe"
+    },
+    "scope": {
+      "canonical_prototypes": [
+        "fcn_00401159",
+        "fcn_004011a4", 
+        "fcn_004011b3",
+        "fcn_00409020",
+        "fcn_0040b180"
+      ],
+      "validation_modes": ["type_reference_check", "parameter_consistency", "return_type_validation"]
+    },
+    "options": {
+      "validate_against_layouts": true,
+      "check_type_dependencies": true,
+      "deterministic_sort": true,
+      "identify_missing_types": true
+    }
+  },
+  "expected_outputs": ["/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/type_gaps.json"]
+}

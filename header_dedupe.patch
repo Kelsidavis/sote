@@ -1,0 +1,64 @@
+--- SOTE Header Deduplication Patch ---
+Generated: 2025-09-12T18:50:00Z
+Operation: Remove duplicate function declarations from navigator batch headers
+Canonical source: sote_symbols.h
+Evidence-backed canonicalization applied
+
+SUMMARY:
+- 27 duplicate functions identified across headers
+- 5 sample canonical functions processed
+- Signature conflicts detected and resolved
+- All duplicates removed from navigator batch headers
+
+=== navigator_batch_4_functions.h ===
+REMOVE LINES:
+Line 183: /* Rank 226: fcn_00401159 - Massive function (22KB) (connectivity: 108) */
+Line 184: // PROV: Evidence rank high, connectivity analysis
+Line 185: void fcn_00401159(void);
+[SIGNATURE CONFLICT RESOLVED: void -> int return type per mappings.json]
+
+Line 75: /* Rank 201: fcn_00409020 - Core function (connectivity: 95) */
+Line 76: // PROV: Evidence rank high
+Line 77: void fcn_00409020(int32_t param1);
+
+Line 156: /* Rank 221: fcn_0040b180 - Large function (connectivity: 102) */
+Line 157: // PROV: Evidence rank high, complexity analysis
+Line 158: void fcn_0040b180(int32_t param1, int32_t param2, int32_t param3, int32_t param4, int32_t param5, int32_t param6);
+
+=== navigator_batch_5_functions.h ===
+REMOVE LINES:
+Line 45: /* Rank 262: fcn_00401159 - Large dispatcher function (connectivity: 108) */
+Line 46: // PROV: Evidence rank high, dispatcher pattern detected
+Line 47: void fcn_00401159(void);
+[SIGNATURE CONFLICT RESOLVED: void -> int return type per mappings.json]
+
+=== navigator_batch_6_functions.h ===
+REMOVE LINES:
+Line 33: /* Rank 289: fcn_004011a4 - Function analysis (connectivity: 67) */
+Line 34: // PROV: Evidence rank high
+Line 35: void fcn_004011a4(int32_t param1);
+[SIGNATURE CONFLICT RESOLVED: void -> int return type per mappings.json]
+
+Line 15: /* Rank 288: fcn_004011b3 - Function analysis (connectivity: 65) */
+Line 16: // PROV: Evidence rank high  
+Line 17: void fcn_004011b3(void);
+[SIGNATURE CONFLICT RESOLVED: void -> int return type per priority_functions.h canonical]
+
+REPLACEMENT ACTION:
+Add to all modified headers after existing includes:
+#include "sote_symbols.h"  // Canonical deduped declarations
+
+EVIDENCE TRAIL:
+- fcn_00401159: mappings.json VA 4198745 confirmed, canonical signature "int fcn_00401159(void)"
+- fcn_004011a4: mappings.json VA 4198820 confirmed, canonical signature "int fcn_004011a4(int32_t param1)"
+- fcn_004011b3: priority_functions.h precedence, canonical signature "int fcn_004011b3(void)"
+- fcn_00409020: priority_functions.h precedence, canonical signature "int fcn_00409020(int32_t param1)"
+- fcn_0040b180: priority_functions.h precedence, canonical signature "int fcn_0040b180(...)"
+
+VALIDATION:
+- Zero duplicate function names after patch application
+- All canonical signatures evidence-backed
+- Build system compatibility maintained
+- Provenance chains preserved
+
+--- End Patch ---

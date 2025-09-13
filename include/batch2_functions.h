@@ -69,7 +69,8 @@ int fcn_00422f60(int32_t param1, int32_t param2, int32_t param3);
 int fcn_0041c720(int32_t param1, int32_t param2, int32_t param3);
 
 // fcn_00409020 @ 0x00409020
-int fcn_00409020(int32_t param1);
+// PROV: canonical fcn_00409020 from sote_symbols.h
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 // fcn_00441edd @ 0x00441edd
 int fcn_00441edd(int32_t param1);

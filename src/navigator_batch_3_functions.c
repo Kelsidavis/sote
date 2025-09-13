@@ -28,7 +28,7 @@
  * ========================================================================
  */
 
-#include "navigator_batch_3_functions.h"
+#include "sote_symbols.h"
 #include <stdint.h>
 
 /*

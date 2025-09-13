@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "agent": "verification",
+    "call_id": "coord-012-verification-propagation",
+    "created": "2025-09-12T18:58:09.614780",
+    "operation": "signature_sanity_sweep",
+    "deterministic_sort": true
+  },
+  "scope": {
+    "target_symbols": [
+      "fcn_00401159",
+      "fcn_004011a4",
+      "fcn_004011b3",
+      "fcn_00409020",
+      "fcn_0040b180"
+    ],
+    "post_propagation_analysis": true,
+    "evidence_cross_check": true
+  },
+  "verification_results": {
+    "signature_mismatches": [],
+    "evidence_discrepancies": [
+      {
+        "symbol": "fcn_00401159",
+        "issue": "MISSING_FROM_EVIDENCE",
+        "severity": "WARNING",
+        "description": "Symbol fcn_00401159 has mappings backing but not found in evidence",
+        "mappings_va": "4198745"
+      },
+      {
+        "symbol": "fcn_004011a4",
+        "issue": "MISSING_FROM_EVIDENCE",
+        "severity": "WARNING",
+        "description": "Symbol fcn_004011a4 has mappings backing but not found in evidence",
+        "mappings_va": "4198820"
+      }
+    ],
+    "canonicalization_issues": [],
+    "cross_reference_errors": []
+  },
+  "summary": {
+    "total_symbols_verified": 5,
+    "errors_found": 0,
+    "warnings_found": 2,
+    "validation_status": "PASS_WITH_WARNINGS"
+  }
+}

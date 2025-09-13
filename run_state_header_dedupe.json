@@ -1,0 +1,46 @@
+{
+  "run_state": {
+    "artifact": { 
+      "file_name": "SOTE.EXE", 
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77", 
+      "arch": "i386", 
+      "abi": "pe32" 
+    },
+    "inputs": {
+      "r2": {}, 
+      "ghidra": {},
+      "source_roots": ["SOTE/src","SOTE/include"], 
+      "tooling": { "pref": "make" }
+    },
+    "db": {
+      "evidence": "/media/k/vbox1/Shadows/SOTE/evidence.curated.json",
+      "layouts": "/media/k/vbox1/Shadows/SOTE/layouts.curated.json",
+      "mappings": "/media/k/vbox1/Shadows/SOTE/mappings.json"
+    },
+    "build": {
+      "graph": "/media/k/vbox1/Shadows/SOTE/build.graph.json",
+      "missing": "/media/k/vbox1/Shadows/SOTE/build.missing.md"
+    },
+    "tests": {
+      "plan": "/media/k/vbox1/Shadows/SOTE/tests.plan.json",
+      "results": "/media/k/vbox1/Shadows/SOTE/tests.results.json"
+    },
+    "docs": { "book": "/media/k/vbox1/Shadows/SOTE/docs/README.md" },
+    "compliance": {
+      "report": "/media/k/vbox1/Shadows/SOTE/compliance.report.json",
+      "summary": "/media/k/vbox1/Shadows/SOTE/compliance.md"
+    },
+    "header_dedupe": {
+      "reports_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe",
+      "symbol_ledger": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/symbol_ledger.json",
+      "conflicts": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/conflicts.json",
+      "canonical_map": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/canonical_map.json",
+      "type_gaps": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/type_gaps.json",
+      "sote_symbols_h": "/media/k/vbox1/Shadows/SOTE/include/sote_symbols.h",
+      "patch_file": "/media/k/vbox1/Shadows/SOTE/header_dedupe.patch",
+      "static_checks": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/static_checks.json",
+      "readme": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/README.md"
+    },
+    "history": "/media/k/vbox1/Shadows/SOTE/CHANGELOG.md"
+  }
+}

@@ -322,7 +322,8 @@ void fcn_00416b30(int32_t arg_8h, int32_t arg_ch);
 
 /* Rank 392: fcn_004011a4 - Extremely large function (connectivity: 22) */
 /* PROV: r2 @ 0x4011a4, size: 15883, cc: 8 */
-void fcn_004011a4(int32_t arg_8h);
+// PROV: canonical fcn_004011a4 from sote_symbols.h
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 /* Rank 393: fcn_00429210 - Small utility function (connectivity: 27) */
 /* PROV: r2 @ 0x429210, size: 70, cc: 3 */

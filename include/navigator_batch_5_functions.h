@@ -44,7 +44,8 @@ void fcn_00428060(int32_t arg_38h_2, int32_t arg_38h, int32_t arg_3ch,
 
 /* Rank 262: fcn_00401159 - Large dispatcher function (connectivity: 108) */
 /* PROV: r2 @ 0x401159, size: 22145, cc: 21 */
-void fcn_00401159(void);
+// PROV: canonical fcn_00401159 from sote_symbols.h
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 /* Rank 263: fcn_00426900 - Balanced hub with good connectivity (connectivity: 97) */
 /* PROV: r2 @ 0x426900, size: 704, cc: 31 */
@@ -125,8 +126,9 @@ void fcn_00427750(int32_t arg_38h, int32_t arg_3ch, int32_t arg_40h,
                   int32_t arg_44h, int32_t arg_48h, int32_t arg_4ch);
 
 /* Rank 277: fcn_00409020 - Large processing function (connectivity: 71) */
+// PROV: canonical fcn_00409020 from sote_symbols.h
 /* PROV: r2 @ 0x409020, size: 1239, cc: 35 */
-void fcn_00409020(int32_t arg_8h);
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 /* Rank 278: fcn_00422030 - High fan-in utility (connectivity: 74) */
 /* PROV: r2 @ 0x422030, size: 279, cc: 18 */

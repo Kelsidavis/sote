@@ -1,0 +1,37 @@
+{
+  "call_id": "coord-005-reimplementation",
+  "agent": "reimplementation",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "canonical_map": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/canonical_map.json",
+      "type_gaps": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/type_gaps.json", 
+      "include_dir": "/media/k/vbox1/Shadows/SOTE/include",
+      "project_root": "/media/k/vbox1/Shadows/SOTE",
+      "output_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe"
+    },
+    "scope": {
+      "operation": "header_surgery",
+      "create_canonical_aggregator": true,
+      "remove_duplicates": true,
+      "preserve_provenance": true
+    },
+    "options": {
+      "target_header": "sote_symbols.h",
+      "no_clobber_src": true,
+      "create_patch": true,
+      "deterministic_sort": true,
+      "preserve_re_agent_banners": true
+    }
+  },
+  "expected_outputs": [
+    "/media/k/vbox1/Shadows/SOTE/include/sote_symbols.h",
+    "/media/k/vbox1/Shadows/SOTE/header_dedupe.patch"
+  ]
+}

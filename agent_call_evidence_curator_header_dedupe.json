@@ -1,0 +1,37 @@
+{
+  "call_id": "coord-001-evidence-curator",
+  "agent": "evidence_curator",
+  "intent": "produce",
+  "inputs": {
+    "artifact": { 
+      "file_name": "SOTE.EXE", 
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77", 
+      "arch": "i386", 
+      "abi": "pe32" 
+    },
+    "paths": {
+      "evidence_json": "/media/k/vbox1/Shadows/SOTE/evidence.curated.json",
+      "mappings_json": "/media/k/vbox1/Shadows/SOTE/mappings.json",
+      "project_root": "/media/k/vbox1/Shadows/SOTE",
+      "include_dir": "/media/k/vbox1/Shadows/SOTE/include",
+      "output_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe"
+    },
+    "scope": {
+      "headers_to_scan": [
+        "navigator_batch_*.h",
+        "batch*_functions.h", 
+        "priority_functions.h",
+        "missing_functions.h",
+        "sote.h"
+      ],
+      "exclude_patterns": ["windows_compat.h", "std*"]
+    },
+    "options": {
+      "mode": "symbol_ledger_build",
+      "merge_evidence_mappings": true,
+      "provenance_tracking": true,
+      "deterministic_sort": true
+    }
+  },
+  "expected_outputs": ["/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/symbol_ledger.json"]
+}

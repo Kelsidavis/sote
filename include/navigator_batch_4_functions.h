@@ -62,6 +62,7 @@ void fcn_00441d30(void);
 
 /* Rank 206: fcn_0040b180 - Balanced processing hub (connectivity: 192) */
 /* PROV: r2 @ 0x40b180, size: 2020, cc: 96 */
+// PROV: canonical fcn_0040b180 from sote_symbols.h
 void fcn_0040b180(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, 
                   int32_t arg_14h, int32_t arg_1ch, int32_t arg_18h);
 
@@ -181,8 +182,9 @@ void fcn_00428060(int32_t arg_38h_2, int32_t arg_38h, int32_t arg_3ch,
                   uint32_t arg_4ch);
 
 /* Rank 226: fcn_00401159 - Massive function (22KB) (connectivity: 108) */
+// PROV: canonical fcn_00401159 from sote_symbols.h
 /* PROV: r2 @ 0x401159, size: 22145, cc: 21 */
-void fcn_00401159(void);
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 /* Rank 227: fcn_00426900 - Three-parameter processor (connectivity: 97) */
 /* PROV: r2 @ 0x426900, size: 704, cc: 31 */
@@ -252,9 +254,10 @@ void fcn_00427750(int32_t arg_28h, int32_t arg_34h);
  * UTILITY AND SUPPORT FUNCTIONS (Ranks 241-250)
  * ======================================================================== */
 
+// PROV: canonical fcn_00409020 from sote_symbols.h
 /* Rank 241: fcn_00409020 - Single-parameter processor (connectivity: 71) */
 /* PROV: r2 @ 0x409020, size: 1239, cc: 35 */
-void fcn_00409020(int32_t arg_10h);
+// PROV: Removed redundant declaration - canonical in sote_symbols.h
 
 /* Rank 242: fcn_00422030 - Seven-parameter processor (connectivity: 74) */
 /* PROV: r2 @ 0x422030, size: 279, cc: 18 */

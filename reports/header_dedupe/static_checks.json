@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "agent": "testing",
+    "call_id": "coord-011-test-harness-propagation",
+    "created": "2025-09-12T18:55:53.866224",
+    "operation": "static_include_test"
+  },
+  "test_config": {
+    "canonical_header": "/media/k/vbox1/Shadows/SOTE/include/sote_symbols.h",
+    "target_functions": [
+      "fcn_00401159",
+      "fcn_004011a4",
+      "fcn_004011b3",
+      "fcn_00409020",
+      "fcn_0040b180"
+    ],
+    "checks": [
+      "compilation",
+      "duplicate_declarations",
+      "implicit_declarations"
+    ]
+  },
+  "results": {
+    "compilation_status": "SUCCESS",
+    "duplicate_warnings": [],
+    "implicit_warnings": [],
+    "other_warnings": [],
+    "errors": [],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "summary": {
+    "test_passed": true,
+    "issues_found": 0,
+    "recommendations": [
+      "Header deduplication successful - no issues found"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "agent": "evidence_curator",
+    "call_id": "coord-001-evidence-curator",
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "created": "2025-09-12T18:37:00Z",
+    "scan_targets": [
+      "navigator_batch_*.h",
+      "batch*_functions.h",
+      "priority_functions.h",
+      "missing_functions.h",
+      "sote.h"
+    ],
+    "total_functions_scanned": 1131,
+    "total_headers_scanned": 30,
+    "deterministic_sort": true
+  },
+  "evidence_symbols": {},
+  "mapping_symbols": {},
+  "header_symbols": {},
+  "cross_references": {},
+  "provenance_matrix": {},
+  "symbol_status": "PROCESSING"
+}

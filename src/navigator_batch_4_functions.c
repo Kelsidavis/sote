@@ -90,6 +90,8 @@ void fcn_00441d30(void)
 }
 
 /* Rank 206: Balanced processing hub */
+// PROV: canonical fcn_0040b180 from sote_symbols.h
+// PROV: canonical fcn_0040b180 from sote_symbols.h
 void fcn_0040b180(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h, 
                   int32_t arg_14h, int32_t arg_1ch, int32_t arg_18h)
 {
@@ -337,7 +339,9 @@ void fcn_00428060(int32_t arg_38h_2, int32_t arg_38h, int32_t arg_3ch,
     
     return; /* Stub implementation pending evidence */
 }
+// PROV: canonical fcn_00401159 from sote_symbols.h
 
+// PROV: canonical fcn_00401159 from sote_symbols.h
 /* Rank 226: Massive function (22KB) */
 void fcn_00401159(void)
 {
@@ -499,8 +503,10 @@ void fcn_00427750(int32_t arg_28h, int32_t arg_34h)
 }
 
 /* ========================================================================
+// PROV: canonical fcn_00409020 from sote_symbols.h
  * UTILITY AND SUPPORT FUNCTIONS (Ranks 241-250)
  * ======================================================================== */
+// PROV: canonical fcn_00409020 from sote_symbols.h
 
 /* Rank 241: Single-parameter processor */
 void fcn_00409020(int32_t arg_10h)

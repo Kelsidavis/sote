@@ -667,6 +667,8 @@ void fcn_00416b30(int32_t arg_8h, int32_t arg_ch)
 }
 
 /* Rank 392: Extremely large function */
+// PROV: canonical fcn_004011a4 from sote_symbols.h
+// PROV: canonical fcn_004011a4 from sote_symbols.h
 void fcn_004011a4(int32_t arg_8h)
 {
     /* PROV: r2 @ 0x4011a4, size: 15883 bytes, cyclomatic complexity: 8 */

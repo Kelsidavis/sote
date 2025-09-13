@@ -1,0 +1,32 @@
+{
+  "call_id": "coord-007-test-harness-generator",
+  "agent": "testing",
+  "intent": "produce",
+  "inputs": {
+    "artifact": {
+      "file_name": "SOTE.EXE",
+      "sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+      "arch": "i386",
+      "abi": "pe32"
+    },
+    "paths": {
+      "project_root": "/media/k/vbox1/Shadows/SOTE",
+      "ci_check_script": "/media/k/vbox1/Shadows/SOTE/ci_check.sh",
+      "canonical_map": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/canonical_map.json",
+      "conflicts_json": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/conflicts.json",
+      "output_dir": "/media/k/vbox1/Shadows/SOTE/reports/header_dedupe"
+    },
+    "scope": {
+      "test_type": "static_conformance",
+      "validate_compilation": true,
+      "check_duplicates": true,
+      "verify_canonicalization": true
+    },
+    "options": {
+      "deterministic_sort": true,
+      "include_performance_metrics": true,
+      "create_regression_tests": true
+    }
+  },
+  "expected_outputs": ["/media/k/vbox1/Shadows/SOTE/reports/header_dedupe/static_checks.json"]
+}
