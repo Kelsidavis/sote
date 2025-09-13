@@ -1,8 +1,8 @@
 /*
  * RE-AGENT-BANNER
  * Agent: binary-reimplementation-engineer
- * Call ID: UNKNOWN
- * Artifact SHA256: be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77
+ * Call ID: coord-interactive-title-001
+ * Artifact SHA256: df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a
  * Provenance: evidence.curated.json, layouts.curated.json, mappings.json
  */
 
@@ -20,6 +20,29 @@
 typedef struct GameState GameState;
 typedef struct GraphicsContext GraphicsContext;
 typedef struct ConfigData ConfigData;
+typedef struct MenuState MenuState;
+
+// Game state enumeration for three-phase state machine
+typedef enum {
+    GAME_STATE_SPLASH = 0,      // Initial splash screen
+    GAME_STATE_TITLE = 1,       // Interactive title menu
+    GAME_STATE_START_SKELETON = 2  // Start game skeleton
+} GameStateType;
+
+// Menu entry structure
+typedef struct {
+    char* text;                 // Menu entry text
+    BOOL enabled;               // Whether the entry is selectable
+    int action_id;              // Action to perform when selected
+} MenuEntry;
+
+// Menu state structure
+struct MenuState {
+    MenuEntry* entries;         // Array of menu entries
+    int entry_count;            // Number of menu entries
+    int selected_index;         // Currently selected entry index
+    BOOL visible;               // Whether the menu is visible
+};
 
 // Main game state structure
 // Size: ~1024 bytes
@@ -29,9 +52,11 @@ struct GameState {
     DWORD game_timer;                   // Offset: 4, Size: 4
     HWND window_handle;                 // Offset: 8, Size: 4
     BOOL is_active;                     // Offset: 12, Size: 4
-    char config_data[256];              // Offset: 16, Size: 256
+    GameStateType current_state;        // Offset: 16, Size: 4 - State machine current state
+    MenuState menu_state;               // Offset: 20, Size: ~16 - Menu state for title screen
+    char config_data[256];              // Offset: 36, Size: 256
     // Additional padding/fields inferred from binary analysis
-    char reserved[752];                 // Padding to reach estimated 1024 bytes
+    char reserved[732];                 // Padding to reach estimated 1024 bytes (adjusted for new fields)
 };
 
 // DirectDraw graphics context
@@ -74,9 +99,9 @@ typedef void (*ErrorHandlerFunc)(void);
 /*
  * RE-AGENT-TRAILER-JSON
  * {
- *   "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+ *   "artifact_sha256": "df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a",
  *   "agent": "binary-reimplementation-engineer", 
- *   "call_id": "UNKNOWN",
+ *   "call_id": "coord-interactive-title-001",
  *   "inputs": ["evidence.curated.json", "layouts.curated.json", "mappings.json"],
  *   "schema_version": "1.0.0"
  * }

@@ -71,6 +71,28 @@ extern ConfigData* g_config_data;
         debug_output(level); \
     } while (0)
 
+// State machine functions for three-phase workflow
+void state_machine_init(GameState* state);
+void state_machine_update(GameState* state);
+void state_machine_transition(GameState* state, GameStateType new_state);
+
+// Title state functions
+void title_state_init(GameState* state);
+void title_state_draw(GameState* state);
+void title_state_input(GameState* state);
+void title_state_update(GameState* state);
+
+// Menu functions
+void menu_init(MenuState* menu);
+void menu_draw(MenuState* menu, GraphicsContext* graphics);
+void menu_input(MenuState* menu, int key_code);
+void menu_cleanup(MenuState* menu);
+
+// VFS asset resolution functions
+char* vfs_resolve_asset(const char* asset_name);
+int load_title_bmp(GraphicsContext* graphics);
+void* load_bmp_file(const char* path);
+
 // DirectX helper functions (inferred from imports)
 HRESULT initialize_directdraw(GraphicsContext* ctx);
 void shutdown_directdraw(GraphicsContext* ctx);
@@ -89,9 +111,9 @@ void update_game_timer(GameState* state);
 /*
  * RE-AGENT-TRAILER-JSON
  * {
- *   "artifact_sha256": "be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77",
+ *   "artifact_sha256": "df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a",
  *   "agent": "binary-reimplementation-engineer", 
- *   "call_id": "UNKNOWN",
+ *   "call_id": "coord-interactive-title-001",
  *   "inputs": ["evidence.curated.json", "layouts.curated.json", "mappings.json"],
  *   "schema_version": "1.0.0"
  * }

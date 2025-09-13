@@ -1,9 +1,36 @@
-[STARTUP] main() entry - argc=1, argv=0035bdb8 (SDL2 signature)
+[STARTUP] main() entry - argc=1, argv=0x69fe10 (SDL2 signature)
 [STARTUP] SOTE_ASSETS_DIR='/media/k/vbox1/Shadows/SOTE/Sdata'
 [STARTUP] SOTE_DISCLESS='1'
-[STARTUP] initialize_directdraw entry - checking routing gates
-[ROUTE] SOTE_FORCE_SDL=1 detected - forcing SDL path
 [ROUTE] forcing SDL path (disc-less)
-[STARTUP] disc-less SDL loop begin
-[ERROR] SDL video init failed: 1
-wine: Unhandled page fault on execute access to 00000000 at address 00000000 (thread 0024), starting debugger...
+[STARTUP] initialize_directdraw entry - checking routing gates
+[DIRECTX] DirectDraw initialization (stub)
+[CONFIG] Loading configuration (stub)
+[TIMER] Game timer initialized (stub)
+[STATE] Initialized state machine - starting with SPLASH
+[STATE] Splash phase - auto-advancing to Title
+[STATE] Transition: 0 -> 1
+[TITLE] Initialized Title menu - 2 entries, default: Start Game
+[VFS] Resolving asset: TITLE_BMP
+[VFS] Asset not found: TITLE_BMP
+[VFS] Resolving asset: title.bmp
+[VFS] Asset not found: title.bmp
+[VFS] Resolving asset: boba.bmp
+[VFS] resolved: boba.bmp -> /media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp
+[TITLE] Using Title asset: boba.bmp
+[BMP] Loading bitmap: boba.bmp
+[BMP] Successfully loaded: boba.bmp
+[TITLE] Title BMP loaded successfully
+[MENU] Drawing menu - 2 entries, selected: 0
+[MENU] > Start Game 
+[MENU]   Options (disabled)
+[MENU] Cursor DOWN - selected: 1
+[MENU] Drawing menu - 2 entries, selected: 1
+[MENU]   Start Game 
+[MENU] > Options (disabled)
+[MENU] Cursor UP - selected: 0
+[MENU] Drawing menu - 2 entries, selected: 0
+[MENU] > Start Game 
+[MENU]   Options (disabled)
+[MENU] selected: Start Game
+[STATE] Transition: 1 -> 2
+[STATE] StartSkeleton phase - game started

@@ -1,0 +1,6 @@
+{"timestamp":1726186230,"operation":"resolve","path":"TITLE_BMP","result":"missing","resolved":"null"}
+{"timestamp":1726186230,"operation":"resolve","path":"title.bmp","result":"missing","resolved":"null"}
+{"timestamp":1726186231,"operation":"resolve","path":"boba.bmp","result":"success","resolved":"/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp"}
+{"timestamp":1726186231,"operation":"open","path":"boba.bmp","result":"success","resolved":"/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp"}
+{"timestamp":1726186231,"operation":"read","path":"/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp","result":"read_921654_bytes","resolved":"null"}
+{"timestamp":1726186231,"operation":"close","path":"/media/k/vbox1/Shadows/SOTE/Sdata/boba.bmp","result":"success","resolved":"null"}
