@@ -1,17 +1,16 @@
 #ifndef ADAPTER_VIDEO_H
 #define ADAPTER_VIDEO_H
 
-#ifdef SOTE_FORCE_SDL /* PROV: SDL2 include enabled for real SDL2 - RE-AGENT REBUILD m100 */
-#include <SDL.h>
-#else
-// SDL stub types for cross-compilation
-typedef struct SDL_Window SDL_Window;
-typedef struct SDL_Renderer SDL_Renderer;
-typedef struct SDL_Texture SDL_Texture;
-#endif
+/* PROV: SDL2 compatibility header - unified cross-platform approach */
+#include "SDL_compat.h"
 
 #include <stdint.h>
+
+#ifdef WIN32_BUILD
 #include <windows.h>
+#else
+#include "windows_compat.h"
+#endif
 
 // PROV: Evidence sources from runtime.apis.json
 // DirectDrawCreate: VA_0x401000+, IAT_0x4c4cec
@@ -99,6 +98,16 @@ int adapter_resolve_splash_bmp(char* resolved_path, size_t path_size);  // PROV:
 int adapter_video_sdl_clear(uint8_t r, uint8_t g, uint8_t b);  // PROV: Clear window with RGB color
 int adapter_video_sdl_draw_bmp_centered(const char* bmp_path);  // PROV: Load and center draw BMP
 int adapter_video_sdl_save_screenshot(const char* out_bmp_path);  // PROV: Screenshot capture for verification
+
+// PROV: OpenGL video adapter APIs - coord-gl-001
+int adapter_video_opengl_init(int w, int h);                   // PROV: Initialize OpenGL context via SDL2
+void adapter_video_opengl_shutdown(void);                      // PROV: Shutdown OpenGL context and cleanup
+int adapter_video_opengl_present(void);                        // PROV: Present OpenGL framebuffer
+int adapter_video_opengl_clear(uint8_t r, uint8_t g, uint8_t b); // PROV: Clear OpenGL framebuffer with RGB
+int adapter_video_opengl_show_bmp(const char* bmp_path);       // PROV: Load and display BMP via OpenGL textured quad
+int adapter_video_opengl_draw_bmp_centered(const char* bmp_path); // PROV: Draw centered BMP via OpenGL
+int adapter_video_opengl_save_screenshot(const char* out_bmp_path); // PROV: Save OpenGL framebuffer screenshot
+int adapter_video_is_opengl(void);                             // PROV: Check if OpenGL video path is active
 
 // Constants from evidence
 // PROV: Screen dimensions from resource analysis (640x480 BMP files)

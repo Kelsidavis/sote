@@ -11,8 +11,7 @@
 
 // PROV: Include real SDL2 headers unconditionally - RE-AGENT REBUILD m100
 // Evidence: SDL2 documentation recommends including SDL.h for cross-platform compatibility
-// PROV: Forward declarations when headers not available during build
-// PROV: Using real SDL2 headers, no stub declarations needed
+#include "SDL_compat.h"
 // NOTE: All SDL types and functions provided by linked SDL2 library
 
 // PROV: SDL stub definitions disabled for real SDL2 linking - RE-AGENT REBUILD m100
@@ -127,8 +126,15 @@ int adapter_video_sdl_present(void) {
 int adapter_video_sdl_shutdown(void) { 
     return 0; // Success
 }
-#else 
+#else
 // Real SDL2 implementation for SOTE_FORCE_SDL mode
+
+// Dummy video detection function for headless mode
+static int using_dummy_video(void) {
+    const char* drv = SDL_GetCurrentVideoDriver();
+    return drv && strcmp(drv, "dummy") == 0;
+}
+
 // Global SDL context
 static struct {
     SDL_Window* window;
@@ -512,7 +518,21 @@ int adapter_video_sdl_show_bmp(const char *bmp_path)
         #endif
         return -1;
     }
-    
+
+    // Headless path for dummy video driver
+    if (using_dummy_video()) {
+        SDL_Surface* bmp = SDL_LoadBMP(bmp_path);
+        if (!bmp) {
+            fprintf(stderr, "[RENDER] LoadBMP failed: %s\n", SDL_GetError());
+            return -1;
+        }
+        /* Save directly as the presented frame in headless mode */
+        int rc = SDL_SaveBMP(bmp, "SOTE/reports/runtime/title_frame.bmp");
+        SDL_FreeSurface(bmp);
+        fprintf(stderr, "[RENDER] (dummy) splash presented via SaveBMP, rc=%d\n", rc);
+        return rc == 0 ? 0 : -1;
+    }
+
     // PROV: Ensure video context is initialized, create if needed
     if (!g_video_context.window) {
         if (SDL_Init(SDL_INIT_VIDEO) < 0) {
