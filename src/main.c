@@ -12,6 +12,13 @@
  * SHA256: be596ee755afbd4f3a50de366a07866d8dfed032f3341b63f539e5f93773ff77
  */
 
+#ifdef LINUX_BUILD
+#define _GNU_SOURCE
+#include <string.h>
+#include <stdlib.h>  // For setenv
+#include <dlfcn.h>  // For dlopen, dlsym, dlerror
+#endif
+
 #include "../include/sote.h"
 #include "../include/types.h"
 #include "../include/missing_functions.h"
@@ -19,6 +26,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "SDL_compat.h" /* contains SDL_MAIN_HANDLED for Linux */
 // PROV: Include SDL2 headers for main handling - RE-AGENT REBUILD m100
 // Evidence: SDL2 documentation recommends SDL_SetMainReady() for custom main functions
 // PROV: Forward declaration for SDL_SetMainReady when headers not available
@@ -40,6 +48,10 @@ extern void SDL_SetMainReady(void);
 #define GetSystemInfo(info) ((void)0)
 #define ExitProcess(code) exit(code)
 typedef struct { int dummy; } SYSTEM_INFO;
+#else
+// Windows compatibility - setenv doesn't exist on Windows, use _putenv_s
+#include <stdlib.h>
+#define setenv(name, value, overwrite) _putenv_s(name, value)
 #endif
 
 // Global state variables (inferred from data section)
@@ -58,15 +70,43 @@ ConfigData* g_config_data = NULL;
  * PROV: Third param named envp per evidence (C syntax requires envp_count disambiguation)
  * TODO_EVID: Evidence shows duplicate param name 'envp' - using envp_count for valid C syntax
  */
+/* PROV: SDL glue for non-Windows plain main() */
 int main(int argc, char** argv)
 {
+#if defined(_WIN32)
+    if (getenv("SOTE_FORCE_SDL")) fprintf(stderr, "[ROUTE] forcing SDL path\n");
+#endif
+#ifdef SDL_MAIN_HANDLED
+    SDL_SetMainReady();
+#endif
+    if (!getenv("SDL_VIDEODRIVER")) setenv("SDL_VIDEODRIVER","dummy",0);
+    if (!getenv("SDL_AUDIODRIVER")) setenv("SDL_AUDIODRIVER","dummy",0);
     // PROV: Using real SDL2, no stub initialization needed - RE-AGENT REBUILD m100
     // Evidence: Real SDL2 library handles initialization automatically
-    
+
     // PROV: Initialize SDL main handling before any other operations - RE-AGENT REBUILD m100
     // Evidence: SDL2 documentation states SDL_SetMainReady() should be called before SDL_Init()
-    SDL_SetMainReady();
-    
+
+
+    /* Initialize SDL with fallback to dummy driver */
+    if (SDL_Init(SDL_INIT_VIDEO
+#ifndef DISABLE_AUDIO
+                 | SDL_INIT_AUDIO
+#endif
+                 ) != 0) {
+        fprintf(stderr, "[SDL] SDL_Init failed: %s\n", SDL_GetError());
+        setenv("SDL_VIDEODRIVER", "dummy", 1);
+        if (SDL_Init(SDL_INIT_VIDEO
+#ifndef DISABLE_AUDIO
+                     | SDL_INIT_AUDIO
+#endif
+                     ) != 0) {
+            fprintf(stderr, "[SDL] SDL_Init(dummy) failed: %s\n", SDL_GetError());
+            return 1;
+        }
+        fprintf(stderr, "[SDL] Fallback to dummy video driver\n");
+    }
+
     // PROV: Ultra-early logging for startup fault triage per coord-startup-002
     #ifdef RESOURCE_WARNINGS
     fprintf(stderr, "[STARTUP] main() entry - argc=%d, argv=%p (SDL2 signature)\n", 
@@ -440,27 +480,30 @@ void title_state_input(GameState* state)
     // Real implementation will get key events from adapter_input_sdl.c
     
     // Check for simulated input (this will be replaced with real SDL input)
+    // TODO: Remove this when real SDL input is implemented
+    /*
     static int simulated_input_timer = 0;
     simulated_input_timer++;
-    
+
     // Simulate DOWN → UP → RETURN sequence for testing (after some delay)
     if (simulated_input_timer == 100) {
         // Simulate DOWN key
         menu_input(&state->menu_state, 40);  // VK_DOWN
     } else if (simulated_input_timer == 200) {
-        // Simulate UP key  
+        // Simulate UP key
         menu_input(&state->menu_state, 38);  // VK_UP
     } else if (simulated_input_timer == 300) {
         // Simulate RETURN key
         menu_input(&state->menu_state, 13);  // VK_RETURN
-        
+
         // If "Start Game" is selected, advance to StartSkeleton
-        if (state->menu_state.selected_index == 0 && 
-            state->menu_state.entries && 
+        if (state->menu_state.selected_index == 0 &&
+            state->menu_state.entries &&
             state->menu_state.entries[0].enabled) {
             state_machine_transition(state, GAME_STATE_START_SKELETON);
         }
     }
+    */
 }
 
 /*
@@ -507,7 +550,7 @@ void menu_draw(MenuState* menu, GraphicsContext* graphics)
     for (int i = 0; i < menu->entry_count; i++) {
         if (menu->entries && menu->entries[i].text) {
             char cursor = (i == menu->selected_index) ? '>' : ' ';
-            char enabled = menu->entries[i].enabled ? ' ' : '(disabled)';
+            // Note: enabled flag handled in the fprintf below
             #ifdef RESOURCE_WARNINGS
             fprintf(stderr, "[MENU] %c %s %s\n", cursor, menu->entries[i].text, 
                     menu->entries[i].enabled ? "" : "(disabled)");
