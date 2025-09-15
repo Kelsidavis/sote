@@ -22,11 +22,13 @@ typedef struct GraphicsContext GraphicsContext;
 typedef struct ConfigData ConfigData;
 typedef struct MenuState MenuState;
 
-// Game state enumeration for three-phase state machine
+// Game state enumeration for extended state machine
 typedef enum {
     GAME_STATE_SPLASH = 0,      // Initial splash screen
     GAME_STATE_TITLE = 1,       // Interactive title menu
-    GAME_STATE_START_SKELETON = 2  // Start game skeleton
+    GAME_STATE_START_SKELETON = 2,  // Start game skeleton
+    GAME_STATE_LEVEL_SELECT = 3,    // Level selection for testing
+    GAME_STATE_LEVEL_PLAY = 4       // Active level gameplay
 } GameStateType;
 
 // Menu entry structure

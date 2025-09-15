@@ -15,7 +15,7 @@ PKG_CONFIG = i686-w64-mingw32-pkg-config
 # Build directories
 SRCDIR = src
 INCDIR = include
-BUILDDIR = build
+BUILDDIR = build_win
 OBJDIR = $(BUILDDIR)/obj
 BINDIR = $(BUILDDIR)/bin
 LIBDIR = $(BUILDDIR)/lib
@@ -28,7 +28,7 @@ SDL2_LIBS = -L$(SDL2_PATH)/lib -lmingw32 -lSDL2main -lSDL2 -mwindows -Wl,--dynam
 
 # Compilation flags (deterministic ordering)
 CFLAGS_COMMON = -std=c99 -m32 -Wall -Wextra -g -fno-omit-frame-pointer
-CFLAGS_DEFINES = -DWIN32 -DWIN32_BUILD -DSOTE_DISCLESS=1 -DSOTE_NO_CD=1 -DSOTE_REIMPL_BUILD -DREAGENT_BUILD_TAG="RE-AGENT REBUILD m100" -DRESOURCE_WARNINGS=1 -DADAPTER_TRACE=1 -DHAVE_ADAPTER_SDL=1 -DSDL_MAIN_HANDLED -DSOTE_FORCE_SDL=1 -DADAPTER_INPUT_SDL=1 -DADAPTER_VIDEO_SDL=1 -UHAVE_ADAPTER_SDL_STUB -USDL_STUB -UHAVE_SDL_STUB
+CFLAGS_DEFINES = -DWIN32 -DWIN32_BUILD -DSOTE_DISCLESS=1 -DSOTE_NO_CD=1 -DSOTE_REIMPL_BUILD -DREAGENT_BUILD_TAG="RE-AGENT REBUILD m100" -DADAPTER_TRACE=1 -DHAVE_ADAPTER_SDL=1 -DSDL_MAIN_HANDLED -DSOTE_FORCE_SDL=1 -DADAPTER_INPUT_SDL=1 -DADAPTER_VIDEO_SDL=1 -DDISABLE_AUDIO=1 -DINCLUDE_ADAPTER_AUDIO_SDL_C=1 -UHAVE_ADAPTER_SDL_STUB -USDL_STUB -UHAVE_SDL_STUB
 CFLAGS_INCLUDES = -I$(INCDIR) $(SDL2_CFLAGS)
 CFLAGS_DEBUG = -DDEBUG -g3 -O0
 CFLAGS_RELEASE = -DNDEBUG -O2 -s
@@ -41,29 +41,15 @@ LIBS = -lwinmm -lddraw -lkernel32 -luser32 -lgdi32 $(SDL2_LIBS)
 # Source files (sorted alphabetically for deterministic builds)
 MAIN_SRCS = $(SRCDIR)/main.c
 
-LIB_SRCS = $(SRCDIR)/adapter_fs_posix.c \
+LIB_SRCS = $(SRCDIR)/adapter_audio_sdl.c \
+           $(SRCDIR)/adapter_fs_posix.c \
            $(SRCDIR)/adapter_input_sdl.c \
            $(SRCDIR)/adapter_time_sdl.c \
            $(SRCDIR)/adapter_video_sdl.c \
-           $(SRCDIR)/batch10_functions.c \
-           $(SRCDIR)/batch11_functions.c \
-           $(SRCDIR)/batch12_functions.c \
-           $(SRCDIR)/batch13_functions.c \
-           $(SRCDIR)/batch14_functions.c \
-           $(SRCDIR)/batch8_functions.c \
-           $(SRCDIR)/batch9_functions.c \
            $(SRCDIR)/build_stamp.c \
            $(SRCDIR)/entry.c \
-           $(SRCDIR)/final_31_functions.c \
-           $(SRCDIR)/missing_functions.c \
-           $(SRCDIR)/navigator_batch_11_functions.c \
-           $(SRCDIR)/navigator_batch_12_functions.c \
-           $(SRCDIR)/navigator_batch_13_functions.c \
-           $(SRCDIR)/navigator_batch_1_functions.c \
-           $(SRCDIR)/navigator_batch_2_functions.c \
-           $(SRCDIR)/navigator_batch_3_functions.c \
-           $(SRCDIR)/navigator_batch_4_functions.c \
-           $(SRCDIR)/priority_functions.c
+           $(SRCDIR)/runtime_loaders.c \
+           $(SRCDIR)/level_launcher.c
 
 ALL_SRCS = $(MAIN_SRCS) $(LIB_SRCS)
 
@@ -185,10 +171,18 @@ compile-errors: clean-build
 clean-build:
 	rm -rf $(BUILDDIR)
 
+# Build level launcher test utility
+.PHONY: test-launcher
+test-launcher: $(TARGET_EXE)
+	@echo "=== Building Level Launcher Test Utility ==="
+	i686-w64-mingw32-gcc $(CFLAGS) test_level_launcher.c $(LIB_OBJS) $(LIBS) -o $(BINDIR)/test_level_launcher.exe
+	@echo "Level launcher built: $(BINDIR)/test_level_launcher.exe"
+
 # Full clean (including logs)
 .PHONY: clean
 clean: clean-build
 	rm -f build.compile.log build.failures.json build.suggestions.md
+	rm -f $(BINDIR)/test_level_launcher.exe
 
 # Build statistics
 .PHONY: stats

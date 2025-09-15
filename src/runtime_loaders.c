@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include "../include/runtime_loaders.h"
 #include "../include/loader_structures.h"
+#include "../include/adapter_fs.h"
 
 /* ---- Provenance Macros ------------------------------------------------------ */
 #define PROV(msg)   /* PROV: msg */
@@ -167,7 +168,7 @@ BMP_IMAGE* bmp_load(const char* filename) {
     
     // PROV: Read BITMAPFILEHEADER (14 bytes) per loader_structures.h
     // PROV: resource.catalog.json confirms all BMPs have "bits offset 54"
-    if (file_read(file, &image->fileHeader, sizeof(BITMAPFILEHEADER)) != sizeof(BITMAPFILEHEADER)) {
+    if (file_read(file, &image->fileHeader, sizeof(SOTE_BITMAPFILEHEADER)) != sizeof(SOTE_BITMAPFILEHEADER)) {
         runtime_free(image);
         file_close(file);
         return NULL;  // PROV: Fail if can't read header
@@ -175,7 +176,7 @@ BMP_IMAGE* bmp_load(const char* filename) {
     
     // PROV: Read BITMAPINFOHEADER (40 bytes) for Windows 3.x format
     // PROV: resource.catalog.json confirms "Windows 3.x format" for all 43 BMPs
-    if (file_read(file, &image->infoHeader, sizeof(BITMAPINFOHEADER)) != sizeof(BITMAPINFOHEADER)) {
+    if (file_read(file, &image->infoHeader, sizeof(SOTE_BITMAPINFOHEADER)) != sizeof(SOTE_BITMAPINFOHEADER)) {
         runtime_free(image);
         file_close(file);
         return NULL;
@@ -221,7 +222,7 @@ BMP_IMAGE* bmp_load(const char* filename) {
 }
 
 // PROV: BMP header validation checks from loader evidence
-int bmp_validate_header(BITMAPFILEHEADER* fileHeader, BITMAPINFOHEADER* infoHeader) {
+int bmp_validate_header(SOTE_BITMAPFILEHEADER* fileHeader, SOTE_BITMAPINFOHEADER* infoHeader) {
     // PROV: Check BM signature (0x4D42) from VA_0x4dba3b constant
     if (fileHeader->bfType != BMP_SIGNATURE) {
         return 0;  // PROV: Invalid magic number
@@ -424,19 +425,26 @@ int dll_archive_load(DLL_ARCHIVE_MANAGER* manager, int index) {
     }
 #endif
     
-    // TODO_EVID("LoadLibraryA implementation needed - VA pattern unknown")
-    // NOTE: Wine LoadLibraryA compatibility required
-    // Need: radare2 -c "axt @ sym.imp.LoadLibraryA" Shadows.exe
-    
+    // PROV: LoadLibraryA implementation using Windows API under Wine
+    HMODULE hModule = adapter_LoadLibraryA(dllName);
+    if (!hModule) {
+        fprintf(stderr, "[LEVEL] Failed to load %s\n", dllName);
+        return -1;
+    }
+
+    // Store the loaded DLL context
     manager->contexts[index].dllName = malloc(strlen(dllName) + 1);
     if (manager->contexts[index].dllName) {
         strcpy(manager->contexts[index].dllName, dllName);
     }
-    manager->contexts[index].hModule = NULL;  // TODO_EVID("LoadLibraryA call pattern")
+    manager->contexts[index].hModule = hModule;
     manager->contexts[index].refCount = 1;
     manager->contexts[index].loadFlags = 0;
-    
-    return -1;  // TODO_EVID: Need LoadLibraryA calling convention at VA_0x402000
+
+    fprintf(stderr, "[LEVEL] Successfully loaded %s (HMODULE: %p)\n", dllName, hModule);
+    manager->loadedCount++;
+
+    return 0;  // Success
 }
 
 // PROV: Get resource from loaded DLL
@@ -468,12 +476,14 @@ void dll_archive_cleanup(DLL_ARCHIVE_MANAGER* manager) {
     
     for (i = 0; i < DLL_COUNT; i++) {
         if (manager->contexts[i].hModule) {
-            // TODO_EVID("FreeLibrary call pattern needed")
-            // Need: radare2 -c "axt @ sym.imp.FreeLibrary" Shadows.exe
+            // PROV: FreeLibrary implementation for DLL cleanup
+            adapter_FreeLibrary(manager->contexts[i].hModule);
+            manager->contexts[i].hModule = NULL;
         }
-        
+
         if (manager->contexts[i].dllName) {
             free(manager->contexts[i].dllName);
+            manager->contexts[i].dllName = NULL;
         }
     }
     
@@ -496,8 +506,8 @@ void dll_archive_cleanup(DLL_ARCHIVE_MANAGER* manager) {
 // PROV: 17 SAN files exist but format undocumented
 SAN_MOVIE* san_load(const char* filename) {
     // TODO_EVID("SAN format reverse engineering needed")
-    // Need: hexdump -C Sdata/*.san | head -100
-    // Need: strings Sdata/*.san | grep -i "magic\|version\|codec"
+    // Need: hexdump -C Sdata/intro.san | head -100
+    // Need: strings Sdata/intro.san | grep -i "magic\|version\|codec"
     // Need: radare2 -c "px 512" Sdata/intro.san
 #ifdef RESOURCE_WARNINGS
     if (filename) {
@@ -564,7 +574,7 @@ ASSET_CATALOG* asset_catalog_build(const char* dataPath) {
     
 /*
  * [RESOURCE] Directory Scanner
- * PROV: va=0x402250, api=FindFirstFileA/FindNextFileA, xref_count=4, strings=["Sdata/*", "*.bmp", "*.wav"]
+ * PROV: va=0x402250, api=FindFirstFileA/FindNextFileA, xref_count=4, strings=["Sdata/", "*.bmp", "*.wav"]
  * RESOURCE: Sdata/ directory containing 277 game assets
  * ADAPTER: FS → adapter_fs.h / adapter_fs_posix.c
  * NOTE: Enumerates all game assets in data directory

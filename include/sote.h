@@ -14,6 +14,7 @@
 #include <ddraw.h>
 #else
 #include "windows_compat.h"  // PROV: build shim only; no runtime semantics assumed
+#include "windows_ddraw_compat.h"  // PROV: DirectDraw COM stubs for Linux builds
 #endif
 
 #include "types.h"
@@ -82,11 +83,22 @@ void title_state_draw(GameState* state);
 void title_state_input(GameState* state);
 void title_state_update(GameState* state);
 
+// Level launcher state functions
+void level_select_state_init(GameState* state);
+void level_select_state_update(GameState* state);
+void level_select_state_input(GameState* state);
+void level_select_state_draw(GameState* state);
+
+void level_play_state_update(GameState* state);
+void level_play_state_input(GameState* state);
+void level_play_state_draw(GameState* state);
+
 // Menu functions
 void menu_init(MenuState* menu);
 void menu_draw(MenuState* menu, GraphicsContext* graphics);
 void menu_input(MenuState* menu, int key_code);
 void menu_cleanup(MenuState* menu);
+void menu_add_entry(MenuState* menu, const char* text, BOOL enabled, int action_id);
 
 // VFS asset resolution functions
 char* vfs_resolve_asset(const char* asset_name);

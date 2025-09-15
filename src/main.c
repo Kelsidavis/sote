@@ -23,6 +23,7 @@
 #include "../include/types.h"
 #include "../include/missing_functions.h"
 #include "../include/adapter_fs.h"
+#include "../include/level_launcher.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,6 +34,10 @@
 #ifndef _SDL_main_h
 extern void SDL_SetMainReady(void);
 #endif
+
+// Global level launcher state
+static int g_level_launcher_initialized = 0;
+static int g_selected_level = 0;
 
 #ifndef _WIN32
 // Linux stub implementations
@@ -364,6 +369,20 @@ void state_machine_update(GameState* state)
             title_state_draw(state);
             break;
             
+        case GAME_STATE_LEVEL_SELECT:
+            // Level selection menu
+            level_select_state_update(state);
+            level_select_state_input(state);
+            level_select_state_draw(state);
+            break;
+
+        case GAME_STATE_LEVEL_PLAY:
+            // Active level gameplay
+            level_play_state_update(state);
+            level_play_state_input(state);
+            level_play_state_draw(state);
+            break;
+
         case GAME_STATE_START_SKELETON:
             // PROV: Start game skeleton - minimal implementation
             #ifdef RESOURCE_WARNINGS
@@ -400,9 +419,15 @@ void state_machine_transition(GameState* state, GameStateType new_state)
         case GAME_STATE_TITLE:
             title_state_init(state);
             break;
+        case GAME_STATE_LEVEL_SELECT:
+            level_select_state_init(state);
+            break;
         case GAME_STATE_START_SKELETON:
             // Clean up menu state when leaving Title
             menu_cleanup(&state->menu_state);
+            break;
+        case GAME_STATE_LEVEL_PLAY:
+            // Level gameplay state
             break;
         default:
             break;
@@ -417,17 +442,17 @@ void title_state_init(GameState* state)
 {
     if (!state) return;
     
-    // Initialize menu with "Start Game" and "Options" entries
+    // Initialize menu with "Start Game", "Level Select" and "Options" entries
     MenuState* menu = &state->menu_state;
-    
+
     // Allocate menu entries
-    menu->entry_count = 2;
+    menu->entry_count = 3;
     menu->entries = (MenuEntry*)memory_allocator(sizeof(MenuEntry) * menu->entry_count, 0);
     if (!menu->entries) {
         error_handler();
         return;
     }
-    
+
     // Set up "Start Game" entry (default selection)
     menu->entries[0].text = (char*)memory_allocator(16, 0);
     if (menu->entries[0].text) {
@@ -435,20 +460,28 @@ void title_state_init(GameState* state)
         menu->entries[0].enabled = TRUE;
         menu->entries[0].action_id = 1;
     }
-    
-    // Set up "Options" entry (disabled placeholder)
+
+    // Set up "Level Select" entry
     menu->entries[1].text = (char*)memory_allocator(16, 0);
     if (menu->entries[1].text) {
-        strcpy(menu->entries[1].text, "Options");
-        menu->entries[1].enabled = FALSE;  // Disabled placeholder
-        menu->entries[1].action_id = 2;
+        strcpy(menu->entries[1].text, "Level Select");
+        menu->entries[1].enabled = TRUE;
+        menu->entries[1].action_id = 3;
+    }
+
+    // Set up "Options" entry (disabled placeholder)
+    menu->entries[2].text = (char*)memory_allocator(16, 0);
+    if (menu->entries[2].text) {
+        strcpy(menu->entries[2].text, "Options");
+        menu->entries[2].enabled = FALSE;  // Disabled placeholder
+        menu->entries[2].action_id = 2;
     }
     
     menu->selected_index = 0;  // Default to "Start Game"
     menu->visible = TRUE;
     
     #ifdef RESOURCE_WARNINGS
-    fprintf(stderr, "[TITLE] Initialized Title menu - 2 entries, default: Start Game\n");
+    fprintf(stderr, "[TITLE] Initialized Title menu - 3 entries, default: Start Game\n");
     #endif
 }
 
@@ -481,29 +514,35 @@ void title_state_input(GameState* state)
     
     // Check for simulated input (this will be replaced with real SDL input)
     // TODO: Remove this when real SDL input is implemented
-    /*
     static int simulated_input_timer = 0;
     simulated_input_timer++;
 
-    // Simulate DOWN → UP → RETURN sequence for testing (after some delay)
+    // Simulate DOWN → DOWN → RETURN sequence to select Level Select
     if (simulated_input_timer == 100) {
-        // Simulate DOWN key
+        // Simulate DOWN key to move to Level Select
         menu_input(&state->menu_state, 40);  // VK_DOWN
     } else if (simulated_input_timer == 200) {
-        // Simulate UP key
-        menu_input(&state->menu_state, 38);  // VK_UP
+        // Simulate DOWN key again if needed
+        if (state->menu_state.selected_index == 0) {
+            menu_input(&state->menu_state, 40);  // VK_DOWN to Level Select
+        }
     } else if (simulated_input_timer == 300) {
         // Simulate RETURN key
         menu_input(&state->menu_state, 13);  // VK_RETURN
 
-        // If "Start Game" is selected, advance to StartSkeleton
-        if (state->menu_state.selected_index == 0 &&
-            state->menu_state.entries &&
-            state->menu_state.entries[0].enabled) {
-            state_machine_transition(state, GAME_STATE_START_SKELETON);
+        // Handle menu selection based on action_id
+        if (state->menu_state.entries && state->menu_state.entries[state->menu_state.selected_index].enabled) {
+            int action_id = state->menu_state.entries[state->menu_state.selected_index].action_id;
+
+            if (action_id == 1) {
+                // "Start Game" selected - advance to StartSkeleton
+                state_machine_transition(state, GAME_STATE_START_SKELETON);
+            } else if (action_id == 3) {
+                // "Level Select" selected - go to level selection
+                state_machine_transition(state, GAME_STATE_LEVEL_SELECT);
+            }
         }
     }
-    */
 }
 
 /*
@@ -625,10 +664,42 @@ void menu_cleanup(MenuState* menu)
         // HeapFree would go here
         menu->entries = NULL;
     }
-    
+
     menu->entry_count = 0;
     menu->selected_index = 0;
     menu->visible = FALSE;
+}
+
+/*
+ * Add entry to menu
+ */
+void menu_add_entry(MenuState* menu, const char* text, BOOL enabled, int action_id)
+{
+    if (!menu || !text) return;
+
+    // Reallocate entries array to accommodate new entry
+    MenuEntry* new_entries = (MenuEntry*)memory_allocator(sizeof(MenuEntry) * (menu->entry_count + 1), 0);
+    if (!new_entries) return;
+
+    // Copy existing entries
+    for (int i = 0; i < menu->entry_count; i++) {
+        new_entries[i] = menu->entries[i];
+    }
+
+    // Add new entry
+    new_entries[menu->entry_count].text = (char*)memory_allocator(strlen(text) + 1, 0);
+    if (new_entries[menu->entry_count].text) {
+        strcpy(new_entries[menu->entry_count].text, text);
+    }
+    new_entries[menu->entry_count].enabled = enabled;
+    new_entries[menu->entry_count].action_id = action_id;
+
+    // Replace old entries array
+    if (menu->entries) {
+        // TODO: Free old entries array
+    }
+    menu->entries = new_entries;
+    menu->entry_count++;
 }
 
 /*
@@ -794,10 +865,137 @@ void exit_handler(void)
 }
 
 /*
+ * ============================================================================
+ * LEVEL LAUNCHER STATE FUNCTIONS
+ * ============================================================================
+ */
+
+/*
+ * Level Selection State Initialization
+ */
+void level_select_state_init(GameState* state) {
+    if (!state) return;
+
+    // Initialize level launcher if not already done
+    if (!g_level_launcher_initialized) {
+        if (level_launcher_init(state) == 0) {
+            g_level_launcher_initialized = 1;
+            fprintf(stderr, "[LEVEL] Level launcher initialized\n");
+        } else {
+            fprintf(stderr, "[LEVEL] Failed to initialize level launcher\n");
+            return;
+        }
+    }
+
+    // Initialize level selection menu
+    menu_init(&state->menu_state);
+
+    // Add level entries to menu
+    for (int i = 0; i < LEVEL_COUNT; i++) {
+        char level_text[128];
+        const LevelInfo* level = &LEVEL_DATABASE[i];
+        snprintf(level_text, sizeof(level_text), "%2d. %s%s",
+                 i, level->name, level->has_boss ? " [BOSS]" : "");
+        menu_add_entry(&state->menu_state, level_text, TRUE, i);
+    }
+
+    // Add back option
+    menu_add_entry(&state->menu_state, "Back to Title", TRUE, -1);
+
+    state->menu_state.selected_index = g_selected_level;
+    state->menu_state.visible = TRUE;
+
+    fprintf(stderr, "[LEVEL] Level selection menu initialized with %d levels\n", LEVEL_COUNT);
+}
+
+/*
+ * Level Selection State Update
+ */
+void level_select_state_update(GameState* state) {
+    if (!state) return;
+    // Level selection update logic
+}
+
+/*
+ * Level Selection State Input
+ */
+void level_select_state_input(GameState* state) {
+    if (!state) return;
+
+    // Handle menu navigation (DOWN/UP keys)
+    // For now, use automatic selection for testing
+    static int input_timer = 0;
+    input_timer++;
+
+    if (input_timer == 60) {  // After 1 second, select current level
+        int selected = state->menu_state.selected_index;
+
+        if (selected == LEVEL_COUNT) {  // "Back to Title" option
+            fprintf(stderr, "[LEVEL] Returning to title\n");
+            state_machine_transition(state, GAME_STATE_TITLE);
+        } else if (selected >= 0 && selected < LEVEL_COUNT) {
+            fprintf(stderr, "[LEVEL] Selected level %d: %s\n", selected, LEVEL_DATABASE[selected].name);
+            g_selected_level = selected;
+
+            // Launch the level
+            if (level_launcher_start_level(state, (LevelID)selected) == 0) {
+                state_machine_transition(state, GAME_STATE_LEVEL_PLAY);
+            } else {
+                fprintf(stderr, "[LEVEL] Failed to launch level, returning to selection\n");
+            }
+        }
+    }
+}
+
+/*
+ * Level Selection State Draw
+ */
+void level_select_state_draw(GameState* state) {
+    if (!state) return;
+    menu_draw(&state->menu_state, state->graphics_context);
+}
+
+/*
+ * Level Play State Functions
+ */
+void level_play_state_update(GameState* state) {
+    if (!state) return;
+    // Active gameplay update logic
+    // TODO: Integrate with actual game systems
+}
+
+void level_play_state_input(GameState* state) {
+    if (!state) return;
+
+    // For testing, auto-return to level select after a few seconds
+    static int play_timer = 0;
+    play_timer++;
+
+    if (play_timer == 300) {  // After 5 seconds
+        fprintf(stderr, "[LEVEL] Level play demo complete, returning to level select\n");
+        play_timer = 0;
+        state_machine_transition(state, GAME_STATE_LEVEL_SELECT);
+    }
+}
+
+void level_play_state_draw(GameState* state) {
+    if (!state) return;
+
+    // Simple level play display
+    static int frame_count = 0;
+    frame_count++;
+
+    if (frame_count % 60 == 0) {  // Every second
+        const LevelInfo* level = &LEVEL_DATABASE[g_selected_level];
+        fprintf(stderr, "[LEVEL] Playing: %s (Level %d)\n", level->name, g_selected_level);
+    }
+}
+
+/*
  * RE-AGENT-TRAILER-JSON
  * {
  *   "artifact_sha256": "df51483219c0d13ce702aaee6df5999c1f9a12e0dfde2f6848890ab963e1627a",
- *   "agent": "binary-reimplementation-engineer", 
+ *   "agent": "binary-reimplementation-engineer",
  *   "call_id": "coord-interactive-title-001",
  *   "inputs": ["evidence.curated.json", "layouts.curated.json", "mappings.json"],
  *   "schema_version": "1.0.0"
