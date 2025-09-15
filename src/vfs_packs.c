@@ -57,3 +57,9 @@ SDL_RWops* vfs_packs_open_rw(const char* pack_name, const char* inner_path){
     // For production, would need custom RWops with cleanup
     return rw;
 }
+
+/* Simple pack reader - just try to load individual files */
+int vfs_packs_read_file(const char* pack_name, const char* inner_path, unsigned char** out_buf, size_t* out_sz) {
+    *out_buf = (unsigned char*)vfs_packs_slurp(pack_name, inner_path, out_sz);
+    return (*out_buf) ? 0 : -1;
+}

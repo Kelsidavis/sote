@@ -36,7 +36,7 @@ CFLAGS_RELEASE = -DNDEBUG -O2 -s
 # Default flags
 CFLAGS = $(CFLAGS_COMMON) $(CFLAGS_DEFINES) $(CFLAGS_INCLUDES) $(CFLAGS_RELEASE)
 LDFLAGS = -m32 -Wl,--subsystem,console -Wl,--Map,$(BINDIR)/SOTE_RE.map -Wl,--enable-auto-import -static-libgcc
-LIBS = -lwinmm -lddraw -lkernel32 -luser32 -lgdi32 $(SDL2_LIBS)
+LIBS = -lwinmm -lddraw -lkernel32 -luser32 -lgdi32 -lopengl32 $(SDL2_LIBS)
 
 # Source files (sorted alphabetically for deterministic builds)
 MAIN_SRCS = $(SRCDIR)/main.c
@@ -46,10 +46,14 @@ LIB_SRCS = $(SRCDIR)/adapter_audio_sdl.c \
            $(SRCDIR)/adapter_input_sdl.c \
            $(SRCDIR)/adapter_time_sdl.c \
            $(SRCDIR)/adapter_video_sdl.c \
+           $(SRCDIR)/adapter_video_opengl.c \
+           $(SRCDIR)/gl_loader.c \
            $(SRCDIR)/build_stamp.c \
            $(SRCDIR)/entry.c \
            $(SRCDIR)/runtime_loaders.c \
-           $(SRCDIR)/level_launcher.c
+           $(SRCDIR)/level_launcher.c \
+           $(SRCDIR)/level_texture_resolver.c \
+           $(SRCDIR)/vfs_packs.c
 
 ALL_SRCS = $(MAIN_SRCS) $(LIB_SRCS)
 
@@ -60,6 +64,9 @@ ALL_OBJS = $(ALL_SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 # Header files (for dependency tracking)
 HEADERS = $(INCDIR)/adapter_video.h \
+          $(INCDIR)/gl_loader.h \
+          $(INCDIR)/vfs_packs.h \
+          $(INCDIR)/video_gl.h \
           $(INCDIR)/batch10_functions.h \
           $(INCDIR)/batch11_functions.h \
           $(INCDIR)/batch12_functions.h \
