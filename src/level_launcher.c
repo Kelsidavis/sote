@@ -6,9 +6,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
+#include "../include/sote.h"
 #include "../include/level_launcher.h"
 #include "../include/runtime_loaders.h"
-#include "../include/sote.h"
+#include "../include/video_gl.h"
+
+// Helper functions for safety and clamping
+static inline int clampi(int v, int lo, int hi) {
+    return v < lo ? lo : (v > hi ? hi : v);
+}
+
+static int file_exists(const char* p) {
+    struct stat st;
+    return !stat(p, &st) && st.st_size > 0;
+}
 
 // Level database with metadata for all 12 levels
 const LevelInfo LEVEL_DATABASE[LEVEL_COUNT] = {
@@ -74,7 +86,7 @@ TestSaveData* level_launcher_create_default_save(LevelID target_level) {
 
     // Mark all previous levels as completed
     memset(save->level_progress, 0, LEVEL_COUNT);
-    for (int i = 0; i < target_level && i < LEVEL_COUNT; i++) {
+    for (int i = 0; i < (int)target_level && i < LEVEL_COUNT; i++) {
         save->level_progress[i] = 1; // Mark as completed
     }
 
@@ -124,6 +136,16 @@ int level_launcher_start_level(GameState* state, LevelID level_id) {
         return -1;
     }
 
+    // Verify level DLL file exists before launching
+    char _dll[512];
+    const char* assets_dir_str = getenv("SOTE_ASSETS_DIR");
+    if (!assets_dir_str) assets_dir_str = "Sdata";
+    snprintf(_dll, sizeof(_dll), "%s/data%02d.dll", assets_dir_str, (int)level_id);
+    if (!file_exists(_dll)) {
+        fprintf(stderr, "[LEVEL] Missing: %s — aborting launch\n", _dll);
+        return -1;
+    }
+
     const LevelInfo* level = &LEVEL_DATABASE[level_id];
 
     fprintf(stderr, "[LEVEL] ========================================\n");
@@ -153,6 +175,21 @@ int level_launcher_start_level(GameState* state, LevelID level_id) {
     // Transition to a new game state for level play
     // TODO: Add GAME_STATE_LEVEL_PLAY to the state machine
     fprintf(stderr, "[LEVEL] Level ready for play!\n");
+
+    /* Load level-specific texture from pack */
+    {
+        unsigned tex = level_resolve_and_upload_texture(level_id);
+        if (tex) {
+            extern unsigned g_level_tex_override;
+            g_level_tex_override = tex;
+            fprintf(stderr, "[ROUTE] using native pack artwork for level %d\n", level_id);
+        } else {
+            extern unsigned g_level_tex_override;
+            g_level_tex_override = 0;
+            fprintf(stderr, "[ROUTE] pack artwork not found for level %d; using fallback\n", level_id);
+        }
+    }
+
     fprintf(stderr, "[LEVEL] Player: %s | Lives: %d | Health: %d | Shields: %d\n",
             g_current_save->player_name,
             g_current_save->lives_remaining,
@@ -199,4 +236,14 @@ void level_launcher_cleanup(void) {
     }
 
     fprintf(stderr, "[LEVEL] Level launcher cleanup complete\n");
+}
+
+// Level select state update with clamping and null guards
+void level_select_state_update_helper(void* menu) {
+    if (!menu) {
+        return;  // Null guard
+    }
+
+    // This is a helper function that would be called from the main menu state machine
+    // The actual implementation would be in main.c where the types are defined
 }

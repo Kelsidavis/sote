@@ -24,6 +24,7 @@
 #include "../include/missing_functions.h"
 #include "../include/adapter_fs.h"
 #include "../include/level_launcher.h"
+#include "../include/video_gl.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -332,13 +333,58 @@ int string_utility(int src, int dest, int len)
 void state_machine_init(GameState* state)
 {
     if (!state) return;
-    
+
+    // Check for direct level launch bypass
+    const char* launch_level = getenv("SOTE_LAUNCH_LEVEL");
+    if (launch_level) {
+        int level_id = atoi(launch_level);
+        if (level_id >= 0 && level_id < LEVEL_COUNT) {
+            #ifdef RESOURCE_WARNINGS
+            fprintf(stderr, "[STATE] Direct level launch: Level %d\n", level_id);
+            #endif
+
+            // Initialize level launcher
+            if (level_launcher_init(state) == 0) {
+                g_level_launcher_initialized = 1;
+
+                // Launch directly into the specified level
+                if (level_launcher_start_level(state, (LevelID)level_id) == 0) {
+                    state->current_state = GAME_STATE_LEVEL_PLAY;
+                    g_selected_level = level_id;
+
+                    /* Load level-specific texture for direct launch */
+                    {
+                        unsigned tex = level_resolve_and_upload_texture((int)g_selected_level);
+                        if (tex) {
+                            extern unsigned g_level_tex_override;
+                            g_level_tex_override = tex;
+                            fprintf(stderr, "[ROUTE] using native pack artwork for level %d\n", (int)g_selected_level);
+                        } else {
+                            extern unsigned g_level_tex_override;
+                            g_level_tex_override = 0;
+                            fprintf(stderr, "[ROUTE] pack artwork not found for level %d; using fallback\n", (int)g_selected_level);
+                        }
+                    }
+
+                    #ifdef RESOURCE_WARNINGS
+                    fprintf(stderr, "[STATE] Successfully launched level %d\n", level_id);
+                    #endif
+                    return;
+                } else {
+                    #ifdef RESOURCE_WARNINGS
+                    fprintf(stderr, "[STATE] Failed to launch level %d - falling back to normal startup\n", level_id);
+                    #endif
+                }
+            }
+        }
+    }
+
     // Start with Splash phase
     state->current_state = GAME_STATE_SPLASH;
-    
+
     // Initialize menu state for Title phase
     menu_init(&state->menu_state);
-    
+
     #ifdef RESOURCE_WARNINGS
     fprintf(stderr, "[STATE] Initialized state machine - starting with SPLASH\n");
     #endif

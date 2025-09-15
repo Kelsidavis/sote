@@ -11,6 +11,19 @@
 #include "../include/runtime_loaders.h"
 #include "../include/loader_structures.h"
 #include "../include/adapter_fs.h"
+#ifdef SOTE_NATIVE_PACKS
+#include "../include/resource_pack.h"
+#include "../include/vfs_packs.h"
+#endif
+
+/* Initialize VFS pack system */
+static void runtime_init_vfs_packs(void) {
+    const char* pack_dir = getenv("SOTE_DATA_PACK_DIR");
+    if (pack_dir && *pack_dir) {
+        vfs_packs_set_root(pack_dir);
+        fprintf(stderr, "[VFS] Pack directory set to: %s\n", pack_dir);
+    }
+}
 
 /* ---- Provenance Macros ------------------------------------------------------ */
 #define PROV(msg)   /* PROV: msg */
@@ -382,17 +395,20 @@ void wav_free(WAV_SOUND* sound) {
 // PROV: Priority 79 critical boot path per bootpath.manifest.json
 DLL_ARCHIVE_MANAGER* dll_archive_init(void) {
     DLL_ARCHIVE_MANAGER* manager;
-    
+
     // PROV: HeapAlloc for manager structure
     manager = (DLL_ARCHIVE_MANAGER*)runtime_alloc(sizeof(DLL_ARCHIVE_MANAGER));
     if (!manager) {
         return NULL;
     }
-    
+
     // PROV: Initialize all contexts to empty
     memset(manager->contexts, 0, sizeof(manager->contexts));
     manager->loadedCount = 0;
-    
+
+    // Initialize VFS pack system
+    runtime_init_vfs_packs();
+
     return manager;
 }
 
@@ -405,11 +421,39 @@ DLL_ARCHIVE_MANAGER* dll_archive_init(void) {
  */
 int dll_archive_load(DLL_ARCHIVE_MANAGER* manager, int index) {
     char dllName[256];
-    
+
     if (!manager || index < 0 || index >= DLL_COUNT) {
         return -1;  // PROV: Invalid parameters
     }
-    
+
+#ifdef SOTE_NATIVE_PACKS
+    // Use native pack loader instead of DLL loading
+    const char* pack_dir = getenv("SOTE_DATA_PACK_DIR");
+    if (!pack_dir) pack_dir = "assets_packs";
+
+    // Initialize VFS pack reader
+    vfs_packs_set_root(pack_dir);
+
+    int pack_result = pack_open_for_level(index, pack_dir);
+    if (pack_result == 0) {
+        fprintf(stderr, "[PACK] opened data%02d.sotepak from %s\n", index, pack_dir);
+
+        // Store pack context info
+        snprintf(dllName, sizeof(dllName), "%s/data%02d.sotepak", pack_dir, index);
+        manager->contexts[index].dllName = malloc(strlen(dllName) + 1);
+        if (manager->contexts[index].dllName) {
+            strcpy(manager->contexts[index].dllName, dllName);
+        }
+        manager->contexts[index].hModule = (HMODULE)(uintptr_t)(index + 1); // Non-null placeholder
+        manager->contexts[index].refCount = 1;
+        manager->contexts[index].loadFlags = 1; // Mark as pack-loaded
+        manager->loadedCount++;
+        return 0;
+    } else {
+        fprintf(stderr, "[PACK] Failed to open data%02d.sotepak from %s, falling back to DLL\n", index, pack_dir);
+    }
+#endif
+
     // PROV: Build DLL name (data00.dll format)
     // PROV: 32 DLL archives per bootpath.manifest.json
     snprintf(dllName, sizeof(dllName), "Sdata/data%02d.dll", index);
@@ -424,7 +468,7 @@ int dll_archive_load(DLL_ARCHIVE_MANAGER* manager, int index) {
         }
     }
 #endif
-    
+
     // PROV: LoadLibraryA implementation using Windows API under Wine
     HMODULE hModule = adapter_LoadLibraryA(dllName);
     if (!hModule) {
@@ -523,6 +567,27 @@ SAN_MOVIE* san_load(const char* filename) {
     
     (void)filename;  // Suppress unused parameter warning
     return NULL;  // TODO_EVID: SAN movie format unknown - needs hex analysis
+}
+
+/* ============================================================================= */
+/* Asset Path Helpers                                                           */
+/* ============================================================================= */
+
+/*
+ * Assets directory helper with environment override
+ * PROV: SOTE_ASSETS_DIR environment variable for flexible asset pathing
+ */
+static const char* assets_dir(void){
+    const char* d = getenv("SOTE_ASSETS_DIR");
+    return (d && *d) ? d : "Sdata";
+}
+
+/*
+ * Level DLL path builder for data00.dll-data31.dll format
+ * PROV: Level DLL naming pattern from bootpath.manifest.json (32 DLL archives)
+ */
+static void make_level_dll_path(int level, char *out, size_t out_sz){
+    snprintf(out, out_sz, "%s/data%02d.dll", assets_dir(), level);
 }
 
 /* ============================================================================= */

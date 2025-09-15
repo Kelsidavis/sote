@@ -8,6 +8,8 @@
 
 #include "adapter_video.h"
 #include "gl_loader.h"
+#include "../include/sote.h"
+#include "../include/video_gl.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -158,6 +160,16 @@ int adapter_video_opengl_present(void)
 
     SDL_GL_SwapWindow(g_gl_context.window);
     return 1;
+}
+
+void video_present(){
+    /* Draw level texture override if present */
+    extern unsigned g_level_tex_override;
+    if (g_level_tex_override) {
+        gl_draw_fullscreen(g_level_tex_override);
+    }
+
+    SDL_GL_SwapWindow(g_gl_context.window);
 }
 
 // Clear screen with RGB color
@@ -312,3 +324,40 @@ int adapter_video_is_opengl(void)
 {
     return g_gl_context.initialized;
 }
+
+/* GL texture helpers for level artwork */
+unsigned gl_upload_surface_rgba(SDL_Surface* s){
+    if (!s) return 0;
+
+    SDL_Surface* conv = SDL_ConvertSurfaceFormat(s, SDL_PIXELFORMAT_RGBA32, 0);
+    if (!conv) return 0;
+
+    GLuint tex = 0;
+    GL_GEN_TEXTURES(1, &tex);
+    GL_BIND_TEXTURE(GL_TEXTURE_2D, tex);
+    GL_TEX_PARAMETER_I(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    GL_TEX_PARAMETER_I(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    GL_TEX_IMAGE_2D(GL_TEXTURE_2D, 0, GL_RGBA, conv->w, conv->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, conv->pixels);
+
+    SDL_FreeSurface(conv);
+    fprintf(stderr, "[GL_VIDEO] Uploaded texture ID %u\n", tex);
+    return tex;
+}
+
+void gl_draw_fullscreen(unsigned tex){
+    if (!tex) return;
+
+    GL_CALL_DISABLE(GL_DEPTH_TEST);
+    GL_CALL_ENABLE(GL_TEXTURE_2D);
+    GL_BIND_TEXTURE(GL_TEXTURE_2D, (GLuint)tex);
+
+    GL_BEGIN(GL_QUADS);
+      GL_TEX_COORD_2F(0.0f, 0.0f); GL_VERTEX_2F(-1.0f, -1.0f);
+      GL_TEX_COORD_2F(1.0f, 0.0f); GL_VERTEX_2F( 1.0f, -1.0f);
+      GL_TEX_COORD_2F(1.0f, 1.0f); GL_VERTEX_2F( 1.0f,  1.0f);
+      GL_TEX_COORD_2F(0.0f, 1.0f); GL_VERTEX_2F(-1.0f,  1.0f);
+    GL_END();
+}
+
+/* Global level texture override */
+unsigned g_level_tex_override = 0;
