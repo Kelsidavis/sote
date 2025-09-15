@@ -3,7 +3,12 @@
 
 #include <stdint.h>
 #include <stdio.h>
+
+#ifdef WIN32_BUILD
 #include <windows.h>
+#else
+#include "windows_compat.h"
+#endif
 
 // PROV: Evidence sources from runtime.apis.json
 // CreateFileA: VA_0x401000+, IAT_0x4c4c20 - main file opening function
@@ -91,31 +96,52 @@ int adapter_file_exists(const char *path);
 HANDLE adapter_fs_open(const char* path, DWORD access, DWORD creation);
 int adapter_fs_exists(const char* path);
 
-// Constants
-#define INVALID_HANDLE_VALUE    ((HANDLE)(LONG_PTR)-1)
+// Constants (only define if not already defined in windows_compat.h)
+#ifndef INVALID_HANDLE_VALUE
+#define INVALID_HANDLE_VALUE    ((HANDLE)(uintptr_t)-1)
+#endif
+
+#ifndef INVALID_FILE_SIZE
 #define INVALID_FILE_SIZE       ((DWORD)0xFFFFFFFF)
+#endif
 
-// File access modes
+// File access modes (only define if not already defined)
+#ifndef GENERIC_READ
 #define GENERIC_READ            0x80000000
+#endif
+
+#ifndef GENERIC_WRITE
 #define GENERIC_WRITE           0x40000000
+#endif
 
-// File share modes  
+// File share modes (only define if not already defined)
+#ifndef FILE_SHARE_READ
 #define FILE_SHARE_READ         0x00000001
-#define FILE_SHARE_WRITE        0x00000002
+#endif
 
-// File creation disposition
+#ifndef FILE_SHARE_WRITE
+#define FILE_SHARE_WRITE        0x00000002
+#endif
+
+// File creation disposition (only define if not already defined)
+#ifndef CREATE_NEW
 #define CREATE_NEW              1
 #define CREATE_ALWAYS           2
 #define OPEN_EXISTING           3
 #define OPEN_ALWAYS             4
 #define TRUNCATE_EXISTING       5
+#endif
 
-// File attributes
+// File attributes (only define if not already defined)
+#ifndef FILE_ATTRIBUTE_NORMAL
 #define FILE_ATTRIBUTE_NORMAL   0x00000080
+#endif
 
-// Seek methods
+// Seek methods (only define if not already defined)
+#ifndef FILE_BEGIN
 #define FILE_BEGIN              0
 #define FILE_CURRENT            1
 #define FILE_END                2
+#endif
 
 #endif // ADAPTER_FS_H

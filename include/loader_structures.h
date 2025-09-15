@@ -13,18 +13,25 @@
 
 /* BMP File Header - 14 bytes
  * Evidence: VA_0x4dba3b constant 0x424D, resource.catalog.json bitmap files
+ * NOTE: Prefixed with SOTE_ to avoid MinGW WinGDI.h conflicts
  */
+#ifndef SOTE_BITMAPFILEHEADER_DEFINED
+#define SOTE_BITMAPFILEHEADER_DEFINED
 typedef struct {
     uint16_t bfType;        /* 0x00: Magic 'BM' (0x4D42) */
     uint32_t bfSize;        /* 0x02: File size in bytes */
     uint16_t bfReserved1;   /* 0x06: Reserved, always 0 */
     uint16_t bfReserved2;   /* 0x08: Reserved, always 0 */
     uint32_t bfOffBits;     /* 0x0A: Offset to pixel data (54 for all BMPs) */
-} BITMAPFILEHEADER;
+} SOTE_BITMAPFILEHEADER;
+#endif
 
 /* BMP Info Header - 40 bytes (Windows 3.x format)
  * Evidence: resource.catalog.json "Windows 3.x format" for all 43 bitmaps
+ * NOTE: Prefixed with SOTE_ to avoid MinGW WinGDI.h conflicts
  */
+#ifndef SOTE_BITMAPINFOHEADER_DEFINED
+#define SOTE_BITMAPINFOHEADER_DEFINED
 typedef struct {
     uint32_t biSize;          /* 0x00: Header size (40) */
     int32_t  biWidth;         /* 0x04: Width in pixels (640, 256, etc) */
@@ -37,7 +44,8 @@ typedef struct {
     int32_t  biYPelsPerMeter; /* 0x1C: Y resolution (3790 or 3788) */
     uint32_t biClrUsed;       /* 0x20: Colors used (0 for 24-bit) */
     uint32_t biClrImportant;  /* 0x24: Important colors (0) */
-} BITMAPINFOHEADER;
+} SOTE_BITMAPINFOHEADER;
+#endif
 
 /* RIFF/WAVE Header - 12 bytes
  * Evidence: resource.catalog.json "RIFF (little-endian) data, WAVE audio"
@@ -138,7 +146,7 @@ typedef struct {
 /* Missing Evidence - Commands needed to resolve unknowns:
  *
  * 1. SAN Movie Format:
- *    hexdump -C Sdata/*.san | head -100
+ *    hexdump -C Sdata/intro.san | head -100
  *    radare2 -c "px 128" Sdata/intro.san
  *    
  * 2. Actual loader function analysis:

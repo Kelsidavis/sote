@@ -1,14 +1,7 @@
 #include "adapter_time.h"
 
-// PROV: SDL2 include disabled for RE-AGENT REBUILD m100 - using forward declarations
-#if 0 /* disabled for RE-AGENT REBUILD m100 */
-#include <SDL2/SDL.h>
-// Forward declarations for SDL timing functions
-extern uint32_t SDL_GetTicks(void);
-extern uint64_t SDL_GetPerformanceCounter(void);
-extern uint64_t SDL_GetPerformanceFrequency(void);
-extern void SDL_Delay(uint32_t ms);
-#endif
+// PROV: SDL2 compatibility header handles cross-platform includes
+// No direct SDL includes needed - handled by adapter_time.h -> SDL_compat.h
 
 // PROV: SDL stub functions for cross-compilation builds
 #if (defined(WIN32_BUILD) && !defined(SOTE_FORCE_SDL)) || !defined(HAVE_ADAPTER_SDL)

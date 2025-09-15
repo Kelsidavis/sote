@@ -1,22 +1,54 @@
 #ifndef ADAPTER_AUDIO_H
 #define ADAPTER_AUDIO_H
 
-#if 0 /* PROV: SDL2 include disabled for RE-AGENT REBUILD m100 - using forward declarations */
-#include <SDL2/SDL.h>
-// SDL_mixer not available in basic SDL2 setup
-typedef struct Mix_Chunk Mix_Chunk;
-typedef struct Mix_Music Mix_Music;
-#else
-// PROV: Using real SDL2 headers, no stub declarations needed
-// NOTE: All SDL types and functions provided by linked SDL2 library
-typedef struct Mix_Chunk Mix_Chunk;
-typedef struct Mix_Music Mix_Music;
+/* PROV: SDL2 compatibility header - unified cross-platform approach */
+#include "SDL_compat.h"
+
+/* Audio-specific types and definitions */
+#if !SOTE_SDL_ENABLED || defined(DISABLE_AUDIO)
+/* SDL2_mixer stub types for compilation when audio disabled or SDL2_mixer missing */
+
+#ifndef SDL_h_
+/* Only define SDL types if real SDL.h not included */
+typedef unsigned char Uint8;
+typedef unsigned int Uint32;
+
+typedef struct {
+    int freq;
+    unsigned short format;
+    unsigned char channels;
+    unsigned char silence;
+    unsigned short samples;
+    unsigned short padding;
+    unsigned int size;
+    void (*callback)(void *userdata, unsigned char *stream, int len);
+    void *userdata;
+} SDL_AudioSpec;
+#endif
+
+typedef struct Mix_Chunk {
+    int allocated;
+    Uint8 *abuf;
+    Uint32 alen;
+    Uint8 volume;
+} Mix_Chunk;
+
+typedef struct Mix_Music {
+    void *data;
+    int type;
+} Mix_Music;
+typedef unsigned int SDL_AudioDeviceID;
 #define AUDIO_S16LSB 0x8010
 #define AUDIO_U8 0x0008
 #define MIX_MAX_VOLUME 128
 #endif
 #include <stdint.h>
+
+#ifdef WIN32_BUILD
 #include <windows.h>
+#else
+#include "windows_compat.h"
+#endif
 
 // PROV: Evidence sources from runtime.apis.json
 // DirectSoundCreate: VA_0x401000+, IAT_0x4c4cd0

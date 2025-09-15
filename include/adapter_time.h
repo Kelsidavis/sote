@@ -1,11 +1,15 @@
 #ifndef ADAPTER_TIME_H
 #define ADAPTER_TIME_H
 
-#ifdef SOTE_FORCE_SDL
-#include <SDL.h>  // Enabled for real SDL2 - RE-AGENT REBUILD m100
-#endif
+/* PROV: SDL2 compatibility header - unified cross-platform approach */
+#include "SDL_compat.h"
 #include <stdint.h>
+
+#ifdef WIN32_BUILD
 #include <windows.h>
+#else
+#include "windows_compat.h"
+#endif
 
 // PROV: Evidence sources from runtime.apis.json
 // timeGetTime: VA_0x401000+, used for game timing and frame rate control

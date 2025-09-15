@@ -13,51 +13,59 @@
  */
 
 #define SDL_MAIN_HANDLED
+
+#if !defined(_WIN32)
+#ifndef SOTE_FORCE_SDL
+#define SOTE_FORCE_SDL 1
+#endif
+#endif
+
+#ifndef _WIN32
+#define _GNU_SOURCE
+#endif
 #include <stdint.h>
 #include <stddef.h>
 #include <string.h>
+#include <strings.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
 #include "../include/sote.h"
 #include "../include/types.h"
 #include "../include/adapter_video.h"
 #include "../include/adapter_input.h"
 #include "../include/adapter_audio.h"
 
-// SDL stub functions for entry.c main loop
-#if (defined(WIN32_BUILD) && !defined(SOTE_FORCE_SDL)) || !defined(HAVE_ADAPTER_SDL)
-static uint32_t SDL_GetTicks(void) { return 0; }
-static void SDL_Delay(uint32_t ms) { }
 // Audio adapter stubs for entry.c - using non-static to match header
+#ifndef INCLUDE_ADAPTER_AUDIO_SDL_C
 int adapter_audio_sdl_init(void) { return -1; }
-void adapter_audio_sdl_shutdown(void) { }
-#else
-// Real SDL2 mode - still need audio stubs since we're focusing on video
-int adapter_audio_sdl_init(void) { return -1; }  // Audio not supported in this build
 void adapter_audio_sdl_shutdown(void) { }
 #endif
 
 #ifndef _WIN32
-// Linux stub types for Windows compatibility
-typedef unsigned long DWORD;
-typedef unsigned int UINT;
-typedef void* HANDLE;
-typedef void* LPVOID;
-typedef char* LPSTR;
+// Include comprehensive Windows compatibility layer for Linux builds
+#include "../include/windows_compat.h"
+// Include DirectDraw COM interface stubs for Linux compilation
+#include "../include/windows_ddraw_compat.h"
+// Additional missing APIs for entry.c
+typedef char* LPCH;
+static inline HANDLE GetCurrentProcess(void) { return (HANDLE)0; }
+static inline HANDLE HeapCreate(DWORD flOptions, size_t dwInitialSize, size_t dwMaximumSize) { return (HANDLE)1; }
+static inline DWORD SetErrorMode(DWORD uMode) { return uMode; }
+static inline void* SetUnhandledExceptionFilter(void* lpTopLevelExceptionFilter) { return NULL; }
+#define SEM_FAILCRITICALERRORS 0x0001
+#define SEM_NOGPFAULTERRORBOX 0x0002
+// Additional STARTUPINFO definition for compatibility
 typedef struct {
     DWORD cb;
 } STARTUPINFOA;
-#define SEM_FAILCRITICALERRORS 0x0001
-#define SEM_NOGPFAULTERRORBOX 0x0002
-#define GetStartupInfoA(x) ((void)0)
-#define GetCommandLineA() ""
-#define GetEnvironmentStrings() NULL
-#define GetCurrentProcess() ((HANDLE)0)
-// PROV: GetProcessHeap removed - NOT in IAT (apis.manifest.json)
-// TODO_EVID: GetProcessHeap phantom API removed per verification.report.json
-#define HeapCreate(a,b,c) ((HANDLE)0)
-#define SetErrorMode(x) ((void)0)
-#define SetUnhandledExceptionFilter(x) ((void)0)
+// Additional missing APIs
+static inline DWORD GetTickCount(void) {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return (DWORD)(ts.tv_sec * 1000 + ts.tv_nsec / 1000000);
+}
 #endif
 
 /*
@@ -247,12 +255,36 @@ void entry_point(void)
 }
 
 /*
+ * OpenGL Environment Detection Helper - coord-gl-001
+ * PROV: Environment gate for forcing OpenGL path over DirectDraw/SDL
+ * Evidence: OpenGL video path extension for SOTE
+ */
+static int sote_should_use_opengl(void)
+{
+    // PROV: Check SOTE_FORCE_GL environment variable first
+    const char *force_gl = getenv("SOTE_FORCE_GL");
+    if (force_gl && (strcmp(force_gl, "1") == 0 || strcasecmp(force_gl, "true") == 0)) {
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[ROUTE] SOTE_FORCE_GL=1 detected - forcing OpenGL path\n");
+        #endif
+        return 1;
+    }
+
+    return 0;
+}
+
+/*
  * SDL Environment Detection Helper - coord-sdl-splash-001
  * PROV: Environment gate for forcing SDL path over DirectDraw
  * Evidence: Environment variables from coordinated disc-less requirements
  */
 static int sote_should_use_sdl(void)
 {
+    // PROV: OpenGL takes priority over SDL if both are set
+    if (sote_should_use_opengl()) {
+        return 0;
+    }
+
     // PROV: Check SOTE_FORCE_SDL environment variable first
     const char *force_sdl = getenv("SOTE_FORCE_SDL");
     if (force_sdl && (strcmp(force_sdl, "1") == 0 || strcasecmp(force_sdl, "true") == 0)) {
@@ -261,7 +293,7 @@ static int sote_should_use_sdl(void)
         #endif
         return 1;
     }
-    
+
     // PROV: Check SOTE_DISCLESS environment variable as secondary gate
     const char *discless = getenv("SOTE_DISCLESS");
     if (discless && (strcmp(discless, "1") == 0 || strcasecmp(discless, "true") == 0)) {
@@ -270,7 +302,7 @@ static int sote_should_use_sdl(void)
         #endif
         return 1;
     }
-    
+
     #ifdef SOTE_DISCLESS
     // PROV: Compile-time disc-less mode forces SDL
     #ifdef RESOURCE_WARNINGS
@@ -278,7 +310,7 @@ static int sote_should_use_sdl(void)
     #endif
     return 1;
     #endif
-    
+
     return 0;
 }
 
@@ -293,6 +325,51 @@ HRESULT initialize_video_subsystem(GraphicsContext* ctx)
         return E_INVALIDARG;
     }
     
+    // PROV: Check for OpenGL path first (Linux and Windows) - coord-gl-001
+    if (sote_should_use_opengl()) {
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[ROUTE] OpenGL video path (SDL2 + GL)\n");
+        fprintf(stderr, "[ROUTE] selecting OpenGL video adapter\n");
+        #endif
+
+        // PROV: Initialize OpenGL video adapter with standard dimensions (640x480)
+        extern int adapter_video_opengl_init(int w, int h);
+        extern void adapter_video_opengl_shutdown(void);
+        extern int adapter_video_opengl_show_bmp(const char* bmp_path);
+        extern int adapter_video_opengl_clear(uint8_t r, uint8_t g, uint8_t b);
+
+        int gl_video_result = adapter_video_opengl_init(640, 480);
+        if (gl_video_result == 0) {
+            #ifdef RESOURCE_WARNINGS
+            fprintf(stderr, "[ERROR] OpenGL video init failed\n");
+            #endif
+            return E_FAIL;
+        }
+
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[STARTUP] OpenGL video path initialized\n");
+        #endif
+
+        // PROV: Simple OpenGL demo - clear and show splash
+        adapter_video_opengl_clear(0, 0, 0);  // Clear to black
+
+        const char *assets_dir = getenv("SOTE_ASSETS_DIR");
+        if (!assets_dir) assets_dir = "Sdata";
+
+        char splash_path[512];
+        snprintf(splash_path, sizeof(splash_path), "%s/boba.bmp", assets_dir);
+        adapter_video_opengl_show_bmp(splash_path);
+
+        // PROV: Brief delay then return success
+        #ifndef _WIN32
+        usleep(1000000); // 1 second delay
+        #else
+        Sleep(1000);
+        #endif
+
+        return S_OK;
+    }
+
     // PROV: Guard justified by Wine backtrace + DD NULL deref.
     #if defined(SOTE_DISCLESS) || defined(HAVE_ADAPTER_SDL)
     // PROV: Disc-less/SDL path; skip DirectDraw per prior crash triage.
@@ -301,7 +378,11 @@ HRESULT initialize_video_subsystem(GraphicsContext* ctx)
     return adapter_video_init();
     #else
     // Original DirectDraw path for non-disc-less builds
-    return initialize_directdraw(ctx);
+    if (getenv("SOTE_FORCE_SDL")) {
+        return 0;
+    } else {
+        return initialize_directdraw(ctx);
+    }
     #endif
 }
 
@@ -312,11 +393,105 @@ HRESULT initialize_video_subsystem(GraphicsContext* ctx)
 
 HRESULT initialize_directdraw(GraphicsContext* ctx)
 {
+    // PROV: Check for OpenGL path first (cross-platform) - coord-gl-001
+    if (sote_should_use_opengl()) {
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[ROUTE] OpenGL video path (SDL2 + GL)\n");
+        fprintf(stderr, "[ROUTE] selecting OpenGL video adapter\n");
+        #endif
+
+        // PROV: Initialize OpenGL video adapter with standard dimensions (640x480)
+        extern int adapter_video_opengl_init(int w, int h);
+        extern void adapter_video_opengl_shutdown(void);
+        extern int adapter_video_opengl_show_bmp(const char* bmp_path);
+        extern int adapter_video_opengl_clear(uint8_t r, uint8_t g, uint8_t b);
+
+        int gl_video_result = adapter_video_opengl_init(640, 480);
+        if (gl_video_result == 0) {
+            #ifdef RESOURCE_WARNINGS
+            fprintf(stderr, "[ERROR] OpenGL video init failed\n");
+            #endif
+            return E_FAIL;
+        }
+
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[STARTUP] OpenGL video path initialized\n");
+        #endif
+
+        // PROV: Simple OpenGL demo - clear and show splash
+        adapter_video_opengl_clear(0, 0, 0);  // Clear to black
+
+        const char *assets_dir = getenv("SOTE_ASSETS_DIR");
+        if (!assets_dir) assets_dir = "Sdata";
+
+        char splash_path[512];
+        snprintf(splash_path, sizeof(splash_path), "%s/boba.bmp", assets_dir);
+        adapter_video_opengl_show_bmp(splash_path);
+
+        // PROV: Brief delay then return success
+        #ifndef _WIN32
+        usleep(1000000); // 1 second delay
+        #else
+        Sleep(1000);
+        #endif
+
+        return S_OK;
+    }
+
+#if !defined(_WIN32) || defined(SOTE_FORCE_SDL)
+    fprintf(stderr, "[ROUTE] DDraw disabled on this build/route — skipping initialize_directdraw()\n");
+    return 0; /* SDL path handles video; DDraw is bypassed. */
+#endif
     // PROV: Early route decision logging and SDL gate check - coord-sdl-splash-001
     #ifdef RESOURCE_WARNINGS
     fprintf(stderr, "[STARTUP] initialize_directdraw entry - checking routing gates\n");
     #endif
-    
+
+    // PROV: Early OpenGL route check with short-circuit return - coord-gl-001
+    if (sote_should_use_opengl()) {
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[ROUTE] OpenGL video path (SDL2 + GL)\n");
+        fprintf(stderr, "[ROUTE] selecting OpenGL video adapter\n");
+        #endif
+
+        // PROV: Initialize OpenGL video adapter with standard dimensions (640x480)
+        extern int adapter_video_opengl_init(int w, int h);
+        extern void adapter_video_opengl_shutdown(void);
+        extern int adapter_video_opengl_show_bmp(const char* bmp_path);
+        extern int adapter_video_opengl_clear(uint8_t r, uint8_t g, uint8_t b);
+
+        int gl_video_result = adapter_video_opengl_init(640, 480);
+        if (gl_video_result == 0) {
+            #ifdef RESOURCE_WARNINGS
+            fprintf(stderr, "[ERROR] OpenGL video init failed\n");
+            #endif
+            return E_FAIL;
+        }
+
+        #ifdef RESOURCE_WARNINGS
+        fprintf(stderr, "[STARTUP] OpenGL video path initialized\n");
+        #endif
+
+        // PROV: Simple OpenGL demo - clear and show splash
+        adapter_video_opengl_clear(0, 0, 0);  // Clear to black
+
+        const char *assets_dir = getenv("SOTE_ASSETS_DIR");
+        if (!assets_dir) assets_dir = "Sdata";
+
+        char splash_path[512];
+        snprintf(splash_path, sizeof(splash_path), "%s/boba.bmp", assets_dir);
+        adapter_video_opengl_show_bmp(splash_path);
+
+        // PROV: Brief delay then return success
+        #ifndef _WIN32
+        usleep(1000000); // 1 second delay
+        #else
+        Sleep(1000);
+        #endif
+
+        return S_OK;
+    }
+
     // PROV: Early SDL route check with short-circuit return
     if (sote_should_use_sdl()) {
         #ifdef RESOURCE_WARNINGS

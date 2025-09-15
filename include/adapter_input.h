@@ -2,55 +2,21 @@
 #define ADAPTER_INPUT_H
 
 #include <stdint.h>
-#include <windows.h>
 
-#ifdef SOTE_FORCE_SDL /* PROV: Enable SDL header include for real SDL2 - RE-AGENT REBUILD m100 */
-#include <SDL.h>
+#ifdef WIN32_BUILD
+#include <windows.h>
 #else
-// SDL stub types for cross-compilation
-typedef struct SDL_Window SDL_Window;
-typedef struct {
-    uint32_t type;
-    struct {
-        uint32_t type;
-        uint32_t timestamp;
-        uint32_t windowID;
-        struct {
-            int sym;
-            int scancode;
-            uint16_t mod;
-        } keysym;
-    } key;
-    struct {
-        uint32_t type;
-        uint32_t timestamp;
-        uint32_t windowID;
-        uint8_t button;
-        uint8_t state;
-        uint8_t clicks;
-        int32_t x, y;
-    } button;
-    struct {
-        uint32_t type;
-        uint32_t timestamp;
-        uint32_t windowID;
-        int32_t x, y;
-        int32_t xrel, yrel;
-    } motion;
-    struct {
-        uint32_t type;
-        uint32_t timestamp;
-        uint32_t windowID;
-        uint8_t event;
-        int32_t data1, data2;
-    } window;
-} SDL_Event;
+#include "windows_compat.h"
+#endif
+
+/* PROV: SDL2 compatibility header - unified cross-platform approach */
+#include "SDL_compat.h"
+
+/* Additional SDL constants needed by adapter_input */
+#if !SOTE_SDL_ENABLED
 #define SDL_NUM_SCANCODES 512
 #define SDL_SCANCODE_ESCAPE 41
 #define SDL_SCANCODE_UNKNOWN 0
-#define SDL_QUIT 0x100
-#define SDL_KEYDOWN 0x300
-#define SDL_KEYUP 0x301
 #define SDL_MOUSEBUTTONDOWN 0x401
 #define SDL_MOUSEBUTTONUP 0x402
 #define SDL_MOUSEMOTION 0x400
@@ -61,8 +27,7 @@ typedef struct {
 #define SDL_BUTTON_LEFT 1
 #define SDL_BUTTON_RIGHT 3
 #define SDL_BUTTON_MIDDLE 2
-#define SDLK_RETURN 13  // PROV: ENTER key for menu selection
-#define SDLK_ESCAPE 27
+#define SDLK_ESCAPE 27  /* Additional to base SDL_compat.h definitions */
 #endif
 
 // PROV: Evidence sources from runtime.apis.json

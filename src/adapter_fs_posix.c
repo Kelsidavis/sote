@@ -1,3 +1,7 @@
+#ifdef LINUX_BUILD
+#define _GNU_SOURCE
+#endif
+
 #include "adapter_fs.h"
 #include <stdio.h>
 #include <stdlib.h>

@@ -3,18 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-// PROV: SDL2 include disabled for RE-AGENT REBUILD m100 - using forward declarations
-#if 0 /* disabled for RE-AGENT REBUILD m100 */
-#include <SDL2/SDL.h>
-// Forward declarations for SDL input functions
-extern int SDL_PollEvent(SDL_Event *event);
-extern const uint8_t* SDL_GetKeyboardState(int *numkeys);
-extern uint32_t SDL_GetMouseState(int *x, int *y);
-extern uint32_t SDL_GetTicks(void);
-extern void SDL_StartTextInput(void);
-extern void SDL_StopTextInput(void);
-extern void SDL_Delay(uint32_t ms);
-#endif
+// PROV: SDL2 compatibility header handles cross-platform includes
+// No direct SDL includes needed - handled by adapter_input.h -> SDL_compat.h
 
 // SDL stub functions for cross-compilation builds
 #if (defined(WIN32_BUILD) && !defined(SOTE_FORCE_SDL)) || !defined(HAVE_ADAPTER_SDL)

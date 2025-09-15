@@ -55,8 +55,8 @@ uint32_t file_get_size(FILE_HANDLE* handle);
 // PROV: VA_0x403000_bmp_format_parser priority 69 in bootpath.manifest.json
 // PROV: Uses CreateFileA/ReadFile/HeapAlloc per bootpath evidence
 typedef struct {
-    BITMAPFILEHEADER fileHeader;
-    BITMAPINFOHEADER infoHeader;
+    SOTE_BITMAPFILEHEADER fileHeader;
+    SOTE_BITMAPINFOHEADER infoHeader;
     uint8_t* pixelData;
     uint32_t pixelDataSize;
 } BMP_IMAGE;
@@ -65,7 +65,7 @@ typedef struct {
 BMP_IMAGE* bmp_load(const char* filename);
 
 // PROV: BMP header validation - checks magic, size constraints
-int bmp_validate_header(BITMAPFILEHEADER* fileHeader, BITMAPINFOHEADER* infoHeader);
+int bmp_validate_header(SOTE_BITMAPFILEHEADER* fileHeader, SOTE_BITMAPINFOHEADER* infoHeader);
 
 // PROV: Free BMP resources using HeapFree
 void bmp_free(BMP_IMAGE* image);

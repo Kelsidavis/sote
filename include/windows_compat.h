@@ -27,11 +27,35 @@ typedef unsigned char BYTE;
 typedef int BOOL;
 typedef long LONG;
 typedef unsigned long ULONG;
+typedef unsigned long* LPDWORD;
+typedef long* PLONG;
 typedef void* LPVOID;
+typedef const void* LPCVOID;
 typedef char* LPSTR;
 typedef const char* LPCSTR;
 typedef wchar_t* LPWSTR;
 typedef const wchar_t* LPCWSTR;
+typedef void* LPSECURITY_ATTRIBUTES;
+typedef void* LPOVERLAPPED;
+typedef void* FARPROC;
+typedef void* LPOPENFILENAMEA;
+
+// Constants needed for structures
+#define MAX_PATH                260
+
+// WIN32_FIND_DATAA structure for file searching
+typedef struct _WIN32_FIND_DATAA {
+    DWORD dwFileAttributes;
+    DWORD ftCreationTime[2];    // FILETIME is 2 DWORDs
+    DWORD ftLastAccessTime[2];
+    DWORD ftLastWriteTime[2];
+    DWORD nFileSizeHigh;
+    DWORD nFileSizeLow;
+    DWORD dwReserved0;
+    DWORD dwReserved1;
+    char cFileName[MAX_PATH];
+    char cAlternateFileName[14];
+} WIN32_FIND_DATAA, *LPWIN32_FIND_DATAA;
 
 // Handle types
 typedef void* HANDLE;
@@ -59,16 +83,30 @@ typedef long HRESULT;
 #endif
 #define E_FAIL                  ((HRESULT)0x80004005L)
 #define E_INVALIDARG            ((HRESULT)0x80070057L)
+
+// MCI and Timer error codes
+#define MMSYSERR_NOERROR        0
+#define MMSYSERR_ERROR          1  
+#define MMSYSERR_BADDEVICEID    2
+#define MMSYSERR_NOTENABLED     3
+#define MMSYSERR_ALLOCATED      4
+#define MMSYSERR_INVALHANDLE    5
+#define TIMERR_NOERROR          0
+#define TIMERR_NOCANDO          97
 #define E_OUTOFMEMORY           ((HRESULT)0x8007000EL)
 #define FAILED(hr)              ((HRESULT)(hr) < 0)
 #define SUCCEEDED(hr)           ((HRESULT)(hr) >= 0)
+
+// Helper macros (WORD already defined above)
+#define MAKELONG(a, b)          ((LONG)(((WORD)(a)) | ((DWORD)((WORD)(b))) << 16))
+#define LOWORD(l)               ((WORD)((DWORD)(l) & 0xFFFF))
+#define HIWORD(l)               ((WORD)((DWORD)(l) >> 16))
 
 // Boolean constants
 #define TRUE    1
 #define FALSE   0
 
-// Common constants
-#define MAX_PATH                260
+// Common constants  
 #define INVALID_HANDLE_VALUE    ((HANDLE)(long)-1)
 
 // Calling conventions
@@ -119,6 +157,13 @@ typedef unsigned long ULONG_PTR;
 #define OPEN_EXISTING           3
 #define OPEN_ALWAYS             4
 #define FILE_ATTRIBUTE_NORMAL   0x00000080
+#define FILE_ATTRIBUTE_DIRECTORY 0x00000010
+
+// File creation disposition constants
+#define TRUNCATE_EXISTING       5
+
+// File pointer constants
+#define INVALID_SET_FILE_POINTER 0xFFFFFFFF
 
 // Window message constants
 #define WM_QUIT                 0x0012
@@ -172,13 +217,39 @@ typedef unsigned long ULONG_PTR;
 #define OPAQUE                  2
 #define SRCCOPY                 (DWORD)0x00CC0020
 
-// DirectDraw types (stub implementations)
-typedef void* IDirectDraw;
-typedef void* IDirectDrawSurface;
-typedef void* IDirectDrawPalette;
-typedef struct DDSCAPS DDSCAPS;
-typedef struct DDSURFACEDESC DDSURFACEDESC;
-typedef struct PALETTEENTRY PALETTEENTRY;
+// Additional Windows types needed by adapters
+typedef unsigned int UINT;
+typedef unsigned long UINT_PTR;
+typedef unsigned long ULONG_PTR; 
+typedef long LRESULT;
+typedef unsigned long MMRESULT;
+typedef unsigned long MCIERROR;
+typedef unsigned long MCIDEVICEID;
+typedef unsigned long DWORD_PTR;
+typedef void* IUnknown;
+typedef unsigned long WPARAM;
+typedef long LPARAM;
+
+// GUID structure
+typedef struct _GUID {
+    unsigned long  Data1;
+    unsigned short Data2;
+    unsigned short Data3;
+    unsigned char  Data4[8];
+} GUID;
+
+// LARGE_INTEGER structure for performance counters
+typedef union _LARGE_INTEGER {
+    struct {
+        DWORD LowPart;
+        LONG  HighPart;
+    };
+    struct {
+        DWORD LowPart;
+        LONG  HighPart;
+    } u;
+    long long QuadPart;
+} LARGE_INTEGER;
 
 // Basic Windows structures
 typedef struct tagPOINT {
@@ -228,9 +299,12 @@ static inline int MessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, unsign
 }
 
 static inline BOOL PeekMessageA(LPMSG lpMsg, HWND hWnd, unsigned int wMsgFilterMin, unsigned int wMsgFilterMax, unsigned int wRemoveMsg) {
-    static int quit_sent = 0;
-    if (!quit_sent) {
-        quit_sent = 1;
+    static int frame_count = 0;
+
+    // Let the game run for a reasonable amount of time before quitting
+    // This allows the game logic to execute properly
+    frame_count++;
+    if (frame_count > 300) { // About 5 seconds at 60fps
         if (lpMsg) {
             lpMsg->hwnd = hWnd;
             lpMsg->message = WM_QUIT;
@@ -241,6 +315,8 @@ static inline BOOL PeekMessageA(LPMSG lpMsg, HWND hWnd, unsigned int wMsgFilterM
         }
         return TRUE;
     }
+
+    // No messages pending - let game logic continue
     return FALSE;
 }
 
@@ -338,11 +414,7 @@ static inline long RegCloseKey(HKEY hKey) {
     return ERROR_SUCCESS;
 }
 
-// DirectDraw stub functions
-static inline HRESULT DirectDrawCreate(void* lpGUID, IDirectDraw** lplpDD, void* pUnkOuter) {
-    *lplpDD = (IDirectDraw*)malloc(sizeof(void*));
-    return S_OK;
-}
+// DirectDraw functions are provided by windows_ddraw_compat.h
 
 static inline HRESULT DirectDrawEnumerateA(void* lpCallback, void* lpContext) {
     return S_OK;

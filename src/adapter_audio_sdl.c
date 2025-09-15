@@ -1,31 +1,13 @@
-#include "adapter_audio.h"
-#include "runtime_loaders.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
+
+#if !defined(DISABLE_AUDIO)
+#include "SDL_compat.h"
+#include "../include/adapter_audio.h"
+#include "runtime_loaders.h"
 #include <math.h>
-
-// SDL stub functions for cross-compilation builds
-#if defined(WIN32_BUILD) || !defined(HAVE_ADAPTER_SDL)
-static int SDL_Init(uint32_t flags) { return 0; }
-static const char* SDL_GetError(void) { return "SDL not available"; }
-static void SDL_Quit(void) { }
-static int Mix_OpenAudio(int frequency, uint16_t format, int channels, int chunksize) { return -1; }
-static const char* Mix_GetError(void) { return "SDL_mixer not available"; }
-static void Mix_CloseAudio(void) { }
-static int Mix_AllocateChannels(int numchans) { return 0; }
-static int Mix_VolumeMusic(int volume) { return 0; }
-static int Mix_Volume(int channel, int volume) { return 0; }
-static int Mix_PlayChannel(int channel, Mix_Chunk *chunk, int loops) { return -1; }
-static void Mix_HaltChannel(int channel) { }
-static int Mix_VolumeChunk(Mix_Chunk *chunk, int volume) { return 0; }
-static void Mix_FreeChunk(Mix_Chunk *chunk) { }
-static void Mix_FreeMusic(Mix_Music *music) { }
-static Mix_Chunk* Mix_LoadWAV_RW(void *src, int freesrc) { return NULL; }
-static void* SDL_RWFromMem(void *mem, int size) { return NULL; }
-
-// WAV stubs for cross-compilation (use external definitions)
-#endif
 
 // PROV: DirectSound/WinMM API replacements based on runtime.apis.json analysis
 // Evidence: DirectSoundCreate at IAT_0x4c4cd0, used for audio initialization
@@ -361,3 +343,187 @@ void adapter_audio_sdl_shutdown(void)
 #endif
     // No-op if audio not enabled
 }
+
+#else // DISABLE_AUDIO
+
+/* Audio stubs when DISABLE_AUDIO is enabled
+ * Provides all expected audio functions but with no-op implementations
+ * Allows building without SDL2_mixer dependency
+ */
+
+// Define missing types when audio is disabled
+typedef long HRESULT;
+typedef unsigned long UINT_PTR;
+typedef unsigned long *LPDWORD;
+typedef unsigned long DWORD;
+typedef unsigned int UINT;
+typedef void *LPVOID;
+typedef const char *LPCSTR;
+typedef char *LPSTR;
+typedef void *HWND;
+typedef unsigned long MCIDEVICEID;
+typedef unsigned long long DWORD_PTR;
+typedef long MMRESULT;
+typedef unsigned long MCIERROR;
+
+// Dummy context for disabled audio mode
+static int g_audio_disabled = 1;
+
+/* [STUB] DirectSoundCreate - No Audio Mode
+ * Returns DS_OK but doesn't initialize any audio subsystem
+ */
+HRESULT adapter_DirectSoundCreate(void *lpGuid, void **ppDS, void *pUnkOuter)
+{
+    (void)lpGuid; (void)pUnkOuter;
+    if (!ppDS) return -1; // DSERR_INVALIDPARAM equivalent
+
+    // Return dummy pointer - application won't use DirectSound features
+    *ppDS = &g_audio_disabled;
+    printf("[AUDIO] DirectSoundCreate - DISABLED (compiled with DISABLE_AUDIO=1)\n");
+    return 0; // DS_OK equivalent
+}
+
+/* [STUB] CreateSoundBuffer - No Audio Mode */
+HRESULT adapter_CreateSoundBuffer(void *lpDSBufferDesc, void **ppDSBuffer, void *pUnkOuter)
+{
+    (void)lpDSBufferDesc; (void)pUnkOuter;
+    if (!ppDSBuffer) return -1;
+
+    // Return dummy pointer for no-op buffer
+    *ppDSBuffer = &g_audio_disabled;
+    return 0;
+}
+
+/* [STUB] auxGetVolume - No Audio Mode */
+MMRESULT adapter_auxGetVolume(UINT_PTR uDeviceID, LPDWORD pdwVolume)
+{
+    (void)uDeviceID;
+    if (!pdwVolume) return -1;
+
+    // Return max volume (65535) to indicate "audio working"
+    *pdwVolume = 65535;
+    return 0; // MMSYSERR_NOERROR equivalent
+}
+
+/* [STUB] auxSetVolume - No Audio Mode */
+MMRESULT adapter_auxSetVolume(UINT_PTR uDeviceID, DWORD dwVolume)
+{
+    (void)uDeviceID; (void)dwVolume;
+    return 0; // Success but no-op
+}
+
+/* [STUB] auxGetDevCapsA - No Audio Mode */
+MMRESULT adapter_auxGetDevCapsA(UINT_PTR uDeviceID, LPVOID lpCaps, UINT cbCaps)
+{
+    (void)uDeviceID;
+    if (!lpCaps || cbCaps == 0) return -1;
+
+    // Zero out caps structure
+    memset(lpCaps, 0, cbCaps);
+    return 0;
+}
+
+/* [STUB] auxGetNumDevs - No Audio Mode */
+UINT adapter_auxGetNumDevs(void)
+{
+    return 1; // Return 1 device to avoid "no audio" error paths
+}
+
+/* [STUB] mciSendCommandA - No Audio Mode */
+MCIERROR adapter_mciSendCommandA(MCIDEVICEID wDeviceID, UINT uMessage, DWORD_PTR fdwCommand, DWORD_PTR dwParam)
+{
+    (void)wDeviceID; (void)uMessage; (void)fdwCommand; (void)dwParam;
+    return 0; // Success but no-op
+}
+
+/* [STUB] mciSendStringA - No Audio Mode */
+MCIERROR adapter_mciSendStringA(LPCSTR lpstrCommand, LPSTR lpstrReturnString, UINT uReturnLength, HWND hwndCallback)
+{
+    (void)lpstrCommand; (void)hwndCallback;
+    if (lpstrReturnString && uReturnLength > 0) {
+        lpstrReturnString[0] = '\0';
+    }
+    return 0;
+}
+
+/* [STUB] Sound buffer operations - No Audio Mode */
+HRESULT adapter_PlaySound(void *buffer, uint32_t flags)
+{
+    (void)buffer; (void)flags;
+    return 0; // Success but no-op
+}
+
+HRESULT adapter_StopSound(void *buffer)
+{
+    (void)buffer;
+    return 0; // Success but no-op
+}
+
+HRESULT adapter_SetVolume(void *buffer, int32_t volume)
+{
+    (void)buffer; (void)volume;
+    return 0; // Success but no-op
+}
+
+HRESULT adapter_SetFrequency(void *buffer, uint32_t frequency)
+{
+    (void)buffer; (void)frequency;
+    return 0; // Success but no-op
+}
+
+HRESULT adapter_Lock(void *buffer, uint32_t offset, uint32_t size, void **ptr1, uint32_t *bytes1, void **ptr2, uint32_t *bytes2, uint32_t flags)
+{
+    (void)buffer; (void)offset; (void)size; (void)ptr1; (void)bytes1; (void)ptr2; (void)bytes2; (void)flags;
+    return -1; // Not supported in no-audio mode
+}
+
+HRESULT adapter_Unlock(void *buffer, void *ptr1, uint32_t bytes1, void *ptr2, uint32_t bytes2)
+{
+    (void)buffer; (void)ptr1; (void)bytes1; (void)ptr2; (void)bytes2;
+    return -1; // Not supported in no-audio mode
+}
+
+/* [STUB] WAV Loading - No Audio Mode */
+void* adapter_LoadWAV(const char *filename)
+{
+    (void)filename;
+    printf("[AUDIO] LoadWAV('%s') - DISABLED (compiled with DISABLE_AUDIO=1)\n", filename ? filename : "NULL");
+    return &g_audio_disabled; // Return dummy pointer
+}
+
+void adapter_FreeWAV(void *buffer)
+{
+    (void)buffer;
+    // No-op for disabled audio
+}
+
+/* [STUB] Context management - No Audio Mode */
+int adapter_audio_init(void)
+{
+    printf("[AUDIO] Audio initialization DISABLED (compiled with DISABLE_AUDIO=1)\n");
+    return 0; // Success - no actual initialization needed
+}
+
+void adapter_audio_shutdown(void)
+{
+    // No-op for disabled audio
+}
+
+void* adapter_get_audio_context(void)
+{
+    return &g_audio_disabled;
+}
+
+/* [STUB] SDL main loop audio functions - No Audio Mode */
+int adapter_audio_sdl_init(void)
+{
+    printf("[AUDIO] SDL audio init DISABLED (compiled with DISABLE_AUDIO=1)\n");
+    return -1; // Indicate no audio available (non-fatal)
+}
+
+void adapter_audio_sdl_shutdown(void)
+{
+    // No-op for disabled audio
+}
+
+#endif // DISABLE_AUDIO
