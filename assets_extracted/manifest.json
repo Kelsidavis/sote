@@ -1,0 +1,299 @@
+{
+  "generated": "2025-09-14T21:43:26.560139",
+  "entries": [
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data00.dll",
+      "tag": "data00",
+      "outdir": "data00",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "062e12099483da6da9d25f368fd54cc248082356"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data01.dll",
+      "tag": "data01",
+      "outdir": "data01",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "28c2cb18a6daa86f1189b6aacc2c0be20daaf89e"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data02.dll",
+      "tag": "data02",
+      "outdir": "data02",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "54a40e2c5a356b125806f14effbc059eab399c3b"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data03.dll",
+      "tag": "data03",
+      "outdir": "data03",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "59563436898b778107d6ba15308c16a724f9efb3"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data04.dll",
+      "tag": "data04",
+      "outdir": "data04",
+      "files": [
+        ".data_section.bin",
+        "embedded_000.bmp"
+      ],
+      "sha1": "65cc3928156e9a5f80fcb19a27f987cab61efaa3"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data05.dll",
+      "tag": "data05",
+      "outdir": "data05",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "1b3413ea1f245b62f9c0d7298906820881c15ae4"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data06.dll",
+      "tag": "data06",
+      "outdir": "data06",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "8ca38a6888c83bbf28874a702eaea8c6b7e48054"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data07.dll",
+      "tag": "data07",
+      "outdir": "data07",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "0496658668c76b8f14129ade3345f721ef4d93b7"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data08.dll",
+      "tag": "data08",
+      "outdir": "data08",
+      "files": [
+        ".data_section.bin",
+        "embedded_000.bmp",
+        "embedded_001.bmp"
+      ],
+      "sha1": "76b87e133030712b037ef3d86eaffd49041576df"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data09.dll",
+      "tag": "data09",
+      "outdir": "data09",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "53db82b977b717ec181f8ece2d81cfac798ac145"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data10.dll",
+      "tag": "data10",
+      "outdir": "data10",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "813933b00a422498b2dbe5dd295febf6e488917d"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data11.dll",
+      "tag": "data11",
+      "outdir": "data11",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "4e1c3387cef382c8a8669f78ed4b89822708f438"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data12.dll",
+      "tag": "data12",
+      "outdir": "data12",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "a1d97fc79af00e4303a9a35bd4f9310ecc68a75f"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data13.dll",
+      "tag": "data13",
+      "outdir": "data13",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "219dbe6ab50835aeb4a49bfb6429b540ea72a60f"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data14.dll",
+      "tag": "data14",
+      "outdir": "data14",
+      "files": [
+        ".data_section.bin",
+        "embedded_000.bmp"
+      ],
+      "sha1": "a5cb8f6cebc9697ae368776eb03c643b15153de5"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data15.dll",
+      "tag": "data15",
+      "outdir": "data15",
+      "files": [
+        ".data_section.bin",
+        "embedded_000.bmp"
+      ],
+      "sha1": "69a86b5bdccfaba3cd93ce166e1a3e6c252e91c3"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data16.dll",
+      "tag": "data16",
+      "outdir": "data16",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "50064d6d555d7295904164c50120e30f225050df"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data17.dll",
+      "tag": "data17",
+      "outdir": "data17",
+      "files": [
+        ".data_section.bin",
+        "embedded_000.bmp"
+      ],
+      "sha1": "18040299a7b29e9a846388caf645db78034dd9e9"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data18.dll",
+      "tag": "data18",
+      "outdir": "data18",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "9fdb2aa1741bf9ca412cae5c940d95f565fc8b4e"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data19.dll",
+      "tag": "data19",
+      "outdir": "data19",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "1d39a0fd4363274b67e612a2559e3f25d9f81d15"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data20.dll",
+      "tag": "data20",
+      "outdir": "data20",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "5b0c54906aa64d91308fef10b779fb3cbc16e222"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data21.dll",
+      "tag": "data21",
+      "outdir": "data21",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "c2102786dce94e5ec305ec96683feed748ab4f51"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data22.dll",
+      "tag": "data22",
+      "outdir": "data22",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "ad35e56ebe3e9606b32882836e34d16ee6315fd5"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data23.dll",
+      "tag": "data23",
+      "outdir": "data23",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "89ab093474c1748e345169c951a515250ea3612e"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data24.dll",
+      "tag": "data24",
+      "outdir": "data24",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "04b627389127c14fddce6672f21370e47fc42c91"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data25.dll",
+      "tag": "data25",
+      "outdir": "data25",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "fdba1d363f2337128235d7aab6b7b6398654fd2b"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data26.dll",
+      "tag": "data26",
+      "outdir": "data26",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "57702d053eeca7008abc848739f73b03550c57b0"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data27.dll",
+      "tag": "data27",
+      "outdir": "data27",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "596a41ff313c4efb52b336a0e6e10eeaead2e7c6"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data28.dll",
+      "tag": "data28",
+      "outdir": "data28",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "60cbae1b48cd5626ccaf4500d136550181b818a4"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data29.dll",
+      "tag": "data29",
+      "outdir": "data29",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "a3fbea74f206188ac9f03c6212bd06cb0eac46fb"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data30.dll",
+      "tag": "data30",
+      "outdir": "data30",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "0993a8166ac6363640d040d3130c1efcf6c610b5"
+    },
+    {
+      "dll": "/media/k/vbox1/Shadows/SOTE/Sdata/data31.dll",
+      "tag": "data31",
+      "outdir": "data31",
+      "files": [
+        ".data_section.bin"
+      ],
+      "sha1": "bdc311dc94d9ad94a944fcc98e821ce405b40084"
+    }
+  ]
+}
