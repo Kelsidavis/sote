@@ -1,6 +1,7 @@
 #include "../include/sote.h"
 #include "../include/video_gl.h"
 #include "../include/vfs_packs.h"  /* existing VFS for .sotepak */
+#include "../include/bmp_like.h"
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
@@ -49,8 +50,14 @@ unsigned level_resolve_and_upload_texture(int level_id){
       SDL_RWops* rw = SDL_RWFromConstMem(buf,(int)len);
       SDL_Surface* s = rw ? SDL_LoadBMP_RW(rw,1) : NULL;
       if(!s){
-        fprintf(stderr,"[GFX] level %d: found custom/encoded BMP '%s' - requires special decoder\n", level_id, path);
-        free(buf); buf=NULL; len=0; continue;
+        /* Try DIB fallback */
+        s = LoadBMPLikeFromMemory(buf, len);
+        if(s){
+          fprintf(stderr,"[PACK][DIB] loaded %s (%zu bytes)\n", path, len);
+        } else {
+          fprintf(stderr,"[GFX] level %d: found custom/encoded BMP '%s' - requires special decoder\n", level_id, path);
+          free(buf); buf=NULL; len=0; continue;
+        }
       }
       unsigned tex = gl_upload_surface_rgba(s);
       if (tex) {
@@ -78,7 +85,15 @@ unsigned level_resolve_and_upload_texture(int level_id){
     if (vfs_packs_read_file(packname, fallback_patterns[i], &buf, &len)==0 && buf && len>0){
       SDL_RWops* rw = SDL_RWFromConstMem(buf,(int)len);
       SDL_Surface* s = rw ? SDL_LoadBMP_RW(rw,1) : NULL;
-      if(!s){ free(buf); buf=NULL; len=0; continue; }
+      if(!s){
+        /* Try DIB fallback */
+        s = LoadBMPLikeFromMemory(buf, len);
+        if(s){
+          fprintf(stderr,"[PACK][DIB] loaded %s (%zu bytes)\n", fallback_patterns[i], len);
+        } else {
+          free(buf); buf=NULL; len=0; continue;
+        }
+      }
       unsigned tex = gl_upload_surface_rgba(s);
       if (tex) {
         SDL_FreeSurface(s);

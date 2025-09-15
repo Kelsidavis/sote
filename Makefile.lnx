@@ -29,7 +29,7 @@ LNX_SOURCES = src/entry.c src/main.c src/adapter_fs_posix.c src/adapter_input_sd
               src/adapter_video_sdl.c src/adapter_video_opengl.c src/gl_loader.c \
               src/adapter_audio_dummy.c src/windows_ddraw_compat.c src/level_launcher.c \
               src/runtime_loaders.c src/missing_functions.c src/resource_pack.c \
-              src/vfs_packs.c src/level_texture_resolver.c
+              src/vfs_packs.c src/level_texture_resolver.c src/bmp_like.c
 
 # Additional common sources for Linux build (minimal set to avoid symbol conflicts)
 COMMON_SOURCES =
